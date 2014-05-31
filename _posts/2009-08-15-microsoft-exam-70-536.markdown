@@ -1,0 +1,55 @@
+---
+author: admin
+comments: true
+date: 2009-08-15 16:19:35+00:00
+layout: post
+slug: microsoft-exam-70-536
+title: Microsoft Exam 70-536
+wordpress_id: 383
+categories:
+- Miscellaneous
+---
+
+Recently I announced that I'm going to be working toward Microsoft Certification and writing my student notes about it here, so I thought I'd hop right in and save my stub page for our first exam, 70-536, also known as _Microsoft .NET Framework -- Application Development Foundation_.
+
+I'm using Tony Northrup's Self-Paced Training Kit for now.  What I'll be doing here are samples and articles that don't appear in Tony's book, but obviously I owe a debt to this work.
+
+The topics covered in this exam are:
+
+
+
+	
+  * [Developing applications that use system types and collections](http://www.particlewave.com/blog/2009/08/18/microsoft-750-36-skills-being-measured-developing-applications-that-use-system-types-and-collections/) (15 percent)
+
+  
+
+	
+  * [Implementing service processes, threading, and application domains in a .NET Framework application](http://www.particlewave.com/blog/2009/08/26/implementing-service-processes-threading-and-application-domains-in-a-net-framework-application-11-percent) (11 percent)
+
+  
+
+	
+  * [Embedding configuration, diagnostic, management, and installation features into a .NET Framework application](http://www.particlewave.com/blog/2009/08/30/embedding-configuration-diagnostic-management-and-installation-features-into-a-net-framework-application-14-percent/) (14 percent)
+
+  
+
+	
+  * [Implementing serialization and input/output functionality in a .NET Framework application](http://www.particlewave.com/blog/2009/09/04/implementing-serialization-and-inputoutput-functionality-in-a-net-framework-application-18-percent/) (18 percent)
+
+  
+
+	
+  * [Improving the security of the .NET Framework applications by using the .NET Framework 2.0 security features](http://www.particlewave.com/blog/2009/09/08/improving-the-security-of-net-framework-applications-by-using-the-net-framework-security-features-20-percent/) (20 percent)
+
+  
+
+	
+  * I[mplementing interoperability, reflection, and mailing functionality in a .NET Framework application](http://www.particlewave.com/blog/2009/09/12/implementing-interoperability-reflection-and-mailing-functionality-in-a-net-framework-application-11-percent/) (11 percent)
+
+  
+
+	
+  * [Implementing globalization, drawing, and text manipulation functionality in a .NET Framework application](http://www.particlewave.com/blog/2009/09/24/implementing-globalization-drawing-and-text-manipulation-functionality-in-a-net-framework-application-11-percent/) (11 percent)
+
+
+We'll be fleshing those sections out further as we go along here.

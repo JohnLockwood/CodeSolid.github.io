@@ -1,0 +1,15 @@
+---
+author: admin
+comments: true
+date: 2008-05-16 19:03:13+00:00
+layout: post
+slug: '102'
+title: The Realtor® Fix Plugin Stupid Test Post.
+wordpress_id: 102
+categories:
+- Miscellaneous
+---
+
+It's fun to be a Realtor®. Realtors® have fun. Don't you want to be a Realtor®?
+
+I want to be a Realtor®. Two realtors® is a good number to have on a team.

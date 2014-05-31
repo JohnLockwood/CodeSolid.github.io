@@ -1,0 +1,26 @@
+---
+author: admin
+comments: true
+date: 2009-09-30 20:25:00+00:00
+layout: post
+slug: microsoft-exam-70-562
+title: Microsoft Exam 70-562
+wordpress_id: 468
+categories:
+- Miscellaneous
+---
+
+  
+  * Configuring and Deploying Web Applications (10 percent) 
+   
+  * Consuming and Creating Server Controls (20 percent) 
+   
+  * Working with Data and Services (17 percent) 
+   
+  * Troubleshooting and Debugging Web Applications (16 percent) 
+   
+  * Working with ASP.NET AJAX and Client-Side Scripting (15 percent) 
+   
+  * Targeting Mobile Devices (5 percent) 
+   
+  * Programming Web Applications (17 percent) 

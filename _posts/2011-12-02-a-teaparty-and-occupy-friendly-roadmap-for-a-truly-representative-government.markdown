@@ -1,0 +1,420 @@
+---
+author: admin
+comments: true
+date: 2011-12-02 19:06:35+00:00
+layout: post
+slug: a-teaparty-and-occupy-friendly-roadmap-for-a-truly-representative-government
+title: A TeaParty and Occupy Friendly Roadmap for a Truly Representative Government
+wordpress_id: 760
+categories:
+- Miscellaneous
+---
+
+On January 10, 1776, some six months before the signing of the Declaration of Independence, Thomas Paine published a pamphlet that became (relative to the population at the time) the most widely read book in U.S. history, Common Sense.
+
+This morning my reading brought me across a link to a fascinating document called "The New Common Sense", which provides a balanced yet serious way forward out of our dysfunctional government.   I reprint it here by permission (the[ original document](http://pastebin.com/gm2UV08D)'s full title reads:  "For the 99% - The NEW COMMON SENSE - Must distribute FAST! - Pastebin.com").  It's long but worth it!  (For those who just want the gist, click forward to the section OUR PETITION).
+
+
+
+In Unity,
+
+THE NEW COMMON SENSE
+
+A Declaration of INTERDEPENDENCE, born of necessity, from and for the collective conscience of the "99%" to and for the oligarchic "1%" of the United States of America.
+
+SUMMARY
+
+SECTION I: The Right to Equal Participation in Government has been taken from the People and is explained. -- A Plan is offered to restore the Right to Equal Participation that requires only the use of tools and procedures that have already been proven to work. -- The restoration of Equality must take priority above all and reasons are given. -- Outside damaging influences must no longer be allowed privileged access to Elected Representatives in a Constitutional Republic. -- An Offer in Compromise that would reunite this Nation with its Foundation is clearly stated. -- A clear, workable and simple method by which we may rebuild ourselves as a Prosperous Nation and return to being One Hundred Percent is explained. -- A New Litmus Test of our government is declared and explained. -- A plan and petition to rebalance the Branches of Government is outlined in detail.
+
+SECTION II: Monitions are forwarded to our Leaders, to the Congress in specific, to the Media, to Law Enforcement and the Domestic Militia, and to the "1%" -- A direct message and plea for the "99%" from the author(s).
+
+SECTION I - Common Sense from the "99%"
+
+INTRODUCTION AND PREAMBLE
+
+When in the course of human events it becomes necessary for the Citizens of a Nation to petition their own Government for a redress of grievances, the People have a duty to exercise their rights under the First Amendment collectively if they so choose. To this end, We the People hereby assert our right to peacefully assemble and petition our Government for redress when we feel that this is our best, and perhaps only remaining option to seek remedies.
+
+We affirm that any lasting and workable solution must reach beyond mere politics, that political issues do not matter at a time when our collective voice has been nearly silenced. We believe that the current political climate has caused a paralysis of our Government. We find that our individual opinions mean little when we are no longer being properly represented. In fact, we believe that the Balance of Power between the Branches of our Government has been corrupted to the point where it can answer only to members of an affluent and politically active upper class. The impending result of this imbalance is that government of the People, by the People, for the People has almost perished from Our Nation. We believe that government has been influenced by an external source that has conspired to control it to the point of stalemate. We believe that this was forced upon us by "special interests", corporations, lobbyists, the banking and the financial sector including Wall Street and the Federal Reserve, who together have used unrestrained financial leverage leading to the corruption of many politicians, regardless of their political party, resulting in great damage to the People and to this Nation.
+
+We hold these truths to be self-evident, that all are created equal regardless of their financial status. -- That we free Citizens of the United States are without exception endowed under a Federal Constitution granting us certain unalienable Rights. -- That among these Rights are Life, Liberty and the pursuit of Happiness. -- That to secure and protect these rights, our forefathers drafted this Constitution, ratified by the then several States and agreed to by the People. -- That this Constitution defines and protects us all with a system of Checks and Balances by which the powers and responsibilities of government would be divided amongst the Federal, the States and the People. -- That this original Social Contract in which those powers were granted has been repeatedly violated by the Federal government. -- That we no longer are represented by our Government. -- That we no longer have a voice in our Government. -- That the limits of power of the Federal Government have been deliberately and repeatedly breached. -- That our Government has become destructive towards the vast majority of the same People that they are supposed to protect. -- That outside influences have gained unreasonable power and influence within our Government. -- That the Fair Election system is being systematically dismantled and no longer allows for a full, on paper, verification and accounting of actual balloting. -- That We the People have the Fundamental Right and Patriotic Duty under the First Amendment of the Bill of Rights to peacefully assemble and to demand that the Government cease and desist from or correct any of these violations. -- That the Government cede back to the States and to the People all such Powers that they have unconstitutionally seized, regaining such Powers from the States via Constitutional Amendment if they are to have them at all. -- That our Government must Right these encroachments on the People by realigning itself to the Constitution. -- That vague interpretations of the Constitution should be clarified through civil discourse leading to a series of new Amendments and with full participation by the several States.
+
+We also hold that the Constitution was originally designed to prevent the Federal government from encroaching upon the rights of the People and the States. Adjustments to Federal Powers were to be made only via Constitutional Amendment. We hold that this Amendment procedure has largely been ignored in recent history. In fact, when the Constitution was originally crafted, the political party as we know it today did not even exist. The modern era of rampant partisanship was not even envisioned by the Founders. We thus believe that the current "political party system" as it stands has served to divide this Nation to the point of paralysis. As a Great former President once said, "A house divided against itself cannot stand."
+
+While we who have named ourselves the "99%" may each have our own individual personal concerns and grievances, we know that we must set them aside at this time due to a more pressing need to demand the return of the Representation that has been taken from us. Until such time, we contend that nothing can be accomplished in a spirit of true discourse.
+
+Collectively we can all certainly agree upon these Truths that have led us to our outrage.
+
+DEFINITIONS
+
+We hold that the branches of Federal government have been corrupted, convoluted and debased, that they have all strayed from their intended purpose, standing idly by while their effectiveness and objectivity have been debased by a conglomerate, known to us as the "1%".
+
+By "1%" we mean specifically those from an aristocracy who manipulate government in their own self-interests: the affluent "elite", the bankers, the corporations and the special interests who use their wealth and financial power as leverage to gain an unreasonable lobbying influence on government legislation and policies. They most often do this in ways that harm the common People.
+
+We define the "99%" as the common citizen, the employed and the unemployed, the poor and the disabled, the aged, the disadvantaged, the students, the public and civil servants with a conscience, the lower and middle classes, even those honest politicians and members of the "1%" itself who refuse to "buy into" this oligarchy. We include all of these and more regardless of our individual affiliations, political leanings, opinions, beliefs, religions, our race, ethnic background, sex, age or even financial status. We are the People of real flesh and blood. We represent all walks of life from all corners of this Nation.
+
+We shall offer and elaborate on examples which will help illustrate where we believe that the four branches of government have now failed us.
+
+THE JUDICIAL BRANCH
+
+Article III, Section 1 of the United States Constitution reads in part, "The Judges, both of the supreme and inferior Courts, shall hold their Offices during good Behavior..." yet there is no clear definition of "good Behavior" given, nor does recent history show us any consistent method of accountability that protects the People or the States from judicial "bad Behavior". Indeed, the phrase "good Behavior" has been historically misinterpreted to mean "appointed for life." These permanent appointments result in Judges that become firmly entrenched and nearly unaccountable to the People for the decisions that they make.
+
+We believe that due to this misinterpretation, the Supreme Court has obtained unbalanced, far-reaching powers well beyond the intention of our forefathers. The People have no reasonable recourse if these Judges prove to be partisan and refuse to rule in the Best Interest--or if they fail to uphold and defend the Constitution. Justices appointed for life terms can easily dodge accountability, as history has so proven.
+
+Many examples of truly questionable Supreme Court decisions exist.
+
+In Santa Clara County v. Southern Pacific Railroad, 118 U.S. 394 (1886), the Court decided that corporations were recognized as "persons" for purposes of the Fourteenth Amendment. This gave corporations the same legal rights as a living, breathing individual. Yet, the corporations enjoy other legal protections not afforded to real persons, such as tax shelters and loopholes, liability shields and others. This grants them unbalanced protections that lead directly to unfair opportunities for governmental influence at a disproportionate level than that of the People.
+
+In Citizens United v. Federal Election Commission, No. 08-205, (2010), the Court ruled 5-4 that the government may not ban political spending by corporations in candidate elections. This decision in part lead to the creation of the "super PAC", by which corporations, special interests and the affluent can donate unlimited amounts of money anonymously through 501(c)(4) corporations, leaving the entire political process unaccountable, untraceable and with the People unable to execute a Public audit of the funding of political campaigns. The Supreme Court also struck down those provisions of the McCain–Feingold Act, Public Law 107-155 (2001) that prohibited all corporations, both for-profit and not-for-profit, as well as unions from broadcasting "electioneering communications." Alarmingly, the decision itself also notes that, 'It might also be added that corporations have no consciences, no beliefs, no feelings, no thoughts, no desires. Corporations help structure and facilitate the activities of human beings, to be sure, and their "personhood" often serves as a useful legal fiction. But they are not themselves members of "We the People" by whom and for whom our Constitution was established.' If this is the case, why then were they given the same rights as flesh and blood persons under the Fourteenth Amendment when they arguably are not equal? How can the common People compete against such invisible and unaccountable financial influence upon politics? The consequences of this have been disastrous. This form of court-sponsored "political "money laundering" has served to corrupt our system in favor of the "1%".
+
+The general attitude that the Supreme Court is perfect and void of corruption internally and thus remain immune from scrutiny has caused yet more damage. Our history is rife with examples of the Judiciary overstepping their bounds. In fact, one case illustrates their large contribution towards the start of Civil War. In Dred Scott v. Sandford, 60 U.S. 393 (1857), the Court ruled 7-2 that people of African descent brought into the United States and held as slaves (or their descendants, whether or not they were slaves) were not protected by the Constitution, could not sue in court and could never be U.S. citizens. It took the Civil War, the loss of countless lives and not one but two Constitutional Amendments (Amendments Thirteen and Fourteen) to even begin to repair the damage that the Court inflicted on the People with this decision.
+
+Yet, even with two Amendments ratified after the War, that were in part intended to prevent the supreme and all lower courts from continuing to make such socially divisive decisions of this nature, the Supreme Court later opted to breach even these key additions to the Constitution in future decisions.
+
+Over thirty years beyond the end of the Civil War, in Plessy v. Ferguson, 163 U.S. 537 (1896), the Court voted 7-1 in favor of upholding the constitutionality of state laws requiring racial segregation in private businesses (particularly railroads), under the doctrine of "separate but equal". This segregation between races remained standard doctrine in U.S. law until its unanimous repudiation in the Supreme Court decision Brown v. Board of Education of Topeka, 347 U.S. 483 (1954), fifty-eight years later.
+
+Thus, a decision that the court made in 1857 helped launch a Civil War and it took two Constitutional Amendments in 1862 and 1868 followed by approximately one hundred more years of civil unrest and divisive Court decisions until these issues finally began to resolve. To this day these issues still remain unresolved to a certain degree; such is the damage that has been done.
+
+In addition, a more recent decision that clearly illustrates how the Court exceeds its jurisdiction and breaches Constitutional authority can be offered. Baker v. Carr, 369 U.S. 186 (1962) was a landmark case that for the first time retreated from the "political question doctrine" (the test of whether or not the court system is an appropriate forum in which to hear a specific case). The details of this case itself are far less important than the effect that it had on our System of Justice. In this case, the Court ceased to limit themselves only to cases based upon a legal question per the doctrine. Instead, they chose to exceed their jurisdiction and authority by ruling on a political dispute instead of a legal one, and over an issue internal to a single State no less.
+
+Baker v. Carr not only violated the doctrine but it set a new precedent that has, under the banner of  stare decisis (a legal principle by which judges are generally obliged to respect the precedents established by prior decisions), has led to even more violations by the Court going forward. Never was it intended for the Court to decide individual internal State issues, but now the Court takes on many of these cases regularly.
+
+These cases prove the need for an urgent return to a staunch reliance upon the Constitutional Amendment procedure as our method of restraint against the Court and we must remember to rely on it as our first course of action in these situations. This was the intent of the Constitution as it was written. It is what made our Constitution a "living document" in the first place.
+
+But as we have now shown, sometimes even Amendments fail to keep the Court in check. We suggest that a serious reconsideration be given regarding term limits for Justices or for some other remedy upon which we can all agree to further curtail this danger.
+
+We maintain that the liberty of "vague interpretation" is not for the Court to enjoy for they are bound by oath to remain impartial and not stray too far from their constitutionally defined boundaries. Clearly they were not meant to hold power that gives them the right to decide cases that are beyond the scope of the Constitution and that lie out of their jurisdiction?
+
+According to Title 28, Chapter I, Part 453 of the United States Code, each Supreme Court Justice takes the following oath:
+
+"I, [NAME], do solemnly swear (or affirm) that I will administer justice without respect to persons, and do equal right to the poor and to the rich, and that I will faithfully and impartially discharge and perform all the duties incumbent upon me as [TITLE] under the Constitution and laws of the United States. So help me God."
+
+This oath, we believe, is no longer respected as a matter of policy.
+
+The People have lost their ability to seek redress against such injustice due to the failure of government at all levels to pursue the Constitutional Amendment with which to enforce and more clearly define Court boundaries. Since appeals or requests for reviews are not allowed by the People, apathy from Congress and the States has nurtured a Supreme Court that need answer to no one, not even to the Constitution itself.
+
+This is no longer acceptable by The People.
+
+THE LEGISLATIVE BRANCH
+
+We hold that much of the fabric of the Constitution has been deliberately dismantled by the Congress. Over the course of time Congress has debated and passed numerous laws of questionable constitutionality, laws that the Supreme Court then upheld without comment or simply refused to review. Many of these laws served to create and endow Federal agencies with expanded Powers that were originally reserved to the States. Instead of petitioning the States to relinquish these officially via an Amendment, Congress merely took these Powers anyway, often through threat to withhold federal funding to the States, and with other forms of political blackmail.
+
+In fact, they use a series of vague interpretations of parts of the Constitution itself, from which they achieve this.
+
+These breaches have occurred slowly and over time through repeated violations of the Tenth Amendment, an amendment which states, "The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people."
+
+This piecemeal seizure of Power from the States and the People also relies upon the following two Constitutional Clauses being used as excuses by which they have further effected this breach.
+
+Article I, Section 8, Clause 18 of the Constitution ("The Necessary and Proper Clause") states, "The Congress shall have Power - To make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers, and all other Powers vested by this Constitution in the Government of the United States, or in any Department or Officer there of." This clause was meant only to grant Congress the power to make Federal Laws in order to aid them in executing Powers already granted to them in the Constitution and nothing more.
+
+Article I, Section 8, Clause 3 ("The Commerce Clause") states, "[The Congress shall have Power] To regulate Commerce with foreign Nations, and among the several States, and with the Indian tribes;" and has been used in combination with "The Necessary and Proper Clause" as a loophole by which they encroach upon and legislate to the States.
+
+In addition, Article 1, Section 9, Clause 7 states that "No Money shall be drawn from the Treasury, but in Consequence of Appropriations made by Law; and a regular Statement and Account of the Receipts and Expenditures of all public Money shall be published from time to time."
+
+Examples of wholesale breaches of this clause by all Branches include: The privately issued "Federal Reserve Note" being forced upon us as our sole currency even though Congress only has the constitutional authority to "coin" money under Article I, Section 8. -- Debasement of our currency and private control of its value. -- Secret bailouts in the amount of trillions by the Federal Reserve (some to foreign entities including foreign banks). -- Covert military actions combined with apathy by the Legislative Branch who have failed to seek estoppel of multiple undeclared wars.
+
+Congress and the private Federal Reserve have ceased to be fully accountable to the People in the reporting of actual receipts and expenditures, proof of which lies in their combined refusal to present a completely detailed audit to the People.
+
+Transparency in government and the Right of Participation by the People does not cease once an election is over. Those who are elected must continue to answer to their constituents for the duration of their term(s). The Congress now acts independently of the People that they swore to represent. They now answer only to the special interests of the "1%", not to the People, all while they ignore the Constitutional limits and procedures that they swore an oath by.
+
+Their oaths, we believe, are no longer respected as a matter of policy.
+
+This is no longer acceptable by The People.
+
+THE EXECUTIVE BRANCH
+
+There is no Constitutional provision or statute that explicitly permits Executive Orders. Instead, there is a vague grant of "executive power" in Article II, Section 1, Clause 1 of the Constitution as well as the phrase "take Care that the Laws be faithfully executed" in Article II, Section 3.
+
+We fail to see how only the phrases "executive power" and "take Care that the Laws be faithfully executed", when taken on their own or even in combination can serve as de-facto justification for any sitting President to claim under the Constitution the right to issue Executive Orders at all.
+
+Furthermore, while most Executive Orders may attempt to justify themselves by claiming that their authority has been granted merely from these two phrases, history makes clear that the original intent of these orders was merely to help direct Officers of the US Executive to carry out their delegated duties and the normal operations of the Federal government itself.
+
+Could it be more obvious that this has clearly not been the case?
+
+Executive Orders through the years included orders that -- authorized the Secretary of War to prescribe certain areas as military zones -- arrested and relocated Japanese Americans to internment camps during World War II -- criminalized the possession of monetary gold by any individual, partnership, association or corporation and forced U.S. citizens to deliver all but a small amount of gold coin, gold bullion, and gold certificates owned by them to the Federal Reserve (with violations of the order punishable by a fine of up to $10,000 or up to ten years in prison, or both) -- waged war without a Declaration from Congress -- restricted access by the People to the non-classified papers and communications of certain Presidents -- made up most of the "New Deal" itself -- allowed INTERPOL to operate inside the U.S. with more authority than our own FBI -- created FEMA, the National Security Council, the Department of Homeland Security, the Transportation Safety Administration and many other agencies that dramatically restructured government agencies as a whole, then transferred incredible amounts of unjustified Power to them.
+
+In fact, it can be argued that multiple Presidents have overstepped their Constitutional bounds using the Executive Order, or via Presidential Proclamations, Determinations, Memorandums, Directives and Signing Statements by which they exceed their authority. They even use them to legislate.
+
+While the use of these Executive Orders, Presidential Proclamations, Determinations, Memorandums and Directives as well as Signing Statements may or may not be unconstitutional per se (as this has rarely been challenged), we believe at the very least that they stand on shaky Constitutional ground and that their use should be reevaluated and clarified, perhaps even limited by law or by an Amendment. After all, if the permitted scope of these orders are not clearly defined, then how can anyone, even the Presidents themselves, ever know the limits of their authority?
+
+The oath of President, we believe, is no longer respected as a matter of policy.
+
+This is no longer acceptable by The People.
+
+The failures of the first three branches of government to abide by the Constitution have caused so much drift away from our Foundations that we now suffer the grave consequence of political paralysis. In fact, these failures have resulted in the creation of a new "fourth branch" of government that is also in large part responsible for this.
+
+THE SPECIAL INTEREST BRANCH
+
+Multiple questionable rulings by the Supreme Court that "money equals speech," in combination with the privatization of the central banking system, have given rise to a new oligarchical and unconstitutional branch of government that we now term "The Special Interest Branch".  This new branch has corrupted the Balance of Power between the original branches of our government.
+
+While the piecemeal creation of this new branch occurred slowly over the course of years, some particular actions by the government including (but not limited to) The Federal Reserve Act of 1913 and the more recent Supreme Court decision Buckley v. Valeo, 424 U.S. 1 (1976) were instrumental in its implementation.
+
+The now infamous "money equals speech" doctrine was enshrined into law with Buckley v. Valeo. This decision saw the Court uphold a Federal law (The Federal Election Campaign Act of 1971) which set limits on campaign contributions yet rule that spending money to influence elections is a form of constitutionally protected free speech. The court also ruled that candidates can give unlimited amounts of money to their own campaigns. Although this decision actually upheld restrictions on the size of outside campaign contributions, it also struck down limits on expenditures, albeit temporarily. As of 2010, those with great wealth can effectively drown out the speech of average citizens anyway because Citizens United paved the way for unlimited anonymous "back door contributions", often laundered through the 501(c)(4) corporation then funneled into the "super PAC". We must also point out that the phrase "back door contributions" was intended to be a double entendre.
+
+These decisions have served to grant unprecedented leverage, influence and power based solely on wealth. They have created a method by which the affluent, the corporation, the unions and other well-funded "special interests" may unduly influence and shape legislation that is contrary to the Will of the People. These entities now have the ability to "buy" their way into the political arena anonymously, influencing those who have sworn to be the Representatives of the People in a manner which actually forces them to represent only these entities' own self-interests.
+
+We submit that such unrestrained non-elected influence is mainly responsible for the utter stalemate and paralysis that exists in government today. Through the promotion of unreasonable partisanship combined with the outright purchasing of both candidates and those who hold office, combined with the unrelenting pressure from well-funded and powerful lobbies, a series of hard political lines have been drawn which greatly diminish the ability of the Legislative, the Judicial and the Executive branches to function impartially.
+
+We refuse to recognize this new perverse and corrupt "branch" of the Federal Government and we demand that it be expunged. No one among us, "99%" or "1%" alike should be given any more of a voice than anyone else in any capacity. Our Representatives themselves can no longer respond to the Will of the People due to this outside influence. This modern doctrine of "money equals speech" is wholly outrageous and must be ostracized from the government landscape at all levels and without delay.
+
+We believe that only full transparency in all political campaigns and the full public disclosure of the activities, affiliations and financing of all lobbies, PACs (Political Action Committees) and "super PACs" can correct these inequities. In addition, The 501(c)(4) corporations must fully disclose their donor list or be barred from contributing to a "super PAC" or political campaign fund. Their contribution amounts and political expenditures should be limited if they are to participate at all, or otherwise they need to be forever barred from participating in political financing. In fact, the "super PAC" itself should be outlawed as it serves no true democratic purpose.
+
+Money verses more money isn't democracy; it's a cancer on our Republic.
+
+Laws that guarantee the full transparency of this and of all other matters not related to National Security must be drafted, passed and vigorously enforced. And finally, a loophole free litmus test must be designed by which matters of National Security may be verified as such in order to protect the Public Right to Disclosure from any more abuse.
+
+As this branch consists of the non-elect and non-appointed, its members need take no oath whatsoever and it is clear that they believe that they are exempt from and thus need not show any respect for the Constitution as a matter of policy.
+
+This is no longer acceptable by The People.
+
+A NEW LITMUS TEST
+
+A litmus test shall be used by the people henceforth.
+
+We ask of our government at all levels, to those holding corporate or financial power and to the media, that we be given a serious and prompt response to The New Common Sense. We call for you to accommodate it as a priority and to publicly acknowledge it without delay.
+
+This serves an important purpose as it will allow us to learn your individual true colors.
+
+If you lend this your assistance, we will then know that you are worthy of election, reelection and/or our consumer support and respect.
+
+If you choose to speak out against this unfairly or if you make an attempt to discredit, slant, misreport, distort, slant, misstate, exaggerate, falsify or suppress it, then we will know that you are beholden to the "1%".
+
+And be forewarned: if you do opt to ignore this entirely then we will be forced to assume that you guard the status quo and we will embrace you as if you were opposed. We will consider it to be similar to a plea of "no contest".
+
+While in a criminal court a plea of "no contest" is given the same effect as a plea of "guilty", in this case such a plea will not protect you from the civil consequences of our negative judgment.
+
+OUR PETITION
+
+Firstly, we must state that we already understand the historical truth that whoever fires the first shot often loses the war. Thus, let it be known that our resistance and petitions for redress are by all intentions nonviolent and limited to lawful and rightful forms of expression under our Rights given to us by the First Amendment. We feel driven to these ends and believe that we must use these and other rightful methods because we have been otherwise precluded from equal participation by recently erected financial barriers that give unfair influence in the government to the affluent members of corporate, political and financial society. We collectively term this invading class the "1%", who have together formed an oligarchy that clearly takes its position against the People, one that has used its collective financial power as a weapon against us in an attempt to reduce or even eliminate our fundamental right to participate in our own government.
+
+We also believe that the government has allowed for this to happen deliberately and has actually welcomed this infiltration by the "1%".
+
+This has lead us to reach the following conclusion, of which we can surely all agree: the system as it was originally designed is now broken. Thus, we stand in protest against those who wish for it to remain broken because it is broken in their favor.
+
+We submit that if a candidate for office is running at all, then they are most likely bought and paid for by the "1%". Those who truly care and are trying to participate for the common good, however few, we see them ostracized, character assassinated, politically destroyed and harassed by the mass media and other tools of the "1%". We can only conclude that while in this climate, any candidate that we are given the opportunity to vote for is meaningless because we have already lost the chance to gain actual Representation for ourselves. We view any two competing candidates as two sides of the same worthless coin.
+
+This "1%" now owns and controls the mass media, funds the lobbyists and sit at the heads of many  corporations including the financial institutions. With such power, they greatly intervene in the affairs of the House, the Senate, the Presidency and the Judiciary.
+
+Who can blame us for the outrage we share and now express? If we still had an equal voice in our own government we would not be driven to this.
+
+As we have previously stated, we believe that the problem is now beyond politics. Another election will solve nothing because the "99%" no longer have anybody to vote for who will represent us once they achieve office. Beyond this lies our serious concern for "electronic voting" systems that by design do not allow for a paper trail. This must also be remedied if our faith is to be restored. We can no longer place trust in the fairness of our own elections in large part because of this.
+
+Thus, mere political issues do not matter at this time and our opinions do not matter when we are not being heard. Until we get our voice back, we must demand redress until such time as our Right to Equal Participation is returned to us.
+
+We repeatedly affirm that our personal issues and affiliations (political or otherwise) while important and needful of resolve in due time, must be set aside temporarily until such a time as we regain our Equal Voice in our government. We realize that until we truly reconnect with our government that our concerns will fall upon deaf ears.
+
+We believe that we as a Nation have lost our ability to be an example to the World of a working Representative Democracy. In order to regain the world's respect, we believe that our government must again completely realign itself with the Constitution that this Nation was founded upon. We cannot sell our way of life to the rest of the world through force while we can only display a ridiculous inability to solve our own problems. Instead, we must bring about an honest desire in their collective hearts to emulate our system by fixing it. Only when we can stand again as an example to the World as a sound Constitutional Republic can we possibly regain that respect. The reality is that respect cannot be earned merely through force and these recent pursuits against parts of the world are some of our greatest mistakes.
+
+We also believe that this One Problem must be corrected before the solutions to any of our other problems can again be within our reach. We absolutely must realign ourselves with our Foundations as the priority. The paralysis will continue if we do not and we as a Nation are running out of time. How much longer can this go on? Compromise in government discourse will remain impossible if we do not repair the Platform that we all absolutely must stand upon and recommit to It our full respects. If we do not do this immediately then we as a Nation face certain doom!
+
+This is strong language, we know. Therefore, we must now make clear that we are not petitioning that our System should be abolished. We are merely stating that it is in dire need of repair. This is a Declaration of Rights and a Petition, not a Declaration of Independence. We cannot stress this enough. We believe that the system as it was originally designed does work; that we can again be the envy of the modern world just as we once were. We have lost touch with ourselves and our Constitutional Foundations and are now politically paralyzed. We must reconnect with the Ideals that the United States was founded upon and we absolutely must do this before anything positive can occur. We see it as our hope by which we can save ourselves at this point.
+
+Please allow us the liberty to preface our proposed detailed solution and plan for execution in terms that even a corporation or bank would understand. Any business that does not take regular inventory or does not do regular internal audits will eventually lose control of itself and self-destruct. To put it another way: poor self-management is the best recipe for failure.
+
+We believe that the same is true with government.  Therefore, we now propose an Exact Method by which we may exorcise every last one of the corruptions and usurpations that have occurred from within our realm.
+
+-- A Complete Inventory and Audit of Powers of all Federal Branches, Institutions, Procedures, Laws and Entitlements of our government should be taken and evaluated piecemeal in full view of the People.
+-- All that are enumerated would then be checked for Constitutionality against the Federal Constitution.
+-- All found to not be compatible can be given a notice of cease and desist or be granted a Constitutional Amendment by the States through the Amendment Procedure.
+-- All that fail to gain an Amendment from the States would then be returned to the States themselves under the Tenth Amendment.
+-- The States can then debate these items as a possible Amendment to their own individual State Constitutions, thus making them legal in their individual States.
+-- In the case where each State does not ratify the proposed Amendment and if it is judged as incompatible with their Constitution and there is no other State Law preventing it, then the People can implement it if they so choose at the State or Local Levels via Law or Ordinance.
+-- If that fails, then it wasn't a power that the Government or the People should have assumed in the first place. It should then be regarded as fundamental in the interest of Liberty if there is no other Law preventing it.
+-- During this process, anything enumerated specifically in the Constitution as unconstitutional or already prohibited by it (such as the Thirteenth Amendment prohibiting slavery) shall remain  inaccessible to implementation at any lower level. The Federal Constitution always retains priority over the States. State Constitutions always retain priority over Local Ordinances and Laws.
+-- To prevent a reoccurrence of any future encroachments at the Federal level, an Amendment fully defining and clarifying both Article I, Section 8, Clause 18 ("The Necessary and Proper Clause") and Article I, Section 8, Clause 3 ("The Commerce Clause") and any other ambiguous clauses should be debated by the States and ratified into the United States Constitution for the sake of clarity. The litmus test for that is a simple one. If any disagreement exists during the piecemeal review and evaluation, then they are enumerated and then subjected to further clarification or repeal using Amendment(s).
+
+Through this process, Liberty is thus fully restored and then preserved and protected.
+
+In no case will these inventoried powers and institutions remain with the Federal government without a Constitutional Amendment that gives each of them full legitimacy or without a full verification of the preexisting intrinsic constitutionality of same.
+
+In this way, the overreaching power of the current Federal, State and Local governments can be rebalanced and placed firmly back under the scope of the Constitution. Powers improperly taken from the States can be returned or given back to the People. This also will realign the Constitution with all aspects of the corporate, financial, housing and banking systems automatically. It will also allow for all other issues from the People to be addressed in their rightful order and in due time. This re-enumeration of Powers rebalances the Federal government with itself, with the States and with the People resulting in a much needed sense of clarity. It will serve to stem the tide of corruption that has been infecting our government. With a Unified and Informed Nation, whole once again and working together again in the Spirit of True Discourse and with such a renewed Collective Spirit, there are no limits to what we can accomplish.
+
+It has been said that the best ideas are simple. We submit that this idea of realignment with our Constitution is the Cornerstone by which we may all reunite as One People and truly solve many of our Nation's problems. We submit that for this Nation to continue to exist, we absolutely must take heed of and implement this proposal at once.
+
+Duly signed,
+
+_____________________________________________
+X
+
+SECTION II - Monitions
+
+TO OUR LEADERS
+
+We must wonder who among you could possibly take issue against an honest implementation of this proposal, save for those of you who would continue to profit from the status quo or would wish for a deliberate debasement of our way of life?
+
+We realize that there are many among you who are just as concerned as we are. We also acknowledge  that many of you possibly may not have realized, while you were campaigning for office, just how pervasive and influential the "Special Interest Branch" truly is. Perhaps only after you were elected did you learn just how entrenched they really are? Perhaps this is why you have so readily abandoned your campaign promises to us so predictably?
+
+Due to these possibilities, surely we can offer you the temporary benefit of the doubt. But let us be clear: it is now up to you to decide our future opinions of you.
+
+You must immediately and publicly recommit to both the "99%" and "1%" alike. In addition, you must declare that you will serve the recombined "100%" equally and without partisan favor. You must reaffirm your oaths to uphold, preserve and protect the Constitution as well and above all else. You then must start to act like it. The opaque influence of the "1%" must be made transparent and then equally balanced with transparent influences of our own. You may well continue to agree to disagree with each other as usual but you must temper your discourse and debate with a new sense of mutual respect and restraint at all cost.
+
+In other words, you need to start doing your jobs.
+
+Have you forgotten that no matter your party affiliation, that once elected you are supposed to serve everyone equally?
+
+The age-old phrase, from fable, lyric and motto, that "United we stand, divided we fall" rings true to this day with the exact points that we make.
+
+You must also cease your political infighting and cross the party lines that you have drawn that constrain you and strive to reach an accord with your brethren regardless of political party. You must do this in order to regain our trust and respect.
+
+We can agree that there are radicals among us in the "99%" just as we can surely agree that there are radicals among you. Regardless, we both know that between us there lies a Voice of Reason. We hope that this New Common Sense proves that to you.
+
+However, even reason demands that you should take heed of the following monition.
+
+We hereby inform you that we will also be taking our own Inventory and Audit of all current and future representatives at all levels of government. The New Common Sense is but the start and we offer it to you as the First Fair Notice of only one way by which we will go about it.  Because we wish to support and will embrace only those who are willing to come forward to help repair this damage, we must identify you from where you stand. We certainly do not wish the continued mutilation and destruction of our beloved Constitutional Republic to continue. Do you?
+
+We affirm that we wish to help repair our Nation in the true spirit of INTERDEPENDENCE. We demand that you do too.
+
+We need to remind you that you are not the ones in charge. We are. This is a Nation of the People, by the People, for the People, remember?
+
+If you choose to declare The New Common Sense to be extreme, then we declare that it must be true. After all, if a mere request that we recommit to obeying our own Constitution is extreme, then we've made our point, haven't we. If, however, you choose to declare it as not extreme then it must also be true because then that means that we are right. You can't win a propaganda war against us this time. We now have you in a corner and you surely must realize this.
+
+We the People have already chosen to rise above the fray. We have delivered to you this document, eschewed all opinions temporarily to open a discussion over some Simple Truths. We've boiled it down to one clear demand that no one who is a patriot could possibly disagree with: That the Constitution of the United States should be placed back at the "center" of active government.
+
+As we have so painstakingly pointed out, inventory of ourselves and the government from top to bottom should have been what we've been doing all along. Can anyone truly disagree with the idea of holding all that we are up to the Light of our Federal and State Constitutions? Could they object to this with a straight face? Can anyone who is a true patriot honestly say that they do not wish to rid our system of corruption, or level all playing fields once again, that they do not wish to obey and see enforced only the legal laws of this country? And most importantly: would they not wish for all involved to declare a new respect for our Constitution and would a patriot not wish to witness the process of repairing it back into the Living Document that is was designed to be?
+
+There's but one more item of needful mention. Political attack ads need to cease. They are not constructive and will no longer help your cause. If you can find nothing good to say about yourselves then perhaps you shouldn't be running for office. If you instead show respect for the other candidates and their ideas by refusing to run attack ads, then you will be sending us the message that you may be able to field diverse opinions and ideas. You will show us your ability to be flexible and will show us true Statesmanship. Attack ads only serve to inform us that you are not willing to compromise and thus not worthy of our vote. This type of politician we no longer need in office. So please, stop it if you wish to gain or keep your job. This tactic will no longer secure you any votes from us.
+
+TO THE CONGRESS IN SPECIFIC
+
+That there are three basic levels of human societal structure. From least to most evolved, they are dependence, independence and interdependence.
+
+We seem to be at odds because the "1%" appears to want to force us into the lowest state of dependence with your help.
+
+Our Nation, however, was founded via The Declaration of Independence which was then followed by a social contract (The Constitution) that guaranteed that we would all participate in a society based solely on interdependence. The "1%" has broken that contract with us in league with you.
+
+Dependence is not an option for We the People, for we would have to give up the freedoms and liberties that our hard won, hard kept and wholly cherished interdependence grants us. We simply are not willing to endure a forced state of dependence and our continued interdependence is the only option that we will accept.
+
+You must understand this.
+
+To be clear: if you want Unity with the People again it can only be accomplished at the level of interdependence. If you wish to continue to try to force unwarranted dependence upon us, with or without the aid of the "1%", then we shall continue our petitions for redress under the protections of the First Amendment.
+
+You must also declare your independence from the influence of the "1%". You must protect yourselves from their attempts to also make you dependent on their money. You must find your own interdependence with each other, again, and with the Whole of the People.
+
+TO THE MEDIA
+
+Before you try to analyze The New Common Sense in an attempt to label it as politically slanted or discount it as extremist rhetoric, let us state that this message is by its design well beyond the bounds of political partisanship. Otherwise, it will not stand up to the "divisive for the sake of being divisive" political scrutiny that we all bear daily witness to.
+
+We realize that you may also attempt to lambast or ridicule the language and carried tone that we used in this missive as a strategy of your scrutiny. You may have noticed that the document begins in a more "classic" language style and then proceeds to slowly change its language, punctuation and overall tone into a modern one as it progresses, becoming almost informal and overtly personal towards the end. This was by design. It was our intention to begin the document in the same tone as (as well as to borrow liberally some of the language of) various historical documents and then to slowly modernize this tone as we ultimately connect it firmly to the now. In addition, the nonstandard use of capitals is a way for us to retain emphasis in a document that in some forms may be distributed as plain text and without formatting. This technique has been used before by writers greater than we (including the composer(s) of the Declaration of Independence) so we cannot apologize for it. It, too, was deliberate. We hope that this explanation of some of our grammatical intentions help to clear up what you may consider to be unintended inconsistencies and that it removes an opportunity for you to criticize it on its face.
+
+But let there be no doubt about this: the political system in this country is fundamentally broken and no amount of political rhetoric and slanted "expert" opinions broadcast to the public by which you can fix a broken political system. Therefore, the only true answer to the Problem must come from a source that is not only above and beyond politics, but it must also be a solution that can include the voluntary input of literally everyone who would bear the equal burden of responsibility in implementing it. That includes you. You must return to a state of genuine balance in your reporting.
+
+The New Common Sense asks only for our government to -- Immediately reject what we term "The Special Interest Branch" and kick them out of backroom politics. -- Put laws in place giving equal voice to  anyone who wishes to speak regardless of their financial status. -- Respect and uphold the laws that are constitutional and abolish and/or correct those that are not. -- Take an inventory of all agencies and branches of government, using the Constitution, and only the Constitution, as the de-facto guide with which to go by.  -- Recommit to the Constitution as the first word on the boundaries of government. -- Reduce the ability for anyone to (mis)interpret the Constitution so broadly by discussing and then passing Amendments which will serve to clarify and modernize it. -- Restore to the People a transparent, open and fair election system nationwide that allows for a full accounting by the people of all elections.
+
+It asks for nothing more. Do not try to read further into it. We're tired of your spin.
+
+If you want our respect then show us that you have the courage and honesty to speak out in favor of this proposal's existence, even if you disagree with it as a matter of corporate mass media policy.  Help us promote The New Common Sense for the good of the Nation. Offer time and space for its discussion and open yourselves to all ideas that may stem from it and give it a platform. This is a unique chance for you to prove to us that at least you are not promoting imbalance.
+
+For the sake of clarity, please let us remind you of something of which you surely are already aware:
+
+For the first time in history, technology has given us all a level playing field in terms of our ability to share information and communicate. We know that this must scare you. We know that, even apart from mere greed, this is most likely why the "1%" have instigated such an insane power grab in the first place.
+
+Thus, we ask almost rhetorically, "What will prevent The New Common Sense from being ridiculed or simply ignored?" We protest, for example, to remind the "1%" that while they may have the largest share of the wealth, we, the People retain control of most of the other numbers. While the "1%" controls the mass media, we have the internet, social media and each other in great numbers. The "1%" can no longer silence us with mere money, for they (in this case, by "1%" we mean those who speak through you and reward you for your performance with a paycheck) no longer have a monopoly on the distribution of information to the masses with which they have attempted to manipulate us.
+
+We know that the moment in history is upon us where we finally have the tools with which we can level the playing field with you. We can accomplish these goals with or without you. You see, we're not buying your disinformation anymore, thus it's time for you to have a real and serious dialog with us.
+
+Thanks to the internet and our growing awareness, the "1%" can no longer operate in the shadows. We shall expose their greed and mockery of our way of life through our protests. our collective voice, our individual efforts, all guided by the Light of this Declaration and with this New Common Sense.
+
+After all, the roaches scatter when a light is shined on them, do they not?
+
+The filters that the "1%" have attempted to install on reality, we can now remove. The New Common Sense itself stands as proof of this.
+
+You have asked us where we stand. You have asked us what we want. We have now given you your first detailed answer.
+
+It's time to change the conversation, will you not agree?
+
+We have a monition for you as well.
+
+We will no longer believe your "anonymous sources," your "unnamed insiders," your unverified "experts" nor do we care for your unsolicited opinions. You can stop telling us what to think and save from extinction the legacy of the media just reporting the facts. Believe it or not, we are fully capable of drawing our own conclusions and do not need your help in that regard. The very existence of this New Common Sense proves that.
+
+We demand complete media transparency. We want accountability in our media and demand that you always declare your sources.
+
+And you may mock The New Common Sense and/or this monition at your peril.
+
+TO LAW ENFORCEMENT AND THE DOMESTIC MILITIA
+
+You are part of the "99%" too. Thus, we realize that you must be victims in this as well.
+
+Please stand with us. We wish for nothing more than for you to join us in solidarity.
+
+For your badges we have no monition. We have only a request plea for you.
+
+We hereby recommit to obey the law as we seek our redress and we respectfully ask that you enforce only the law as it pertains to us, without preventing our right to peaceful assembly.
+
+Thus we should have no conflict.
+
+TO THE "1%"
+
+We certainly do not define you as the whole of the affluent 1% based upon your portfolio and assets. We define you as the affluent who use your wealth to gain self-serving leverage over government.
+
+We understand that you are merely following human nature. We know that you have justified as good the things that you do. We are aware that our own apathy has contributed to this situation that we all find ourselves in today. We can even admit that given the opportunity, we might have done some of the same things you've done.
+
+After all, who doesn't want more wealth? It's the American Dream after all.
+
+However, the rift between us has become too wide. You have become too consumed by greed. Do you see all of this as a game? Are you addicted to Wall Street in the same way a gambler is addicted to the casino? Cannot you even see that ultimately you will destroy our way of life, yours included, with your greed and lust for power? And do you not realize that by destroying the Middle Class you are actually eliminating your main source of income?
+
+The games that you insist on playing with our society will ultimately become your own ruin. Destroy our economy and you destroy yourselves with it.
+
+But do you not feel it? Do you not realize that time is running out? Don't you know that it might be "game over" soon?
+
+You may feel that in this race against time, that you must "lock us down" and control us. You urge the government to violate our privacies and attempt to scare us with propaganda churned out by your various mass media machines. You try to silence our collective voice, pollute our conscience as if it were the environment itself and divert our attention in the hopes that we may waste time arguing with ourselves and never realize what you are up to. But we are on to you now. We have found a new common sense.
+
+Lower and lower you do sink, not even realizing that we are all in the same boat. We have news for you. We're going to occupy your life raft too if this continues.
+
+From where we stand in protest. we see your problem as this: Your money cannot buy Truth and this is the lesson that you must learn.
+
+In fact, it is your Achilles' heel.
+
+By now you must have realized that this isn't a "Declaration" at all, but that it is actually an edict. We the People are the rightful holders of true Power in this Nation, shared equally with all, including you, even though we know that you probably do not see it that way. The Truth is the Truth and we are in possession of It now. Your money can only buy you more lies and a false sense of security.
+
+We absolutely do not wish for a "class war" between us. You need to understand, however, that we are quite serious. We're not asking. Stop your corruptions now.
+
+Your monition is as follows:
+
+Do not judge The New Common Sense unfairly and do not attack it. Work with us. Show us proof that you are willing to clean up your act and we shall work with you and for you. Police yourselves and reign in your greed. If you truly want to save this Nation then stop gaming this broken system for your own ends.
+
+If after reading this missive you dare still hold the opinion that we are "sheep", then by all means, allow the sheep to give you a message: No longer may you force us to consume the defecation that you call grass.
+
+TO THE "99%"
+
+By its design The New Common Sense is nothing more than a "voice of reason" that is designed to be compatible with all other past, present and future voices. It was crafted by persons just like you in a true spirit of cooperation and in the hopes that it will serve as a tool by which we can be further unified. It is our hope that it will aid in the start of a new dialog with the "1%" who, by reading this also, will hopefully realize that it's time for them to listen and engage us with respect. It also points out, explains and offers a fully detailed and workable solution to the real core problem that affects us all. It then petitions the simple request for all of us to work together to implement it.
+
+If you suspect that this is an "infiltration" of some sort, then please read it again. We believe that it speaks for itself .
+
+The New Common Sense was crafted to be above and beyond our individual issues, yet it still includes them "under its umbrella" as it shows how we can have our individual issues ultimately addressed. It makes the argument that we first have a serious problem to fix in government before anything else can matter.
+
+This makes it a "first word" on our common plight, but surely not the last. We believe that this is what makes it so special. It's not combative by nature yet it is firm in its demands and explicit in its proposal. It deliberately avoids specific issues that do not directly support the main thesis. It's merely honest and forthright in its tone. It is also designed to breed inspiration and is meant to be used as a starting point upon which you are all encouraged to follow up on with your own forms of public discourse going forward.
+
+Please embrace The New Common Sense fully and help distribute it as fast and as far as you can! If this so much as touches your hands or crosses your eyes then it is critical that you must help distribute it immediately. If you can afford to print copies, please do so. If you can upload it and share, please do so. If you can tell others about this or share links to it, please do so. An "audio book" version is also being released for the benefit of the blind (who are of course part of the 99%, too!) and distributed as well.
+
+Each and every one of us must stand together and treat all ideas such as this with the utmost of  importance. We must act now! If we show apathy or delay then we may lose our opportunity to help instigate true change and we may never have another chance to be heard. Don't think for a minute that the "1%" isn't plotting and scheming for a way to prevent us from being able to speak out like this again. If we show any weakness at this point, if we make the same mistakes that other failed movements have made (such as by not staying decentralized or by choosing sides on issues instead of standing together against a problem-- BIG difference!), if we don't act now and unite, then we may lose what could be our last chance to ever right these wrongs.
+
+The author(s) have decided to remain anonymous in order for this to stand as a true gift to the masses. All ego has thus been removed as there is now no personal credit to be had. However, there is another reason that is not so altruistic that we must be honest about. We are also anonymous for our own protection. The "1%" is playing hard ball. They might go to great lengths to make sure that Truths like this do not see the light of day. Therefore we do it as a protection for all of us. We also do it to keep them guessing, right out of the Sun Tzu playbook. For all they know, this could have come from anywhere, even from their own back yard. This is to our advantage (because it very well might be true).
+
+Also, in order to protect this document, an insurance file has been made that can be opened only by the actual author(s) and it is also being distributed. In the unforeseen case that the document should ever become corrupted and it becomes necessary to prove the source of the original (or the actual text of the original itself if it becomes diluted or corrupted), then we will be able to do so. The insurance file also allows us to release true updates for this if they are ever needed and allows us to prove source because we can then release the old insurance password to prove that since only we could know it while providing a new one for the update which would replace it. In this way, you can be sure that it came from the same source.
+
+If you see this insurance file, please download it and copy it. Please distribute it also. It is the only thing that stands between this message and its destruction. It is what will allow this to stay whole long enough to distribute without being infiltrated and diluted (or worse).
+
+An MD5 sum (a sort of "serial number" generated from the data of a file that can be used as a way to insure that a file hasn't been modified, please Google it if you'd like to learn more about it and do not know what it is) is also included in the insurance file so that anyone can check and verify that the digital release of this document is in fact the original, since the MD5 sum will change if it was altered in any way.
+
+Now for a necessary word about copyright. While this document is being given freely to the public domain without any duplication or distribution restrictions so long as they remain non-profit, the copyright is being reserved and all modifications are discouraged as another means of a protection from those who may wish to modify it with the intention to dilute and/or discredit it. So please make no changes to this? Just pass it on, if you would.
+
+Did we say that there is no credit to be had for this? Well, we misspoke. The credit belongs to you! Since this document was originally gifted to our minds through the process of carefully collecting public opinion, it really does come from you, the "collective conscience" that is mentioned at the very beginning. We merely collected the ideas that we found to be most popular and attempted to put them into words.
+
+So go ahead, take the credit, you've earned it!
+
+May we digress for a moment and inject a few personal notes? This was originally written with the intent for it to be nothing more than a simple Declaration. It had the working title of "A New Declaration of Interdependence". Only when it was completed and fully edited did we see it as a whole and realize that we may have actually achieved something beyond just that. In fact, we received a great surprise when we compared it to the classic historical treatise by Thomas Paine, known as "Common Sense" (published in 1776 and yet completely out of our minds during the period that we crafted this). When we compared it, we noticed that it too was written with the exact same intentions as ours and that we have indeed achieved a document that we believe is at nearly the same level. Hence, it became obvious that this should be given the title of The New Common Sense. We can only hope that it has the same impact of the original. W can make no apology for its length. It needed to be complete and unabridged because there is no time to do this piecemeal. We wish we could have made it shorter, but we truly believe that everything in it had to be said. Therefore, we worked hard on it up front to make it as thorough and as complete as possible so that it can be catapulted as is into the public discussion, and fast! Oh, and "Common Sense" was much longer than this even if we include the monitions section when we compare size.
+
+How you can easily and immediately help:
+
+By affixing a signature, you may convert The New Common Sense into a letter and make it your own. Send it to your congressmen, the media, to friends and family, to corporations. Send it to anyone and everyone that you can.
+
+By collecting signatures, you may transform it into a petition. You can even combine it with others who have done the same and create larger petitions.
+
+By working together to distribute The New Common Sense to the "99%" and "1%" alike, we will turn this into a unifying movement and change the course of history!
+
+Please, don't allow The New Common Sense to be in vain. Sign it, own it, send it, copy it. Please help spread it far and wide, as fast as possible. We have no more time to lose.
+
+Lets "Occupy The Constitution!" And may we receive our Due Justice and see a speedy and peaceful return to the Constitutional Republic that we were supposed to inherit.
+
+A space for signature(s) is placed at the bottom of the "Our Petition" chapter. We hope that by now you have already seen it?
+
+Good luck! Thank you for embracing and sharing The New Common Sense in advance, and may we all further unite and take our country back as One (but without the percent, unless they shape up of course)!
