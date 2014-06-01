@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Troubleshooting Passenger and Devise Problems on Ruby on Rails</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>Troubleshooting Passenger and Devise Problems on Ruby on Rails</h2>
+<p class="meta">11 Jul 2012</p>
+
+<div class="post">
+<p>I spent more time than I&#39;d like to admit yesterday on a problem with Devise that I was seeing on a Rails application that I was deploying to production.  Like most head-scratcher bugs that we as software developers track down, the solution often appears blindingly obvious -- once we find it, of course.  What happened was that my Devise routes, which had worked fine on the development server, suddenly stopped working when I moved the app to production.</p>
+
+<p>At first all I saw were 404 errors.  Thinking it was a Passenger issue, my first stop was to try finding out about Passenger logging.  This led me to set up my apache configuration file for this virtual host as follows:</p>
+
+<p>[cc lang=&quot;XML&quot;]</p>
+
+<p>ServerName myservername.com
+  PassengerLogLevel 3                             &lt;-- Add this line!
+  DocumentRoot /var/www/apps/prjectdirectory/public</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">Options -Multiviews
+AllowOverride None
+Order allow,deny 
+    Allow from all
+</code></pre></div>
+<p>[/cc]</p>
+
+<p>Since this was an early deployment effort, I also temporarily moved config/environments/development.rb to config/environments/production.rb, thus picking up some of the development time debug settings.</p>
+
+<p>By the time I&#39;d done this, the page was at least starting to point me in the right direction, by displaying the error:</p>
+
+<p>[cc]
+No route matches {:controller=&gt;“devise/home”}.
+[/cc]</p>
+
+<p>Well, that was a little more helpful than a 404 message, but not much.  The error output from passenger in the Apache log wasn&#39;t much help either.  Google-Fu, StackOverflow -- nothing helpful.</p>
+
+<p>Meantime, one thing that kept nagging at me was the fact that I was also seeing the problem if I ran the app under WebBrick using production settings (i.e.:  &quot;RAILS_ENV=production rails s&quot;).  </p>
+
+<p><strong>Looking in the Wrong Place</strong></p>
+
+<p>Often I find that a few minutes before a daunting software puzzler turns into trivial child&#39;s play, I stop looking for the solution in the &quot;wrong&quot; (according to hindsight) place.  In this case, the fact that this was also failing in WebBrick led me to conclude that what I should be troubleshooting in this case was not passenger -- but the Rails app itself.  Never mind that it worked in development -- it wasn&#39;t working here, in not one but two web servers.  </p>
+
+<p>At this point I turned on Rails logging.  (Yay -- good answer -- and the crowd went wild!)</p>
+
+<p>Adding the following line to production.rb was all I needed:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+config.log_level = :debug
+[/cc]</p>
+
+<p>Doing that, restarting the server and navigating to mysite.com/users/sign_up, the log (in the default location of &quot;log/production.log&quot; showed me this call stack:</p>
+
+<p>[cc]
+Started GET &quot;/users/sign<em>up&quot; for 207.183.247.194 at 2012-07-10 23:56:21 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/</em>links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/<em>dev</em>nav.html.erb (0.8ms)
+Completed 500 Internal Server Error in 18ms
+[/cc]</p>
+
+<p>At this point the log helpfully was pointing me to just the page where the error was happening.  Looking at the partial in &quot;views/layouts/<em>dev</em>nav.html.erb&quot;, the advice of the articles I&#39;d found about the problem along the way now made sense:  this was a scoping problem in a link_to call.  Actually there were a few such calls, but the solution was the same in each case:  Add a &quot;/&quot; to the beginning of the controller &quot;name&quot;.  In other words, change this:</p>
+
+<p>[cc lang=&quot;ruby&quot;]</p>
+
+<p>&lt;%= link_to &quot;Home&quot;, :controller =&gt; &quot;home&quot;, :action =&gt; &quot;index&quot; %&gt;</p>
+
+<p>[/cc]</p>
+
+<p>To this:</p>
+
+<p>[cc lang=&quot;ruby&quot;]</p>
+
+<p>&lt;%= link_to &quot;Home&quot;, :controller =&gt; &quot;/home&quot;, :action =&gt; &quot;index&quot; %&gt;</p>
+
+<p>[/cc]</p>
+
+<p>This makes sure that &quot;home&quot; isn&#39;t considered to be a Devise controller, even in the context of rendering a Devise view.</p>
+
+<p>In simpler terms, the best way to debug Passenger and Devise problems on Rails is not to treat them as Passenger or Devise problems.   Underneath whatever&#39;s broken is a Rails application, and that Rails application has excellent logging available.</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

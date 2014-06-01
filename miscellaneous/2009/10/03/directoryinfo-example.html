@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>DirectoryInfo Example</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>DirectoryInfo Example</h2>
+<p class="meta">03 Oct 2009</p>
+
+<div class="post">
+<p>In the spirit of our DriveInfo example, which was a little slip of a thing, here&#39;s a DriveInfo example. </p>
+
+<p>`</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">using System;
+using System.Collections.Generic;
+using System.IO;
+
+class DirectoryInfoExample
+{
+    static void Main(string[] args)
+    {
+        string dir = @&quot;C:\&quot;;
+        Console.WriteLine(&quot;Listing directories underneath {0}&quot;, dir);
+        DirectoryInfo diList = new DirectoryInfo(dir);
+        foreach (DirectoryInfo di in diList.GetDirectories())
+        {
+            Console.WriteLine(&quot;{0}&quot;, di.FullName);
+        }
+        Console.WriteLine(&quot;Listing files in {0}&quot;, dir);
+
+        foreach (FileInfo fi in diList.GetFiles())
+        {
+            Console.WriteLine(&quot;File name:  {0}\nCreated:  {1},\nLength:   {2} bytes&quot;, 
+                 fi.Name, fi.CreationTime, fi.Length);
+        }
+        Console.ReadKey();     
+    }
+}
+</code></pre></div>
+<p>`</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

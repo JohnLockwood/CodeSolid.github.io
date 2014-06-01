@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>.NET Regular Expressions Example: Basic use of Match and MatchCollection</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>.NET Regular Expressions Example: Basic use of Match and MatchCollection</h2>
+<p class="meta">10 Sep 2009</p>
+
+<div class="post">
+<p>Here is the first of what should really be several .NET Regular Expressions examples. I firmly believe that in any given environment, you’re going to end up spending most of your programming career manipulating strings one way or another. Because of this, learning .NET’s regular expression support -- unlike many of the other topics you’re likely to encounter on the certification exam, is not one of those Use It and Lose It things. It’s something that’s really useful.</p>
+
+<p>`   </p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace GlobalizationDrawingText
+{
+    class RegularExpressionExample1
+    {
+        static void Main(string[] args)
+        {
+            // Let&#39;s set up a needle to search for and a couple of haystacks
+            Regex re = new Regex(&quot;needle&quot;);
+            string haystack = &quot;hay hay hay needle hay haybeatle hay_dirt hay hay&quot;;
+            string needleless /* to say */ = &quot;hay hay hay hay hay&quot;;
+
+            // Do some really simple matching
+            Match match1 = re.Match(haystack);
+            Match match2 = re.Match(needleless);
+            Console.WriteLine(&quot;Haystack had &quot;
+                + (match1.Success ? &quot;a needle.&quot; : &quot;no needles.&quot;));
+            Console.WriteLine(&quot;Needleless had &quot; 
+                + (match2.Success ? &quot;a needle.&quot; : &quot;no needles.&quot;));
+
+            // Let&#39;s use MatchCollection to gather some hay.
+            // Motivation:  what the hay.
+            re = new Regex(@&quot;hay\w*\b&quot;);
+            MatchCollection mc = re.Matches(haystack);
+            foreach (Match hay in mc)
+            {
+                Console.WriteLine(&quot;Found:  {0}&quot;, hay.Value);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+</code></pre></div>
+<p>`</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

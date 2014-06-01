@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>How I Became a Ruby on Rails Contractor (Trapped in a Microsoft Programmer's Body)</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>How I Became a Ruby on Rails Contractor (Trapped in a Microsoft Programmer's Body)</h2>
+<p class="meta">06 Jul 2012</p>
+
+<div class="post">
+<p>I work in a Microsoft shop during the day working mostly on legacy code written in C, C++, C#, and some VB.NET. There was an incident at work recently that turned me into a Rails Contractor, through some interesting alchemy involving pointy hair, which I will describe below.</p>
+
+<p>But before telling you my war story, a bit about my Rails experience: I learned Rails the same way I learned every language and framework I know -- by coding in it in my spare time.  I&#39;ve made my living as a programmer / web developer doing that since about 1993.  Currently I&#39;m working on a private Rails project, which is probably a bad thing since I can&#39;t point to it on Github and show you my stuff.  I&#39;ll fix that shortly by doing some public rails work.</p>
+
+<p>Now on to the war story. As I said, I work mainly on legacy code. In his excellent book on the subject, Michael Feathers defines legacy code as code that&#39;s not under test. That&#39;s what I work on -- vast expanses of code through which dozens of programmers have slogged since Regan was in office. The first development time unit tests in the system were tests that I added, and I only came here some four years ago, so that tells you how long this untested code had been hacked on. So needless to say, it&#39;s been a challenge to get tests in after the fact.</p>
+
+<p>Here is our software &quot;process&quot;: For major releases, our software goes through QA, running whatever tests we have. The quality is poor, so we have multiple service packs to fix it, which also go through QA. But because our test coverage isn&#39;t what it should be, the quality of the service packs is poor. Our solution to this is to send out &quot;Emergency Patches&quot; -- releases that don&#39;t go through QA testing at all.</p>
+
+<p>Yes, you really read that right, and it really said that.  To fix our quality problems, we patch our software, test the patch, but we don&#39;t send the software back to QA to run whatever scant regression tests we have -- we just send the patch out the door.  Problem?  What problem?</p>
+
+<p><strong>The Software Death Spiral</strong></p>
+
+<p>Yesterday one of my bosses asked me why we were having regressions in one area of the product. I work on database drivers, and the area in question was our handling of Oracle LONGs, a data type that Oracle deprecated in 1997, when Bill Clinton was president. I replied that we don&#39;t have regression tests for it in the suite that QA runs, and that it wasn&#39;t too much work to add them, but would leave us in the position of certifying our product against another vendor&#39;s deprecated type. So this development manager talks to the manager of technical support, who&#39;s job it is to tell us which fixes we ship without testing, which she determines according to the customer screaming for the fix.</p>
+
+<p>Our process is CSDD: Customer Screaming Driven Development.</p>
+
+<p>The answer I received was that the support manager &quot;agreed&quot; with me that we don&#39;t need regression tests for LONGs. We just need &quot;something very targeted and specifc: a fix for this one problem...&quot;</p>
+
+<p>In other words, the manager&#39;s solution for the regressions he was asking me about was to do more patches in that area without regression testing, and to attribute the idea to me!</p>
+
+<p>It was at that very moment that I became a Ruby on Rails Contractor.  To be sure, I was occupying the space of a nominal .NET / C# / C++ / C programmer, but now I was a Rails Contractor sitting in the wrong chair.  Echos of my old career as a contractor came back to me, where I was able to fight and win the battle of Test First Development in a Java shop, before Ruby on Rails was invented.  As a result, we found and killed all kinds of problems that we wouldn&#39;t have otherwise.  (That was shortly after teaching myself Java, as it happens.  Learn.  Do.  Learn more.  Do more.  That&#39;s the cycle).</p>
+
+<p>Rails is not a magic bullet, of course, but at least a framework that includes unit tests baked in -- as well as gems like Rspec and FactoryGirl and Capybara -- has a fighting chance of attracting one or two managers who understand that testing is important.</p>
+
+<p>Leave me a comment if you&#39;re such a manager. I&#39;d love to hear from you.</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

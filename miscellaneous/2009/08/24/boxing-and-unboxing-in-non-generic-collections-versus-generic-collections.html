@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Boxing and Unboxing in Non-Generic Collections versus Generic Collections</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>Boxing and Unboxing in Non-Generic Collections versus Generic Collections</h2>
+<p class="meta">24 Aug 2009</p>
+
+<div class="post">
+<p>Note that the example below has no output.</p>
+
+<p>`   </p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">/* 
+ * This example shows a non-generic list with an array of objects, 
+ * and the boxing and unboxing that are needed to add and retrieve integers
+ * from such an array.  It also shows a generic list and how this simplifies
+ * access to a value type such as int.
+ */
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+
+class ListsExample
+{
+    public void CreateNonGenericList()
+    {
+        ArrayList list = new ArrayList();
+
+        // Boxing
+        Object o1 = (Object)1;
+
+        // Boxing again
+        Object o2 = 2.ToString();
+
+        list.Add(o1);
+        list.Add(o2);
+
+        // Add myself
+        list.Add(this); 
+
+        // Have to unbox (or cast) to get explicit type out
+        // Run time exception if get it wrong.
+
+        // Unbox
+        int i = (int)list[0];
+
+        // Unbox
+        string s = (string)list[1];
+
+        // Cast
+        ListsExample myclass = (ListsExample) list[2];
+    }
+
+    public void CreateGenericList()
+    {
+        List&lt;int&gt; list = new List&lt;int&gt;(10);
+        for (int i = 0; i &lt; 10; i++)
+        {
+            list.Add(i);
+        }
+
+        // Can access any variable directly as an int without casting
+        int four = list[5];
+    }
+
+    static void Main(string[] args)
+    {
+        ListsExample lists = new ListsExample();
+        lists.CreateGenericList();
+        lists.CreateNonGenericList();      
+    }
+}
+</code></pre></div>
+<p>`</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>
