@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Using the Wordpress Code Markup Plugin</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>Using the Wordpress Code Markup Plugin</h2>
+<p class="meta">01 Jul 2006</p>
+
+<div class="post">
+<p>Well, I just found Bennet&#39;s excellent <a href="http://www.thunderguy.com/semicolon/wordpress/code-markup-wordpress-plugin/">Code Markup Plugin</a>, and with it, I was able to pretty quickly fix the post about C Sharp Verbatim Strings.</p>
+
+<p>I knew some smart guy would have written that, and sure enough, he did.</p>
+
+<p>With very little extra work, I was able to get some cool formatting going.</p>
+
+<h2>Cool Formatting</h2>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;code class=&quot;code&quot; allow=&quot;none&quot;&gt;
+using System;
+using System.Text;
+
+public class Hello
+{
+
+    public static void Main()
+    {
+    String verbatim =
+
+@&quot;This is a
+verbatim string, and it can go
+on and on, using &quot;&quot;quote&quot;&quot; characters
+etc but everything else
+is not escaped, like tab characters, \t
+and so forth.&quot;;
+
+    System.Console.Write(verbatim);
+    }
+}
+&lt;/code&gt;
+</code></pre></div>
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

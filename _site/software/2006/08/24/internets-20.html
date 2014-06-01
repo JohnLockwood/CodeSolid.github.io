@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Internets 2.0</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>Internets 2.0</h2>
+<p class="meta">24 Aug 2006</p>
+
+<div class="post">
+<p>I&#39;m pleased to report that ParticleWave today became fully Internets 2.0 compliant.  Flickr has <a href="http://www.flickr.com/photos/fynes/89305841/in/pool-webtard/">more</a> about this.</p>
+
+<p>I thought this would also be a good time to do my post-mortem on my first three-week iteration of LeadReply, which you might call iterations 1.0, given our naming convention.  Actually in looking over the Software Requirements Specification (SRS), it looks as though iteration 1.0 is not quite mortem yet, since there&#39;s one feature missing -- Realtor® notification.   That should probably be what I tackle today and tomorrow, even though by rights it&#39;s OK since Eudora&#39;s handling it for now.</p>
+
+<p>The main thing is that in iteration one, we combined an autoresponder with an automatic data entry system into a system that can grow into a full fledged contact manager or drip marketing system.  The SQL Server database design is pretty complete -- what gets tricky now is that we&#39;re actually entering clients and leads into production, so modifications to the schema become a bit more involved from here on out.  Fortunately most of the changes we need now are additional stored procedures, so dropping all / creating all should still work fine in that realm.</p>
+
+<p>Iteration one was a good brush up / learning vehicle for more SQL and SQL Server stored procedures than we&#39;d done in many a month, so from the project portfolio aspect it was a good success.  I also got to bang out some good ADO.NET code in C Sharp -- not rocket science, to be sure, but some HR guy is bound to expect that it is, so now I can say, &quot;sure, I&#39;ve done that&quot;, since he&#39;ll never be able to figure out that I could based on how similar it is to everything else in the universe.</p>
+
+<p>It might be worth getting with IHomefinder or Moineau Designs or the like at this point to see if there&#39;s any demand for an IDX lead parser and autoresponder, since that&#39;s what we&#39;ve got at the end of iteration 1.</p>
+
+<p>All in all I think being where I am at this stage is pretty good given some of the distractions that came up this week such as some existing web site work and a bit of direct client work as well.  The web site, LeadReply.com, is almost utterly nowhere yet -- but that&#39;s exactly where it&#39;s supposed to be at this point, with most of the work on the lead parser and database.</p>
+
+<p>Built into the SRS was that each iteration should have a go / no go decision about the next iteration.  I&#39;m leaning toward &quot;go&quot; at the moment but will formalize that into the SRS.  If we go ahead, some priorities are:</p>
+
+<ul>
+<li><p>Write and test the campaign scheduler for sending out emails after the first &quot;one-off&quot; welcome email.</p></li>
+<li><p>Write a parameterizable opt-in form that can be included on third party sites (e.g. MY third Internets 2.0 enabled third party sites ).</p></li>
+<li><p>Write the corresponding one-click opt-out form, where the default result is &quot;opted out&quot;, but in case the user made a mistake, let them opt back in.</p></li>
+</ul>
+
+<p>That&#39;s a bit different focus than the first version of the SRS, so I should get this merged into that and do a bit more planning.</p>
+
+<p>As always, what should the business be doing is the harder question than what should the software be doing.</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

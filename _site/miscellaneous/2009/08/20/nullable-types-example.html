@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Nullable Types Example</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>Nullable Types Example</h2>
+<p class="meta">20 Aug 2009</p>
+
+<div class="post">
+<p>The memory for reference types is allocated on the system heap, so it makes sense that reference variables can be null. Value types, in contrast, cannot be assigned a &quot;null” value by default. Still, there are times when you may want to declare a int (for example) and allow it to be set null – one obvious use is in reading and writing data from a database. Enter the Nullable type. Here’s a brief sample that shows how these types work.</p>
+
+<p>``</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">using System;
+
+class NullableExample
+{
+    static void Main()
+    {
+    // A basic value type can be assigned to, but cannot be null
+    int normal;
+    normal = 1;
+
+    // The line below if uncommented produces:
+    // error CS0037: Cannot convert null to &#39;int&#39; because 
+    // it is a value type
+
+    // normal = null;
+
+    // Declare a Nullable value
+    int? nullable = null;
+
+    // The type? syntax used above is a synonym for Nullable&lt;type&gt;
+    // So the following is equivalent
+    System.Nullable&lt;system.int32&gt; nullable2 = 5;
+
+    // Display something -- the null for nullable displays nothing
+        System.Console.WriteLine(
+        &quot;normal = {0}, nullable = {1}, nullable2 = {2}&quot;, 
+        normal, nullable, nullable2);
+
+    // HasValue returns true if the Nullable type has a value
+    Console.WriteLine(
+        &quot;nullable.HasValue = {0}, nullable2.HasValue = {1}&quot;,
+        nullable.HasValue, nullable2.HasValue);
+
+    // Value returns the value or throws an exception if there is no value
+    try
+    {
+        Console.WriteLine(&quot;Doesn&#39;t display:  {0}&quot;, nullable.Value);
+    }
+    catch (System.InvalidOperationException e)
+    {
+        Console.WriteLine(&quot;Exception caught: &quot; + e);
+    }   
+
+    }
+}
+</code></pre></div>
+<p>`</p>
+
+<p><strong>Output</strong></p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">normal = 1, nullable = , nullable2 = 5
+nullable.HasValue = False, nullable2.HasValue = True
+Exception caught: System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at NullableExample.Main()
+</code></pre></div>
+<p>`</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Using TestNG with Spring</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>Using TestNG with Spring</h2>
+<p class="meta">04 Jul 2013</p>
+
+<div class="post">
+<h3>Contents</h3>
+
+<ul>
+<li><p>Moving to TestNG from JUnit</p></li>
+<li><p>Setting Up The Maven Dependency for TestNG</p></li>
+<li><p>Some Simple AbstractTestNGSpringContextTests</p></li>
+</ul>
+
+<h3>Moving to TestNG From JUnit</h3>
+
+<p>A few weeks ago I published a <a href="http://www.particlewave.com/2013/05/16/spring-unit-testing-using-junit/">Simple Introduction to Spring Unit testing using JUnit</a>.  We&#39;ve been using JUnit quite a bit in our examples so far, but as some of you may already know, JUnit is not the only unit test framework for Java.  Another framework, TestNG, offers a lot of features that JUnit lacks, such as the ability to run parameterized tests in which a given test is run against an array of different values, and the ability to break tests down into categories coupled with fine-grained configuration control over what tests to run.  Indeed, the author of TestNG (&quot;Next Generation&quot;) very much had the limitations of JUnit in mind in writing the new framework.  You can read about some of the problems with JUnit that TestNG was designed to solve on it the <a href="http://testng.org/">TestNG web site</a>.</p>
+
+<p>Of course, the choice of which technology to use is often a matter not of what&#39;s best, but what&#39;s most popular (especially if you&#39;re early in your career and need to get certain key technologies added to your resume).  So for my wife, who&#39;s just beginning her technical career as a tester, I&#39;d be inclined to recommend JUnit, whereas for myself, old fart programmer that I am, I have the luxury of picking the technology I consider better in many cases.  For example, compared to IntelliJ Idea, for me Eclipse is just too painful -- free or not, big market share or not.  So I use IntelliJ.  So if you&#39;re playing &quot;Dice Keyword Bingo&quot;, stick with JUnit, otherwise do yourself a favor and take a look at TestNG.  </My two cents></p>
+
+<h3>Setting up the Maven Dependency for TestNG</h3>
+
+<p>Rather than repeat all the sample bean code from our <a href="=">original JUnit article</a>, let&#39;s focus here on the tests. The original sample code is, after all, not very interesting -- it only gave us something to test.  To migrate the JUnit sample, the first thing I needed to do was change the dependency section in our POM file slightly.  Remove the JUnit dependency:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>junit
+  junit
+  4.8.2
+  test</code></pre>
+</div>
+
+<p>Now add the dependency for TestNG:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>org.testng
+  testng
+  6.1.1
+  test</code></pre>
+</div>
+
+<p>For the benefit of those of you starting from scratch, the here is <a href="https://github.com/CodeSolid/tutorials/blob/master/SpringTestNG/pom.xml">the full POM file</a>.</p>
+
+<h3>Simple AbstractTestNGSpringContextTests Test Examples</h3>
+
+<p>Next, let&#39;s see what we need to do to use Spring&#39;s basic TestNG testing support class, AbstractTestNGSpringContextTests.  Don&#39;t let the &quot;Abstract&quot; in the name scare you off here, there&#39;s really nothing much to implement. All you need to do is add a ContextConfiguration annotation to your class and it just works.  Here&#39;s the Hello-World-simple example, which only uses the ContextConfiguration annotation to get it to compile and run.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.tests;
+
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.springframework.test.context.ContextConfiguration;
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertTrue;
+
+@ContextConfiguration(&quot;file:src/main/resources/spring-config.xml&quot;)
+public class SimpleTest extends AbstractTestNGSpringContextTests {
+
+    @Test
+    public void SomeTest() {
+        assertTrue(true);
+    }
+}</code></pre>
+</div>
+
+<p>Modifying our JUnit tests to work with TestNG was just as easy.  The @RunWith annotation was no longer needed, being replaced by the fact that we&#39;re extending AbstractTestNGSpringContextTexts.  So  pretty much the only migration we did involved changing JUnit imports to TestNG ones.  We removed:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;</code></pre>
+</div>
+
+<p>We replaced it with:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.Test;
+import static org.testng.Assert.*;</code></pre>
+</div>
+
+<p>Here for example is a little bit longer example, that exercises some of the test beans we&#39;ve wired up in our application context:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.tests;
+
+// Generally needed:
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.Test;
+import static org.testng.Assert.*;
+
+// Application specific
+import com.codesolid.tutorials.UserStory;
+import com.codesolid.tutorials.User;
+
+@ContextConfiguration(&quot;file:src/main/resources/spring-config.xml&quot;)
+public class ContextTests extends AbstractTestNGSpringContextTests {
+
+    @SuppressWarnings(&quot;SpringJavaAutowiringInspection&quot;)
+    @Autowired
+    protected ApplicationContext ac;
+
+    // Using ApplicationContext
+    // The getBean method is the workhorse of the Spring ApplicationContext.
+    // The user field in the UserStory object was set up (dependency injected)
+    // by Spring:
+    @Test
+    public void testUserNotNull() {
+        UserStory story = (UserStory) ac.getBean(&quot;userStory&quot;);
+        assertNotNull(story.getUser());
+    }
+
+    // Not using ApplicationContext
+    // Regular non-Spring instantiation
+    // Instantiating our own UserStory, you can see that the user
+    // is null.
+    @Test
+    public void testUserStoryNotFromContext() {
+        UserStory story = new UserStory();
+        assertNull(story.getUser());
+    }
+
+    // Not using ApplicationContext
+    // Regular non-Spring instantiation
+    // The default role if you just call the constructor
+    // is &quot;User&quot;.
+    @Test
+    public void testNonSpringUserDefaultRole()
+    {
+        User u = new User();
+        assertEquals(u.getRole(), &quot;User&quot;);
+    }
+
+    // Using ApplicationContext
+    // Since Spring instantiated this according to the property
+    // from spring-config.xml, it overrode the default &quot;user&quot;
+    // role with &quot;SuperGenius User&quot;.  (This presumably
+    // is Wile E. Coyote.)
+    @Test
+    public void testUserRoleIsAsExpected() {
+        UserStory story = (UserStory) ac.getBean(&quot;userStory&quot;);
+        assertEquals(story.getUser().getRole(), &quot;SuperGenius User&quot;);
+    }
+}</code></pre>
+</div>
+
+<p>Getting started using the Spring TestNG support turned out to be really easy.  Check our our IntelliJ project and the full source on <a href="https://github.com/CodeSolid/tutorials/tree/master/SpringTestNG">GitHub</a>.</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

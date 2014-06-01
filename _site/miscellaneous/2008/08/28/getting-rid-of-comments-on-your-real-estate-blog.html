@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Getting Rid of Comments On Your Real Estate Blog</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+
+
+    </head>
+
+    <body>
+        <div class="container">
+        <nav id="nav">
+        <ul>
+        <li><a href="/index.html">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="">Hire Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>Getting Rid of Comments On Your Real Estate Blog</h2>
+<p class="meta">28 Aug 2008</p>
+
+<div class="post">
+<p>I recently had as many people beginning a discussion with me about real estate directly from my real estate blog in a couple of weeks as I formerly enjoyed all year long. One of these folks is a fairly well motivated buyer who&#39;s now working with one of my agents.</p>
+
+<p>Anecdotally, then, my directly blog-related conversion rate went up maybe 1700% or so.</p>
+
+<p><a href="http://www.particlewave.com/internet-marketing/wp-content/uploads/2008/08/image.png"><img src="http://www.particlewave.com/internet-marketing/wp-content/uploads/2008/08/image-thumb.png" alt="image"></a>What changed to make this happen? Well, one of the recent things I did was to completely get rid of comments on my blog.</p>
+
+<p><strong>Conversion, Not Conversation</strong></p>
+
+<p>When I got rid of comments, I wasn&#39;t expecting to increase my conversion rate from the blog. I wasn&#39;t expecting to decrease it, either. I didn&#39;t really expect it to change at all. I got rid of comments because I was sick of having to open up the comments page only to find yet another anti-Realtor troll trying to get me worked up.</p>
+
+<p>I do have an idea about why I&#39;m getting more contacts from my blog now that users are forced to use my contact page instead of a comment form, however.</p>
+
+<p>I think that not having comments on the blog helps to sends a message -- albeit on a very subtle level -- that I&#39;m blogging to make contact with customers, not to socialize.</p>
+
+<p>Maybe to the extent that you&#39;re goofing off on your blog / Facebook / Twitter / Myspace, you *<em>look *</em>like you&#39;re goofing off on your blog / Facebook / Twitter / Myspace.</p>
+
+<p><strong>But John, You Can&#39;t Get Rid Of Comments!</strong></p>
+
+<p>Of course I can. Web 2.0 is a great buzzword, but I&#39;ve spent enough time as a software developer to be comfortable with my geek credentials. Because of this, my goal is to have a successful online business, not to be more buzzword compliant by bandying ersatz version numbers.</p>
+
+<p>Besides, if your real estate clients really wanted a nerd and not a Realtor®, more real estate agents would market themselves at Star Trek conventions.</p>
+
+<p>Don&#39;t forget your Vulcan ears.</p>
+
+<p>I&#39;m not saying you should get rid of comments if they&#39;re really working for you, but for those who think they are, have you experimented with not having them?</p>
+
+<p>From my point of view, I&#39;m spending hundreds of hours every year blogging to help me reach customers, not to have a conversation (if you can call it that) with <a href="http://www.collegehumor.com/video:1771556">these losers</a>. You wouldn&#39;t let a drunken, semi-literate moron ruin your open house or get in your face in your office. Why should you put up with them on a web site to which you&#39;ve equally dedicated time and money?</p>
+
+<p>Similarly, when a buyer visits your open house, do you put your feet on the coffee table and say, &quot;Come on in and have a House 2.0 Konversation, dood!&quot;, or do you try to conduct yourself as a professional with whom your visitor might want to do business?</p>
+
+<p>Of course, you should have your phone number on every page of the site, and you should have a contact form equally prominently available. You&#39;re not trying to hide from legitimate customers. If my experience is any guide, your clients will begin to appreciate that you&#39;re not just hanging around the Office Water Cooler 2.0, and respond accordingly. You may even find yourself making more money 1.0.</p>
+
+<p><strong>How To Get Rid of Comments on Wordpress</strong></p>
+
+<p>As always, before you make any changes you&#39;ll want to <strong>back up your existing files</strong>. Also if you&#39;re not comfortable coding, don&#39;t follow these steps. If you are it should take you fifteen minutes or less. </p>
+
+<p>The way I went about this was to first create a brain dead function in my theme&#39;s directory&#39;s function.php file: </p>
+
+<p>`</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;?php
+
+// ...
+
+function show_comments()
+{
+    return false;
+}&lt;br&gt;?&gt;
+</code></pre></div>
+<p>`</p>
+
+<p>The reason for this is simply to make it easier to change my mind later by returning true, if indeed I change my mind later. You may not have a functions.php file, but if not, show_comments() is a good reason to create one -- again, it goes in your theme directory.</p>
+
+<p>Next, I wrapped the call to comments<em>popup</em>link in index.php, changing the line </p>
+
+<p>`</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;div&gt;comments_popup_link(...whatever)...&lt;/div&gt;
+</code></pre></div>
+<p>`</p>
+
+<p>to </p>
+
+<p>`</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">if (show_comments())
+{
+    &lt;div&gt;comments_popup_link(...whatever)...&lt;/div&gt;
+}
+</code></pre></div>
+<p>`</p>
+
+<p>If you&#39;re OK with not showing comments that you already have, you can also go after single.php and change the call to comments_template to read:</p>
+
+<p>`</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">if (show_comments())
+{
+    comments_template();
+}
+</code></pre></div>
+<p>`</p>
+
+<p>Keeping the comments you have already means you would need to go into comments.php and leave the part that displays the comments while removing the comment submission form (or better yet, wrapping the form in a show_comments conditional, as above).</p>
+
+<p>Once you&#39;ve done these steps, if you have no other references to comments-post.php in your themes you can go into your Wordpress root directory and rename comments-post.php to something like comments-post.my<em>secret</em>backup. This will ensure that you&#39;re now not only free from trolls with keyboards, you&#39;re also more secure from spambots (which suck up server time sending you spam about little blue pills and the like).</p>
+
+<p>Finally, if you&#39;re sick of trackback spam, too, while you&#39;re in the Wordpress root go ahead and rename wp-trackback.php to something like wp-trackback.I<em>hate</em>trackback_spam.</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>
