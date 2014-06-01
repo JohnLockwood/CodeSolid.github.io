@@ -62,7 +62,7 @@ task :deploy do
   status = system("git push origin source")
   puts status ? "Success" : "Failed"
 
-  puts "\n## Pushing source -- forcing"
+  puts "\n## Pushing master (_site) -- forcing"
   status = system("git push origin +master")
   puts status ? "Success" : "Failed"
 
