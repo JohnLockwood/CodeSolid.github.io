@@ -1,5 +1,9 @@
 desc "Completely rebuilds and pushes site"
-task :all => ["delete", "build:pro", "commit", "deploy"] do
+task :all do
+  Rake::Task["delete"].invoke
+  Rake::Task["build:pro"].invoke
+  Rake::Task["commit"].invoke
+  Rake::Task["deploy"].invoke  
   puts "Rake all finished."
 end
 
@@ -24,12 +28,12 @@ namespace :build do
   desc "Build _site/ for development"
   task :dev do
     puts "\nServing site"
-    exec "jekyll serve --baseurl / -w"
+    system("jekyll serve --baseurl / -w")
   end
 
   desc "Build _site/ for production"
   task :pro  do
-    exec "jekyll build"
+    system("jekyll build")
   end
 end
 
