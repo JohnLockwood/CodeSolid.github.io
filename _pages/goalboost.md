@@ -4,5 +4,6 @@ permalink: /goalboost/
 title:     Goalboost Time Tracking
 ---
 
-* Goalboost
-This is where it goes
+# Goalboost
+Goalboost.com is the name of our time tracking application.  It's at [Goalboost.com](Goalboost.com), of course,
+and we'll be writing more about our progress here as time goes by.
