@@ -1,1 +1,13 @@
-_site/
+README.md
+_assets
+_config.yml
+_include
+_pages
+_posts
+_layouts
+_plugins
+*.html
+css
+images
+js
+test
