@@ -4,7 +4,7 @@ permalink: /hire/
 title:     Hire CodeSolid 
 ---
 
-* Get the CodeSolid advantage
+# Get the CodeSolid advantage
 
 The advantage is, then we'll get paid!
 
