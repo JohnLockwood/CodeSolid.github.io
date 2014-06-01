@@ -1,3 +1,9 @@
+desc "Completely rebuilds and pushes site"
+task :all => ["delete", "build:pro", "commit", "deploy"] do
+  puts "Rake all finished."
+end
+
+
 
 desc "Delete _site/"
 task :delete do
