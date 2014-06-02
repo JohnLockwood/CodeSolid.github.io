@@ -12,3 +12,9 @@ include: ['_pages']
 relative_permalinks: false
 
 baseurl: "https://codesolid.github.io/"
+
+post:
+  template: templates/_post.txt
+  extension: md
+
+editor: C:\apps\SublimeText3\sublime_text.exe
