@@ -14,6 +14,7 @@ This week in Ruby pain, I was trying to install the mysql gem and was having a b
 
 The solution turned out to be some combination of the following commands:
 
+{% prism bash %}
 sudo apt-get install libmysql-ruby
 sudo aptitude install libmysqlclient16-dev
 sudo ln -s /usr/lib/mysql/ /usr/local/lib/mysql
@@ -38,6 +39,7 @@ checking for mysql_query() in -lmysqlclient... no
 Could not create Makefile due to some reason, probably lack of
 necessary libraries and/or headers.  Check the mkmf.log file for more
 details.  You may need configuration options.
+{% endprism %}
 
 
 
