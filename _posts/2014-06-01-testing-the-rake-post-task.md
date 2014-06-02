@@ -11,4 +11,4 @@ more complex than 'rake["Testing the Rake Post Task"]'.
 
 Very cool.  Nice job, Ellen, and thanks.
 
-My Rakefile with David Ensinger's work on building Jekyll sites locally together with some of Ellen's post-creating magic is located [here](https://github.com/CodeSolid/CodeSolid.github.io/blob/source/Rakefile).
+My Rakefile with David Ensinger's work on building Jekyll sites locally and working around the fact that Github doesn't support most plugins, together with some of Ellen's post-creating magic is located [here](https://github.com/CodeSolid/CodeSolid.github.io/blob/source/Rakefile).
