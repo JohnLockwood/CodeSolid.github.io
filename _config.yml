@@ -9,6 +9,8 @@ pygments: false
 encoding: utf-8
 
 include: ['_pages']
+include: ['_goalboost_testplan']
+
 relative_permalinks: false
 
 baseurl: "https://codesolid.github.io/"
