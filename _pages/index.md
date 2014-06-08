@@ -4,12 +4,9 @@ permalink: /
 title:     CodeSolid
 ---
 
-# CodeSolid
+CodeSolid is a test automation outsourcing company with a small team of talented developers who can help you quickly move your Java or Ruby test automation effort to completion.
 
-CodeSolid is a boutique development shop that provides test automation outsourcing in Java and Ruby on Rails.
+We automate tests using industry standard tools like JUnit, TestNG, and RSpec.  We use Selenium and SoapUI to automate web UIs and web services. We are a family owned company consisting of a senior developer with over twenty years' experience and a talented and energetic newcomer. 
 
-We pair a senior developer who can provide project jumpstart and architectural guidance with a junior engineer who can move your project forward while saving your company a ton of money.  A typical pair combines over 20 years of experience between the two developers.
+Our rates are reasonable, and we love writing tests every bit as much as we despise shipping bugs.
 
-We use Git, Selenium, and Jenkins to provide whatever test automation you need, running on Amazon EC2 instances.
-
-Best of all, we're fully employee owned and utterly focused on the success of your project.  We don't take on more work than we can do, and we don't hard sell, ever.

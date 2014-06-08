@@ -32,3 +32,34 @@ body {
 	background-color:#fff;
 	padding:1em;
 }
+
+header h1 {
+  margin-top:1em;
+  padding-bottom:0;
+  line-height:40%;
+
+}
+header .logo_code {
+
+  background-color:black;
+  color:white;
+  padding:.2em;
+  padding-right:0px;
+  margin:0;
+  
+}
+
+header .logo_solid {
+  background-color:#ddd;
+  color:black; 
+  padding:.2em;
+  padding-left:0px;
+  margin:0;   
+}
+
+header p {
+  margin:0;
+  padding:0;
+  font-size:85%;
+  font-style:italic;
+}
