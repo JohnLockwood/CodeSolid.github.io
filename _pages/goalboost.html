@@ -5,13 +5,13 @@ title:     Goalboost Time Tracking
 ---
 
 <h1>Goalboost</h1>
-<p> <a href="http://goalboost.com">Goalboost</a> is the name of our time tracking application.  We'll be writing more about our progress here as time goes by.
+<p> <a href="http://goalboost.com">Goalboost</a> is the name of our time tracking application.  We'll be writing more about our progress here as time goes by.  Listed below are the archives of some earlier posts.</p>
 
 {% for post in site.posts %}	
     {% if post.categories contains 'goalboost' %}
     <p>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}...
+      <b><a href="{{ post.url }}">{{ post.title }}</a></b>
+      {{ post.excerpt }}  <a href="{{ post.url }}">Read more</a>...
       </p>
     {% endif %}
 {% endfor %}  

@@ -2,6 +2,7 @@
 author: John Lockwood
 layout: post
 title: "Goalboost - Hours Tracking for Sofware Projects" 
+excerpt:  We're eating our own dogfood on Goalboost, and so far it's not all that bad.
 categories:
 - Goalboost
 ---
