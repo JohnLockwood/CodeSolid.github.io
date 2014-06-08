@@ -1,19 +1,22 @@
 
 #nav {
   width: 100%;
-  margin: 1em 0 0 0; }
+  padding:0;
+  margin: 2em 0 0 0; }
+
 #nav ul {
   list-style: none;
   list-style-position:outside;
-  
+  margin:0;
+  padding:0;
   overflow: hidden; 
-
+/*
   -webkit-margin-before: 0em;
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px;
-
+*/
 }
 #nav ul li {
   float: left;
