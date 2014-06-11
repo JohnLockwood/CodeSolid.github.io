@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Getting Started with Selenium in IntelliJ Idea</title>
+        <title>Getting Started with Selenium in IntelliJ Idea - Part I</title>
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="">
         <!-- Prism syntax highlighting -->
@@ -14,6 +14,10 @@
 
         <!-- Navbar only -->
         <link rel="stylesheet" href="https://codesolid.github.io/css/nav.css">
+        
+        <!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+        
     </head>
 
     <body>
@@ -31,13 +35,52 @@
         </nav>
 
         <div class="site">        
-          <h2>Getting Started with Selenium in IntelliJ Idea</h2>
+          <h2>Getting Started with Selenium in IntelliJ Idea - Part I</h2>
 <p class="meta">06 Jun 2014</p>
 
 <div class="post">
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#Setup">Fill Your Toolbox -- Setting Up Firebug and Selenium IDE</a></li>
+<li><a href="#SimpleSeleniumTestcase">A Simple Selenium Test Case</a></li>
+</ul>
+</div>
+
+<h2><a id="Introduction" name="Introduction">Introduction</a></h2>
+
 <p>Selenium is a one of the most popular test automation tools.  Selenium lets you write automated tests to drive a variety of popular browsers including Firefox, Chrome, and Internet Explorer. Using Selenium IDE, you can record browser sessions and export the recorded tests to test cases written in a variety of languages, including Java, Python, Ruby, and .NET.  These tests can then be easily extended within that language to add assertions to verify that the test case passed.</p>
 
 <p>In this tutorial, we&#39;ll walk you through all the basics of using Selenium, from recording your first browser session using Selenium IDE, to setting up and running your JUnit tests in IntelliJ Idea.</p>
+
+<h2><a id="Setup" name="Setup">Setting up Firebug and Selenium IDE</a></h2>
+
+<p>The Selenium IDE is an extension for Firefox that should serve as your starting point for your Selenium work.  So of course, you&#39;ll need Firefox installed.</p>
+
+<p>Before getting Selenium, however, there&#39;s one more tool we&#39;ll need if you don&#39;t already have it, Firebug.  Among other things, Firebug makes it easy to examine page elements, something which we&#39;ll be doing a lot as we dig into Selenium.  <a href="https://getfirebug.com/">Download Firebug</a> from this site and install it.  Once it&#39;s installed, you should see a little bug on the Firefox menu bar, click it to open Firebug.  We&#39;ll be using it in a few minutes.</p>
+
+<p>Now we&#39;re ready to get the Selenium IDE from the <a href="http://docs.seleniumhq.org/download/">Selenium Download Page</a>.  Selenium IDE will appear as an option on the tools menu.  In recent versions, you can also access it from the right hand menu button as shown below.</p>
+
+<p><img src="/images/FirefoxMenuButtonSelenium.png" alt="&quot;Selenium Firefox menu button&quot;"></p>
+
+<p>I generally open Selenium in a sidebar, but opening as a Popup is the more common option that&#39;s available in all environments.  Shown below is how that looks.</p>
+
+<p><img src="/images/SeleniumScreenShot1.png" alt="&quot;Selenium IDE Pop Up&quot;"></p>
+
+<h2><a id="SimpleSeleniumTestcase" name="SimpleSeleniumTestCase">A Simple Selenium Test Case</a></h2> 
+
+<p>Let&#39;s dive right in to Selenium with a simple test case.  Make sure that the red recording button in the upper right is &quot;On&quot; as shown in the image above.  You can toggle it if you&#39;re not sure -- the &quot;On&quot; state is when it looks pushed in.  Next, in the Selenium window&#39;s address bar, where it says &quot;Base URL&quot;, let&#39;s enter:  https://github.com/codesolid . One thing to notice at this point is that Selenium will not automatically go to the base URL.  You&#39;ll need to navigate it in the firefox address bar as well.  This is because really what we&#39;re entering here is the URL of the &quot;Web Application Under Test&quot; -- in other words, we&#39;re telling Selenium where to record our activity.</p>
+
+<p>The fun begins when you navigate a page under that base URL.  On the CodeSolid github page, there should be a link to a &quot;tutorials&quot; project.  Let&#39;s click on that link in Firefox.</p>
+
+<p>Firefox navigates to the link, but if you&#39;ll notice, the Selenium IDE has now recorded your activity.  At this point the Selenium IDE window should look something like this.</p>
+
+<p><img src="/images/SeleniumScreenShot2.png" alt="&quot;Selenium Test Recording&quot;"></p>
+
+<p>If you toggle the recording button to the &quot;Off state&quot;, you should be able to prove you&#39;ve recorded your session by playing it back.  First, in the window that&#39;s viewing the CodeSolid tutorials, navigate to somewhere on the web that&#39;s not as popular as the CodeSolid tutorials, like Google for example.  Now, underneath the Base URL bar, 
+you should see two green play buttons.  Click either of these (at this point it doesn&#39;t matter which).  You should see Firefox navigate back to the CodeSolid Github 
+account and </p>
 
 </div>
 

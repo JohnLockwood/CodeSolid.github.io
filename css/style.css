@@ -1,19 +1,20 @@
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
 
 body {
   padding:0px;
   margin:0px;
   width: 100%;
-  font-family:arial, Arial, Helvetica, sans-serif;
-  
+  font-family: 'Lora',serif;
+  font-weight:400;  
+  font-size:110%;
   }
 
-.inside {
-  padding:2em; 
-  background-color:#fff;
-  max-width: 960px;
-  margin: 0 auto; 
+p { line-height:180%;}
 
-}
 .logo {
   background-image:url('/images/CodeSolid.png');
   background-position:left center;
@@ -30,7 +31,10 @@ body {
 
 .site {
 	background-color:#fff;
-	padding:1em;
+}
+
+header {
+    font-family:arial, Arial, Helvetica, sans-serif;
 }
 
 header h1 {
@@ -61,5 +65,31 @@ header p {
   margin:0;
   padding:0;
   font-size:85%;
-  font-style:italic;
+  font-style:italic;}
+
+
+#table_of_contents {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color:#ddd;
+  border:1px solid #ccc;
+}
+
+#table_of_contents ul li {
+  text-indent:0px;
+  list-style: none;
+  list-style-position:inside;
+  margin:0;
+  padding:0; 
+  font-family:arial, Arial, Helvetica, sans-serif;
+}
+
+#table_of_contents ul {
+  padding-left:25px;
+}
+
+#table_of_contents h1 {
+  font-size:120%;
+  padding-left:20px;
 }
