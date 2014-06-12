@@ -45,6 +45,7 @@
 <li><a href="#Introduction">Introduction</a></li>
 <li><a href="#Setup">Fill Your Toolbox -- Setting Up Firebug and Selenium IDE</a></li>
 <li><a href="#SimpleSeleniumTestcase">A Simple Selenium Test Case</a></li>
+<li><a href="#TestingWebElements">Testing Web Elements</a></li>
 </ul>
 </div>
 
@@ -62,11 +63,11 @@
 
 <p>Now we&#39;re ready to get the Selenium IDE from the <a href="http://docs.seleniumhq.org/download/">Selenium Download Page</a>.  Selenium IDE will appear as an option on the tools menu.  In recent versions, you can also access it from the right hand menu button as shown below.</p>
 
-<p><img src="/images/FirefoxMenuButtonSelenium.png" alt="&quot;Selenium Firefox menu button&quot;"></p>
+<p><img src="/images/20140606/FirefoxMenuButtonSelenium.png" alt="&quot;Selenium Firefox menu button&quot;"></p>
 
 <p>I generally open Selenium in a sidebar, but opening as a Popup is the more common option that&#39;s available in all environments.  Shown below is how that looks.</p>
 
-<p><img src="/images/SeleniumScreenShot1.png" alt="&quot;Selenium IDE Pop Up&quot;"></p>
+<p><img src="/images/20140606/SeleniumScreenShot1.png" alt="&quot;Selenium IDE Pop Up&quot;"></p>
 
 <h2><a id="SimpleSeleniumTestcase" name="SimpleSeleniumTestCase">A Simple Selenium Test Case</a></h2> 
 
@@ -76,11 +77,23 @@
 
 <p>Firefox navigates to the link, but if you&#39;ll notice, the Selenium IDE has now recorded your activity.  At this point the Selenium IDE window should look something like this.</p>
 
-<p><img src="/images/SeleniumScreenShot2.png" alt="&quot;Selenium Test Recording&quot;"></p>
+<p><img src="/images/20140606/SeleniumScreenShot2.png" alt="&quot;Selenium Test Recording&quot;"></p>
 
 <p>If you toggle the recording button to the &quot;Off state&quot;, you should be able to prove you&#39;ve recorded your session by playing it back.  First, in the window that&#39;s viewing the CodeSolid tutorials, navigate to somewhere on the web that&#39;s not as popular as the CodeSolid tutorials, like Google for example.  Now, underneath the Base URL bar, 
 you should see two green play buttons.  Click either of these (at this point it doesn&#39;t matter which).  You should see Firefox navigate back to the CodeSolid Github 
-account and </p>
+account and click through to the tutorials page.</p>
+
+<h2><a id="TestingWebElements" name="TestingWebElements">Testing Web Elements</a></h2>
+
+<p>As interesting as it is, a recorded web session is not yet a test.  It has the first part -- a description in code of the steps that take place -- but we haven&#39;t yet added a way to compare some expected value to an actual value.  We&#39;ll add a simple check to see if some element on the page contains the text we expect it to.  On the CodeSolid tutorials page, if you scroll down past the links to the tutorials, there&#39;s a readme file.</p>
+
+<p><img src="/images/20140606/CodeSolidReadme.png" alt="&quot;CodeSolid Readme&quot;"></p>
+
+<p>Github displays this in an H1 tag, but to make sure we&#39;re finding the right H1 tag, let&#39;s open firebug using the firebug button:</p>
+
+<p><img src="/images/20140606/FirebugButton.png" alt="&quot;Firebug&quot;"></p>
+
+<p><img src="/images/20140606/FirebugWindow.png" alt="&quot;Firebug&quot;"></p>
 
 </div>
 
