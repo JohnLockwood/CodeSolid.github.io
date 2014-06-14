@@ -28,30 +28,16 @@ tags:
 
 
 
-### Contents
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#Introduction">The Simplest Case - Exploring the IDE Starter Project</a></li>
+<li><a href="#TestingSpringBeans">Testing Some Basic Spring Beans</a></li>
+<li><a href="#ApplicationContext">Pojo Style: Getting an Application Context in a junit.org Test Runner</a></li>
+</ul>
+</div>
 
-
-
-
-
-	
-  * The Simplest Case: Exploring The IDE Starter Project
-
-	
-  * Testing Some Basic Spring Beans
-
-	
-  * Pojo Style: Getting an Application Context in a junit.org Test Runner
-
-
-
-
-
-
-
-
-### Exploring the IDE Starter Project
-
+<h2><a id="Introduction" name="Introduction">Exploring the IDE Starter Project</a></h2>
 
 In this tutorial we'll set up some really basic Spring unit tests -- the sort of thing that is vanilla enough so you can steal it and get started on your own tests. I developed these tests in IntelliJ Idea Ultimate Edition, but when I check them in to the [Github repository](https://github.com/codesolid/tutorials) I'll try to make something available in Maven and Eclipse, so you can try it out that way if you like. (Update -- that's done, [here are the instructions](http://www.particlewave.com/2013/05/17/how-to-run-the-codesolid-tutorials-in-eclipse/)).  I originally developed these tests in a web app I was working on, but to keep things simple let's start instead by creating a new project in Idea as a "Spring Application" for the project type.
 
@@ -59,7 +45,7 @@ In this tutorial we'll set up some really basic Spring unit tests -- the sort of
 
 You can then make the project from the build menu, and you'll see if you look around in the test directory (actually src\test\java\foo.bar, to be precise), that Idea has created your first Spring Test for you as SpringAppTests.java:
 
-[cc lang="java"]
+{% prism java %}
 package foo.bar;
 
 import junit.framework.Assert;
@@ -81,14 +67,11 @@ Assert.assertEquals("Hello world!", helloService.sayHello());
 }
 }
 
-[/cc]
+{% endprism %}
 
 This unit test is doing a few interesting things. First of all, it's annotated as "@RunWith(SpringJUnit4ClassRunner.class)". The Spring JUnit runner, which works in conjunction with the Spring [TestContextManager](http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/test/context/TestContextManager.html), allows you to easily set up Spring ApplicationContexts for your tests, as you can see it does here with the annotation @ContextConfiguration("classpath:spring-config.xml"). Inside the SpringAppTests class, you can see that you can also use Dependency Injection to wire up your objects for you. Note that the object that's under the @Autowired annotation is used in the test without an explicit constructor call.
 
-
-
-### Testing Some Basic Spring Beans
-
+<h2><a id="TestingSpringBeans" name="TestingSpringBeans">Testing Some Basic Spring Beans</a></h2>
 
 Now let's write our own test to exercise some basic beans to see how the Spring framework injects dependencies as needed. We'll want to compare that to what would happen outside of the framework so we'll set up our beans in such a way as to work differently depending on the context -- Spring versus non-Spring. (I was tempted to say Spring versus Fall in that last sentence, but Java suffers from enough puns already).
 
@@ -96,7 +79,7 @@ Let's say we want to model some classes to capture software User Stories. Of cou
 
 So let's write two beans to capture the relationship between a user and the UserStory. First, the UserStory class:
 
-[cc lang="Java"]
+{% prism java %}
 // UserStory.java
 
 package com.codesolid.tutorials;
@@ -139,9 +122,9 @@ public void setOutcomeDesired(String outcomeDesired) {
 this.outcomeDesired = outcomeDesired;
 }
 }
-[/cc]
+{% endprism %}
 And the User class:
-[cc lang="Java"]
+{% prism java %}
 package com.codesolid.tutorials;
 
 /**
@@ -164,7 +147,7 @@ this.role = role;
 }
 }
 
-[/cc]
+{% endprism %}
 
 As you can see, if you were to construct a UserStory object at this point, the user field it contains would be null. The trade-off on class dependencies is basically this: You can ensure that your objects are always fully constructed by putting all the dependencies in the constructor. However, this means that your object becomes tightly coupled with other objects, and harder to test. Having accessors to set the dependencies means you have the flexibility to test only that part of the object that relies on the dependencies, or you can set up all your dependencies up front and test a fully constructed object.
 
@@ -174,17 +157,20 @@ Take a look at the file src\main\resources\spring-config.xml. Here we've configu
 
 When we add our dependencies, the file looks like this:
 
-[cc lang="XML"]
+{% prism XML %}
 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:context="http://www.springframework.org/schema/context"
-xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd">
 
-[/cc]
+{% endprism %}
 
 We're now ready to write some tests against this code. I'll show you the whole listing in one go, since I've commented it fairly heavily to show what we're demonstrating in each case. Bear with the imports -- there's some code underneath, I promise!
 
-[cc lang="Java"]
+{% prism java %}
 package com.codesolid.tutorials.tests;
 
 import static org.junit.Assert.*;
@@ -250,18 +236,15 @@ UserStory story = (UserStory) ac.getBean("userStory");
 assertEquals(story.getUser().getRole(), "SuperGenius User");
 }
 }
-[/cc]
+{% endprism %}
 
 As you can see, Spring allows for a great deal of flexibility in configuring the objects in the system. In a simple context like this one it may be hard to see the advantage of this, but in the context of a large application, having a configuration system like this in place means that the system is very flexible.
 
-
-
-### Getting an Application Context in a junit.org Test Runner
-
+<h2><a id="ApplicationContext" name="ApplicationContext">Getting an Application Context in a junit.org Test Runner</a></h2>
 
 You'll probably use the SpringJUnit4ClassRunner for most of your Spring testing, since it is derived from the "vanilla", junit.orgJ Unit4ClassRunner. However it's also possible to get an ApplicationContext outside of the context of the Spring test runner, and doing this in JUnit demonstrates how to achieve this programatically. The following sample shows some of the same tests we ran earlier set up in this way:
 
-[cc lang="Java"]
+{% prism java %}
 package com.codesolid.tutorials.tests;
 import com.codesolid.tutorials.UserStory;
 import org.junit.Test;
@@ -302,6 +285,6 @@ assertEquals(story.getUser().getRole(), "SuperGenius User");
 }
 }
 
-[/cc]
+{% endprism %}
 
 I hope you enjoyed this tutorial on Spring Unit Testing -- feel free to leave a comment if you're finding it useful.

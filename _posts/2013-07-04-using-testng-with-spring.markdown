@@ -19,33 +19,24 @@ tags:
 - Unit Testing
 ---
 
+Testing Spring in JUnit is fairly simple given the test runner support.  Using TestNG is a little bit more complex, but this tutorial will quickly get you up to speed.
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#MovingToTestNGfromJUnit">Moving to TestNG from JUnit</a></li>
+<li><a href="#SettingUpMaven">Setting Up The Maven Dependency for TestNG</a></li>
+<li><a href="#SimpleTests">Some Simple AbstractTestNGSpringContextTests Examples</a></li>
+</ul>
+</div>
 
-
-
-### Contents
-
-
-
-
-
-
-  * Moving to TestNG from JUnit
-
-
-  * Setting Up The Maven Dependency for TestNG
-
-
-  * Some Simple AbstractTestNGSpringContextTests
-
-
-
-### Moving to TestNG From JUnit
-
+<h2><a name="MovingToTestNGfromJUnit" id="MovingToTestNGfromJUnit">Moving to TestNG from JUnit</a></h2>
 
 A few weeks ago I published a [Simple Introduction to Spring Unit testing using JUnit](http://www.particlewave.com/2013/05/16/spring-unit-testing-using-junit/).  We've been using JUnit quite a bit in our examples so far, but as some of you may already know, JUnit is not the only unit test framework for Java.  Another framework, TestNG, offers a lot of features that JUnit lacks, such as the ability to run parameterized tests in which a given test is run against an array of different values, and the ability to break tests down into categories coupled with fine-grained configuration control over what tests to run.  Indeed, the author of TestNG ("Next Generation") very much had the limitations of JUnit in mind in writing the new framework.  You can read about some of the problems with JUnit that TestNG was designed to solve on it the [TestNG web site](http://testng.org/).
 
 Of course, the choice of which technology to use is often a matter not of what's best, but what's most popular (especially if you're early in your career and need to get certain key technologies added to your resume).  So for my wife, who's just beginning her technical career as a tester, I'd be inclined to recommend JUnit, whereas for myself, old fart programmer that I am, I have the luxury of picking the technology I consider better in many cases.  For example, compared to IntelliJ Idea, for me Eclipse is just too painful -- free or not, big market share or not.  So I use IntelliJ.  So if you're playing "Dice Keyword Bingo", stick with JUnit, otherwise do yourself a favor and take a look at TestNG.  </My two cents>
 
+
+<h2><a name="SettingUpMaven" id="SettingUpMaven">Setting Up The Maven Dependency for TestNG</a></h2>
 
 ### Setting up the Maven Dependency for TestNG
 
@@ -70,6 +61,8 @@ Now add the dependency for TestNG:
 
 For the benefit of those of you starting from scratch, the here is [the full POM file](https://github.com/CodeSolid/tutorials/blob/master/SpringTestNG/pom.xml).
 
+
+<h2><a name="SimpleTests" id="SimpleTests">Some Simple AbstractTestNGSpringContextTests Examples</a></h2>
 
 ### Simple AbstractTestNGSpringContextTests Test Examples
 
