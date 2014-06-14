@@ -6,9 +6,7 @@
         <title>Using TestNG with Spring</title>
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="">
-        <!-- Prism syntax highlighting -->
-        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
-
+      
         <!-- Custom CSS -->
         <link rel="stylesheet" href="https://codesolid.github.io/css/style.css">
 
@@ -17,9 +15,23 @@
         
         <!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
         <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-        
+      
+        <!-- Prism syntax highlighting -->
+        <link href="https://codesolid.github.io/css/prism.css" rel="stylesheet" type="text/css">
+  
     </head>
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
 
+woopra.config({
+    domain: 'codesolid.com'
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
     <body>
 
         <div class="container">
@@ -39,19 +51,23 @@
 <p class="meta">04 Jul 2013</p>
 
 <div class="post">
-<h3>Contents</h3>
-
-<ul>
-<li><p>Moving to TestNG from JUnit</p></li>
-<li><p>Setting Up The Maven Dependency for TestNG</p></li>
-<li><p>Some Simple AbstractTestNGSpringContextTests</p></li>
+<p>Testing Spring in JUnit is fairly simple given the test runner support.  Using TestNG is a little bit more complex, but this tutorial will quickly get you up to speed.
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#MovingToTestNGfromJUnit">Moving to TestNG from JUnit</a></li>
+<li><a href="#SettingUpMaven">Setting Up The Maven Dependency for TestNG</a></li>
+<li><a href="#SimpleTests">Some Simple AbstractTestNGSpringContextTests Examples</a></li>
 </ul>
+</div></p>
 
-<h3>Moving to TestNG From JUnit</h3>
+<h2><a name="MovingToTestNGfromJUnit" id="MovingToTestNGfromJUnit">Moving to TestNG from JUnit</a></h2>
 
 <p>A few weeks ago I published a <a href="http://www.particlewave.com/2013/05/16/spring-unit-testing-using-junit/">Simple Introduction to Spring Unit testing using JUnit</a>.  We&#39;ve been using JUnit quite a bit in our examples so far, but as some of you may already know, JUnit is not the only unit test framework for Java.  Another framework, TestNG, offers a lot of features that JUnit lacks, such as the ability to run parameterized tests in which a given test is run against an array of different values, and the ability to break tests down into categories coupled with fine-grained configuration control over what tests to run.  Indeed, the author of TestNG (&quot;Next Generation&quot;) very much had the limitations of JUnit in mind in writing the new framework.  You can read about some of the problems with JUnit that TestNG was designed to solve on it the <a href="http://testng.org/">TestNG web site</a>.</p>
 
 <p>Of course, the choice of which technology to use is often a matter not of what&#39;s best, but what&#39;s most popular (especially if you&#39;re early in your career and need to get certain key technologies added to your resume).  So for my wife, who&#39;s just beginning her technical career as a tester, I&#39;d be inclined to recommend JUnit, whereas for myself, old fart programmer that I am, I have the luxury of picking the technology I consider better in many cases.  For example, compared to IntelliJ Idea, for me Eclipse is just too painful -- free or not, big market share or not.  So I use IntelliJ.  So if you&#39;re playing &quot;Dice Keyword Bingo&quot;, stick with JUnit, otherwise do yourself a favor and take a look at TestNG.  </My two cents></p>
+
+<h2><a name="SettingUpMaven" id="SettingUpMaven">Setting Up The Maven Dependency for TestNG</a></h2>
 
 <h3>Setting up the Maven Dependency for TestNG</h3>
 
@@ -74,6 +90,8 @@
 </div>
 
 <p>For the benefit of those of you starting from scratch, the here is <a href="https://github.com/CodeSolid/tutorials/blob/master/SpringTestNG/pom.xml">the full POM file</a>.</p>
+
+<h2><a name="SimpleTests" id="SimpleTests">Some Simple AbstractTestNGSpringContextTests Examples</a></h2>
 
 <h3>Simple AbstractTestNGSpringContextTests Test Examples</h3>
 

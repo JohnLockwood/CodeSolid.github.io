@@ -15,12 +15,6 @@ body {
 
 p { line-height:180%;}
 
-.logo {
-  background-image:url('/images/CodeSolid.png');
-  background-position:left center;
-  background-repeat:no-repeat;
-
-}
 
 .container {
   max-width: 960px;
@@ -43,8 +37,13 @@ header h1 {
   line-height:40%;
 
 }
-header .logo_code {
 
+
+header .logo_code {
+  -webkit-border-top-left-radius: 12px;
+  -moz-border-top-left-radius: 12px;
+  border-top-left-radius: 12px;
+  
   background-color:black;
   color:white;
   padding:.2em;
@@ -54,6 +53,12 @@ header .logo_code {
 }
 
 header .logo_solid {
+
+  -webkit-border-top-right-radius: 12px;
+  -moz-border-top-right-radius: 12px;
+  border-top-right-radius: 12px;
+
+
   background-color:#ddd;
   color:black; 
   padding:.2em;
@@ -65,8 +70,10 @@ header p {
   margin:0;
   padding:0;
   font-size:85%;
-  font-style:italic;}
-
+  font-style:italic;
+  line-height:85%;
+  padding-top:3px;
+}
 
 #table_of_contents {
   -webkit-border-radius: 8px;
@@ -79,8 +86,11 @@ header p {
 
 
 
+  line-height:80%;
 
+  line-height:80%;
 
+  line-height:80%;
 
 
 
