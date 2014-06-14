@@ -1,6 +1,6 @@
 name: CodeSolid
 
-description:  Just another CodeSolid Description
+description:  Test Automation and Software Development Blog
 
 markdown: redcarpet
 
@@ -12,7 +12,7 @@ include: ['_pages', '_goalboost_testplan']
 
 relative_permalinks: false
 
-baseurl: "https://codesolid.github.io/"
+baseurl: "http://codesolid.com/"
 
 post:
   template: templates/_post.txt
