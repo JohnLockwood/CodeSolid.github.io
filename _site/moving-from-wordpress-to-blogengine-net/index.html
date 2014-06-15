@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Moving from Wordpress to BlogEngine.Net</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="">
+      
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="http://codesolid.com/css/style.css">
+
+        <!-- Navbar only -->
+        <link rel="stylesheet" href="http://codesolid.com/css/nav.css">
+        
+        <!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+      
+        <!-- Prism syntax highlighting -->
+        <link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+  
+    </head>
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com'
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+    <body>
+
+        <div class="container">
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Test Automation Specialists</p></header>
+        <nav id="nav">
+        <ul>
+        <li><a href="/">Home</a></li>        
+        <li><a href="/goalboost/">Goalboost.com</a></li>
+        <li><a href="/selenium/">Selenium Testing</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>    
+        </nav>
+
+        <div class="site">        
+          <h2>Moving from Wordpress to BlogEngine.Net</h2>
+<p class="meta">03 Oct 2009</p>
+
+<div class="post">
+<p>I’ve been in the process of migrating the site from a Wordpress blog hosted on HostingRails.com to a BlogEngine.Net blog hosted at Godaddy.com. You can consider this a guide to setting up a BlogEngine.Net site at Godaddy.com, but first, two words of caution about doing such a migration.</p>
+
+<p>Your first word of caution: fiction writers say that if you want to make a character interesting, present him with adversity. Unfortunately, presenting characters with adversity in real life doesn’t make us any more interesting – it only makes us write tutorials. Expect delays.</p>
+
+<p>Your second word of caution: If you’re not writing about ASP.NET or adding a blog to an ASP.NET web site, or if you don’t need to be on an ASP.NET platform for some other good reason, what the hell are you thinking? BlogEngine.net has some cool features, but for the most part <strong><em>Wordpress works significantly better</em></strong>. There, I came out and said it.</p>
+
+<p><strong>Godaddy’s Support for BlogEngine.NET</strong></p>
+
+<p><a href="http://www.particlewave.com/images/blog/MovingfromWordpresstoBlogEngine.Net_1250F/image.png"><img src="http://www.particlewave.com/images/blog/MovingfromWordpresstoBlogEngine.Net_1250F/image_thumb.png" alt="image"></a>I wasn’t able to do what I tried in the first go around, which was to just download the BlogEngine.net 1.5 release candidate and push it up to the site. Perhaps I was tired after a long day of work, and your mileage may vary, but what I ended up doing was installing BlogEngine.Net it from Godaddy’s application control panel. From the Hosting management page, click on the “Your Applications Link” (shown at left), then select “Blog” from the left hand navbar and then BlogEngine.Net. In my case I got a compatibility warning because I was running IIS 7.0 in <a href="http://learn.iis.net/page.aspx/244/how-to-take-advantage-of-the-iis7-integrated-pipeline/">Integrated Mode rather than Classic Mode</a> (who knew), so I had to click on “Purchase Compatible” then “Select compatible hosted domain” to work through what was going wrong, then return to “Content / IIS Configuration” to get it squared away. Once I did that it was pretty much smooth sailing, but at one point I either messed up the application, so I needed to make sure my blog directory (where blogengine.net was installed) was configured as an application:       </p>
+
+<p><a href="http://www.particlewave.com/images/blog/MovingfromWordpresstoBlogEngine.Net_1250F/image_3.png"><img src="http://www.particlewave.com/images/blog/MovingfromWordpresstoBlogEngine.Net_1250F/image_thumb_3.png" alt="image"></a></p>
+
+<p>Clicking the edit pencil button brings up this window, and you want to make sure Set Application Root is checked:</p>
+
+<p><a href="http://www.particlewave.com/images/blog/MovingfromWordpresstoBlogEngine.Net_1250F/image_4.png"><img src="http://www.particlewave.com/images/blog/MovingfromWordpresstoBlogEngine.Net_1250F/image_thumb_4.png" alt="image"></a></p>
+
+<p><strong>Importing Wordpress Posts to BlogEngine.Net</strong></p>
+
+<p>You’re first step for this part of your journey is to get the BlogML export tool from the <a href="http://blogml.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=171">Codeplex BlogML downloads page</a>. You want the download that says “Wordpress BlogML Export”. When you unzip this file, you’ll get a single export.php that works as a replacement for the default Wordpress export page. Backup up export.php in your <wordpress folder>/wp-admin directory, install this file, and run the Wordpress export from the admin panel to create a BlogML export.</p>
+
+<p>Now at this point you might want to give some thought to manually reviewing this file and removing duplicate posts, which could be a very tedious process. The export file created by this tool is likely to have any number of versions of some of your posts, and when you import into BlogEngine.net, your blog is going to stutter like a Porky Pig cartoon. When you run the BlogEngine.net import tool, there’s a handy checkbox “Remove Duplicate Posts” you can check. It doesn’t do anything, but you can check it.</p>
+
+<p><a href="http://www.particlewave.com/images/blog/MovingfromWordpresstoBlogEngine.Net_1250F/image_5.png"><img src="http://www.particlewave.com/images/blog/MovingfromWordpresstoBlogEngine.Net_1250F/image_thumb_5.png" alt="image"></a></p>
+
+<p>Maybe if you’re running BlogEngine.Net 1.5 this has been fixed and it does something. That would be nice.</p>
+
+<p>Another quirky aspect of this tool is that it doesn’t give you any sort of progress indicator letting you know what’s going on, so while it’s doing the import it pretty much looks like it’s gone to lunch. I recommend pushing the two validate buttons before you start the import, that way you know everything’s set up correctly, then be prepared to wait several minutes while it does its thing.</p>
+
+<p>When it finishes, your posts will be there, complete with Porky Pig stutters, but you’ll find your categories and tags weren’t imported. Oh well, what did I tell you at the beginning? Adversity won’t make you interesting, it will only make you write a tutorial.</p>
+
+<p><strong>Converting Your Wordpress Theme</strong></p>
+
+<p>Next your ready to convert your Wordpress theme. You’re probably not going to like this part, but here’s how I did it. Open up your favorite text editor and file difference tool, pick a target third party BlogEngine.net theme such as “Standard”, and code yourself a theme, there, fella. <a href="http://www.aspworkbench.com/blog/">Here’s how mine turned out</a>, combining the ASPWorkbench / ParticleWave theme with the Standard theme.</p>
+
+<p>So there you have it! Delete your duplicate posts, re-enter your categories, and rock and roll.</p>
+
+</div>
+
+<!--
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+              
+            </div>
+            <div class="contact">
+
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+-->
+          </div>
+
+    <script src="/js/prism.js"></script>
+    </div>
+    </div>
+    </body>
+</html>

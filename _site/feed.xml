@@ -136,8 +136,8 @@ base URL is cleverly stuffed away in the head tag.  &lt;/p&gt;
 &lt;/div&gt;
 </description>
 				<pubDate>Sat, 14 Jun 2014 00:00:00 -0700</pubDate>
-				<link>/testing/selenium/intellij%20idea/2014/06/14/getting-started-with-selenium-in-intellij-idea.html</link>
-				<guid isPermaLink="true">/testing/selenium/intellij%20idea/2014/06/14/getting-started-with-selenium-in-intellij-idea.html</guid>
+				<link>/getting-started-with-selenium-in-intellij-idea</link>
+				<guid isPermaLink="true">/getting-started-with-selenium-in-intellij-idea</guid>
 			</item>
 			
 		
@@ -155,8 +155,8 @@ base URL is cleverly stuffed away in the head tag.  &lt;/p&gt;
 &lt;p&gt;Such tasty, tasty dog food.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 02 Jun 2014 00:00:00 -0700</pubDate>
-				<link>/goalboost/2014/06/02/goalboost---hours-tracking-for-sofware-projects.html</link>
-				<guid isPermaLink="true">/goalboost/2014/06/02/goalboost---hours-tracking-for-sofware-projects.html</guid>
+				<link>/goalboost---hours-tracking-for-sofware-projects</link>
+				<guid isPermaLink="true">/goalboost---hours-tracking-for-sofware-projects</guid>
 			</item>
 			
 		
@@ -183,8 +183,8 @@ since I&amp;#39;m not using sass at the moment.&lt;/p&gt;
 &lt;p&gt;Now I can feed my keyboard addition again.  &lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 Jun 2014 00:00:00 -0700</pubDate>
-				<link>/miscellaneous/2014/06/01/we-are-moving.html</link>
-				<guid isPermaLink="true">/miscellaneous/2014/06/01/we-are-moving.html</guid>
+				<link>/we-are-moving</link>
+				<guid isPermaLink="true">/we-are-moving</guid>
 			</item>
 			
 		
@@ -199,8 +199,8 @@ more complex than &amp;#39;rake[&amp;quot;Testing the Rake Post Task&amp;quot;]&
 &lt;p&gt;My Rakefile with David Ensinger&amp;#39;s work on building Jekyll sites locally and working around the fact that Github doesn&amp;#39;t support most plugins, together with some of Ellen&amp;#39;s post-creating magic is located &lt;a href=&quot;https://github.com/CodeSolid/CodeSolid.github.io/blob/source/Rakefile&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 Jun 2014 00:00:00 -0700</pubDate>
-				<link>/miscellaneous/2014/06/01/testing-the-rake-post-task.html</link>
-				<guid isPermaLink="true">/miscellaneous/2014/06/01/testing-the-rake-post-task.html</guid>
+				<link>/testing-the-rake-post-task</link>
+				<guid isPermaLink="true">/testing-the-rake-post-task</guid>
 			</item>
 			
 		
@@ -212,8 +212,8 @@ more complex than &amp;#39;rake[&amp;quot;Testing the Rake Post Task&amp;quot;]&
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/28Zo8gj5810?list=UUZvhhcu-e5sURJ17cUwk02w&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 </description>
 				<pubDate>Sun, 23 Mar 2014 18:31:00 -0700</pubDate>
-				<link>/java%20beginners/2014/03/23/java-beginner-tutorial-downloading-installing-tools-java-development.html</link>
-				<guid isPermaLink="true">/java%20beginners/2014/03/23/java-beginner-tutorial-downloading-installing-tools-java-development.html</guid>
+				<link>/java-beginner-tutorial-downloading-installing-tools-java-development</link>
+				<guid isPermaLink="true">/java-beginner-tutorial-downloading-installing-tools-java-development</guid>
 			</item>
 			
 		
@@ -373,8 +373,8 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 &lt;p&gt;Getting started using the Spring TestNG support turned out to be really easy.  Check our our IntelliJ project and the full source on &lt;a href=&quot;https://github.com/CodeSolid/tutorials/tree/master/SpringTestNG&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 04 Jul 2013 12:14:37 -0700</pubDate>
-				<link>/testing,%20junit,%20testng%20tutorials/2013/07/04/using-testng-with-spring.html</link>
-				<guid isPermaLink="true">/testing,%20junit,%20testng%20tutorials/2013/07/04/using-testng-with-spring.html</guid>
+				<link>/using-testng-with-spring</link>
+				<guid isPermaLink="true">/using-testng-with-spring</guid>
 			</item>
 			
 		
@@ -613,8 +613,8 @@ public class StandardPasswordEncoderDemo {
 &lt;p&gt;With that, we&amp;#39;ve seen a basic Spring Security starter project that illustrates how to set up a very basic authentication based on pre-configured user names and passwords.  In Spring Security Part II, we&amp;#39;ll dig into how to handle the much more common use case of storing user authentication information in a database.  We&amp;#39;ll also dig into customizing the log-in forms.  This will serve as a starting point for a much more full featured authorization system suitable for a business to consumer or business to business web site.  Later on in another tutorial we&amp;#39;re planning to tie this database-based authentication system with Spring OAuth, allowing users with (for example) a Google account to sign in using that account.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 09 Jun 2013 19:37:37 -0700</pubDate>
-				<link>/spring/tutorials/2013/06/09/spring-security-part-i-spring-authentication-and-authorization-basics.html</link>
-				<guid isPermaLink="true">/spring/tutorials/2013/06/09/spring-security-part-i-spring-authentication-and-authorization-basics.html</guid>
+				<link>/spring-security-part-i-spring-authentication-and-authorization-basics</link>
+				<guid isPermaLink="true">/spring-security-part-i-spring-authentication-and-authorization-basics</guid>
 			</item>
 			
 		
@@ -843,8 +843,8 @@ public void testDatabaseConfiguredCorrectly() {
 &lt;p&gt;Working with the PropertyPlaceholderConfigurer class lets you easily configure your WAR file for production, test, and any other environments you need -- and with that out of the way, you can now get busy writing your application.  Enjoy!&lt;/p&gt;
 </description>
 				<pubDate>Sat, 01 Jun 2013 23:08:04 -0700</pubDate>
-				<link>/spring/tutorials/2013/06/01/configuring-spring-for-test-versus-production.html</link>
-				<guid isPermaLink="true">/spring/tutorials/2013/06/01/configuring-spring-for-test-versus-production.html</guid>
+				<link>/configuring-spring-for-test-versus-production</link>
+				<guid isPermaLink="true">/configuring-spring-for-test-versus-production</guid>
 			</item>
 			
 		
@@ -1294,8 +1294,8 @@ public void testDelete() {
 [/cc]&lt;/p&gt;
 </description>
 				<pubDate>Wed, 22 May 2013 18:00:40 -0700</pubDate>
-				<link>/testing,%20junit,%20testng%20tutorials/tutorials/2013/05/22/a-simple-hibernate-mysql-and-junit-tutorial.html</link>
-				<guid isPermaLink="true">/testing,%20junit,%20testng%20tutorials/tutorials/2013/05/22/a-simple-hibernate-mysql-and-junit-tutorial.html</guid>
+				<link>/a-simple-hibernate-mysql-and-junit-tutorial</link>
+				<guid isPermaLink="true">/a-simple-hibernate-mysql-and-junit-tutorial</guid>
 			</item>
 			
 		
@@ -1318,8 +1318,8 @@ public void testDelete() {
 &lt;p&gt;&lt;a href=&quot;http://www.particlewave.com/wordpress/wp-content/uploads/2013/05/EclipseImport3.png&quot;&gt;&lt;img src=&quot;http://www.particlewave.com/wordpress/wp-content/uploads/2013/05/EclipseImport3.png&quot; alt=&quot;EclipseImport3&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 17 May 2013 13:04:09 -0700</pubDate>
-				<link>/tutorials/2013/05/17/how-to-run-the-codesolid-tutorials-in-eclipse.html</link>
-				<guid isPermaLink="true">/tutorials/2013/05/17/how-to-run-the-codesolid-tutorials-in-eclipse.html</guid>
+				<link>/how-to-run-the-codesolid-tutorials-in-eclipse</link>
+				<guid isPermaLink="true">/how-to-run-the-codesolid-tutorials-in-eclipse</guid>
 			</item>
 			
 		
@@ -1584,8 +1584,8 @@ assertEquals(story.getUser().getRole(), &amp;quot;SuperGenius User&amp;quot;);
 &lt;p&gt;I hope you enjoyed this tutorial on Spring Unit Testing -- feel free to leave a comment if you&amp;#39;re finding it useful.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 16 May 2013 12:32:44 -0700</pubDate>
-				<link>/spring/testing,%20junit,%20testng%20tutorials/tutorials/2013/05/16/spring-unit-testing-using-junit.html</link>
-				<guid isPermaLink="true">/spring/testing,%20junit,%20testng%20tutorials/tutorials/2013/05/16/spring-unit-testing-using-junit.html</guid>
+				<link>/spring-unit-testing-using-junit</link>
+				<guid isPermaLink="true">/spring-unit-testing-using-junit</guid>
 			</item>
 			
 		
@@ -1618,8 +1618,8 @@ assertEquals(story.getUser().getRole(), &amp;quot;SuperGenius User&amp;quot;);
 &lt;/ul&gt;
 </description>
 				<pubDate>Mon, 13 May 2013 20:12:16 -0700</pubDate>
-				<link>/software/testing,%20junit,%20testng%20tutorials/2013/05/13/pros-and-cons-of-test-driven-development.html</link>
-				<guid isPermaLink="true">/software/testing,%20junit,%20testng%20tutorials/2013/05/13/pros-and-cons-of-test-driven-development.html</guid>
+				<link>/pros-and-cons-of-test-driven-development</link>
+				<guid isPermaLink="true">/pros-and-cons-of-test-driven-development</guid>
 			</item>
 			
 		
@@ -1772,8 +1772,8 @@ public void testArray() {
 &lt;p&gt;Enjoy!&lt;/p&gt;
 </description>
 				<pubDate>Sat, 11 May 2013 12:21:15 -0700</pubDate>
-				<link>/testing,%20junit,%20testng%20tutorials/tutorials/2013/05/11/a-simple-junit-tutorial-using-maven-and-intellij-idea.html</link>
-				<guid isPermaLink="true">/testing,%20junit,%20testng%20tutorials/tutorials/2013/05/11/a-simple-junit-tutorial-using-maven-and-intellij-idea.html</guid>
+				<link>/a-simple-junit-tutorial-using-maven-and-intellij-idea</link>
+				<guid isPermaLink="true">/a-simple-junit-tutorial-using-maven-and-intellij-idea</guid>
 			</item>
 			
 		
@@ -1801,8 +1801,8 @@ public void testArray() {
 &lt;/ul&gt;
 </description>
 				<pubDate>Wed, 01 May 2013 12:31:11 -0700</pubDate>
-				<link>/software/2013/05/01/what-if-carpenters-were-hired-like-programmers.html</link>
-				<guid isPermaLink="true">/software/2013/05/01/what-if-carpenters-were-hired-like-programmers.html</guid>
+				<link>/what-if-carpenters-were-hired-like-programmers</link>
+				<guid isPermaLink="true">/what-if-carpenters-were-hired-like-programmers</guid>
 			</item>
 			
 		
@@ -1818,8 +1818,8 @@ public void testArray() {
 &lt;p&gt;We&amp;#39;re having another organizational meeting at 9:00 as a Google hangout. We&amp;#39;ll be meeting weekly. If you&amp;#39;re a developer / QA engineer or a client marketing focused staffing professional, we&amp;#39;d like to extend an invitation to attend a future meeting.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 20 Apr 2013 06:26:43 -0700</pubDate>
-				<link>/miscellaneous/2013/04/20/and-then-there-were-two.html</link>
-				<guid isPermaLink="true">/miscellaneous/2013/04/20/and-then-there-were-two.html</guid>
+				<link>/and-then-there-were-two</link>
+				<guid isPermaLink="true">/and-then-there-were-two</guid>
 			</item>
 			
 		
@@ -1861,8 +1861,8 @@ public void testArray() {
 &lt;/ul&gt;
 </description>
 				<pubDate>Mon, 15 Apr 2013 12:28:15 -0700</pubDate>
-				<link>/employee%20owned%20software/2013/04/15/employee-owned-business-draft-business-plan.html</link>
-				<guid isPermaLink="true">/employee%20owned%20software/2013/04/15/employee-owned-business-draft-business-plan.html</guid>
+				<link>/employee-owned-business-draft-business-plan</link>
+				<guid isPermaLink="true">/employee-owned-business-draft-business-plan</guid>
 			</item>
 			
 		
@@ -1900,8 +1900,8 @@ public void testArray() {
 &lt;p&gt;I&amp;#39;m going to let me inner salesman run the company for a few weeks.  It won&amp;#39;t be much fun listening to that bozo, but the app will move forward, and it may become something I can sell.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 21 Nov 2012 18:00:02 -0800</pubDate>
-				<link>/software/2012/11/21/dont-let-the-development-department-run-your-one-man-company.html</link>
-				<guid isPermaLink="true">/software/2012/11/21/dont-let-the-development-department-run-your-one-man-company.html</guid>
+				<link>/dont-let-the-development-department-run-your-one-man-company</link>
+				<guid isPermaLink="true">/dont-let-the-development-department-run-your-one-man-company</guid>
 			</item>
 			
 		
@@ -1915,8 +1915,8 @@ public void testArray() {
 &lt;p&gt;Por cualquier medio, lo importante es que juntos disfrutamos los frutos de nuestro trabajo, y que juntos lleguemos a decidir nuestros destinos y tareas -- los dos sellos de calidad de una empresa propiedad de los empleados.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 20 Nov 2012 06:40:24 -0800</pubDate>
-				<link>/employee%20owned%20software/2012/11/20/desarrollo-en-ruby-on-rails-en-estados-unidos.html</link>
-				<guid isPermaLink="true">/employee%20owned%20software/2012/11/20/desarrollo-en-ruby-on-rails-en-estados-unidos.html</guid>
+				<link>/desarrollo-en-ruby-on-rails-en-estados-unidos</link>
+				<guid isPermaLink="true">/desarrollo-en-ruby-on-rails-en-estados-unidos</guid>
 			</item>
 			
 		
@@ -2010,8 +2010,8 @@ content&lt;em&gt;for?(:description) ? yield(:description) : (I18n.t &amp;quot;si
 &lt;p&gt;Definitely not what you want.  What will the Guatemalans think of you then?&lt;/p&gt;
 </description>
 				<pubDate>Sat, 10 Nov 2012 10:20:06 -0800</pubDate>
-				<link>/miscellaneous/2012/11/10/translating-application-html-erb-to-haml.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/11/10/translating-application-html-erb-to-haml.html</guid>
+				<link>/translating-application-html-erb-to-haml</link>
+				<guid isPermaLink="true">/translating-application-html-erb-to-haml</guid>
 			</item>
 			
 		
@@ -2061,8 +2061,8 @@ content&lt;em&gt;for?(:description) ? yield(:description) : (I18n.t &amp;quot;si
 &lt;p&gt;Oh, sorry:  (30).&lt;/p&gt;
 </description>
 				<pubDate>Sat, 03 Nov 2012 03:59:48 -0700</pubDate>
-				<link>/ruby%20on%20rails/2012/11/03/thirty-point-five-reasons-why-i-dont-have-a-rails-job.html</link>
-				<guid isPermaLink="true">/ruby%20on%20rails/2012/11/03/thirty-point-five-reasons-why-i-dont-have-a-rails-job.html</guid>
+				<link>/thirty-point-five-reasons-why-i-dont-have-a-rails-job</link>
+				<guid isPermaLink="true">/thirty-point-five-reasons-why-i-dont-have-a-rails-job</guid>
 			</item>
 			
 		
@@ -2122,8 +2122,8 @@ content&lt;em&gt;for?(:description) ? yield(:description) : (I18n.t &amp;quot;si
 &lt;p&gt;No broken windows means just that -- NO broken windows.The problem with letting things be &amp;quot;just good enough&amp;quot; is that once your quality standards are just good enough, wait a few years and you&amp;#39;ll inevitably get to &amp;quot;please, somebody kill me.&amp;quot;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 30 Sep 2012 18:48:17 -0700</pubDate>
-				<link>/miscellaneous/2012/09/30/in-praise-of-100-test-coverage-or-how-i-made-my-code-smell-bad-to-martin-fowler.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/09/30/in-praise-of-100-test-coverage-or-how-i-made-my-code-smell-bad-to-martin-fowler.html</guid>
+				<link>/in-praise-of-100-test-coverage-or-how-i-made-my-code-smell-bad-to-martin-fowler</link>
+				<guid isPermaLink="true">/in-praise-of-100-test-coverage-or-how-i-made-my-code-smell-bad-to-martin-fowler</guid>
 			</item>
 			
 		
@@ -2163,8 +2163,8 @@ content&lt;em&gt;for?(:description) ? yield(:description) : (I18n.t &amp;quot;si
 &lt;/ul&gt;
 </description>
 				<pubDate>Sat, 15 Sep 2012 09:21:13 -0700</pubDate>
-				<link>/miscellaneous/ruby%20on%20rails/software/2012/09/15/how-to-get-in-the-zone-a-reminder-to-myself-in-case-i-someday-read-me.html</link>
-				<guid isPermaLink="true">/miscellaneous/ruby%20on%20rails/software/2012/09/15/how-to-get-in-the-zone-a-reminder-to-myself-in-case-i-someday-read-me.html</guid>
+				<link>/how-to-get-in-the-zone-a-reminder-to-myself-in-case-i-someday-read-me</link>
+				<guid isPermaLink="true">/how-to-get-in-the-zone-a-reminder-to-myself-in-case-i-someday-read-me</guid>
 			</item>
 			
 		
@@ -2200,8 +2200,8 @@ Factory.load(&amp;#39;spec/factories.rb&amp;#39;)
 &lt;p&gt;Admittedly if this were harder I would have gotten a longer article out of it, but you have to take the good with the bad.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 14 Jul 2012 06:36:07 -0700</pubDate>
-				<link>/ruby%20on%20rails/2012/07/14/using-factorygirl-with-the-rails-console.html</link>
-				<guid isPermaLink="true">/ruby%20on%20rails/2012/07/14/using-factorygirl-with-the-rails-console.html</guid>
+				<link>/using-factorygirl-with-the-rails-console</link>
+				<guid isPermaLink="true">/using-factorygirl-with-the-rails-console</guid>
 			</item>
 			
 		
@@ -2267,8 +2267,8 @@ git clone git://github.com/fdv/typo.git
 &lt;p&gt;Run the instructions above and you should be good to go!&lt;/p&gt;
 </description>
 				<pubDate>Thu, 12 Jul 2012 20:26:45 -0700</pubDate>
-				<link>/ruby%20on%20rails/2012/07/12/getting-started-with-typo-2.html</link>
-				<guid isPermaLink="true">/ruby%20on%20rails/2012/07/12/getting-started-with-typo-2.html</guid>
+				<link>/getting-started-with-typo-2</link>
+				<guid isPermaLink="true">/getting-started-with-typo-2</guid>
 			</item>
 			
 		
@@ -2347,8 +2347,8 @@ Completed 500 Internal Server Error in 18ms
 &lt;p&gt;In simpler terms, the best way to debug Passenger and Devise problems on Rails is not to treat them as Passenger or Devise problems.   Underneath whatever&amp;#39;s broken is a Rails application, and that Rails application has excellent logging available.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 11 Jul 2012 12:47:20 -0700</pubDate>
-				<link>/miscellaneous/2012/07/11/troubleshooting-passenger-and-devise-problems-on-ruby-on-rails.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/07/11/troubleshooting-passenger-and-devise-problems-on-ruby-on-rails.html</guid>
+				<link>/troubleshooting-passenger-and-devise-problems-on-ruby-on-rails</link>
+				<guid isPermaLink="true">/troubleshooting-passenger-and-devise-problems-on-ruby-on-rails</guid>
 			</item>
 			
 		
@@ -2449,8 +2449,8 @@ rake spec SPEC=spec/requests/people_spec.rb
 &lt;p&gt;Hopefully that will save you a few minutes of time.  Enjoy!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 06 Jul 2012 19:09:58 -0700</pubDate>
-				<link>/miscellaneous/2012/07/06/testing-devise-authentication-in-rails-3-1.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/07/06/testing-devise-authentication-in-rails-3-1.html</guid>
+				<link>/testing-devise-authentication-in-rails-3-1</link>
+				<guid isPermaLink="true">/testing-devise-authentication-in-rails-3-1</guid>
 			</item>
 			
 		
@@ -2484,8 +2484,8 @@ rake spec SPEC=spec/requests/people_spec.rb
 &lt;p&gt;Leave me a comment if you&amp;#39;re such a manager. I&amp;#39;d love to hear from you.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 06 Jul 2012 13:12:14 -0700</pubDate>
-				<link>/miscellaneous/2012/07/06/hire-this-ruby-developer-trapped-in-a-microsoft-programmers-body.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/07/06/hire-this-ruby-developer-trapped-in-a-microsoft-programmers-body.html</guid>
+				<link>/hire-this-ruby-developer-trapped-in-a-microsoft-programmers-body</link>
+				<guid isPermaLink="true">/hire-this-ruby-developer-trapped-in-a-microsoft-programmers-body</guid>
 			</item>
 			
 		
@@ -2523,8 +2523,8 @@ end
 &lt;p&gt;So far my tests in the Visual Editor didn&amp;#39;t work out too well even when following the directions.  However I&amp;#39;m very pleased with the result I get in the non-visual editor, and one can always type one&amp;#39;s own HTML for any post with code in it.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 06 Jul 2012 12:29:02 -0700</pubDate>
-				<link>/miscellaneous/2012/07/06/yet-another-code-formatting-test.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/07/06/yet-another-code-formatting-test.html</guid>
+				<link>/yet-another-code-formatting-test</link>
+				<guid isPermaLink="true">/yet-another-code-formatting-test</guid>
 			</item>
 			
 		
@@ -2554,8 +2554,8 @@ end
 &lt;p&gt;I&amp;#39;ll let you know how it all goes.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 May 2012 06:08:57 -0700</pubDate>
-				<link>/miscellaneous/2012/05/04/on-buying-too-much-crap-and-what-it-might-be-like-to-stop.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/05/04/on-buying-too-much-crap-and-what-it-might-be-like-to-stop.html</guid>
+				<link>/on-buying-too-much-crap-and-what-it-might-be-like-to-stop</link>
+				<guid isPermaLink="true">/on-buying-too-much-crap-and-what-it-might-be-like-to-stop</guid>
 			</item>
 			
 		
@@ -2594,8 +2594,8 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
 				<pubDate>Sat, 03 Mar 2012 09:07:38 -0800</pubDate>
-				<link>/ruby%20on%20rails/2012/03/03/checking-for-mysql_query-in-mysqlclient-lib-no.html</link>
-				<guid isPermaLink="true">/ruby%20on%20rails/2012/03/03/checking-for-mysql_query-in-mysqlclient-lib-no.html</guid>
+				<link>/checking-for-mysql_query-in-mysqlclient-lib-no</link>
+				<guid isPermaLink="true">/checking-for-mysql_query-in-mysqlclient-lib-no</guid>
 			</item>
 			
 		
@@ -2612,8 +2612,8 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 [/code]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 				<pubDate>Fri, 17 Feb 2012 13:57:16 -0800</pubDate>
-				<link>/miscellaneous/2012/02/17/testing-a-code-markup-plugin.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/02/17/testing-a-code-markup-plugin.html</guid>
+				<link>/testing-a-code-markup-plugin</link>
+				<guid isPermaLink="true">/testing-a-code-markup-plugin</guid>
 			</item>
 			
 		
@@ -2637,8 +2637,8 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And with that, it&amp;#39;s Monday.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 12 Feb 2012 17:50:35 -0800</pubDate>
-				<link>/ruby%20on%20rails/2012/02/12/this-week-in-my-unhired-rails-developer-journey.html</link>
-				<guid isPermaLink="true">/ruby%20on%20rails/2012/02/12/this-week-in-my-unhired-rails-developer-journey.html</guid>
+				<link>/this-week-in-my-unhired-rails-developer-journey</link>
+				<guid isPermaLink="true">/this-week-in-my-unhired-rails-developer-journey</guid>
 			</item>
 			
 		
@@ -2660,8 +2660,8 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Being clever is fun, and the speed boost is exhilarating.  If you&amp;#39;re being clever, believe me, I understand the allure.  But take my advice -- cut it out and be obvious.  Your future self will thank you for it.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 04 Feb 2012 06:22:26 -0800</pubDate>
-				<link>/miscellaneous/2012/02/04/taking-another-look-at-python.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/02/04/taking-another-look-at-python.html</guid>
+				<link>/taking-another-look-at-python</link>
+				<guid isPermaLink="true">/taking-another-look-at-python</guid>
 			</item>
 			
 		
@@ -2702,8 +2702,8 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;So there you go.  Learn Ruby.  It&amp;#39;s the patriotic thing to do.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 07 Jan 2012 09:10:21 -0800</pubDate>
-				<link>/miscellaneous/2012/01/07/back-into-rails.html</link>
-				<guid isPermaLink="true">/miscellaneous/2012/01/07/back-into-rails.html</guid>
+				<link>/back-into-rails</link>
+				<guid isPermaLink="true">/back-into-rails</guid>
 			</item>
 			
 		
@@ -2719,8 +2719,8 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once you’re connected, let the staff know you’re a constituent, then ask your Rep. to &lt;strong&gt;co-sponsor&lt;/strong&gt; the &lt;strong&gt;People’s Rights Amendment -- H J Res 88&lt;/strong&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 15 Dec 2011 13:07:37 -0800</pubDate>
-				<link>/miscellaneous/2011/12/15/have-your-representative-co-sponsor-the-peoples-rights-amendment.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/12/15/have-your-representative-co-sponsor-the-peoples-rights-amendment.html</guid>
+				<link>/have-your-representative-co-sponsor-the-peoples-rights-amendment</link>
+				<guid isPermaLink="true">/have-your-representative-co-sponsor-the-peoples-rights-amendment</guid>
 			</item>
 			
 		
@@ -2747,8 +2747,8 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 Orangevale, CA&lt;/p&gt;
 </description>
 				<pubDate>Thu, 08 Dec 2011 12:53:19 -0800</pubDate>
-				<link>/miscellaneous/2011/12/08/an-open-letter-to-state-senator-ted-gaines.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/12/08/an-open-letter-to-state-senator-ted-gaines.html</guid>
+				<link>/an-open-letter-to-state-senator-ted-gaines</link>
+				<guid isPermaLink="true">/an-open-letter-to-state-senator-ted-gaines</guid>
 			</item>
 			
 		
@@ -2774,8 +2774,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;John Lockwood&lt;/p&gt;
 </description>
 				<pubDate>Mon, 05 Dec 2011 16:51:12 -0800</pubDate>
-				<link>/miscellaneous/2011/12/05/dr-richard-pan-state-assemblyman-an-open-letter.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/12/05/dr-richard-pan-state-assemblyman-an-open-letter.html</guid>
+				<link>/dr-richard-pan-state-assemblyman-an-open-letter</link>
+				<guid isPermaLink="true">/dr-richard-pan-state-assemblyman-an-open-letter</guid>
 			</item>
 			
 		
@@ -2793,8 +2793,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;Although perhaps originating with Occupy, far from being a leftist screed, it is a call for a return to a government that is responsible for preserving and defending the Constitution (duh). Progressive Radio host Thom Hartman calls it awesome and brilliant and I agree.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 02 Dec 2011 12:40:41 -0800</pubDate>
-				<link>/miscellaneous/2011/12/02/my-news-tip-for-the-huffington-post.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/12/02/my-news-tip-for-the-huffington-post.html</guid>
+				<link>/my-news-tip-for-the-huffington-post</link>
+				<guid isPermaLink="true">/my-news-tip-for-the-huffington-post</guid>
 			</item>
 			
 		
@@ -3210,8 +3210,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;Good luck! Thank you for embracing and sharing The New Common Sense in advance, and may we all further unite and take our country back as One (but without the percent, unless they shape up of course)!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 02 Dec 2011 11:06:35 -0800</pubDate>
-				<link>/miscellaneous/2011/12/02/a-teaparty-and-occupy-friendly-roadmap-for-a-truly-representative-government.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/12/02/a-teaparty-and-occupy-friendly-roadmap-for-a-truly-representative-government.html</guid>
+				<link>/a-teaparty-and-occupy-friendly-roadmap-for-a-truly-representative-government</link>
+				<guid isPermaLink="true">/a-teaparty-and-occupy-friendly-roadmap-for-a-truly-representative-government</guid>
 			</item>
 			
 		
@@ -3238,8 +3238,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;I hope to meet you and have a chance to talk to you very soon.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 01 Dec 2011 21:22:27 -0800</pubDate>
-				<link>/miscellaneous/2011/12/01/ending-corporate-personhood-in-california-making-it-happen.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/12/01/ending-corporate-personhood-in-california-making-it-happen.html</guid>
+				<link>/ending-corporate-personhood-in-california-making-it-happen</link>
+				<guid isPermaLink="true">/ending-corporate-personhood-in-california-making-it-happen</guid>
 			</item>
 			
 		
@@ -3277,8 +3277,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;Please write to me about your views on this and contact me to volunteer.  Government of the people, by the people, and for the people has to start with the right definition of who the people are.  (Hint -- if you&amp;#39;re reading this, you are.  Your company isn&amp;#39;t, but your boss is.  It&amp;#39;s so simple it took the Supreme Court 200 years to fully screw it up).&lt;/p&gt;
 </description>
 				<pubDate>Wed, 30 Nov 2011 19:41:54 -0800</pubDate>
-				<link>/miscellaneous/2011/11/30/launching-californians-against-corporate-personhood.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/11/30/launching-californians-against-corporate-personhood.html</guid>
+				<link>/launching-californians-against-corporate-personhood</link>
+				<guid isPermaLink="true">/launching-californians-against-corporate-personhood</guid>
 			</item>
 			
 		
@@ -3298,8 +3298,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
 				<pubDate>Wed, 23 Nov 2011 20:43:45 -0800</pubDate>
-				<link>/miscellaneous/2011/11/23/non-violence-triggering-the-spam-filter.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/11/23/non-violence-triggering-the-spam-filter.html</guid>
+				<link>/non-violence-triggering-the-spam-filter</link>
+				<guid isPermaLink="true">/non-violence-triggering-the-spam-filter</guid>
 			</item>
 			
 		
@@ -3317,8 +3317,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;From my position as a very sympathetic but very part time member of the movement, such kibitzing may seem like armchair quarterbacking. I do think that speaking for me, studying Gandhi’s history and reading other writers on non-violence is a very interesting endeavor that I think will help to educate me as to the possibilities.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 23 Nov 2011 20:29:41 -0800</pubDate>
-				<link>/miscellaneous/2011/11/23/non-violence-social-change-and-the-occupy-movement.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/11/23/non-violence-social-change-and-the-occupy-movement.html</guid>
+				<link>/non-violence-social-change-and-the-occupy-movement</link>
+				<guid isPermaLink="true">/non-violence-social-change-and-the-occupy-movement</guid>
 			</item>
 			
 		
@@ -3336,8 +3336,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;Uniforms and signs and other advertising gimmicks are nothing that Corporations don&amp;#39;t already own in spades. Active and consistent acts of kindness and love toward those less fortunate than ourselves are things that will benefit us both personally and as a mass movement.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 20 Nov 2011 11:24:09 -0800</pubDate>
-				<link>/miscellaneous/2011/11/20/my-response-to-occupy-call-for-an-alternative-day-of-action.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/11/20/my-response-to-occupy-call-for-an-alternative-day-of-action.html</guid>
+				<link>/my-response-to-occupy-call-for-an-alternative-day-of-action</link>
+				<guid isPermaLink="true">/my-response-to-occupy-call-for-an-alternative-day-of-action</guid>
 			</item>
 			
 		
@@ -3375,8 +3375,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;We’ll be together, together you and I.&lt;/em&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sat, 19 Nov 2011 09:02:41 -0800</pubDate>
-				<link>/miscellaneous/2011/11/19/bringing-the-occupy-movement-and-the-tea-party-together.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/11/19/bringing-the-occupy-movement-and-the-tea-party-together.html</guid>
+				<link>/bringing-the-occupy-movement-and-the-tea-party-together</link>
+				<guid isPermaLink="true">/bringing-the-occupy-movement-and-the-tea-party-together</guid>
 			</item>
 			
 		
@@ -3498,8 +3498,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;how much is enough?&lt;/p&gt;
 </description>
 				<pubDate>Thu, 27 Oct 2011 04:32:39 -0700</pubDate>
-				<link>/miscellaneous/2011/10/27/how-much-is-enough.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/10/27/how-much-is-enough.html</guid>
+				<link>/how-much-is-enough</link>
+				<guid isPermaLink="true">/how-much-is-enough</guid>
 			</item>
 			
 		
@@ -3533,8 +3533,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;Stay strong.  I love you guys.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 21 Oct 2011 12:43:58 -0700</pubDate>
-				<link>/miscellaneous/2011/10/21/in-solidarity-with-occupy-wall-street.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/10/21/in-solidarity-with-occupy-wall-street.html</guid>
+				<link>/in-solidarity-with-occupy-wall-street</link>
+				<guid isPermaLink="true">/in-solidarity-with-occupy-wall-street</guid>
 			</item>
 			
 		
@@ -3560,8 +3560,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;I wonder what the personality testers would make of that.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 21 Jun 2011 19:04:54 -0700</pubDate>
-				<link>/miscellaneous/2011/06/21/web-design-and-being-in-a-state-of-flow.html</link>
-				<guid isPermaLink="true">/miscellaneous/2011/06/21/web-design-and-being-in-a-state-of-flow.html</guid>
+				<link>/web-design-and-being-in-a-state-of-flow</link>
+				<guid isPermaLink="true">/web-design-and-being-in-a-state-of-flow</guid>
 			</item>
 			
 		
@@ -3585,8 +3585,8 @@ Orangevale, CA&lt;/p&gt;
 &lt;p&gt;Lo siento, pero este artículo aun no está traducido desde inglés.  ¿Que puedo decir?  Trabajo demasiado durante la semana, porque me pagan.  Les prometo que voy a traducirlo pronto.  Gracias por tu paciencia.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 15 Jun 2010 06:08:36 -0700</pubDate>
-				<link>/miscellaneous/2010/06/15/css3-and-modern-web-design-resources-this-week.html</link>
-				<guid isPermaLink="true">/miscellaneous/2010/06/15/css3-and-modern-web-design-resources-this-week.html</guid>
+				<link>/css3-and-modern-web-design-resources-this-week</link>
+				<guid isPermaLink="true">/css3-and-modern-web-design-resources-this-week</guid>
 			</item>
 			
 		
@@ -3702,8 +3702,8 @@ Value&lt;/p&gt;
 &lt;p&gt;URL&lt;/p&gt;
 </description>
 				<pubDate>Sat, 12 Jun 2010 07:29:01 -0700</pubDate>
-				<link>/miscellaneous/2010/06/12/my-first-bilingual-web-site.html</link>
-				<guid isPermaLink="true">/miscellaneous/2010/06/12/my-first-bilingual-web-site.html</guid>
+				<link>/my-first-bilingual-web-site</link>
+				<guid isPermaLink="true">/my-first-bilingual-web-site</guid>
 			</item>
 			
 		
@@ -3753,8 +3753,8 @@ I wrote about this &lt;a href=&quot;http://www.particlewave.com/blog/2009/11/01/
 &lt;/ul&gt;
 </description>
 				<pubDate>Sun, 06 Jun 2010 06:34:23 -0700</pubDate>
-				<link>/john%20lockwood/ruby%20on%20rails/2010/06/06/role-models-spending-time-in-the-design-phase-of-my-life.html</link>
-				<guid isPermaLink="true">/john%20lockwood/ruby%20on%20rails/2010/06/06/role-models-spending-time-in-the-design-phase-of-my-life.html</guid>
+				<link>/role-models-spending-time-in-the-design-phase-of-my-life</link>
+				<guid isPermaLink="true">/role-models-spending-time-in-the-design-phase-of-my-life</guid>
 			</item>
 			
 		
@@ -3780,8 +3780,8 @@ I wrote about this &lt;a href=&quot;http://www.particlewave.com/blog/2009/11/01/
 &lt;p&gt;I’m going to spend some time finding myself. If I succeed, I’ll let you know where I was all along. I’ll bring a water bottle in case I appear to be dehydrated.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 29 May 2010 06:58:43 -0700</pubDate>
-				<link>/john%20lockwood/2010/05/29/the-unimaginable.html</link>
-				<guid isPermaLink="true">/john%20lockwood/2010/05/29/the-unimaginable.html</guid>
+				<link>/the-unimaginable</link>
+				<guid isPermaLink="true">/the-unimaginable</guid>
 			</item>
 			
 		
@@ -3795,8 +3795,8 @@ I wrote about this &lt;a href=&quot;http://www.particlewave.com/blog/2009/11/01/
 &lt;p&gt;Next headline: Fitness Club Members Quitting Over Exercise Concerns.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 28 May 2010 05:59:40 -0700</pubDate>
-				<link>/miscellaneous/2010/05/28/facebook-privacy-concerns.html</link>
-				<guid isPermaLink="true">/miscellaneous/2010/05/28/facebook-privacy-concerns.html</guid>
+				<link>/facebook-privacy-concerns</link>
+				<guid isPermaLink="true">/facebook-privacy-concerns</guid>
 			</item>
 			
 		
@@ -3825,8 +3825,8 @@ I wrote about this &lt;a href=&quot;http://www.particlewave.com/blog/2009/11/01/
 &lt;p&gt;And then of course, I finish getting dressed. Now where was that leash?&lt;/p&gt;
 </description>
 				<pubDate>Sat, 22 May 2010 09:32:14 -0700</pubDate>
-				<link>/miscellaneous/2010/05/22/saturday-morning-with-the-dog-vs-twitter-and-facebook.html</link>
-				<guid isPermaLink="true">/miscellaneous/2010/05/22/saturday-morning-with-the-dog-vs-twitter-and-facebook.html</guid>
+				<link>/saturday-morning-with-the-dog-vs-twitter-and-facebook</link>
+				<guid isPermaLink="true">/saturday-morning-with-the-dog-vs-twitter-and-facebook</guid>
 			</item>
 			
 		
@@ -3858,8 +3858,8 @@ I wrote about this &lt;a href=&quot;http://www.particlewave.com/blog/2009/11/01/
 &lt;p&gt;Please.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 20 May 2010 20:54:19 -0700</pubDate>
-				<link>/miscellaneous/2010/05/20/confessions-of-a-social-media-retard.html</link>
-				<guid isPermaLink="true">/miscellaneous/2010/05/20/confessions-of-a-social-media-retard.html</guid>
+				<link>/confessions-of-a-social-media-retard</link>
+				<guid isPermaLink="true">/confessions-of-a-social-media-retard</guid>
 			</item>
 			
 		
@@ -3883,8 +3883,8 @@ I wrote about this &lt;a href=&quot;http://www.particlewave.com/blog/2009/11/01/
 &lt;p&gt;Let’s see if I can read myself there by writing myself here.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 15 May 2010 08:13:57 -0700</pubDate>
-				<link>/miscellaneous/2010/05/15/social-networking-are-you-kidding-me.html</link>
-				<guid isPermaLink="true">/miscellaneous/2010/05/15/social-networking-are-you-kidding-me.html</guid>
+				<link>/social-networking-are-you-kidding-me</link>
+				<guid isPermaLink="true">/social-networking-are-you-kidding-me</guid>
 			</item>
 			
 		
@@ -3927,8 +3927,8 @@ You&amp;#39;re gonna make it after all.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I hope you’ve enjoyed this musical interlude as much as I have. I know, I know: don’t quit your day job.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 07 Nov 2009 16:45:53 -0800</pubDate>
-				<link>/employee%20owned%20software/2009/11/07/employees-love-you-capitalism-long-time-or-dont-quit-your-day-job.html</link>
-				<guid isPermaLink="true">/employee%20owned%20software/2009/11/07/employees-love-you-capitalism-long-time-or-dont-quit-your-day-job.html</guid>
+				<link>/employees-love-you-capitalism-long-time-or-dont-quit-your-day-job</link>
+				<guid isPermaLink="true">/employees-love-you-capitalism-long-time-or-dont-quit-your-day-job</guid>
 			</item>
 			
 		
@@ -3985,8 +3985,8 @@ Yes, there are a lot of companies who are building curly light-bulbs or selling 
 &lt;p&gt;The problem of course with working as a programmer for a big company is that you&amp;#39; don’t have a say in how the software is created. Working open source, you can do whatever you want for free, and then try to sell that to people who by definition don’t pay for things. Working as an employee-owner in a closed source shop, you can build your skills and own the software that is sold and forms the basis of the consulting business -- the “means of production”, if you will. Your clients will benefit from your longevity to the company and the dedication with which you take a long term view to create outstanding software. Everybody wins. And nobody gets run over by a tank.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 Nov 2009 13:50:08 -0800</pubDate>
-				<link>/employee%20owned%20software/2009/11/01/knee-jerk-open-source-ialism.html</link>
-				<guid isPermaLink="true">/employee%20owned%20software/2009/11/01/knee-jerk-open-source-ialism.html</guid>
+				<link>/knee-jerk-open-source-ialism</link>
+				<guid isPermaLink="true">/knee-jerk-open-source-ialism</guid>
 			</item>
 			
 		
@@ -4083,8 +4083,8 @@ A detailed resource of information we may need going forward.       &lt;/p&gt;
 A Vermont web development software company organized as an Employee Owned Cooperative&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 Nov 2009 11:12:49 -0800</pubDate>
-				<link>/employee%20owned%20software/2009/11/01/employee-owned-software-company.html</link>
-				<guid isPermaLink="true">/employee%20owned%20software/2009/11/01/employee-owned-software-company.html</guid>
+				<link>/employee-owned-software-company</link>
+				<guid isPermaLink="true">/employee-owned-software-company</guid>
 			</item>
 			
 		
@@ -4122,8 +4122,8 @@ A Vermont web development software company organized as an Employee Owned Cooper
 &lt;p&gt;Kaplah, comrades!&lt;/p&gt;
 </description>
 				<pubDate>Sun, 01 Nov 2009 09:59:08 -0800</pubDate>
-				<link>/miscellaneous/2009/11/01/an-employee-owned-software-collective.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/11/01/an-employee-owned-software-collective.html</guid>
+				<link>/an-employee-owned-software-collective</link>
+				<guid isPermaLink="true">/an-employee-owned-software-collective</guid>
 			</item>
 			
 		
@@ -4148,8 +4148,8 @@ A Vermont web development software company organized as an Employee Owned Cooper
 &lt;/ul&gt;
 </description>
 				<pubDate>Sun, 01 Nov 2009 09:31:10 -0800</pubDate>
-				<link>/miscellaneous/2009/11/01/i-cant-believe-you-published-your-to-do-list-here-how-can-you-possibly-think-anyone-would-be-interested-in-that.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/11/01/i-cant-believe-you-published-your-to-do-list-here-how-can-you-possibly-think-anyone-would-be-interested-in-that.html</guid>
+				<link>/i-cant-believe-you-published-your-to-do-list-here-how-can-you-possibly-think-anyone-would-be-interested-in-that</link>
+				<guid isPermaLink="true">/i-cant-believe-you-published-your-to-do-list-here-how-can-you-possibly-think-anyone-would-be-interested-in-that</guid>
 			</item>
 			
 		
@@ -4181,8 +4181,8 @@ A Vermont web development software company organized as an Employee Owned Cooper
 &lt;p&gt;Create and register client script. May include but is not limited to: inline, included .js file, embedded JavaScript resource, created from server code&lt;/p&gt;
 </description>
 				<pubDate>Tue, 27 Oct 2009 13:21:00 -0700</pubDate>
-				<link>/working%20with%20asp.net%20ajax%20and%20client-side%20scripting/2009/10/27/working-with-asp-net-ajax-and-client-side-scripting.html</link>
-				<guid isPermaLink="true">/working%20with%20asp.net%20ajax%20and%20client-side%20scripting/2009/10/27/working-with-asp-net-ajax-and-client-side-scripting.html</guid>
+				<link>/working-with-asp-net-ajax-and-client-side-scripting</link>
+				<guid isPermaLink="true">/working-with-asp-net-ajax-and-client-side-scripting</guid>
 			</item>
 			
 		
@@ -4232,8 +4232,8 @@ A Vermont web development software company organized as an Employee Owned Cooper
 &lt;p&gt;Implement the Generic Handler.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 23 Oct 2009 13:26:00 -0700</pubDate>
-				<link>/programming%20web%20applications/2009/10/23/programming-web-applications.html</link>
-				<guid isPermaLink="true">/programming%20web%20applications/2009/10/23/programming-web-applications.html</guid>
+				<link>/programming-web-applications</link>
+				<guid isPermaLink="true">/programming-web-applications</guid>
 			</item>
 			
 		
@@ -4265,8 +4265,8 @@ A Vermont web development software company organized as an Employee Owned Cooper
 &lt;p&gt;Implement control adapters. May include but is not limited to: App_Browsers; rendering by using ChtmlTextWriter or XhtmlTextWriter&lt;/p&gt;
 </description>
 				<pubDate>Mon, 19 Oct 2009 13:24:00 -0700</pubDate>
-				<link>/miscellaneous/2009/10/19/targeting-mobile-devices.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/10/19/targeting-mobile-devices.html</guid>
+				<link>/targeting-mobile-devices</link>
+				<guid isPermaLink="true">/targeting-mobile-devices</guid>
 			</item>
 			
 		
@@ -4304,8 +4304,8 @@ A Vermont web development software company organized as an Employee Owned Cooper
 &lt;p&gt;Consume standard controls. May include but is not limited to: Button, TextBox, DropDownList, RadioButton, CheckBox, HyperLink, Wizard, MultiView&lt;/p&gt;
 </description>
 				<pubDate>Thu, 15 Oct 2009 13:11:00 -0700</pubDate>
-				<link>/miscellaneous/2009/10/15/consuming-and-creating-server-controls.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/10/15/consuming-and-creating-server-controls.html</guid>
+				<link>/consuming-and-creating-server-controls</link>
+				<guid isPermaLink="true">/consuming-and-creating-server-controls</guid>
 			</item>
 			
 		
@@ -4355,8 +4355,8 @@ A Vermont web development software company organized as an Employee Owned Cooper
 &lt;p&gt;Compile an application by using Visual Studio or command-line tools. May include but is not limited to: aspnet&lt;em&gt;compiler.exe, Just-In-Time (JIT) compiling, aspnet&lt;/em&gt;merge.exe&lt;/p&gt;
 </description>
 				<pubDate>Sun, 11 Oct 2009 13:09:00 -0700</pubDate>
-				<link>/miscellaneous/2009/10/11/configuring-and-deploying-web-applications.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/10/11/configuring-and-deploying-web-applications.html</guid>
+				<link>/configuring-and-deploying-web-applications</link>
+				<guid isPermaLink="true">/configuring-and-deploying-web-applications</guid>
 			</item>
 			
 		
@@ -4495,8 +4495,8 @@ class SimpleFileIO
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Wed, 07 Oct 2009 17:52:00 -0700</pubDate>
-				<link>/miscellaneous/2009/10/07/reading-and-writing-text-files-and-binary-files-in-net.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/10/07/reading-and-writing-text-files-and-binary-files-in-net.html</guid>
+				<link>/reading-and-writing-text-files-and-binary-files-in-net</link>
+				<guid isPermaLink="true">/reading-and-writing-text-files-and-binary-files-in-net</guid>
 			</item>
 			
 		
@@ -4540,8 +4540,8 @@ class SimpleFileIO
 &lt;p&gt;So there you have it! Delete your duplicate posts, re-enter your categories, and rock and roll.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 03 Oct 2009 20:49:00 -0700</pubDate>
-				<link>/miscellaneous/2009/10/03/moving-from-wordpress-to-blogengine-net.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/10/03/moving-from-wordpress-to-blogengine-net.html</guid>
+				<link>/moving-from-wordpress-to-blogengine-net</link>
+				<guid isPermaLink="true">/moving-from-wordpress-to-blogengine-net</guid>
 			</item>
 			
 		
@@ -4580,8 +4580,8 @@ class DirectoryInfoExample
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Sat, 03 Oct 2009 12:46:00 -0700</pubDate>
-				<link>/miscellaneous/2009/10/03/directoryinfo-example.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/10/03/directoryinfo-example.html</guid>
+				<link>/directoryinfo-example</link>
+				<guid isPermaLink="true">/directoryinfo-example</guid>
 			</item>
 			
 		
@@ -4601,8 +4601,8 @@ class DirectoryInfoExample
 &lt;p&gt;Most importantly, I’m now in a position to integrate more ASP.NET into my blogging about ASP.NET – go figure!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 02 Oct 2009 23:54:23 -0700</pubDate>
-				<link>/miscellaneous/2009/10/02/blogengine-net-comes-to-the-workbench.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/10/02/blogengine-net-comes-to-the-workbench.html</guid>
+				<link>/blogengine-net-comes-to-the-workbench</link>
+				<guid isPermaLink="true">/blogengine-net-comes-to-the-workbench</guid>
 			</item>
 			
 		
@@ -4620,8 +4620,8 @@ class DirectoryInfoExample
 &lt;/ul&gt;
 </description>
 				<pubDate>Wed, 30 Sep 2009 13:25:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/30/microsoft-exam-70-562.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/30/microsoft-exam-70-562.html</guid>
+				<link>/microsoft-exam-70-562</link>
+				<guid isPermaLink="true">/microsoft-exam-70-562</guid>
 			</item>
 			
 		
@@ -4707,8 +4707,8 @@ class FileAndFileInfoExample
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Mon, 28 Sep 2009 19:50:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/28/copying-moving-deleting-creating-and-reading-files-with-or-without-deep-love-poetry.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/28/copying-moving-deleting-creating-and-reading-files-with-or-without-deep-love-poetry.html</guid>
+				<link>/copying-moving-deleting-creating-and-reading-files-with-or-without-deep-love-poetry</link>
+				<guid isPermaLink="true">/copying-moving-deleting-creating-and-reading-files-with-or-without-deep-love-poetry</guid>
 			</item>
 			
 		
@@ -4732,8 +4732,8 @@ class FileAndFileInfoExample
 &lt;p&gt;For the answer, head over to the Workbench while this is still the &lt;a href=&quot;http://www.aspworkbench.com/blog/&quot;&gt;featured question&lt;/a&gt;. (I know, that’s a bit of a cheesy process, but I just haven’t yet had time to get the archives and the site registration going – coming soon though).&lt;/p&gt;
 </description>
 				<pubDate>Sat, 26 Sep 2009 20:16:30 -0700</pubDate>
-				<link>/miscellaneous/2009/09/26/featured-aspworkbench-question.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/26/featured-aspworkbench-question.html</guid>
+				<link>/featured-aspworkbench-question</link>
+				<guid isPermaLink="true">/featured-aspworkbench-question</guid>
 			</item>
 			
 		
@@ -4763,8 +4763,8 @@ public class DriveInfoExample
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Sat, 26 Sep 2009 12:42:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/26/a-quick-driveinfo-example.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/26/a-quick-driveinfo-example.html</guid>
+				<link>/a-quick-driveinfo-example</link>
+				<guid isPermaLink="true">/a-quick-driveinfo-example</guid>
 			</item>
 			
 		
@@ -4798,8 +4798,8 @@ public class DriveInfoExample
 &lt;p&gt;May include but is not limited to: StringBuilder class; Regex class; Match class and MatchCollection class; Group class and GroupCollection class; Encode text by using Encoding classes.; Decode text by using Decoding classes.; Capture class and CaptureCollection class&lt;/p&gt;
 </description>
 				<pubDate>Thu, 24 Sep 2009 21:00:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/24/implementing-globalization-drawing-and-text-manipulation-functionality-in-a-net-framework-application-11-percent.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/24/implementing-globalization-drawing-and-text-manipulation-functionality-in-a-net-framework-application-11-percent.html</guid>
+				<link>/implementing-globalization-drawing-and-text-manipulation-functionality-in-a-net-framework-application-11-percent</link>
+				<guid isPermaLink="true">/implementing-globalization-drawing-and-text-manipulation-functionality-in-a-net-framework-application-11-percent</guid>
 			</item>
 			
 		
@@ -4829,8 +4829,8 @@ public class DriveInfoExample
 &lt;p&gt;&lt;a href=&quot;http://www.particlewave.com/images/blog/Whats.NETMasterPagesLoveandUnderstanding_115DD/image.png&quot;&gt;&lt;img src=&quot;http://www.particlewave.com/images/blog/Whats.NETMasterPagesLoveandUnderstanding_115DD/image_thumb.png&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 21 Sep 2009 06:54:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/21/whats-so-funny-about-asp-net-master-pages-love-and-understanding.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/21/whats-so-funny-about-asp-net-master-pages-love-and-understanding.html</guid>
+				<link>/whats-so-funny-about-asp-net-master-pages-love-and-understanding</link>
+				<guid isPermaLink="true">/whats-so-funny-about-asp-net-master-pages-love-and-understanding</guid>
 			</item>
 			
 		
@@ -4848,8 +4848,8 @@ public class DriveInfoExample
 &lt;p&gt;I’m not all that discontent – just weary, and I thought it was a cool title, what with old Sigmund having anticipated it and all.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 18 Sep 2009 21:50:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/18/certification-and-its-discontents.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/18/certification-and-its-discontents.html</guid>
+				<link>/certification-and-its-discontents</link>
+				<guid isPermaLink="true">/certification-and-its-discontents</guid>
 			</item>
 			
 		
@@ -4865,8 +4865,8 @@ public class DriveInfoExample
 &lt;p&gt;Anyway, I hope you find it useful. If so I put it together. If not, I had nothing to do with it. Here it is as a 389 Kb or so &lt;a href=&quot;http://www.particlewave.com/asp_net/AspNetStarter.zip&quot;&gt;zip file&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 16 Sep 2009 00:01:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/16/mixing-asp-net-and-asp-net-mvc-in-the-same-project-a-visual-studio-starter-project.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/16/mixing-asp-net-and-asp-net-mvc-in-the-same-project-a-visual-studio-starter-project.html</guid>
+				<link>/mixing-asp-net-and-asp-net-mvc-in-the-same-project-a-visual-studio-starter-project</link>
+				<guid isPermaLink="true">/mixing-asp-net-and-asp-net-mvc-in-the-same-project-a-visual-studio-starter-project</guid>
 			</item>
 			
 		
@@ -4959,8 +4959,8 @@ class IComparableTest
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Mon, 14 Sep 2009 12:53:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/14/icomparable-example.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/14/icomparable-example.html</guid>
+				<link>/icomparable-example</link>
+				<guid isPermaLink="true">/icomparable-example</guid>
 			</item>
 			
 		
@@ -5000,8 +5000,8 @@ class IComparableTest
 &lt;p&gt;May include but is not limited to: MailMessage class; MailAddress class and MailAddressCollection class; SmtpClient class, SmtpPermission class, and SmtpPermissionAttribute class; Attachment class, AttachmentBase class, and AttachmentCollection class; SmtpException class, SmtpFailedReceipientException class, and SmtpFailedReceipientsException class; SendCompletedEventHandler delegate; LinkedResource class and LinkedResourceCollection class; AlternateView class and AlternateViewCollection class&lt;/p&gt;
 </description>
 				<pubDate>Sat, 12 Sep 2009 20:59:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/12/implementing-interoperability-reflection-and-mailing-functionality-in-a-net-framework-application-11-percent.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/12/implementing-interoperability-reflection-and-mailing-functionality-in-a-net-framework-application-11-percent.html</guid>
+				<link>/implementing-interoperability-reflection-and-mailing-functionality-in-a-net-framework-application-11-percent</link>
+				<guid isPermaLink="true">/implementing-interoperability-reflection-and-mailing-functionality-in-a-net-framework-application-11-percent</guid>
 			</item>
 			
 		
@@ -5052,8 +5052,8 @@ namespace GlobalizationDrawingText
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Thu, 10 Sep 2009 17:25:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/10/net-regular-expressions-example-basic-use-of-match-and-matchcollection.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/10/net-regular-expressions-example-basic-use-of-match-and-matchcollection.html</guid>
+				<link>/net-regular-expressions-example-basic-use-of-match-and-matchcollection</link>
+				<guid isPermaLink="true">/net-regular-expressions-example-basic-use-of-match-and-matchcollection</guid>
 			</item>
 			
 		
@@ -5117,8 +5117,8 @@ namespace GlobalizationDrawingText
 &lt;p&gt;May include but is not limited to: GenericIdentity class and GenericPrincipal class; WindowsIdentity class and WindowsPricipal class; NTAccount class and SecurityIdentifier class; IIdentity interface and IPrincipal interface; WindowsImpersonationContext class; IdentityReference class and IdentityReferenceCollection class&lt;/p&gt;
 </description>
 				<pubDate>Tue, 08 Sep 2009 20:57:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/08/improving-the-security-of-net-framework-applications-by-using-the-net-framework-security-features-20-percent.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/08/improving-the-security-of-net-framework-applications-by-using-the-net-framework-security-features-20-percent.html</guid>
+				<link>/improving-the-security-of-net-framework-applications-by-using-the-net-framework-security-features-20-percent</link>
+				<guid isPermaLink="true">/improving-the-security-of-net-framework-applications-by-using-the-net-framework-security-features-20-percent</guid>
 			</item>
 			
 		
@@ -5135,8 +5135,8 @@ namespace GlobalizationDrawingText
 &lt;p&gt;&lt;a href=&quot;http://blog.sqlauthority.com/2008/09/21/sql-server-2008-fix-connection-error-with-visual-studio-2008-server-version-is-not-supported/&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 06 Sep 2009 12:51:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/06/early-asp-net-mvc-troubleshooting.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/06/early-asp-net-mvc-troubleshooting.html</guid>
+				<link>/early-asp-net-mvc-troubleshooting</link>
+				<guid isPermaLink="true">/early-asp-net-mvc-troubleshooting</guid>
 			</item>
 			
 		
@@ -5200,8 +5200,8 @@ namespace GlobalizationDrawingText
 &lt;p&gt;May include but is not limited to: IsolatedStorageFile class; IsolatedStorageFileStream class; DeflateStream class; GZipStream class&lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Sep 2009 20:55:00 -0700</pubDate>
-				<link>/miscellaneous/2009/09/04/implementing-serialization-and-inputoutput-functionality-in-a-net-framework-application-18-percent.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/09/04/implementing-serialization-and-inputoutput-functionality-in-a-net-framework-application-18-percent.html</guid>
+				<link>/implementing-serialization-and-inputoutput-functionality-in-a-net-framework-application-18-percent</link>
+				<guid isPermaLink="true">/implementing-serialization-and-inputoutput-functionality-in-a-net-framework-application-18-percent</guid>
 			</item>
 			
 		
@@ -5229,8 +5229,8 @@ namespace GlobalizationDrawingText
 &lt;p&gt;So I’m going to spend another hour or two on the &lt;a href=&quot;http://www.stackoverflow.com&quot;&gt;coolest programming web site ever&lt;/a&gt;, which incidentally is written in ASP.NET MVC.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 02 Sep 2009 11:40:00 -0700</pubDate>
-				<link>/ruby%20on%20rails/2009/09/02/microsoft-asp-net-mvc-a-glimmer-of-hope-for-ruby-programmers-or-is-that-asp-net-programmers.html</link>
-				<guid isPermaLink="true">/ruby%20on%20rails/2009/09/02/microsoft-asp-net-mvc-a-glimmer-of-hope-for-ruby-programmers-or-is-that-asp-net-programmers.html</guid>
+				<link>/microsoft-asp-net-mvc-a-glimmer-of-hope-for-ruby-programmers-or-is-that-asp-net-programmers</link>
+				<guid isPermaLink="true">/microsoft-asp-net-mvc-a-glimmer-of-hope-for-ruby-programmers-or-is-that-asp-net-programmers</guid>
 			</item>
 			
 		
@@ -5250,8 +5250,8 @@ namespace GlobalizationDrawingText
 &lt;p&gt;Despite its flaws, however, I want to leave you with the title of my review, that this is one of the best programming books I&amp;#39;ve read in a long time. It&amp;#39;s the kind of book that expands your horizons and makes you want to try things out the way the author has outlined. To be sure, Walther&amp;#39;s book is not the book you want to read if you goal is to hack together an unstructured ASP.NET MVC application in record time. But if your goal is to learn ASP.NET MVC while becoming a better programmer along the way, this book merits your serious attention and you should be pulling your credit card out now.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 31 Aug 2009 08:59:00 -0700</pubDate>
-				<link>/miscellaneous/2009/08/31/review-of-stephen-walthers-asp-net-mvc-framework-unleashed.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/31/review-of-stephen-walthers-asp-net-mvc-framework-unleashed.html</guid>
+				<link>/review-of-stephen-walthers-asp-net-mvc-framework-unleashed</link>
+				<guid isPermaLink="true">/review-of-stephen-walthers-asp-net-mvc-framework-unleashed</guid>
 			</item>
 			
 		
@@ -5307,8 +5307,8 @@ namespace GlobalizationDrawingText
 &lt;p&gt;May include but is not limited to: Retrieve a collection of Management objects by using the ManagementObjectSearcher class and its derived classes; ManagementQuery class; Subscribe to management events by using the ManagementEventWatcher class&lt;/p&gt;
 </description>
 				<pubDate>Sun, 30 Aug 2009 13:00:00 -0700</pubDate>
-				<link>/miscellaneous/2009/08/30/embedding-configuration-diagnostic-management-and-installation-features-into-a-net-framework-application-14-percent.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/30/embedding-configuration-diagnostic-management-and-installation-features-into-a-net-framework-application-14-percent.html</guid>
+				<link>/embedding-configuration-diagnostic-management-and-installation-features-into-a-net-framework-application-14-percent</link>
+				<guid isPermaLink="true">/embedding-configuration-diagnostic-management-and-installation-features-into-a-net-framework-application-14-percent</guid>
 			</item>
 			
 		
@@ -5476,8 +5476,8 @@ Control key pressed
 &amp;lt;/code&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 				<pubDate>Fri, 28 Aug 2009 10:08:00 -0700</pubDate>
-				<link>/miscellaneous/2009/08/28/delegates-and-events.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/28/delegates-and-events.html</guid>
+				<link>/delegates-and-events</link>
+				<guid isPermaLink="true">/delegates-and-events</guid>
 			</item>
 			
 		
@@ -5509,8 +5509,8 @@ Control key pressed
 &lt;p&gt;May include but is not limited to: Create an application domain; Unload an application domain; Configure an application domain; Retrieve setup information from an application domain; Load assemblies into an application domain&lt;/p&gt;
 </description>
 				<pubDate>Wed, 26 Aug 2009 12:49:00 -0700</pubDate>
-				<link>/miscellaneous/2009/08/26/implementing-service-processes-threading-and-application-domains-in-a-net-framework-application-11-percent.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/26/implementing-service-processes-threading-and-application-domains-in-a-net-framework-application-11-percent.html</guid>
+				<link>/implementing-service-processes-threading-and-application-domains-in-a-net-framework-application-11-percent</link>
+				<guid isPermaLink="true">/implementing-service-processes-threading-and-application-domains-in-a-net-framework-application-11-percent</guid>
 			</item>
 			
 		
@@ -5586,8 +5586,8 @@ class ListsExample
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Mon, 24 Aug 2009 13:03:00 -0700</pubDate>
-				<link>/miscellaneous/2009/08/24/boxing-and-unboxing-in-non-generic-collections-versus-generic-collections.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/24/boxing-and-unboxing-in-non-generic-collections-versus-generic-collections.html</guid>
+				<link>/boxing-and-unboxing-in-non-generic-collections-versus-generic-collections</link>
+				<guid isPermaLink="true">/boxing-and-unboxing-in-non-generic-collections-versus-generic-collections</guid>
 			</item>
 			
 		
@@ -5674,8 +5674,8 @@ val2 = 42
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Sat, 22 Aug 2009 12:43:00 -0700</pubDate>
-				<link>/miscellaneous/2009/08/22/reference-types-versus-value-types.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/22/reference-types-versus-value-types.html</guid>
+				<link>/reference-types-versus-value-types</link>
+				<guid isPermaLink="true">/reference-types-versus-value-types</guid>
 			</item>
 			
 		
@@ -5743,8 +5743,8 @@ Exception caught: System.InvalidOperationException: Nullable object must have a 
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Thu, 20 Aug 2009 13:49:00 -0700</pubDate>
-				<link>/miscellaneous/2009/08/20/nullable-types-example.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/20/nullable-types-example.html</guid>
+				<link>/nullable-types-example</link>
+				<guid isPermaLink="true">/nullable-types-example</guid>
 			</item>
 			
 		
@@ -5804,8 +5804,8 @@ Exception caught: System.InvalidOperationException: Nullable object must have a 
 &lt;p&gt;May include but is not limited to: Delegate class; EventArgs class; EventHandler delegates&lt;/p&gt;
 </description>
 				<pubDate>Tue, 18 Aug 2009 12:44:16 -0700</pubDate>
-				<link>/miscellaneous/2009/08/18/microsoft-750-36-skills-being-measured-developing-applications-that-use-system-types-and-collections.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/18/microsoft-750-36-skills-being-measured-developing-applications-that-use-system-types-and-collections.html</guid>
+				<link>/microsoft-750-36-skills-being-measured-developing-applications-that-use-system-types-and-collections</link>
+				<guid isPermaLink="true">/microsoft-750-36-skills-being-measured-developing-applications-that-use-system-types-and-collections</guid>
 			</item>
 			
 		
@@ -5821,8 +5821,8 @@ Exception caught: System.InvalidOperationException: Nullable object must have a 
 &lt;p&gt;Battery life is supposed to be quite good though I’ve yet to test that. 4 gig of RAM, half a terabyte hard drive, $749 at Best Buy. The front side bus speed is 800 MHz, the two processors runs at 2.1 GHz, so those numbers are a tad lower than some of seen out there, but I don’t think I’ll be doing huge builds just yet so that’s probably all I need, and all things considered I’m very happy with it. Hat tip to the Best Buy folks in Folsom, a very congenial and generally fairly knowledgeable bunch. &lt;/p&gt;
 </description>
 				<pubDate>Mon, 17 Aug 2009 21:05:00 -0700</pubDate>
-				<link>/miscellaneous/2009/08/17/dell-studio-17-review.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/17/dell-studio-17-review.html</guid>
+				<link>/dell-studio-17-review</link>
+				<guid isPermaLink="true">/dell-studio-17-review</guid>
 			</item>
 			
 		
@@ -5848,8 +5848,8 @@ Exception caught: System.InvalidOperationException: Nullable object must have a 
 &lt;p&gt;We&amp;#39;ll be fleshing those sections out further as we go along here.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 15 Aug 2009 09:19:35 -0700</pubDate>
-				<link>/miscellaneous/2009/08/15/microsoft-exam-70-536.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/15/microsoft-exam-70-536.html</guid>
+				<link>/microsoft-exam-70-536</link>
+				<guid isPermaLink="true">/microsoft-exam-70-536</guid>
 			</item>
 			
 		
@@ -5873,8 +5873,8 @@ Exception caught: System.InvalidOperationException: Nullable object must have a 
 &lt;p&gt;Meet the new blog.  Same as the old blog.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 15 Aug 2009 05:37:44 -0700</pubDate>
-				<link>/miscellaneous/2009/08/15/late-born-head-case-ponders-microsoft-certification.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/08/15/late-born-head-case-ponders-microsoft-certification.html</guid>
+				<link>/late-born-head-case-ponders-microsoft-certification</link>
+				<guid isPermaLink="true">/late-born-head-case-ponders-microsoft-certification</guid>
 			</item>
 			
 		
@@ -5924,8 +5924,8 @@ Exception caught: System.InvalidOperationException: Nullable object must have a 
 &lt;p&gt;I&amp;#39;d rather be a hammer than a nail.  As the great software engineer, Louis XIV, said, &amp;quot;Other People, C&amp;#39;est Moi!&amp;quot;&lt;/p&gt;
 </description>
 				<pubDate>Thu, 23 Jul 2009 20:22:17 -0700</pubDate>
-				<link>/miscellaneous/2009/07/23/development-driven-development.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/07/23/development-driven-development.html</guid>
+				<link>/development-driven-development</link>
+				<guid isPermaLink="true">/development-driven-development</guid>
 			</item>
 			
 		
@@ -5984,8 +5984,8 @@ et_the_extra_terestrial:
 &lt;p&gt;And there you have it, Bob&amp;#39;s you&amp;#39;re uncle, and Drew Barrymore&amp;#39;s your hot aunt.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 30 Jun 2009 11:37:31 -0700</pubDate>
-				<link>/miscellaneous/2009/06/30/ruby-enumerations-and-fixtures.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/06/30/ruby-enumerations-and-fixtures.html</guid>
+				<link>/ruby-enumerations-and-fixtures</link>
+				<guid isPermaLink="true">/ruby-enumerations-and-fixtures</guid>
 			</item>
 			
 		
@@ -6001,8 +6001,8 @@ script/console test
 &lt;/code&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sat, 27 Jun 2009 10:59:41 -0700</pubDate>
-				<link>/ruby%20on%20rails/2009/06/27/using-ruby-fixtures-at-the-console.html</link>
-				<guid isPermaLink="true">/ruby%20on%20rails/2009/06/27/using-ruby-fixtures-at-the-console.html</guid>
+				<link>/using-ruby-fixtures-at-the-console</link>
+				<guid isPermaLink="true">/using-ruby-fixtures-at-the-console</guid>
 			</item>
 			
 		
@@ -6038,8 +6038,8 @@ script/console test
 &lt;p&gt;I hope not.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 20 Jun 2009 01:03:25 -0700</pubDate>
-				<link>/miscellaneous/2009/06/20/software-at-the-speed-of-part-time.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/06/20/software-at-the-speed-of-part-time.html</guid>
+				<link>/software-at-the-speed-of-part-time</link>
+				<guid isPermaLink="true">/software-at-the-speed-of-part-time</guid>
 			</item>
 			
 		
@@ -6053,8 +6053,8 @@ script/console test
 &lt;p&gt;Enjoy!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 19 Jun 2009 21:18:27 -0700</pubDate>
-				<link>/miscellaneous/2009/06/19/svn-recurisvely-show-unversioned-files.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/06/19/svn-recurisvely-show-unversioned-files.html</guid>
+				<link>/svn-recurisvely-show-unversioned-files</link>
+				<guid isPermaLink="true">/svn-recurisvely-show-unversioned-files</guid>
 			</item>
 			
 		
@@ -6082,8 +6082,8 @@ script/console test
 &lt;p&gt;So that&amp;#39;s my midlife crisis, in its nerdly nutshell.  No harlot, no Harley:  just me and my new editor, which I like very much, and a lot of useless SlickEdit boxes.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 29 May 2009 21:35:05 -0700</pubDate>
-				<link>/software/2009/05/29/a-farewell-to-slickedit.html</link>
-				<guid isPermaLink="true">/software/2009/05/29/a-farewell-to-slickedit.html</guid>
+				<link>/a-farewell-to-slickedit</link>
+				<guid isPermaLink="true">/a-farewell-to-slickedit</guid>
 			</item>
 			
 		
@@ -6097,8 +6097,8 @@ script/console test
 &lt;p&gt;And in spite of what the docs say about ActiveSupport::TestCase being derived from Object, it&amp;#39;s not -- it&amp;#39;s derived from ::Test::Unit::TestCase as it should be, at least in the code I&amp;#39;m looking at.  Like I said before:  Ruby documentation makes Jesus cry.  And I&amp;#39;m not even religious.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 08 May 2009 21:46:46 -0700</pubDate>
-				<link>/miscellaneous/2009/05/08/graphical-unit-testing-for-ruby-on-windows.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/05/08/graphical-unit-testing-for-ruby-on-windows.html</guid>
+				<link>/graphical-unit-testing-for-ruby-on-windows</link>
+				<guid isPermaLink="true">/graphical-unit-testing-for-ruby-on-windows</guid>
 			</item>
 			
 		
@@ -6182,8 +6182,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Thank you for hanging in there for this completely idiosyncratic view of some of the pros and cons of Ruby on Rails versus ASP.NET.  I&amp;#39;ve barely scratched the surface, I&amp;#39;m sure, but when it comes to language wars, that&amp;#39;s probably all one should do.  In my opinion, programming always represents a certain dynamic tension between &amp;quot;How cool is that?&amp;quot; and &amp;quot;Who&amp;#39;s cutting me a check this week?&amp;quot;  Go out and code something, folks.  What if they gave a language war and nobody came?&lt;/p&gt;
 </description>
 				<pubDate>Sun, 19 Apr 2009 14:29:13 -0700</pubDate>
-				<link>/ruby%20on%20rails/2009/04/19/aspnet-versus-ruby-on-rails.html</link>
-				<guid isPermaLink="true">/ruby%20on%20rails/2009/04/19/aspnet-versus-ruby-on-rails.html</guid>
+				<link>/aspnet-versus-ruby-on-rails</link>
+				<guid isPermaLink="true">/aspnet-versus-ruby-on-rails</guid>
 			</item>
 			
 		
@@ -6207,8 +6207,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I apologize that I don&amp;#39;t have more code to share here yet. I&amp;#39;m too busy writing code to have much time to write about writing code, but I do remember blogging.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 08 Mar 2009 14:04:05 -0700</pubDate>
-				<link>/miscellaneous/2009/03/08/programmer-fondly-remembers-blogging.html</link>
-				<guid isPermaLink="true">/miscellaneous/2009/03/08/programmer-fondly-remembers-blogging.html</guid>
+				<link>/programmer-fondly-remembers-blogging</link>
+				<guid isPermaLink="true">/programmer-fondly-remembers-blogging</guid>
 			</item>
 			
 		
@@ -6238,8 +6238,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Here is the &lt;a href=&quot;http://www.politico.com/static/PPM41_ayo08b28.html&quot;&gt;latest draft the bill&lt;/a&gt;, which I must admit I think is substantially better than Paulson&amp;#39;s original proposal. I wouldn&amp;#39;t go so far as to say this makes me for the bill, but at least it&amp;#39;s moving in the right direction.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 22 Sep 2008 15:01:06 -0700</pubDate>
-				<link>/miscellaneous/2008/09/22/write-or-call-your-representative-senator-to-oppose-the-paulson-bailout.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/09/22/write-or-call-your-representative-senator-to-oppose-the-paulson-bailout.html</guid>
+				<link>/write-or-call-your-representative-senator-to-oppose-the-paulson-bailout</link>
+				<guid isPermaLink="true">/write-or-call-your-representative-senator-to-oppose-the-paulson-bailout</guid>
 			</item>
 			
 		
@@ -6277,8 +6277,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Just add users!&lt;/p&gt;
 </description>
 				<pubDate>Sat, 23 Aug 2008 11:52:53 -0700</pubDate>
-				<link>/miscellaneous/2008/08/23/a-drupal-based-business-forum-for-greater-sacramento.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/08/23/a-drupal-based-business-forum-for-greater-sacramento.html</guid>
+				<link>/a-drupal-based-business-forum-for-greater-sacramento</link>
+				<guid isPermaLink="true">/a-drupal-based-business-forum-for-greater-sacramento</guid>
 			</item>
 			
 		
@@ -6298,8 +6298,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Oh well, into each life must fall not just rain, but two days of useless software development aimed at thwarting some malicious moron with a copied exploit script.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 12 Aug 2008 15:27:48 -0700</pubDate>
-				<link>/software/2008/08/12/wordpress-security-woes.html</link>
-				<guid isPermaLink="true">/software/2008/08/12/wordpress-security-woes.html</guid>
+				<link>/wordpress-security-woes</link>
+				<guid isPermaLink="true">/wordpress-security-woes</guid>
 			</item>
 			
 		
@@ -6315,8 +6315,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;#39;m not saying that such a thing won&amp;#39;t miraculously start to happen, and if it does, we can get the award ball rolling again. But I don&amp;#39;t expect it to.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 16 Jul 2008 10:42:01 -0700</pubDate>
-				<link>/miscellaneous/2008/07/16/what-became-of-the-houssee-award.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/07/16/what-became-of-the-houssee-award.html</guid>
+				<link>/what-became-of-the-houssee-award</link>
+				<guid isPermaLink="true">/what-became-of-the-houssee-award</guid>
 			</item>
 			
 		
@@ -6340,8 +6340,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The 1.2 Release added two features:  First, if you add &amp;quot;[sic]&amp;quot; after the r-word it will suppress adding the trademark (but remove the &amp;quot;[sic]&amp;quot;).  Thus, if you need to link to realtor.com, use http://www.realtor.com.  Secondly, comments are not processed.  A few minutes after I had the plugin installed a user used the r-word in a url, and it was transformed.  Users commenting shouldn&amp;#39;t have to know the rules of use.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 17 Jun 2008 17:16:04 -0700</pubDate>
-				<link>/miscellaneous/2008/06/17/the-realtor-trademark-fixer-wordpress-plugin.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/06/17/the-realtor-trademark-fixer-wordpress-plugin.html</guid>
+				<link>/the-realtor-trademark-fixer-wordpress-plugin</link>
+				<guid isPermaLink="true">/the-realtor-trademark-fixer-wordpress-plugin</guid>
 			</item>
 			
 		
@@ -6357,8 +6357,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Think of it as &amp;quot;Broker Co-Op&amp;quot;.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 13 Jun 2008 16:35:19 -0700</pubDate>
-				<link>/miscellaneous/2008/06/13/son-of-houssee-award-houssee-2.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/06/13/son-of-houssee-award-houssee-2.html</guid>
+				<link>/son-of-houssee-award-houssee-2</link>
+				<guid isPermaLink="true">/son-of-houssee-award-houssee-2</guid>
 			</item>
 			
 		
@@ -6376,8 +6376,8 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;A few users spent quite a bit of time testing out this policy this week, and have discovered that it works. For those of you who didn&amp;#39;t test it out, thank you, and yes I do hate being a cop probably as much as you hate reading about me being one.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 13 Jun 2008 15:04:02 -0700</pubDate>
-				<link>/miscellaneous/2008/06/13/a-reminder-about-the-houssee-spam-policy.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/06/13/a-reminder-about-the-houssee-spam-policy.html</guid>
+				<link>/a-reminder-about-the-houssee-spam-policy</link>
+				<guid isPermaLink="true">/a-reminder-about-the-houssee-spam-policy</guid>
 			</item>
 			
 		
@@ -6416,8 +6416,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;And stay tuned for &amp;quot;Houssee Awards, Part Deux: The Re-Houssee-ing.&amp;quot;  Coming soon.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 09 Jun 2008 17:21:15 -0700</pubDate>
-				<link>/miscellaneous/2008/06/09/the-housseecom-top-user-point-system-an-insiders-guide.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/06/09/the-housseecom-top-user-point-system-an-insiders-guide.html</guid>
+				<link>/the-housseecom-top-user-point-system-an-insiders-guide</link>
+				<guid isPermaLink="true">/the-housseecom-top-user-point-system-an-insiders-guide</guid>
 			</item>
 			
 		
@@ -6427,8 +6427,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 				<description>&lt;p&gt;As you consider your web site design, it helps to &lt;strike&gt;bear in mind&lt;/strike&gt; groove to the basic architecture that we&amp;#39;re dealing with here.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 09 Jun 2008 15:28:23 -0700</pubDate>
-				<link>/miscellaneous/2008/06/09/funky-ted-stevens.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/06/09/funky-ted-stevens.html</guid>
+				<link>/funky-ted-stevens</link>
+				<guid isPermaLink="true">/funky-ted-stevens</guid>
 			</item>
 			
 		
@@ -6452,8 +6452,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;&lt;strong&gt;Houssee.com:  Submit Early.  Vote Often.&lt;/strong&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 08 Jun 2008 13:23:26 -0700</pubDate>
-				<link>/miscellaneous/2008/06/08/housseecom-passes-one-hundred-user-mark-and-other-updates.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/06/08/housseecom-passes-one-hundred-user-mark-and-other-updates.html</guid>
+				<link>/housseecom-passes-one-hundred-user-mark-and-other-updates</link>
+				<guid isPermaLink="true">/housseecom-passes-one-hundred-user-mark-and-other-updates</guid>
 			</item>
 			
 		
@@ -6581,8 +6581,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;Yeah, and there&amp;#39;s no way I can make a list of all the bugs there are in your code. Mostly I find it fairly robust, and I&amp;#39;m not trying to sound ungrateful, but I stubbed my toe hard on this one, and I&amp;#39;m not the first one, hence the thread. I sent you the fix. Here it is again: Add -MultiViews to the Options line in .htaccess. If you&amp;#39;d rather show off how much more you know about Apache configuration than your users than have a product that works in as many environments as possible, leave it broken.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 07 Jun 2008 21:47:21 -0700</pubDate>
-				<link>/miscellaneous/2008/06/07/problem-using-option-2-search-engine-friendly-urls-using-htaccess-in-pligg-with-fix.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/06/07/problem-using-option-2-search-engine-friendly-urls-using-htaccess-in-pligg-with-fix.html</guid>
+				<link>/problem-using-option-2-search-engine-friendly-urls-using-htaccess-in-pligg-with-fix</link>
+				<guid isPermaLink="true">/problem-using-option-2-search-engine-friendly-urls-using-htaccess-in-pligg-with-fix</guid>
 			</item>
 			
 		
@@ -6602,8 +6602,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;Submit early. Vote often. Enjoy!&lt;/p&gt;
 </description>
 				<pubDate>Tue, 03 Jun 2008 17:32:32 -0700</pubDate>
-				<link>/miscellaneous/2008/06/03/housseecom-adds-top-user-feature.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/06/03/housseecom-adds-top-user-feature.html</guid>
+				<link>/housseecom-adds-top-user-feature</link>
+				<guid isPermaLink="true">/housseecom-adds-top-user-feature</guid>
 			</item>
 			
 		
@@ -6629,8 +6629,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;I&amp;#39;m going to work with Pligg a little bit and see how the latest Beta&amp;#39;s doing. I imagine my original idea would be much easier to do as an integration on top of this existing code. Of course, then the guy having to make sure the spammers get stopped would be me. There are ways to approach this -- the latest Beta has more spam fighting tools built in, and one could always make the site invitation-only to help combat spam. The outstanding question would be whether users would show up given that there&amp;#39;s already a well established contender.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 29 May 2008 15:51:14 -0700</pubDate>
-				<link>/miscellaneous/2008/05/29/a-review-of-realestatevoicescom.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/05/29/a-review-of-realestatevoicescom.html</guid>
+				<link>/a-review-of-realestatevoicescom</link>
+				<guid isPermaLink="true">/a-review-of-realestatevoicescom</guid>
 			</item>
 			
 		
@@ -6642,8 +6642,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;I want to be a Realtor®. Two realtors® is a good number to have on a team.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 16 May 2008 12:03:13 -0700</pubDate>
-				<link>/miscellaneous/2008/05/16/102.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/05/16/102.html</guid>
+				<link>/102</link>
+				<guid isPermaLink="true">/102</guid>
 			</item>
 			
 		
@@ -6653,8 +6653,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 				<description>&lt;p&gt;Stop in the middle.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 21 Apr 2008 11:48:41 -0700</pubDate>
-				<link>/miscellaneous/2008/04/21/things-not-to-do-if-youre-writing-a-series.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/21/things-not-to-do-if-youre-writing-a-series.html</guid>
+				<link>/things-not-to-do-if-youre-writing-a-series</link>
+				<guid isPermaLink="true">/things-not-to-do-if-youre-writing-a-series</guid>
 			</item>
 			
 		
@@ -6668,8 +6668,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;So if you&amp;#39;re going to do an upgrade, I recommend you start by reading Lorelle van Fossen&amp;#39;s &lt;a href=&quot;http://www.blogherald.com/2008/03/07/wordpress-upgrade-preparation-checklist/&quot;&gt;Upgrade Preparation Checklist&lt;/a&gt;. And then where Lorelle says Backup Everything, you might substitute: &amp;quot;Backup everything, and then don&amp;#39;t be an idiot and delete it right away once things are up and running -- do extensive testing over several weeks and then delete the backups.&amp;quot;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 21 Apr 2008 11:02:28 -0700</pubDate>
-				<link>/miscellaneous/2008/04/21/wordpress-woes.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/21/wordpress-woes.html</guid>
+				<link>/wordpress-woes</link>
+				<guid isPermaLink="true">/wordpress-woes</guid>
 			</item>
 			
 		
@@ -6703,8 +6703,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;&lt;a href=&quot;http://www.inklit.com/series/21DaysTableOfContent.php&quot;&gt;Twenty-One Days To a Better Blog Table of Contents&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Wed, 16 Apr 2008 20:08:35 -0700</pubDate>
-				<link>/miscellaneous/2008/04/16/blogging-basics-part-3-of-3-launch-checklist.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/16/blogging-basics-part-3-of-3-launch-checklist.html</guid>
+				<link>/blogging-basics-part-3-of-3-launch-checklist</link>
+				<guid isPermaLink="true">/blogging-basics-part-3-of-3-launch-checklist</guid>
 			</item>
 			
 		
@@ -6762,8 +6762,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;&lt;a href=&quot;http://www.inklit.com/series/21DaysTableOfContent.php&quot;&gt;Twenty-One Days To a Better Blog Table of Contents&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Tue, 15 Apr 2008 08:18:16 -0700</pubDate>
-				<link>/miscellaneous/2008/04/15/blogging-basics-ii-theme-logo-title-tagline.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/15/blogging-basics-ii-theme-logo-title-tagline.html</guid>
+				<link>/blogging-basics-ii-theme-logo-title-tagline</link>
+				<guid isPermaLink="true">/blogging-basics-ii-theme-logo-title-tagline</guid>
 			</item>
 			
 		
@@ -6814,8 +6814,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;&lt;a href=&quot;http://www.inklit.com/series/21DaysTableOfContent.php&quot;&gt;Twenty-One Days To a Better Blog Table of Contents&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 14 Apr 2008 10:01:04 -0700</pubDate>
-				<link>/miscellaneous/2008/04/14/blogging-basics-platform-hosting-domain.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/14/blogging-basics-platform-hosting-domain.html</guid>
+				<link>/blogging-basics-platform-hosting-domain</link>
+				<guid isPermaLink="true">/blogging-basics-platform-hosting-domain</guid>
 			</item>
 			
 		
@@ -6863,8 +6863,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;&lt;a href=&quot;http://www.inklit.com/series/21DaysTableOfContent.php&quot;&gt;Twenty-One Days To a Better Blog Table of Contents&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 11 Apr 2008 07:00:33 -0700</pubDate>
-				<link>/miscellaneous/2008/04/11/twenty-one-days-to-a-better-blog.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/11/twenty-one-days-to-a-better-blog.html</guid>
+				<link>/twenty-one-days-to-a-better-blog</link>
+				<guid isPermaLink="true">/twenty-one-days-to-a-better-blog</guid>
 			</item>
 			
 		
@@ -6893,8 +6893,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;Starting tomorrow we&amp;#39;ll have a brand new series, 21 Days to a Better Blog.  Watch for it.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 10 Apr 2008 11:44:52 -0700</pubDate>
-				<link>/miscellaneous/2008/04/10/ad-contest-winner.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/10/ad-contest-winner.html</guid>
+				<link>/ad-contest-winner</link>
+				<guid isPermaLink="true">/ad-contest-winner</guid>
 			</item>
 			
 		
@@ -6963,8 +6963,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;/ul&gt;
 </description>
 				<pubDate>Tue, 08 Apr 2008 11:23:42 -0700</pubDate>
-				<link>/miscellaneous/2008/04/08/twitter-versus-catalystblogger.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/08/twitter-versus-catalystblogger.html</guid>
+				<link>/twitter-versus-catalystblogger</link>
+				<guid isPermaLink="true">/twitter-versus-catalystblogger</guid>
 			</item>
 			
 		
@@ -6997,8 +6997,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;Comments?  Do you specialize?  If you generalize, do you do it in more than one place?&lt;/p&gt;
 </description>
 				<pubDate>Mon, 07 Apr 2008 15:05:44 -0700</pubDate>
-				<link>/miscellaneous/2008/04/07/blogging-tips-many-topics-versus-few-topics.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/07/blogging-tips-many-topics-versus-few-topics.html</guid>
+				<link>/blogging-tips-many-topics-versus-few-topics</link>
+				<guid isPermaLink="true">/blogging-tips-many-topics-versus-few-topics</guid>
 			</item>
 			
 		
@@ -7021,8 +7021,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;Thanks and a hat tip again to Scott.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 05 Apr 2008 10:45:27 -0700</pubDate>
-				<link>/miscellaneous/2008/04/05/wordpress-plugin-to-increase-subscribers.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/05/wordpress-plugin-to-increase-subscribers.html</guid>
+				<link>/wordpress-plugin-to-increase-subscribers</link>
+				<guid isPermaLink="true">/wordpress-plugin-to-increase-subscribers</guid>
 			</item>
 			
 		
@@ -7049,8 +7049,8 @@ One of the changes I made to the default (&lt;a href=&quot;http://www.pligg.com/
 &lt;p&gt;In the interest of replacing this funk with some creative work, I&amp;#39;m going to shift gears now and work on one of those projects.  If you see any teens catching up with me, for God&amp;#39;s sake, won&amp;#39;t you please let them know how bad smoking is for the baby?&lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Apr 2008 11:00:21 -0700</pubDate>
-				<link>/miscellaneous/2008/04/04/so-many-blogs-so-little-blogger.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/04/so-many-blogs-so-little-blogger.html</guid>
+				<link>/so-many-blogs-so-little-blogger</link>
+				<guid isPermaLink="true">/so-many-blogs-so-little-blogger</guid>
 			</item>
 			
 		
@@ -7099,8 +7099,8 @@ Are the luckiest people in the world.&amp;quot;&lt;/p&gt;
 &lt;p&gt;I believe that if you&amp;#39;re looking to optimize your site, you should either start writing or hire someone to start writing.  This is the most important thing you can do.  Search engines have gotten much smarter over the years, so that more and more, they&amp;#39;re focused on indexing sites with lots of good, fresh content.  Once once you&amp;#39;re writing on a consistent basis, your next step is to see if you can improve the quality of your material.  Can you learn how to make it more link worthy, and can you find venues off of your main site that can help you to build your link reputation?  Guest blogging and article submission are two great ways to place your writing strategically so you&amp;#39;ll get a search engine boost.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 03 Apr 2008 08:55:47 -0700</pubDate>
-				<link>/miscellaneous/2008/04/03/what-does-seo-have-to-do-with-writing.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/03/what-does-seo-have-to-do-with-writing.html</guid>
+				<link>/what-does-seo-have-to-do-with-writing</link>
+				<guid isPermaLink="true">/what-does-seo-have-to-do-with-writing</guid>
 			</item>
 			
 		
@@ -7139,8 +7139,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;To all my current subscribers, thanks so much, and again, I&amp;#39;ll try to keep some worthwhile stuff coming!&lt;/p&gt;
 </description>
 				<pubDate>Wed, 02 Apr 2008 08:10:27 -0700</pubDate>
-				<link>/miscellaneous/2008/04/02/the-last-leg-of-101-subscribers-in-30-days.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/02/the-last-leg-of-101-subscribers-in-30-days.html</guid>
+				<link>/the-last-leg-of-101-subscribers-in-30-days</link>
+				<guid isPermaLink="true">/the-last-leg-of-101-subscribers-in-30-days</guid>
 			</item>
 			
 		
@@ -7156,8 +7156,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;But when it comes to Grammar Girl, I&amp;#39;m not just motivated by self-inflicted self-improvement. On the contrary, Fogarty has a way of making the subject very engaging and an easy read.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 01 Apr 2008 09:50:15 -0700</pubDate>
-				<link>/miscellaneous/2008/04/01/quick-and-dirty-grammar-tips.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/04/01/quick-and-dirty-grammar-tips.html</guid>
+				<link>/quick-and-dirty-grammar-tips</link>
+				<guid isPermaLink="true">/quick-and-dirty-grammar-tips</guid>
 			</item>
 			
 		
@@ -7177,8 +7177,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.particlewave.com/internet-marketing/wp-content/uploads/2008/03/newheader2.jpg&quot;&gt;&lt;img src=&quot;http://www.particlewave.com/internet-marketing/wp-content/uploads/2008/03/newheader2-thumb.jpg&quot; alt=&quot;newheader2&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 31 Mar 2008 09:00:10 -0700</pubDate>
-				<link>/miscellaneous/2008/03/31/two-new-headers.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/31/two-new-headers.html</guid>
+				<link>/two-new-headers</link>
+				<guid isPermaLink="true">/two-new-headers</guid>
 			</item>
 			
 		
@@ -7196,8 +7196,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.inklit.com/blog/2008/03/25/forthcoming-guest-article-on-article-submission-sites/&quot;&gt;Forthcoming Guest Post on Article Submissions&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Fri, 28 Mar 2008 12:05:17 -0700</pubDate>
-				<link>/miscellaneous/2008/03/28/article-submissions.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/28/article-submissions.html</guid>
+				<link>/article-submissions</link>
+				<guid isPermaLink="true">/article-submissions</guid>
 			</item>
 			
 		
@@ -7231,8 +7231,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;I hope you enjoyed this &lt;strike&gt;essay&lt;/strike&gt; content, and invite you to &lt;a href=&quot;http://www.inklit.com/blog/feed/&quot;&gt;subscribe for more&lt;/a&gt;. I need big subscription numbers for when I release my blog to &lt;a href=&quot;http://www.amazon.com&quot;&gt;Kindle&lt;/a&gt;. Hey, wait a minute, wasn&amp;#39;t Amazon.com the company that was selling us all Segue&amp;#39;s a few years back? Whatever happened to those...&lt;/p&gt;
 </description>
 				<pubDate>Thu, 27 Mar 2008 10:42:29 -0700</pubDate>
-				<link>/miscellaneous/2008/03/27/rumors-of-the-death-of-print.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/27/rumors-of-the-death-of-print.html</guid>
+				<link>/rumors-of-the-death-of-print</link>
+				<guid isPermaLink="true">/rumors-of-the-death-of-print</guid>
 			</item>
 			
 		
@@ -7272,8 +7272,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;If I were you I&amp;#39;d start typing.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 26 Mar 2008 15:47:00 -0700</pubDate>
-				<link>/miscellaneous/2008/03/26/how-to-retire-on-a-six-figure-adsense-income.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/26/how-to-retire-on-a-six-figure-adsense-income.html</guid>
+				<link>/how-to-retire-on-a-six-figure-adsense-income</link>
+				<guid isPermaLink="true">/how-to-retire-on-a-six-figure-adsense-income</guid>
 			</item>
 			
 		
@@ -7297,8 +7297,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;It may be time for bad&lt;em&gt;attitude&lt;/em&gt;guy to go find a mentor or two.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 25 Mar 2008 15:10:09 -0700</pubDate>
-				<link>/miscellaneous/2008/03/25/forthcoming-guest-article-on-article-submission-sites.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/25/forthcoming-guest-article-on-article-submission-sites.html</guid>
+				<link>/forthcoming-guest-article-on-article-submission-sites</link>
+				<guid isPermaLink="true">/forthcoming-guest-article-on-article-submission-sites</guid>
 			</item>
 			
 		
@@ -7330,8 +7330,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.inklit.com/blog/2008/03/06/setting-writing-goals-making-room-for-the-good-stuff/&quot;&gt;Setting Writing Goals, Making Room for the Good Stuff&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 24 Mar 2008 16:14:04 -0700</pubDate>
-				<link>/miscellaneous/2008/03/24/tips-for-setting-writing-goals-a-stack-of-twenty.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/24/tips-for-setting-writing-goals-a-stack-of-twenty.html</guid>
+				<link>/tips-for-setting-writing-goals-a-stack-of-twenty</link>
+				<guid isPermaLink="true">/tips-for-setting-writing-goals-a-stack-of-twenty</guid>
 			</item>
 			
 		
@@ -7379,8 +7379,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;Perhaps in a future post we&amp;#39;ll talk about the results of my attempting to increase RPM and continue to increase it over time using an open source Ad Server, &lt;a href=&quot;http://www.openx.org&quot;&gt;OpenX&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 22 Mar 2008 09:59:07 -0700</pubDate>
-				<link>/miscellaneous/2008/03/22/what-i-learned-about-adsense-from-associated-content.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/22/what-i-learned-about-adsense-from-associated-content.html</guid>
+				<link>/what-i-learned-about-adsense-from-associated-content</link>
+				<guid isPermaLink="true">/what-i-learned-about-adsense-from-associated-content</guid>
 			</item>
 			
 		
@@ -7414,8 +7414,8 @@ http://www.problogger.net 14&lt;/p&gt;
 &lt;p&gt;I still have my work cut out for me to get to 101 in 30 days, but I&amp;#39;m on track so far, and I&amp;#39;m very pleased with how things are going. My unique visitor count is certainly better than I expected it to be at this point (more than 200 per day on average, which I consider excellent for 21 days on a brand new domain). I&amp;#39;ve made some new friends, and it seems like every day I&amp;#39;m learning something new.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 21 Mar 2008 14:00:35 -0700</pubDate>
-				<link>/miscellaneous/2008/03/21/our-new-blog-101-subscribers-in-30-days-campaign-a-progress-report.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/21/our-new-blog-101-subscribers-in-30-days-campaign-a-progress-report.html</guid>
+				<link>/our-new-blog-101-subscribers-in-30-days-campaign-a-progress-report</link>
+				<guid isPermaLink="true">/our-new-blog-101-subscribers-in-30-days-campaign-a-progress-report</guid>
 			</item>
 			
 		
@@ -7454,8 +7454,8 @@ If this list were in order of importance, the issue of payment would have been i
 &lt;/ol&gt;
 </description>
 				<pubDate>Thu, 20 Mar 2008 09:00:22 -0700</pubDate>
-				<link>/miscellaneous/2008/03/20/should-internet-writers-do-paid-reviews.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/20/should-internet-writers-do-paid-reviews.html</guid>
+				<link>/should-internet-writers-do-paid-reviews</link>
+				<guid isPermaLink="true">/should-internet-writers-do-paid-reviews</guid>
 			</item>
 			
 		
@@ -7498,8 +7498,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;/ol&gt;
 </description>
 				<pubDate>Wed, 19 Mar 2008 14:49:41 -0700</pubDate>
-				<link>/miscellaneous/2008/03/19/eight-questions-you-should-ask-before-you-buy-a-paid-review.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/19/eight-questions-you-should-ask-before-you-buy-a-paid-review.html</guid>
+				<link>/eight-questions-you-should-ask-before-you-buy-a-paid-review</link>
+				<guid isPermaLink="true">/eight-questions-you-should-ask-before-you-buy-a-paid-review</guid>
 			</item>
 			
 		
@@ -7511,8 +7511,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;Another really great thing about Bob&amp;#39;s blog is that unlike many blogs, it comes with Bob!    What distinguishes Bob from most of the writers out there is that he doesn&amp;#39;t just write for the Internet -- he actually reads it as well.   Bob was one of the first people to come by, find my blog, and engage me in a conversation, and he makes a good case for establishing such peer relationships in his 4 Keys article.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 19 Mar 2008 05:58:10 -0700</pubDate>
-				<link>/miscellaneous/2008/03/19/internet-writer-bob-younce.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/19/internet-writer-bob-younce.html</guid>
+				<link>/internet-writer-bob-younce</link>
+				<guid isPermaLink="true">/internet-writer-bob-younce</guid>
 			</item>
 			
 		
@@ -7558,8 +7558,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;Matt Cutts has also hinted that you should disclose in the article that the review is paid, though to my knowledge there&amp;#39;s no standard, machine readable way to say your review is paid, so it&amp;#39;s hard to see whether this is just Matt&amp;#39;s preference or something in the algorithm.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 18 Mar 2008 07:15:32 -0700</pubDate>
-				<link>/miscellaneous/2008/03/18/paid-reviews-googles-problem-with-them-and-how-to-solve-it.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/18/paid-reviews-googles-problem-with-them-and-how-to-solve-it.html</guid>
+				<link>/paid-reviews-googles-problem-with-them-and-how-to-solve-it</link>
+				<guid isPermaLink="true">/paid-reviews-googles-problem-with-them-and-how-to-solve-it</guid>
 			</item>
 			
 		
@@ -7581,8 +7581,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;Do you offer paid reviews?  Have they been a good source of revenue to you?  Are you opposed for ideological reasons?  Opposed for practical reasons?&lt;/p&gt;
 </description>
 				<pubDate>Mon, 17 Mar 2008 12:13:42 -0700</pubDate>
-				<link>/miscellaneous/2008/03/17/paid-reviews-freelance-writer-boon-or-bargain-with-the-devil.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/17/paid-reviews-freelance-writer-boon-or-bargain-with-the-devil.html</guid>
+				<link>/paid-reviews-freelance-writer-boon-or-bargain-with-the-devil</link>
+				<guid isPermaLink="true">/paid-reviews-freelance-writer-boon-or-bargain-with-the-devil</guid>
 			</item>
 			
 		
@@ -7600,8 +7600,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;&lt;a href=&quot;http://www.inklit.com/blog/feed/&quot;&gt;Subscribe here&lt;/a&gt; to learn more about Landlord Land Mines when it becomes available.  Avoid the land mines -- because blowing your leg off can ruin your whole day!&lt;/p&gt;
 </description>
 				<pubDate>Sun, 16 Mar 2008 08:39:51 -0700</pubDate>
-				<link>/miscellaneous/2008/03/16/my-writing-partner-purva-brown.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/16/my-writing-partner-purva-brown.html</guid>
+				<link>/my-writing-partner-purva-brown</link>
+				<guid isPermaLink="true">/my-writing-partner-purva-brown</guid>
 			</item>
 			
 		
@@ -7635,8 +7635,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;P.S. For an amusing critique of the national 125x125 banner ad addiction, check out &lt;a href=&quot;http://www.garryconn.com/how-many-button-banner-ads-does-it-take-to-screw-in-a-light-bulb.php#comment-12435&quot;&gt;Garry Conn&amp;#39;s How Many Button Banner Ads Does It Take To Screw In a Lightbulb?&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sat, 15 Mar 2008 11:39:15 -0700</pubDate>
-				<link>/miscellaneous/2008/03/15/entrecard-ad-network-plus-social-network.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/15/entrecard-ad-network-plus-social-network.html</guid>
+				<link>/entrecard-ad-network-plus-social-network</link>
+				<guid isPermaLink="true">/entrecard-ad-network-plus-social-network</guid>
 			</item>
 			
 		
@@ -7671,8 +7671,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;These are just five ways to add value to your ebooks and articles. I&amp;#39;m sure there are many others. Readers, do you have techniques you&amp;#39;ve used or admired?&lt;/p&gt;
 </description>
 				<pubDate>Fri, 14 Mar 2008 09:45:53 -0700</pubDate>
-				<link>/miscellaneous/2008/03/14/five-ways-to-upsell-your-online-writing.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/14/five-ways-to-upsell-your-online-writing.html</guid>
+				<link>/five-ways-to-upsell-your-online-writing</link>
+				<guid isPermaLink="true">/five-ways-to-upsell-your-online-writing</guid>
 			</item>
 			
 		
@@ -7725,8 +7725,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;You can &lt;a href=&quot;http://feeds.feedburner.com/InklitcomWritingBlog&quot;&gt;subscribe to this blog here&lt;/a&gt;. Are you new to RSS and blog subscriptions? If so &lt;a href=&quot;http://www.inklit.com/blog/2008/03/12/what-is-rss-and-how-do-i-use-it/&quot;&gt;learn about RSS here&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 13 Mar 2008 07:12:15 -0700</pubDate>
-				<link>/miscellaneous/2008/03/13/words-you-want-to-avoid-and-cant-monetize.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/13/words-you-want-to-avoid-and-cant-monetize.html</guid>
+				<link>/words-you-want-to-avoid-and-cant-monetize</link>
+				<guid isPermaLink="true">/words-you-want-to-avoid-and-cant-monetize</guid>
 			</item>
 			
 		
@@ -7752,8 +7752,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;Following up on this, she promoted the contest for me on FaceBook. I&amp;#39;m hoping to do well there. People with their face in a book are a natural for a writing blog!&lt;/p&gt;
 </description>
 				<pubDate>Wed, 12 Mar 2008 16:51:52 -0700</pubDate>
-				<link>/miscellaneous/2008/03/12/link-karma-and-can-you-get-101-subscribers-to-a-new-blog-in-30-days.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/12/link-karma-and-can-you-get-101-subscribers-to-a-new-blog-in-30-days.html</guid>
+				<link>/link-karma-and-can-you-get-101-subscribers-to-a-new-blog-in-30-days</link>
+				<guid isPermaLink="true">/link-karma-and-can-you-get-101-subscribers-to-a-new-blog-in-30-days</guid>
 			</item>
 			
 		
@@ -7807,8 +7807,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;So now go find your favorite blogs and enjoy reading them! And if you haven&amp;#39;t done so in the tutorial above already, thank you for adding &lt;a href=&quot;http://feeds.feedburner.com/InklitcomWritingBlog&quot;&gt;the feed for Inklit.com&lt;/a&gt; to your reader.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 12 Mar 2008 09:59:51 -0700</pubDate>
-				<link>/miscellaneous/2008/03/12/what-is-rss-and-how-do-i-use-it.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/12/what-is-rss-and-how-do-i-use-it.html</guid>
+				<link>/what-is-rss-and-how-do-i-use-it</link>
+				<guid isPermaLink="true">/what-is-rss-and-how-do-i-use-it</guid>
 			</item>
 			
 		
@@ -7832,8 +7832,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;If you&amp;#39;re looking to make money writing online, when all else fails, write something online.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 12 Mar 2008 09:39:31 -0700</pubDate>
-				<link>/miscellaneous/2008/03/12/why-setting-writing-goals-is-so-important.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/12/why-setting-writing-goals-is-so-important.html</guid>
+				<link>/why-setting-writing-goals-is-so-important</link>
+				<guid isPermaLink="true">/why-setting-writing-goals-is-so-important</guid>
 			</item>
 			
 		
@@ -7845,8 +7845,8 @@ The more you&amp;#39;re looking to spend, the more time you should spend thinkin
 &lt;p&gt;And as if that isn&amp;#39;t enough, Jennifer Williamson also has the distinction of being the first person to ever make bold to write a comment here on Inklit, before anyone knew that writing comments here would become a major Internet pastime.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 12 Mar 2008 09:28:40 -0700</pubDate>
-				<link>/miscellaneous/2008/03/12/jennifer-williamson-freelance-writing-blog.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/12/jennifer-williamson-freelance-writing-blog.html</guid>
+				<link>/jennifer-williamson-freelance-writing-blog</link>
+				<guid isPermaLink="true">/jennifer-williamson-freelance-writing-blog</guid>
 			</item>
 			
 		
@@ -7892,8 +7892,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;/ol&gt;
 </description>
 				<pubDate>Tue, 11 Mar 2008 08:32:50 -0700</pubDate>
-				<link>/miscellaneous/2008/03/11/eleven-steps-to-get-101-subscribers-to-your-new-blog-in-thirty-days.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/11/eleven-steps-to-get-101-subscribers-to-your-new-blog-in-thirty-days.html</guid>
+				<link>/eleven-steps-to-get-101-subscribers-to-your-new-blog-in-thirty-days</link>
+				<guid isPermaLink="true">/eleven-steps-to-get-101-subscribers-to-your-new-blog-in-thirty-days</guid>
 			</item>
 			
 		
@@ -7947,8 +7947,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;/ol&gt;
 </description>
 				<pubDate>Mon, 10 Mar 2008 10:21:38 -0700</pubDate>
-				<link>/miscellaneous/2008/03/10/selling-your-writing-part-ii-the-right-way.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/10/selling-your-writing-part-ii-the-right-way.html</guid>
+				<link>/selling-your-writing-part-ii-the-right-way</link>
+				<guid isPermaLink="true">/selling-your-writing-part-ii-the-right-way</guid>
 			</item>
 			
 		
@@ -7962,8 +7962,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;p&gt;If you know of resources that you feel should be included on the list, please let me know and I will consider adding them in a future article.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 09 Mar 2008 18:44:28 -0700</pubDate>
-				<link>/miscellaneous/2008/03/09/resources-for-making-money-by-writing-online.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/09/resources-for-making-money-by-writing-online.html</guid>
+				<link>/resources-for-making-money-by-writing-online</link>
+				<guid isPermaLink="true">/resources-for-making-money-by-writing-online</guid>
 			</item>
 			
 		
@@ -8012,8 +8012,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;p&gt;For many of us who are already writing, the person we met at the outset who doesn&amp;#39;t write anything is a total foreigner. We write all the time. So the issue for us is not whether we write at all, because we can&amp;#39;t stop writing. Instead, the issue boils down to this: can we sell enough writing products and services often enough at a high enough price to make the sort of living we aspire to? In my own case, my niche blogging activity already makes me an income that some people in my area make on their full time jobs. Even this year, with the market falling apart, it&amp;#39;s probably more than I&amp;#39;d make as a full time typist, but I am working on doing better. &lt;/p&gt;
 </description>
 				<pubDate>Sun, 09 Mar 2008 11:49:24 -0700</pubDate>
-				<link>/miscellaneous/2008/03/09/selling-your-writing-part-i-the-wrong-way.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/09/selling-your-writing-part-i-the-wrong-way.html</guid>
+				<link>/selling-your-writing-part-i-the-wrong-way</link>
+				<guid isPermaLink="true">/selling-your-writing-part-i-the-wrong-way</guid>
 			</item>
 			
 		
@@ -8025,8 +8025,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;p&gt;Sorry the content is still such a mixed bag, but I&amp;#39;m working on it!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 07 Mar 2008 19:20:50 -0800</pubDate>
-				<link>/miscellaneous/2008/03/07/welcome-to-my-pals-from-other-blogs.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/07/welcome-to-my-pals-from-other-blogs.html</guid>
+				<link>/welcome-to-my-pals-from-other-blogs</link>
+				<guid isPermaLink="true">/welcome-to-my-pals-from-other-blogs</guid>
 			</item>
 			
 		
@@ -8058,8 +8058,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;p&gt;I do think the idea of setting the goals in writing for the week was worth doing -- and setting them somewhat aggressively was also the right approach.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 07 Mar 2008 13:38:32 -0800</pubDate>
-				<link>/miscellaneous/2008/03/07/a-journey-of-1000-miles-starts-with-gas-at-400-per-gallon.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/07/a-journey-of-1000-miles-starts-with-gas-at-400-per-gallon.html</guid>
+				<link>/a-journey-of-1000-miles-starts-with-gas-at-400-per-gallon</link>
+				<guid isPermaLink="true">/a-journey-of-1000-miles-starts-with-gas-at-400-per-gallon</guid>
 			</item>
 			
 		
@@ -8129,8 +8129,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;p&gt;Whatever system you set up and use, make sure it&amp;#39;s simple and easy to use. It can be as easy as a diary. Getting organized is not an end in itself, and it should never be so complex that it detracts from the good stuff. The goal of setting goals is to distract from the good stuff, but to give it the time it needs to flower and grow.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 06 Mar 2008 09:03:46 -0800</pubDate>
-				<link>/miscellaneous/2008/03/06/setting-writing-goals-making-room-for-the-good-stuff.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/06/setting-writing-goals-making-room-for-the-good-stuff.html</guid>
+				<link>/setting-writing-goals-making-room-for-the-good-stuff</link>
+				<guid isPermaLink="true">/setting-writing-goals-making-room-for-the-good-stuff</guid>
 			</item>
 			
 		
@@ -8156,8 +8156,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;p&gt;Now you know why he&amp;#39;s a billionaire and I put search and rescue dogs to sleep.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 04 Mar 2008 16:56:27 -0800</pubDate>
-				<link>/miscellaneous/2008/03/04/missing-geek-found-search-party-unimpressed.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/04/missing-geek-found-search-party-unimpressed.html</guid>
+				<link>/missing-geek-found-search-party-unimpressed</link>
+				<guid isPermaLink="true">/missing-geek-found-search-party-unimpressed</guid>
 			</item>
 			
 		
@@ -8179,8 +8179,8 @@ Burn your feed with &lt;a href=&quot;http://www.feedburner.com/&quot;&gt;Feedbur
 &lt;p&gt;I find it an interesting addition to the march of business models.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 03 Mar 2008 16:39:15 -0800</pubDate>
-				<link>/miscellaneous/2008/03/03/plr-writing-basics.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/03/plr-writing-basics.html</guid>
+				<link>/plr-writing-basics</link>
+				<guid isPermaLink="true">/plr-writing-basics</guid>
 			</item>
 			
 		
@@ -8221,8 +8221,8 @@ Because blogs are not vetted in any way and needn&amp;#39;t be &amp;quot;sold&am
 &lt;p&gt;There. I feel more focused already.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 02 Mar 2008 10:34:16 -0800</pubDate>
-				<link>/miscellaneous/2008/03/02/am-i-writing-or-am-i-blogging-and-whats-the-difference.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/02/am-i-writing-or-am-i-blogging-and-whats-the-difference.html</guid>
+				<link>/am-i-writing-or-am-i-blogging-and-whats-the-difference</link>
+				<guid isPermaLink="true">/am-i-writing-or-am-i-blogging-and-whats-the-difference</guid>
 			</item>
 			
 		
@@ -8242,8 +8242,8 @@ Because blogs are not vetted in any way and needn&amp;#39;t be &amp;quot;sold&am
 &lt;p&gt;That&amp;#39;s what this blog is about. Welcome.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 01 Mar 2008 11:47:48 -0800</pubDate>
-				<link>/miscellaneous/2008/03/01/welcome-to-inklitcom.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/03/01/welcome-to-inklitcom.html</guid>
+				<link>/welcome-to-inklitcom</link>
+				<guid isPermaLink="true">/welcome-to-inklitcom</guid>
 			</item>
 			
 		
@@ -8277,8 +8277,8 @@ Because blogs are not vetted in any way and needn&amp;#39;t be &amp;quot;sold&am
 &lt;p&gt;On balance, for me the simplicity and ease of use of HighRise and its ability to &amp;quot;do the right thing&amp;quot; with a new lead far outweigh the features it lacks. Add to that the fact that getting a team of a half dozen agents up and running will set you back only about $24 per month compared to $210 per month for Top Producer, and HighRise&amp;#39;s minimalism becomes if anything even more exciting. We&amp;#39;re in the middle of rolling it out and I will let you know how it goes!&lt;/p&gt;
 </description>
 				<pubDate>Sat, 26 Jan 2008 21:48:25 -0800</pubDate>
-				<link>/miscellaneous/2008/01/26/highrise-review-highrisehq-contact-relationship-manager.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/01/26/highrise-review-highrisehq-contact-relationship-manager.html</guid>
+				<link>/highrise-review-highrisehq-contact-relationship-manager</link>
+				<guid isPermaLink="true">/highrise-review-highrisehq-contact-relationship-manager</guid>
 			</item>
 			
 		
@@ -8300,8 +8300,8 @@ Because blogs are not vetted in any way and needn&amp;#39;t be &amp;quot;sold&am
 *&lt;/em&gt;As he always does, Phoenix Real Estate guy Jay Thompson has done a good job implementing a real estate marketing idea that you sometimes see surfacing on other sites, the &lt;a href=&quot;http://www.phoenixrealestateguy.com/latest-blogsperiment-the-real-estate-faq/626&quot;&gt;Real Estate FAQ&lt;/a&gt;. Such in depth real estate coverage may help you with &amp;quot;long tail&amp;quot; search results, and help to establish your expertise to your clients and your site&amp;#39;s relevance to the search engines.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 11 Jan 2008 15:03:08 -0800</pubDate>
-				<link>/miscellaneous/2008/01/11/internet-marketing-week-in-review-2.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/01/11/internet-marketing-week-in-review-2.html</guid>
+				<link>/internet-marketing-week-in-review-2</link>
+				<guid isPermaLink="true">/internet-marketing-week-in-review-2</guid>
 			</item>
 			
 		
@@ -8341,8 +8341,8 @@ Because blogs are not vetted in any way and needn&amp;#39;t be &amp;quot;sold&am
 &lt;/ul&gt;
 </description>
 				<pubDate>Tue, 08 Jan 2008 11:29:29 -0800</pubDate>
-				<link>/miscellaneous/2008/01/08/whats-your-internet-marketing-strategy-authors-guide.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/01/08/whats-your-internet-marketing-strategy-authors-guide.html</guid>
+				<link>/whats-your-internet-marketing-strategy-authors-guide</link>
+				<guid isPermaLink="true">/whats-your-internet-marketing-strategy-authors-guide</guid>
 			</item>
 			
 		
@@ -8368,8 +8368,8 @@ Because blogs are not vetted in any way and needn&amp;#39;t be &amp;quot;sold&am
 &lt;p&gt;Isn&amp;#39;t the Internet great?&lt;/p&gt;
 </description>
 				<pubDate>Sat, 05 Jan 2008 05:29:52 -0800</pubDate>
-				<link>/miscellaneous/2008/01/05/feed-statistics-for-wordpress-without-feedburner.html</link>
-				<guid isPermaLink="true">/miscellaneous/2008/01/05/feed-statistics-for-wordpress-without-feedburner.html</guid>
+				<link>/feed-statistics-for-wordpress-without-feedburner</link>
+				<guid isPermaLink="true">/feed-statistics-for-wordpress-without-feedburner</guid>
 			</item>
 			
 		
@@ -8387,8 +8387,8 @@ Because blogs are not vetted in any way and needn&amp;#39;t be &amp;quot;sold&am
 &lt;p&gt;Perhaps the best single source for discussion of HomeGain and other lead generation companies that I found was on Realtown.com&amp;#39;s &lt;a href=&quot;http://www.realtown.com/LeadGeneration/blog/&quot;&gt;Lead Generation Blog&lt;/a&gt;. An excellent guide to who the players are is the &amp;quot;View by Vendor&amp;quot; blogroll on the left hand side, and the articles here are a good mix of criticisms of the Lead Generation companies and success stories.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 28 Dec 2007 14:46:47 -0800</pubDate>
-				<link>/miscellaneous/2007/12/28/the-week-in-review-focus-on-lead-generating-companies.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/12/28/the-week-in-review-focus-on-lead-generating-companies.html</guid>
+				<link>/the-week-in-review-focus-on-lead-generating-companies</link>
+				<guid isPermaLink="true">/the-week-in-review-focus-on-lead-generating-companies</guid>
 			</item>
 			
 		
@@ -8433,8 +8433,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;/ol&gt;
 </description>
 				<pubDate>Thu, 27 Dec 2007 13:44:03 -0800</pubDate>
-				<link>/miscellaneous/2007/12/27/what-was-the-social-internet-before-it-was-social.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/12/27/what-was-the-social-internet-before-it-was-social.html</guid>
+				<link>/what-was-the-social-internet-before-it-was-social</link>
+				<guid isPermaLink="true">/what-was-the-social-internet-before-it-was-social</guid>
 			</item>
 			
 		
@@ -8444,8 +8444,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 				<description>&lt;p&gt;Here is a &lt;a href=&quot;http://www.particlewave.com/video/LiveWriterInstall/LiveWriterInstall.html&quot;&gt;tutorial &lt;/a&gt;about getting started with Windows Live Writer. It takes you through the process of downloading and installing the software and configuring it for your Wordpress Blog.  Enjoy!  &lt;img src=&quot;file:///C:/DOCUME%7E1/HP_ADM%7E1/LOCALS%7E1/Temp/moz-screenshot.jpg&quot; alt=&quot;&quot;&gt; &lt;a href=&quot;http://www.particlewave.com/video/LiveWriterInstall/LiveWriterInstall.html&quot;&gt;&lt;img src=&quot;http://www.particlewave.com/internet-marketing/wp-content/uploads/2008/04/livewriter-300x284.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt; &lt;img src=&quot;file:///C:/DOCUME%7E1/HP_ADM%7E1/LOCALS%7E1/Temp/moz-screenshot.jpg&quot; alt=&quot;&quot;&gt; &lt;a href=&quot;http://www.particlewave.com/video/LiveWriterInstall/LiveWriterInstall.html&quot;&gt; &lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Thu, 20 Dec 2007 12:00:17 -0800</pubDate>
-				<link>/miscellaneous/2007/12/20/windows-live-writer-tutorial.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/12/20/windows-live-writer-tutorial.html</guid>
+				<link>/windows-live-writer-tutorial</link>
+				<guid isPermaLink="true">/windows-live-writer-tutorial</guid>
 			</item>
 			
 		
@@ -8461,8 +8461,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Fortunately, Google has a relatively &lt;a href=&quot;http://www.google.com/blogger_dmca.html&quot;&gt;easy way to respond to copyright violations&lt;/a&gt; on that you find on Blogger blogs (typically with a URL like ImAnIdiotCopyingYourWork.blogspot.com).  I&amp;#39;ve read other bloggers complain that the process takes some time because you have to submit the request by mail or fax, but I just submitted a complaint following the instructions there, and it took no more than about twenty minutes.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 19 Dec 2007 09:15:33 -0800</pubDate>
-				<link>/miscellaneous/2007/12/19/has-your-copyright-been-violated.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/12/19/has-your-copyright-been-violated.html</guid>
+				<link>/has-your-copyright-been-violated</link>
+				<guid isPermaLink="true">/has-your-copyright-been-violated</guid>
 			</item>
 			
 		
@@ -8488,8 +8488,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;John got me off to a great start. Long term success is up to me, but I don’t know where I would be if I tried to do this on my own. If you are even thinking of starting a new blog you really should give him a call.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 17 Dec 2007 11:01:22 -0800</pubDate>
-				<link>/our%20clients/2007/12/17/mortgage-broker-blog-client-testimonial.html</link>
-				<guid isPermaLink="true">/our%20clients/2007/12/17/mortgage-broker-blog-client-testimonial.html</guid>
+				<link>/mortgage-broker-blog-client-testimonial</link>
+				<guid isPermaLink="true">/mortgage-broker-blog-client-testimonial</guid>
 			</item>
 			
 		
@@ -8511,8 +8511,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;And that&amp;#39;s the week in review. Have a great weekend.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 07 Dec 2007 14:32:33 -0800</pubDate>
-				<link>/miscellaneous/2007/12/07/internet-marketing-week-in-review.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/12/07/internet-marketing-week-in-review.html</guid>
+				<link>/internet-marketing-week-in-review</link>
+				<guid isPermaLink="true">/internet-marketing-week-in-review</guid>
 			</item>
 			
 		
@@ -8528,8 +8528,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;What really gets me excited as well is that he&amp;#39;s well on his way (we&amp;#39;ll do a few more tweaks over the next few days), and he was able to accomplish this for about 1/6th the cost of one of my competitors.  So in the first year, he&amp;#39;ll save some $2,800** **for the same results, and he&amp;#39;ll continue to save year after year on his web hosting bill.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 06 Dec 2007 17:06:13 -0800</pubDate>
-				<link>/our%20clients/2007/12/06/illinois-mortgage-blog-coming-along-nicely.html</link>
-				<guid isPermaLink="true">/our%20clients/2007/12/06/illinois-mortgage-blog-coming-along-nicely.html</guid>
+				<link>/illinois-mortgage-blog-coming-along-nicely</link>
+				<guid isPermaLink="true">/illinois-mortgage-blog-coming-along-nicely</guid>
 			</item>
 			
 		
@@ -8545,8 +8545,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Here are words of wisdom from an amateur network admin:  95% of the time, it&amp;#39;s a cable problem.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 29 Nov 2007 14:32:38 -0800</pubDate>
-				<link>/miscellaneous/2007/11/29/please-dont-disconnect-the-bloggers-internet.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/11/29/please-dont-disconnect-the-bloggers-internet.html</guid>
+				<link>/please-dont-disconnect-the-bloggers-internet</link>
+				<guid isPermaLink="true">/please-dont-disconnect-the-bloggers-internet</guid>
 			</item>
 			
 		
@@ -8565,8 +8565,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Based on some of the writing I&amp;#39;ve seen from him both on his newly launched site and his &lt;a href=&quot;http://activerain.com/blogs/pt1111&quot;&gt;Active Rain blog&lt;/a&gt; and his &amp;quot;in it for the long haul&amp;quot; attitude, I expect that it won&amp;#39;t be long before his new blog will ultimately serve as a major resource for Illinois home finance information.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 26 Nov 2007 14:19:27 -0800</pubDate>
-				<link>/miscellaneous/2007/11/26/mortgage-blogging-client.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/11/26/mortgage-blogging-client.html</guid>
+				<link>/mortgage-blogging-client</link>
+				<guid isPermaLink="true">/mortgage-blogging-client</guid>
 			</item>
 			
 		
@@ -8592,8 +8592,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;OK, just one other thing.  I know the developers are probably too young to know about this movie that was already sixteen years old when I watched it as a kid, but here&amp;#39;s the thing:  ants don&amp;#39;t buzz.  They make the &lt;a href=&quot;http://www.particlewave.com/images/AntSound.mp3&quot;&gt;Them! movie ant noise&lt;/a&gt;.  If you&amp;#39;ve never heard that noise before, you really should go check out  &lt;a href=&quot;http://video.google.com/videoplay?docid=-828076470184247942&quot;&gt;Them!&lt;/a&gt;.  Watch the whole movie, or fast forward to about 27 minutes 30 seconds and you&amp;#39;ll not only get to watch Joan Weldon walking around, which is always a treat, but if you let it play about two minutes you&amp;#39;ll get to hear plenty of good ant noises.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 10 Nov 2007 20:09:06 -0800</pubDate>
-				<link>/miscellaneous/2007/11/10/cre8buzz-an-early-look.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/11/10/cre8buzz-an-early-look.html</guid>
+				<link>/cre8buzz-an-early-look</link>
+				<guid isPermaLink="true">/cre8buzz-an-early-look</guid>
 			</item>
 			
 		
@@ -8622,8 +8622,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;The fact that searches are qualification tools is what makes Internet Marketing such a wonderful investment.   Even pay-per-click is completely efficient compared to mailing, for example.  Consider, would you rather pay $1.00 to mail to one person at random, or $3.00 to get your message in front of one person searching for &amp;quot;Yourtown Real Estate&amp;quot;.  Sure, if you&amp;#39;re doing a mailing, you&amp;#39;d try to narrow down the list, but it&amp;#39;s hard to see it ever getting as good as the list of people who are actively looking for your product &lt;strong&gt;right now&lt;/strong&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 06 Nov 2007 08:29:59 -0800</pubDate>
-				<link>/miscellaneous/2007/11/06/traffic-versus-qualified-traffic.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/11/06/traffic-versus-qualified-traffic.html</guid>
+				<link>/traffic-versus-qualified-traffic</link>
+				<guid isPermaLink="true">/traffic-versus-qualified-traffic</guid>
 			</item>
 			
 		
@@ -8669,8 +8669,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;I wonder if I started a Luddite group if Andrew Keen would join me.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 04 Nov 2007 08:52:35 -0800</pubDate>
-				<link>/miscellaneous/2007/11/04/reductio-ad-myspace.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/11/04/reductio-ad-myspace.html</guid>
+				<link>/reductio-ad-myspace</link>
+				<guid isPermaLink="true">/reductio-ad-myspace</guid>
 			</item>
 			
 		
@@ -8746,8 +8746,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;There&amp;#39;s a lesson in that for this blog as well, but one could argue that I haven&amp;#39;t learned it yet. Stay tuned! &lt;/p&gt;
 </description>
 				<pubDate>Wed, 31 Oct 2007 09:02:47 -0700</pubDate>
-				<link>/miscellaneous/2007/10/31/why-you-should-care-about-what-your-clients-care-about.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/10/31/why-you-should-care-about-what-your-clients-care-about.html</guid>
+				<link>/why-you-should-care-about-what-your-clients-care-about</link>
+				<guid isPermaLink="true">/why-you-should-care-about-what-your-clients-care-about</guid>
 			</item>
 			
 		
@@ -8775,8 +8775,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;I feel a definite &amp;quot;follow-on article&amp;quot; feeling coming on.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 30 Oct 2007 08:35:46 -0700</pubDate>
-				<link>/miscellaneous/2007/10/30/whos-reading-your-blog-you-dont-have-one-bounce-rate-you-have-many.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/10/30/whos-reading-your-blog-you-dont-have-one-bounce-rate-you-have-many.html</guid>
+				<link>/whos-reading-your-blog-you-dont-have-one-bounce-rate-you-have-many</link>
+				<guid isPermaLink="true">/whos-reading-your-blog-you-dont-have-one-bounce-rate-you-have-many</guid>
 			</item>
 			
 		
@@ -8807,8 +8807,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 *&lt;/em&gt;PlanetOzh&amp;#39;s plugin, &lt;a href=&quot;http://planetozh.com/blog/my-projects/wordpress-plugin-better-feed-rss/&quot;&gt;BetterFeed&lt;/a&gt;, allows you to automatically make some neat changes to your RSS feed.  Why would you care about what&amp;#39;s in your RSS feed?  Well, for one reason, your RSS feed is what your subscribers see.   So let&amp;#39;s say want to offer someone an incentive for subscribing, an idea I&amp;#39;m &lt;a href=&quot;http://www.sacramento-home.com/real-estate-events/subscribe.php&quot;&gt;testing out&lt;/a&gt; on my Sacramento Blog.  I&amp;#39;m using PlanetOzh&amp;#39;s plugin to add some links to the Subscriber-only content directly into my feed.  (Please note that you don&amp;#39;t want to add anything really secret this way, since chances are pretty good your feed is available to non-subscribers as well -- that&amp;#39;s how people turn into subscribers is by accessing your feed.  But in the case of discount coupons and the like, if someone thinks they found a &amp;quot;forbidden freebie&amp;quot;, that&amp;#39;s not necessarily a bad thing.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 29 Oct 2007 10:03:40 -0700</pubDate>
-				<link>/miscellaneous/2007/10/29/five-favorite-wordpress-plugins.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/10/29/five-favorite-wordpress-plugins.html</guid>
+				<link>/five-favorite-wordpress-plugins</link>
+				<guid isPermaLink="true">/five-favorite-wordpress-plugins</guid>
 			</item>
 			
 		
@@ -8832,8 +8832,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Your mileage may vary, but to my way of thinking there&amp;#39;s just no reason to even get started on an Internet marketing campaign if you can&amp;#39;t dominate a niche.  That&amp;#39;s where you should be heading.  Your site should be generating leads for you.  If it&amp;#39;s not, fix it or fire it.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 23 Oct 2007 09:12:04 -0700</pubDate>
-				<link>/miscellaneous/2007/10/23/getting-back-in-the-groove.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/10/23/getting-back-in-the-groove.html</guid>
+				<link>/getting-back-in-the-groove</link>
+				<guid isPermaLink="true">/getting-back-in-the-groove</guid>
 			</item>
 			
 		
@@ -8843,8 +8843,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 				<description>&lt;p&gt;&lt;a href=&quot;http://technorati.com/claim/eeqvu4sei&quot;&gt;Technorati Profile&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 23 Sep 2007 17:29:22 -0700</pubDate>
-				<link>/miscellaneous/2007/09/23/and-now-a-bit-of-technorati-housekeeping.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/09/23/and-now-a-bit-of-technorati-housekeeping.html</guid>
+				<link>/and-now-a-bit-of-technorati-housekeeping</link>
+				<guid isPermaLink="true">/and-now-a-bit-of-technorati-housekeeping</guid>
 			</item>
 			
 		
@@ -8860,8 +8860,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;In a nutshell, that means that NAR recognizes that the informed consumer wants to see listing data when they go to a Realtor&amp;#39;s web site, and they want to make this information available to all Realtors to publish on their web sites -- even those agents who work with buyers exclusively.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 05 Sep 2007 08:11:55 -0700</pubDate>
-				<link>/miscellaneous/2007/09/05/what-is-idx.html</link>
-				<guid isPermaLink="true">/miscellaneous/2007/09/05/what-is-idx.html</guid>
+				<link>/what-is-idx</link>
+				<guid isPermaLink="true">/what-is-idx</guid>
 			</item>
 			
 		
@@ -8888,8 +8888,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;What I&amp;#39;ve found, however, is that this is only working for me on sites with a long history already, so for me, &amp;quot;search engines versus social networks&amp;quot; not is not a case of either/or, it&amp;#39;s a case of one of those hands washing the other.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 14 Oct 2006 23:49:45 -0700</pubDate>
-				<link>/miscellaneous/2006/10/14/farewell-search-engine-optimization-we-hardly-knew-ye.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/10/14/farewell-search-engine-optimization-we-hardly-knew-ye.html</guid>
+				<link>/farewell-search-engine-optimization-we-hardly-knew-ye</link>
+				<guid isPermaLink="true">/farewell-search-engine-optimization-we-hardly-knew-ye</guid>
 			</item>
 			
 		
@@ -8907,8 +8907,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;My meditation sessions since Tuesday have been some of the best ever, very deep, relaxed, insightful -- almost as though I can feel my brain being reprogrammed.  Yes, indeed that is a materialistic way to put it.  One little exercise that I&amp;#39;ve been enjoying is shining the white metta light on whatever disturbances or ill feelings arise.  Tonight however I feel like I should nap before the sit a while -- there&amp;#39;s not much brain left at the end of the wick.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 10 Oct 2006 19:22:57 -0700</pubDate>
-				<link>/miscellaneous/2006/10/10/lazy-boy-buddhism-revisited.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/10/10/lazy-boy-buddhism-revisited.html</guid>
+				<link>/lazy-boy-buddhism-revisited</link>
+				<guid isPermaLink="true">/lazy-boy-buddhism-revisited</guid>
 			</item>
 			
 		
@@ -8928,8 +8928,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Needless to say, there&amp;#39;s a lot to learn and put together to get this done, and I welcome input from Realtors® about their experiences with different web site companies and lead providers.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 05 Oct 2006 19:15:18 -0700</pubDate>
-				<link>/miscellaneous/2006/10/05/the-ebook-project.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/10/05/the-ebook-project.html</guid>
+				<link>/the-ebook-project</link>
+				<guid isPermaLink="true">/the-ebook-project</guid>
 			</item>
 			
 		
@@ -8943,8 +8943,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;So pull up an RSS reader and stay tuned!&lt;/p&gt;
 </description>
 				<pubDate>Wed, 04 Oct 2006 11:41:38 -0700</pubDate>
-				<link>/miscellaneous/2006/10/04/welcome-to-particlewaves-internet-marketing-blog.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/10/04/welcome-to-particlewaves-internet-marketing-blog.html</guid>
+				<link>/welcome-to-particlewaves-internet-marketing-blog</link>
+				<guid isPermaLink="true">/welcome-to-particlewaves-internet-marketing-blog</guid>
 			</item>
 			
 		
@@ -8960,8 +8960,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;But schizophrenia / multiple personality disorder isn&amp;#39;t really the metaphor I&amp;#39;m going for.  The goal of a doctor treating a patient with multiple personality disorder is to get them to become re-integrated.  But the goal of doctor me in treating this multiple personality web site, unless I miss my guess, should be to disintegrate it into two separate blogs.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 04 Oct 2006 10:22:05 -0700</pubDate>
-				<link>/miscellaneous/2006/10/04/schizoprhrainia-of-the-brainia.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/10/04/schizoprhrainia-of-the-brainia.html</guid>
+				<link>/schizoprhrainia-of-the-brainia</link>
+				<guid isPermaLink="true">/schizoprhrainia-of-the-brainia</guid>
 			</item>
 			
 		
@@ -8983,8 +8983,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;So best of luck to you, new category.  I sense the spark of greatness in you already, your potential to become the fulfillment of the goal I set recently, for this web site to be about something.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 23 Sep 2006 19:30:02 -0700</pubDate>
-				<link>/miscellaneous/2006/09/23/welcome-to-writing.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/23/welcome-to-writing.html</guid>
+				<link>/welcome-to-writing</link>
+				<guid isPermaLink="true">/welcome-to-writing</guid>
 			</item>
 			
 		
@@ -8996,8 +8996,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Very tasty.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 23 Sep 2006 00:28:50 -0700</pubDate>
-				<link>/miscellaneous/2006/09/23/form-is-emptiness-emptiness-is-form-and-some-good-podcasts.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/23/form-is-emptiness-emptiness-is-form-and-some-good-podcasts.html</guid>
+				<link>/form-is-emptiness-emptiness-is-form-and-some-good-podcasts</link>
+				<guid isPermaLink="true">/form-is-emptiness-emptiness-is-form-and-some-good-podcasts</guid>
 			</item>
 			
 		
@@ -9013,8 +9013,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;I think some times those of us who are agnostic or atheistic in our beliefs fight a primarily social battle, in which we long to be accepted by our fellows, who may have some elements of a lifestyle we wish to pursue, but who have no compunctions about faithful leaps they&amp;#39;re supposed to be making in their tradition.  I&amp;#39;m sympathetic to Batchelor, but I think at the same time I&amp;#39;d already fought this fight so well in another context that I don&amp;#39;t see much need for it in Buddhism.  It helps to be a newcomer in some respects.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 22 Sep 2006 10:39:01 -0700</pubDate>
-				<link>/miscellaneous/2006/09/22/buddhism-without-beliefs.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/22/buddhism-without-beliefs.html</guid>
+				<link>/buddhism-without-beliefs</link>
+				<guid isPermaLink="true">/buddhism-without-beliefs</guid>
 			</item>
 			
 		
@@ -9032,8 +9032,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;I find I prosper in such meetings to the extent they&amp;#39;re more like a group of meditators getting together, and less like a church.  It&amp;#39;s nice that someone has robes and prostrates to the altar a multiple of three times and has other traditions -- it&amp;#39;s just not for me.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 20 Sep 2006 09:22:03 -0700</pubDate>
-				<link>/miscellaneous/2006/09/20/whats-up-this-week.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/20/whats-up-this-week.html</guid>
+				<link>/whats-up-this-week</link>
+				<guid isPermaLink="true">/whats-up-this-week</guid>
 			</item>
 			
 		
@@ -9049,8 +9049,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Thursday and Friday were days with a Y in them, too.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 16 Sep 2006 09:29:26 -0700</pubDate>
-				<link>/miscellaneous/2006/09/16/notes-i-sangha-this-week-2.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/16/notes-i-sangha-this-week-2.html</guid>
+				<link>/notes-i-sangha-this-week-2</link>
+				<guid isPermaLink="true">/notes-i-sangha-this-week-2</guid>
 			</item>
 			
 		
@@ -9078,8 +9078,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;When it&amp;#39;s more earnestly about something, you&amp;#39;ll be the first to know.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 16 Sep 2006 08:27:49 -0700</pubDate>
-				<link>/miscellaneous/2006/09/16/concentration-first-then-mindfulness-then-adsense.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/16/concentration-first-then-mindfulness-then-adsense.html</guid>
+				<link>/concentration-first-then-mindfulness-then-adsense</link>
+				<guid isPermaLink="true">/concentration-first-then-mindfulness-then-adsense</guid>
 			</item>
 			
 		
@@ -9103,8 +9103,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;David D. Burns, M.D., in &amp;quot;The Feeling Good Handbook&amp;quot; (see above -- this material is circa page 170 in my edition) discusses motivation and action in terms of a virtuous cycle.  You don&amp;#39;t get motivated by willing motivation, you get motivated by some small action.  The action then gives you motivation, and then you can take more action, and so forth.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 09 Sep 2006 22:11:48 -0700</pubDate>
-				<link>/miscellaneous/2006/09/09/depression-is-a-choice.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/09/depression-is-a-choice.html</guid>
+				<link>/depression-is-a-choice</link>
+				<guid isPermaLink="true">/depression-is-a-choice</guid>
 			</item>
 			
 		
@@ -9130,8 +9130,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;So then what can I say at this point about motivation and depression?  Not much, I&amp;#39;m just at the beginning of my inquiry, but I do know that I seem to feel best when creating my own life rather than suffering from it.  Yet it&amp;#39;s the same set of external circumstances either way.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 09 Sep 2006 09:30:51 -0700</pubDate>
-				<link>/miscellaneous/2006/09/09/depression-motivation-and-the-real-me.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/09/depression-motivation-and-the-real-me.html</guid>
+				<link>/depression-motivation-and-the-real-me</link>
+				<guid isPermaLink="true">/depression-motivation-and-the-real-me</guid>
 			</item>
 			
 		
@@ -9151,8 +9151,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Stupid miasms.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 08 Sep 2006 20:01:52 -0700</pubDate>
-				<link>/miscellaneous/2006/09/08/quote-of-the-day.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/08/quote-of-the-day.html</guid>
+				<link>/quote-of-the-day</link>
+				<guid isPermaLink="true">/quote-of-the-day</guid>
 			</item>
 			
 		
@@ -9166,8 +9166,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Clearly, Chad&amp;#39;s one of those great guys who puts his client&amp;#39;s needs first, so I wanted to just put up that quick link above and let people know.  If you&amp;#39;re a real estate agent or broker in need of an IDX web site, you owe it to yourself to give Chad a call and see what he can do for you!&lt;/p&gt;
 </description>
 				<pubDate>Wed, 06 Sep 2006 11:24:33 -0700</pubDate>
-				<link>/miscellaneous/2006/09/06/idxbroker-review.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/09/06/idxbroker-review.html</guid>
+				<link>/idxbroker-review</link>
+				<guid isPermaLink="true">/idxbroker-review</guid>
 			</item>
 			
 		
@@ -9198,8 +9198,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Steve Pavlina&amp;#39;s program for attracting wealth into your life is &lt;strong&gt;0.065321%&lt;/strong&gt; successful.  Isn&amp;#39;t that amazing?  Be sure to contribute something to his web site.  If you should happen to find yourself unlucky enough in life to trip and fall from a high place, you might try intending to fly.  But I hope you&amp;#39;ll just watch your step.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 31 Aug 2006 13:53:02 -0700</pubDate>
-				<link>/miscellaneous/2006/08/31/the-power-of-intention-2.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/08/31/the-power-of-intention-2.html</guid>
+				<link>/the-power-of-intention-2</link>
+				<guid isPermaLink="true">/the-power-of-intention-2</guid>
 			</item>
 			
 		
@@ -9217,8 +9217,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;To be sure, the same good and evil problem crops up as elsewhere, and at that point you need some sleight of hand to explain how an evil guy can become rich, for example, or how a good person can lose a child: and by sleight of hand read &amp;quot;multiple lifetimes.&amp;quot;  But if you take Buddhism and cut away the parts an atheist wouldn&amp;#39;t like, you&amp;#39;re still left with some tasty bits: an entire secular recipe for happiness.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 25 Aug 2006 13:30:17 -0700</pubDate>
-				<link>/miscellaneous/2006/08/25/buddhism-and-rationality.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/08/25/buddhism-and-rationality.html</guid>
+				<link>/buddhism-and-rationality</link>
+				<guid isPermaLink="true">/buddhism-and-rationality</guid>
 			</item>
 			
 		
@@ -9250,8 +9250,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;As always, what should the business be doing is the harder question than what should the software be doing.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 24 Aug 2006 11:03:56 -0700</pubDate>
-				<link>/software/2006/08/24/internets-20.html</link>
-				<guid isPermaLink="true">/software/2006/08/24/internets-20.html</guid>
+				<link>/internets-20</link>
+				<guid isPermaLink="true">/internets-20</guid>
 			</item>
 			
 		
@@ -9275,8 +9275,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;I will say this, though.  When I see some other articles about how easy and overnight it is, however, I want to cringe.  For me, it&amp;#39;s been hundreds of hours of work, lots of false starts, hits and misses.  Even now, I can&amp;#39;t say that my Internet revenue is such a big deal that I can afford to give up my &amp;quot;brick and mortar&amp;quot; activities.  Not that I really use brick and mortar on anything, but that&amp;#39;s the idiom.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 24 Aug 2006 09:45:33 -0700</pubDate>
-				<link>/miscellaneous/2006/08/24/making-money-on-the-internet.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/08/24/making-money-on-the-internet.html</guid>
+				<link>/making-money-on-the-internet</link>
+				<guid isPermaLink="true">/making-money-on-the-internet</guid>
 			</item>
 			
 		
@@ -9296,8 +9296,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;With the vastness of suffering and death, how can we be anything but kind?&lt;/p&gt;
 </description>
 				<pubDate>Wed, 23 Aug 2006 13:33:20 -0700</pubDate>
-				<link>/miscellaneous/2006/08/23/categorize-this.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/08/23/categorize-this.html</guid>
+				<link>/categorize-this</link>
+				<guid isPermaLink="true">/categorize-this</guid>
 			</item>
 			
 		
@@ -9323,8 +9323,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;That&amp;#39;s how I also do the jobs I&amp;#39;m paid for, of course -- but in that case where&amp;#39;s the joke?&lt;/p&gt;
 </description>
 				<pubDate>Thu, 10 Aug 2006 13:16:07 -0700</pubDate>
-				<link>/miscellaneous/2006/08/10/contract-firms-two-car-funerals-and-quality-assurance.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/08/10/contract-firms-two-car-funerals-and-quality-assurance.html</guid>
+				<link>/contract-firms-two-car-funerals-and-quality-assurance</link>
+				<guid isPermaLink="true">/contract-firms-two-car-funerals-and-quality-assurance</guid>
 			</item>
 			
 		
@@ -9344,8 +9344,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Maybe I should have gone for 3/3 of a night&amp;#39;s sleep.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 29 Jul 2006 05:44:47 -0700</pubDate>
-				<link>/software/2006/07/29/subversion-for-windows-etc.html</link>
-				<guid isPermaLink="true">/software/2006/07/29/subversion-for-windows-etc.html</guid>
+				<link>/subversion-for-windows-etc</link>
+				<guid isPermaLink="true">/subversion-for-windows-etc</guid>
 			</item>
 			
 		
@@ -9357,8 +9357,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;Suddenly I&amp;#39;m jonesing for yet another web site host, where I can play around with some .NET and SQL server application development.  Meantime, the real estate sites are split between two separate hosts already, so I&amp;#39;m a bit hesitant in that regard, but at least one of the SQL Team authors gave &lt;a href=&quot;http://www.orcsweb.com/&quot;&gt;Orcs Web&lt;/a&gt; a fairly glowing writeup.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 14 Jul 2006 22:57:44 -0700</pubDate>
-				<link>/software/2006/07/14/great-sql-server-site.html</link>
-				<guid isPermaLink="true">/software/2006/07/14/great-sql-server-site.html</guid>
+				<link>/great-sql-server-site</link>
+				<guid isPermaLink="true">/great-sql-server-site</guid>
 			</item>
 			
 		
@@ -9370,8 +9370,8 @@ Having their cake and eating it too, social Internet socialites believing in the
 &lt;p&gt;I&amp;#39;m not very happy with how the code formatting is going given the layout of the Particlewave site.  I just don&amp;#39;t have enough room between the navigation and the right hand links to get a decent line of code in, it seems.  We&amp;#39;ll have to look into that further, or give up the idea of blogging about code -- I don&amp;#39;t like the latter alternative at all.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 09 Jul 2006 14:40:12 -0700</pubDate>
-				<link>/software/2006/07/09/more-c-exam-samples.html</link>
-				<guid isPermaLink="true">/software/2006/07/09/more-c-exam-samples.html</guid>
+				<link>/more-c-exam-samples</link>
+				<guid isPermaLink="true">/more-c-exam-samples</guid>
 			</item>
 			
 		
@@ -9601,8 +9601,8 @@ namespace ExamSamples.Bullet1
 &lt;p&gt;`&lt;/p&gt;
 </description>
 				<pubDate>Sat, 08 Jul 2006 18:02:52 -0700</pubDate>
-				<link>/miscellaneous/2006/07/08/icollection-iequalitycomparer-icomparer-examples.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/07/08/icollection-iequalitycomparer-icomparer-examples.html</guid>
+				<link>/icollection-iequalitycomparer-icomparer-examples</link>
+				<guid isPermaLink="true">/icollection-iequalitycomparer-icomparer-examples</guid>
 			</item>
 			
 		
@@ -9612,8 +9612,8 @@ namespace ExamSamples.Bullet1
 				<description>&lt;p&gt;I&amp;#39;ve posted my &lt;a href=&quot;http://www.particlewave.com/dot_net/MicrosoftCertificationExam70-536.php&quot;&gt;70-536 Exam Sample Code&lt;/a&gt; that I mentioned last time.  We&amp;#39;ll have a few tests from this NUnit test suite posted here on the blog shortly too to give you an idea.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 08 Jul 2006 17:49:41 -0700</pubDate>
-				<link>/software/2006/07/08/70-536-exam-samples.html</link>
-				<guid isPermaLink="true">/software/2006/07/08/70-536-exam-samples.html</guid>
+				<link>/70-536-exam-samples</link>
+				<guid isPermaLink="true">/70-536-exam-samples</guid>
 			</item>
 			
 		
@@ -9635,8 +9635,8 @@ namespace ExamSamples.Bullet1
 &lt;p&gt;So I&amp;#39;m going to work in that way for awhile, developing my sample &amp;quot;apps&amp;quot; (i.e., learning exercises) in NUnit, and perhaps I&amp;#39;ll publish them up here for what it&amp;#39;s worth.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 01 Jul 2006 18:24:04 -0700</pubDate>
-				<link>/software/2006/07/01/when-is-a-test-not-a-test.html</link>
-				<guid isPermaLink="true">/software/2006/07/01/when-is-a-test-not-a-test.html</guid>
+				<link>/when-is-a-test-not-a-test</link>
+				<guid isPermaLink="true">/when-is-a-test-not-a-test</guid>
 			</item>
 			
 		
@@ -9674,8 +9674,8 @@ and so forth.&amp;quot;;
 &amp;lt;/code&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 				<pubDate>Sat, 01 Jul 2006 17:41:03 -0700</pubDate>
-				<link>/software/2006/07/01/second-crack-at-verbatim-strings-w-wordpress-code-markup-plugin.html</link>
-				<guid isPermaLink="true">/software/2006/07/01/second-crack-at-verbatim-strings-w-wordpress-code-markup-plugin.html</guid>
+				<link>/second-crack-at-verbatim-strings-w-wordpress-code-markup-plugin</link>
+				<guid isPermaLink="true">/second-crack-at-verbatim-strings-w-wordpress-code-markup-plugin</guid>
 			</item>
 			
 		
@@ -9687,8 +9687,8 @@ and so forth.&amp;quot;;
 &lt;p&gt;And heck, thinks are looking up.  We&amp;#39;re on CD 2 already.   Of course, I remember Borland C++ on 21 floppies...&lt;/p&gt;
 </description>
 				<pubDate>Sat, 01 Jul 2006 15:54:18 -0700</pubDate>
-				<link>/miscellaneous/2006/07/01/visual-studio-arrived.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/07/01/visual-studio-arrived.html</guid>
+				<link>/visual-studio-arrived</link>
+				<guid isPermaLink="true">/visual-studio-arrived</guid>
 			</item>
 			
 		
@@ -9725,8 +9725,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;You know, it took about three times as long to write the blog post as it did to figure it out to begin with.  I love trying to write code in HTML.  There should be a wordpress plugin or the like for that...&lt;/p&gt;
 </description>
 				<pubDate>Thu, 29 Jun 2006 20:44:12 -0700</pubDate>
-				<link>/software/2006/06/29/c-verbatim-strings-3.html</link>
-				<guid isPermaLink="true">/software/2006/06/29/c-verbatim-strings-3.html</guid>
+				<link>/c-verbatim-strings-3</link>
+				<guid isPermaLink="true">/c-verbatim-strings-3</guid>
 			</item>
 			
 		
@@ -9742,8 +9742,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;Also, being in Visual Studio again is a treat.  It&amp;#39;s always had a fairly competent debugger -- and let&amp;#39;s face it, as a programmer, that&amp;#39;s home.  I keep a SlickEdit window open for the heavy editorial lifting, of course.  The new SourceSafe integration is flawless so far, too, and that&amp;#39;s quite nice.  I&amp;#39;m starting to get a pretty good feel for ASP.NET.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 28 Jun 2006 02:00:37 -0700</pubDate>
-				<link>/software/2006/06/28/net-contract-in-sacramento-going-well.html</link>
-				<guid isPermaLink="true">/software/2006/06/28/net-contract-in-sacramento-going-well.html</guid>
+				<link>/net-contract-in-sacramento-going-well</link>
+				<guid isPermaLink="true">/net-contract-in-sacramento-going-well</guid>
 			</item>
 			
 		
@@ -9759,8 +9759,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;Stay tuned.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 24 Jun 2006 09:55:29 -0700</pubDate>
-				<link>/software/2006/06/24/aspnet-20-programming-hooray-new-gig.html</link>
-				<guid isPermaLink="true">/software/2006/06/24/aspnet-20-programming-hooray-new-gig.html</guid>
+				<link>/aspnet-20-programming-hooray-new-gig</link>
+				<guid isPermaLink="true">/aspnet-20-programming-hooray-new-gig</guid>
 			</item>
 			
 		
@@ -9778,8 +9778,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;Admittedly that was a bit perfunctory, but what the heck.  Happy belated birthday.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 20 Jun 2006 05:33:39 -0700</pubDate>
-				<link>/miscellaneous/2006/06/20/saying-goodbye-to-the-legacy-stuff.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/06/20/saying-goodbye-to-the-legacy-stuff.html</guid>
+				<link>/saying-goodbye-to-the-legacy-stuff</link>
+				<guid isPermaLink="true">/saying-goodbye-to-the-legacy-stuff</guid>
 			</item>
 			
 		
@@ -9815,8 +9815,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;
 </description>
 				<pubDate>Sat, 03 Jun 2006 17:34:07 -0700</pubDate>
-				<link>/software/2006/06/03/using-ant-and-xdoclet-with-jdo.html</link>
-				<guid isPermaLink="true">/software/2006/06/03/using-ant-and-xdoclet-with-jdo.html</guid>
+				<link>/using-ant-and-xdoclet-with-jdo</link>
+				<guid isPermaLink="true">/using-ant-and-xdoclet-with-jdo</guid>
 			</item>
 			
 		
@@ -9842,8 +9842,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;/ul&gt;
 </description>
 				<pubDate>Sun, 28 May 2006 20:59:04 -0700</pubDate>
-				<link>/miscellaneous/2006/05/28/hp-d4100e-review.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/05/28/hp-d4100e-review.html</guid>
+				<link>/hp-d4100e-review</link>
+				<guid isPermaLink="true">/hp-d4100e-review</guid>
 			</item>
 			
 		
@@ -9857,8 +9857,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;I&amp;#39;m currently working on automating my real estate business using &lt;a href=&quot;http://www.lickey.com/rubymail/&quot;&gt;Ruby Mail&lt;/a&gt;, and wanted to thank Xinizul for his excellent &lt;a href=&quot;http://rubyforge.org/tracker/index.php?func=detail&amp;amp;aid=2597&amp;amp;group_id=426&amp;amp;atid=1698&quot;&gt;fix for Rubymail on Windows&lt;/a&gt;, which saved me several hours in the debugger.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 23 May 2006 11:02:48 -0700</pubDate>
-				<link>/software/2006/05/23/more-on-ruby-programming.html</link>
-				<guid isPermaLink="true">/software/2006/05/23/more-on-ruby-programming.html</guid>
+				<link>/more-on-ruby-programming</link>
+				<guid isPermaLink="true">/more-on-ruby-programming</guid>
 			</item>
 			
 		
@@ -9876,8 +9876,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;And by the way, apropos the acronyms, the fact that now we have an acronym for the Plain Old Java Objects we should have been coding in all along is fairly amusing.  Unfortunately I&amp;#39;m still seeing statements of work for the Dark Side of the Force -- EJBs, of course -- so it&amp;#39;s a little to early to make a stand on the virtue of simplicity.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 18 May 2006 16:33:20 -0700</pubDate>
-				<link>/miscellaneous/2006/05/18/new-hardware-on-its-way.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/05/18/new-hardware-on-its-way.html</guid>
+				<link>/new-hardware-on-its-way</link>
+				<guid isPermaLink="true">/new-hardware-on-its-way</guid>
 			</item>
 			
 		
@@ -9895,8 +9895,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;Well, for cash flow purposes at least:  Yep.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 17 May 2006 17:12:19 -0700</pubDate>
-				<link>/software/2006/05/17/ruby-on-rails.html</link>
-				<guid isPermaLink="true">/software/2006/05/17/ruby-on-rails.html</guid>
+				<link>/ruby-on-rails</link>
+				<guid isPermaLink="true">/ruby-on-rails</guid>
 			</item>
 			
 		
@@ -9912,8 +9912,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;So we&amp;#39;ll be getting back to that, and having more to say about Java in the weeks ahead, especially focusing on struts, EJBs, and other good stuff with a level of complexity sufficient to satsify the complexity-junky programmers who are advising the managers who are making the hiring decisions.  As a wise man told me when I was very, very new to the software business -- &amp;quot;learn something that looks hard, because people will pay you more to do it.&amp;quot;&lt;/p&gt;
 </description>
 				<pubDate>Wed, 17 May 2006 10:29:32 -0700</pubDate>
-				<link>/software/2006/05/17/programming-in-sacramento.html</link>
-				<guid isPermaLink="true">/software/2006/05/17/programming-in-sacramento.html</guid>
+				<link>/programming-in-sacramento</link>
+				<guid isPermaLink="true">/programming-in-sacramento</guid>
 			</item>
 			
 		
@@ -9937,8 +9937,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;/ol&gt;
 </description>
 				<pubDate>Sun, 23 Apr 2006 21:12:15 -0700</pubDate>
-				<link>/miscellaneous/2006/04/23/seven-deadly-reciprocal-linking-sins.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/04/23/seven-deadly-reciprocal-linking-sins.html</guid>
+				<link>/seven-deadly-reciprocal-linking-sins</link>
+				<guid isPermaLink="true">/seven-deadly-reciprocal-linking-sins</guid>
 			</item>
 			
 		
@@ -9952,8 +9952,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;Meantime, we have our first work product, a little 30-second spot showing how our search results help market our sellers&amp;#39; homes.  Check it out below. (I know, it&amp;#39;s not exactly Cecil B. DeMille, but give me a break, it&amp;#39;s my first one).                                                                       &lt;/p&gt;
 </description>
 				<pubDate>Sat, 07 Jan 2006 11:11:59 -0800</pubDate>
-				<link>/miscellaneous/2006/01/07/expired-video-a-bare-beachhead.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/01/07/expired-video-a-bare-beachhead.html</guid>
+				<link>/expired-video-a-bare-beachhead</link>
+				<guid isPermaLink="true">/expired-video-a-bare-beachhead</guid>
 			</item>
 			
 		
@@ -9969,8 +9969,8 @@ and so forth.&amp;quot;&lt;/p&gt;
 &lt;p&gt;I&amp;#39;ll do another post soon about some of the resources I find useful as I dig further into article submission.  One that&amp;#39;s already been somewhat helpful and generated a few ideas is &lt;a href=&quot;http://www.submityourarticle.com&quot;&gt;SubmitYourArticle.com&lt;/a&gt;.  They&amp;#39;re web site is pretty much an opt-in email list, but so far it&amp;#39;s pretty much been just good solid information.  I&amp;#39;m not at the point of recommending their article submission services yet, however.  I&amp;#39;m still looking at many of the folks out there writing, and trying to understand how much their writing helps their search positions, but I&amp;#39;m somewhat wary of the effect of automated services given the web&amp;#39;s history with link submission services and the like.  If anyone&amp;#39;s used SubmitYourArticle.com or another article submission service and wants to be interviewed, let me know.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 02 Jan 2006 16:34:54 -0800</pubDate>
-				<link>/miscellaneous/2006/01/02/first-free-content-article.html</link>
-				<guid isPermaLink="true">/miscellaneous/2006/01/02/first-free-content-article.html</guid>
+				<link>/first-free-content-article</link>
+				<guid isPermaLink="true">/first-free-content-article</guid>
 			</item>
 			
 		

@@ -12,6 +12,8 @@ include: ['_pages', '_goalboost_testplan']
 
 relative_permalinks: false
 
+permalink: /:title
+
 baseurl: "http://codesolid.com/"
 
 post:
