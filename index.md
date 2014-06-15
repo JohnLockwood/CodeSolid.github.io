@@ -4,6 +4,9 @@ permalink: /
 title:     CodeSolid
 ---
 
+{{ author }}
+
+{{ page.author }}
 Who's Finding Your Bugs?
 ========================
 
