@@ -8,6 +8,125 @@
 		
 			
 			<item>
+				<title>Getting Started in Selenium and Java in IntelliJ Idea, Part 2</title>
+				<description>&lt;p&gt;Read &lt;a href=&quot;/getting-started-with-selenium-in-intellij-idea/&quot;&gt;part one&lt;/a&gt;.
+&lt;a href=&quot;https://github.com/CodeSolid/tutorials/tree/master/SeleniumStarter&quot;&gt;Get the source&lt;/a&gt;&lt;/p&gt;
+
+&lt;div id=&quot;table_of_contents&quot;&gt;
+&lt;h1&gt;Table of Contents&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#Introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#SimpleSeleniumTestcase&quot;&gt;Set up a Selenium Test Project Using Maven and IntelliJ Idea&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ExportingSeleniumToJava&quot;&gt;Exporting Selenium IDE Tests to Java&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;&lt;a id=&quot;Introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;In &lt;a href=&quot;/getting-started-with-selenium-in-intellij-idea/&quot;&gt;part one&lt;/a&gt; of this article, we looked at how to use the Selenium IDE to record browser actions.
+We then used Firebug to locate a page element, and added a simple assertion to verify that a page element had the text we expected.&lt;/p&gt;
+
+&lt;p&gt;In part two of the series, we want to look at how to begin to work with out Selenium Scripts using Java.  We&amp;#39;ll explore how easy it is to do a simple
+export to a JUnit test, and we&amp;#39;ll get you the Maven and IntelliJ project files you&amp;#39;ll need to get started.&lt;/p&gt;
+
+&lt;h2&gt;&lt;a id=&quot;SimpleSeleniumTestcase&quot;&gt;Set up a Selenium Test Project Using Maven and IntelliJ Idea&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;When setting up new projects in IntelliJ Idea, I almost always start with a Maven POM file first and then import it, since I find that pasting Maven
+dependencies is the simplest way to get the jars I need. If you prefer to skip past this section, all the source including POM file and the finished project for this article are in the &lt;a href=&quot;https://github.com/CodeSolid/tutorials&quot;&gt;CodeSolid Tutorials repository&lt;/a&gt; on Github, in the &lt;a href=&quot;https://github.com/CodeSolid/tutorials/tree/master/SeleniumStarter&quot;&gt;Selenium Starter&lt;/a&gt; project.  However, the steps are pretty simple:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy the pom file (see below) into a directory.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;
+         xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+    &amp;lt;groupId&amp;gt;com.codesolid.tutorials&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;SeleniumStarter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;1.0&amp;lt;/version&amp;gt;
+
+    &amp;lt;properties&amp;gt;
+        &amp;lt;junit.version&amp;gt;4.11&amp;lt;/junit.version&amp;gt;
+        &amp;lt;selenium.version&amp;gt;2.41.0&amp;lt;/selenium.version&amp;gt;
+    &amp;lt;/properties&amp;gt;
+
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;!-- JUnit --&amp;gt;         
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;${junit.version}&amp;lt;/version&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+
+        &amp;lt;!-- Selenium --&amp;gt;
+
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;selenium-firefox-driver&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;${selenium.version}&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;selenium-support&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;${selenium.version}&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;${selenium.version}&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+
+    &amp;lt;/dependencies&amp;gt;
+
+&amp;lt;/project&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set up a place for files to go.  In the same directory where you copied your pom file, run the following at the command prompt: &lt;em&gt;mkdir src\test\java\com\codesolid\tutorials\seleniumstarter&lt;/em&gt;&amp;quot; The &amp;quot;src\test\java&amp;quot; portion is a maven standard directory layout for test files and should
+be kept as is.  In contrast, the &amp;quot;com\codesolid\tutorials\seleniumstarter&amp;quot; portion of that path will be our package structure, and you can modify 
+it to fit your project&amp;#39;s package structure as needed.&lt;/li&gt;
+&lt;li&gt;In IntelliJ Idea, &amp;quot;File / Import Project&amp;quot;, then point to your directory.  When prompted in the Import Project dialog, make sure &amp;quot;Import project from external
+model&amp;quot; and &amp;quot;Maven&amp;quot; are selected.&lt;/li&gt;
+&lt;li&gt;In the next Import Project dialog (below), I generally leave the defaults with the exception of &amp;quot;Import Maven Projects Automatically&amp;quot;.  This helps to make sure that any changes you make to the POM are also reflected in your IntelliJ idea.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/20140606/ImportMaven.png&quot; alt=&quot;&amp;quot;Import Maven Project&amp;quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;The rest of the dialogs are pretty straightforward.  I generally skip importing any modules if prompted for one, choose my favorite JDK when prompted,
+and provide a name for the project that matches the name I&amp;#39;m prompted for in the POM.&lt;/p&gt;
+
+&lt;p&gt;If you need more details on working with Idea and Maven projects, check out the IntelliJ documentation on &lt;a href=&quot;http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects&quot;&gt;working with Maven&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;&lt;a id=&quot;ExportingSeleniumToJava&quot;&gt;Exporting Selenium to Java&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Once you have a project set up to house your tests, exporting Selenium tests to a JUnit test case is generally quite straightforward. To export a single test to JUnit, simply select &amp;quot;Export Test Case As&amp;quot;, and select the type of test case you want to create.  Let&amp;#39;s select Java / JUnit 4 / WebDriver, as shown here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/20140606/ExportJUnitTestcase.png&quot; alt=&quot;&amp;quot;Export Java JUnit4 WebDriver Test&amp;quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;What you&amp;#39;ll want to do is export it to the package directory you created above, in other words, the directory where you copied the pom file plus  src\test\java\com\codesolid\tutorials\seleniumstarter and give it a name, such as FirstSeleniumTest.java.  The final step before running it in Idea is to make sure
+your package name is set up correctly -- chances are Selenium exported something like &amp;quot;package com.example&amp;quot;.  Find the package directive at the top of the file
+and change it to read:  &lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.seleniumstarter;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;At this point you should be able to right-click on the file in IntelliJ Idea and click on &amp;quot;Debug FirstSeleniumTest&amp;quot;.  You should see Firefox launch and your test should pass.  If you run into trouble, try grabbing the project from &lt;a href=&quot;https://github.com/CodeSolid/tutorials/tree/master/SeleniumStarter&quot;&gt;Github&lt;/a&gt;.  Enjoy!&lt;/p&gt;
+</description>
+				<pubDate>Mon, 16 Jun 2014 00:00:00 -0700</pubDate>
+				<link>/selenium-and-intellij-idea-part-two</link>
+				<guid isPermaLink="true">/selenium-and-intellij-idea-part-two</guid>
+			</item>
+			
+		
+			
+			<item>
 				<title>Getting Started with Selenium in IntelliJ Idea - Part I</title>
 				<description>&lt;div id=&quot;table_of_contents&quot;&gt;
 &lt;h1&gt;Table of Contents&lt;/h1&gt;
@@ -18,6 +137,7 @@
 &lt;li&gt;&lt;a href=&quot;#LocatingWebElements&quot;&gt;Locating Web Elements&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#VerifyingExpectedResults&quot;&gt;Verifying Expected Results&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#LastSteps&quot;&gt;Final Steps and What&#39;s Ahead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/selenium-and-intellij-idea-part-two/&quot;&gt;Read Part Two of the Article&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -134,6 +254,8 @@ base URL is cleverly stuffed away in the head tag.  &lt;/p&gt;
 &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;/selenium-and-intellij-idea-part-two/&quot;&gt;Read Part Two of the Article&lt;/a&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sat, 14 Jun 2014 00:00:00 -0700</pubDate>
 				<link>/getting-started-with-selenium-in-intellij-idea</link>
