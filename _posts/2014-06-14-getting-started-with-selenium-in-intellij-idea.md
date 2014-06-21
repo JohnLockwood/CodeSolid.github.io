@@ -18,6 +18,7 @@ categories:
 <li><a href="#LocatingWebElements">Locating Web Elements</a></li>
 <li><a href="#VerifyingExpectedResults">Verifying Expected Results</a></li>
 <li><a href="#LastSteps">Final Steps and What's Ahead</a></li>
+<li><a href="/selenium-and-intellij-idea-part-two/">Read Part Two of the Article</a></li>
 </ul>
 </div>
 
@@ -135,3 +136,5 @@ A tool for testing HTML that stores files as HTML?  Don't worry -- the universe 
 </html>
 
 {% endprism %}
+
+<a href="/selenium-and-intellij-idea-part-two/">Read Part Two of the Article</a>
