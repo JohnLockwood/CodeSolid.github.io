@@ -30,22 +30,7 @@ Atta girl, Gina.  That's just what we needed, social networks for anything!
 
 And in the true spirit of Web 2.0, I have decided that if I can, of course that means I should, so I am now the proud owner of not just one, but TWO social networks, with me as the one member each!
 
-
-
-
-
-
-
-
-[Visit _Real Estate Internet Marketing_](http://particlewave.ning.com/)
-
-
-
-[View my profile on _Sacramento Real Estate_](http://sacramentorealestate.ning.com/xn/detail/u_19ydvgcp6voem)
-
-
-
-[![image](http://www.particlewave.com/internet-marketing/wp-content/uploads/2007/11/windowslivewriterreductioadmyspace-c3fbimage-thumb.png)](http://www.particlewave.com/internet-marketing/wp-content/uploads/2007/11/windowslivewriterreductioadmyspace-c3fbimage-2.png)That was the whole problem with MySpace, come to think of it -- they let YOU in.  Now we can each have our own MySpace, which for the sake of clarity we can call MyMySpace, to distinguish it from YourMySpace and ThatOtherGuysMySpace.
+That was the whole problem with MySpace, come to think of it -- they let YOU in.  Now we can each have our own MySpace, which for the sake of clarity we can call MyMySpace, to distinguish it from YourMySpace and ThatOtherGuysMySpace.
 
 No, but seriously, come join me.  We can massively collaborate, at least on a small scale.  Won't that be cozy?
 

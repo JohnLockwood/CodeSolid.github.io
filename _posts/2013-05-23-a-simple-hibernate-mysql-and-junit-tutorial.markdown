@@ -21,138 +21,123 @@ tags:
 - Testing, JUnit, TestNG Tutorials
 ---
 
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#GettingStarted">Getting Started with Hibernate and MySQL</a></li>
+<li><a href="#ConfiguringMYSQL">Configuring MySQL</a></li>
+<li><a href="#ConfiguringHibernate">Configuring Hibernate</a></li>
+<li><a href="#MinimizingSetupTime">Minimizing Setup Time</a></li>
+<li><a href="#SimpleEntity">A Simple Hibernate Entity</a></li>
+<li><a href="#GenericEntity">A Hibernate Generic Entity Storage Class</a></li>
+<li><a href="#JUnit">The JUnit Test</a></li>
 
+</ul>
+</div>
 
-
-### Contents
-
-
-
-
-
-
-  * Getting Started with Hibernate and MySQL
-
-
-  * Configuring MySQL
-	
-
-  * Configuring Hibernate
-
-
-  * Minimizing Setup Time
-
-
-  * A Simple Hibernate Entity
-
-
-  * A Hibernate Generic Entity Storage Class
-
-
-  * The JUnit Test
-
-
-
-
-
-
-
-
-
-### Getting Started With Hibernate and MySQL
-
+<h2><a id="GettingStarted">Getting Started With Hibernate and MySQL</a></h2>
 
 In this tutorial, we're once again going to use JUnit as a learning tool for exploring various Java technologies -- in this case Hibernate.  We'll be configuring Hibernate to run with MySQL in a way that works both in a standalone application or in a Spring or other web application.  Along the way we'll also be setting up Log4J logging for hibernate.  We'll work on a small generics class that -- although it doesn't really do much more than wrap a few Hibernate functions -- will allow us to demonstrate and test out the basic CRUD operations -- Create, Read, Update, and Delete.
 
-As usual, you can download the complete project files for IntelliJ Idea from our [Tutorials Repository on Github](https://github.com/CodeSolid/tutorials). This tutorial is located in the HibernateGeneric directory.  If you're using Eclipse, check out our [Eclipse instructions](http://www.particlewave.com/2013/05/17/how-to-run-the-codesolid-tutorials-in-eclipse/).
+As usual, you can download the complete project files for IntelliJ Idea from our [Tutorials Repository on Github](https://github.com/CodeSolid/tutorials). This tutorial is located in the HibernateGeneric directory.  If you're using Eclipse, check out our [Eclipse instructions](/how-to-run-the-codesolid-tutorials-in-eclipse/).
 
-
-
-### Configuring MySQL
-
+<h2><a id="ConfiguringMYSQL">Configuring MySQL</a></h2>
 
 This tutorial assumes you have mysql installed and can log in as root.  If you don't have MySQL on your system, you should [start here](http://dev.mysql.com/doc/refman/5.1/en/windows-installation.html) and work through the instructions appropriate to your environment.  Go into the mysql monitor (i.e., the mysql command line client).  To do this, run:
-
-<PathToMySQLBin>\mysql.exe --user=root --password=YourRootPassword
-
+<pre>
+&lt;PathToMySQLBin&gt;mysql.exe --user=root --password=YourRootPassword
+</pre>
 (If you haven't set a mysql root password, you should -- if you haven't, you can simply use the command:
-
-<PathToMySQLBin>\mysql.exe --user=root
-
+<pre>
+&lt;PathToMySQLBin&gt;\mysql.exe --user=root
+</pre>
 Once you're connected in the mysql client, use the source command to run the dbsetup.sql script located in the database directory of the tutorial, for example:
 
-source database\dbsetup.sql
+<pre>source database\dbsetup.sql</pre>
 
-[cc lang="SQL"]
+{% prism sql %}
 CREATE DATABASE tutorials;
 USE tutorials;
 GRANT ALL ON tutorials.* to 'myuser'@'localhost' identified by 'mypassword';
 commit;
 flush privileges;
-[/cc]
+{% endprism %}
 
 Of course, the user name and password given in this script are pretty brain-dead and certainly not secure so probably want to change them.  If you do, that's fine, you'll just need to make one other change, in the hibernate configuration file.  Let's look at that next:
 
 
 
-### Configuring Hibernate
-
+<h2><a id="ConfiguringHibernate">Configuring Hibernate</a></h2>
 
 
 The hibernate configuration file is the file hibernate.cfg.xml in the root of the resources directory (i.e., at src/main/resources).  As you can see, we've configured the JDBC driver directly in this file.  If you changed the user name or password in the dbsetup.sql script, you need to make the corresponding chagnes to the "connection.username" and / or "connection.password" properties below.
 
 You might also experiment with setting the show_sql and use_sql_comments to true, especially if you run into problems.  For now they are turned off to keep the test run output a little bit cleaner.
 
-[cc lang="SQL"]
 
+{% prism http %}
+  <?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
+<hibernate-configuration>
+    <session-factory>
 
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/tutorials</property>
+        <property name="connection.username">myuser</property>
+        <property name="connection.password">mypassword</property>
 
-    
+        <!-- JDBC connection pool (use the built-in connection pool) -->
+        <property name="connection.pool_size">1</property>
 
-        
-        com.mysql.jdbc.Driver
-        jdbc:mysql://localhost/tutorials
-        myuser
-        mypassword
+        <!--
+            SQL dialect
+            There are other mysql dialects avaialable IF you run INTO trouble WITH this one.
+            The FULL list IS:
+                MySQL5Dialect
+                MySQL5InnoDBDialect
+                MySQLDialect
+                MySQLInnoDBDialect
+                MySQLMyISAMDialect
+            See http://docs.jboss.org/hibernate/orm/3.5/api/org/hibernate/dialect/package-summary.html
+        -->
+        <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
 
-        
-        1
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
 
-        
-        org.hibernate.dialect.MySQL5InnoDBDialect
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
 
-        
-        thread
+        <!-- Change these values to true to echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+        <property name="use_sql_comments">false</property>
 
-        
-        org.hibernate.cache.NoCacheProvider
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
 
-        
-        false
-        false
+        <!-- This is the entity class that we'll be testing. -->
+        <mapping class="com.codesolid.tutorials.model.entities.Actor"/>
 
-        
-        update
+    </session-factory>
+</hibernate-configuration>
+{% endprism %}
 
-        
-        
-
-    
-
-[/cc]
 I won't post the log4j configuration here.  Hibernate issues a warning if logging is not enabled, so I have configured Hibernate to use the log file, "log4j.log" in the root of the project directory.  The configuration file for log4j is at src/main/resources/log4j.xml.
 
 
 
-### Minimizing Setup Time
+<h2><a id="MinimizingSetupTime">Minimizing Setup Time</a></h2>
 
 
 As with any process that initially connects to a database, initializing Hibernate sessions takes a fair amount of time, and is not something you want to be doing over and over again in your tests.  In the case of Hibernate, creating the SessionFactory object takes even more time, adding up to about 1.4 seconds on a laptop, or about .8 seconds on a faster machine.  We don't want to be running that for every test class.  (To be sure, in the kind of one-class suite we're running in this tutorial, it wouldn't make a difference, but one of the purposes of these tutorials is to give you steal-able code that you can use in larger projects.  What we want is to initialize the SessionFactory only once.
 
 The [Hibernate tutorial](http://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/tutorial.html) that comes with the Hibernate docs gives us a part of the solution, the HibernateUtil class, which exists for the sole purpose of ensuring a one time initialization of a SessionFactory, which it then caches as a static object.  I've used this class pretty much verbatim in the current tutorial, changing only the package name.
 
-[cc lang="Java"]
+{% prism java %}
 // This file is adapted with only minor changes from the original in the hibernate
 // tutorial, http://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/tutorial.html.
 package com.codesolid.tutorials.model.dal;
@@ -181,13 +166,14 @@ public class HibernateUtil {
     }
 
 }
-[/cc]
+{% endprism %}
 
 OK, so we have a class where we can cache our SessionFactory, but the question remains -- how should we wire that up to our JUnit tests?  Since JUnit 4.9, we can use the @ClassRule annotation to set up a test suite with before and after methods that will run before and after all the classes in the suite have run.  This allows for the initialization of expensive resoures once before all the tests in the suite are run.
 
 The following listing shows the RuleSuite test suite, which builds with the rest of the tests in the src\test\java\code\codesolid\tests directory:
 
-[cc lang="Java"]
+{% prism java %}
+
 package com.codesolid.tests;
 
 import com.codesolid.tutorials.model.dal.HibernateUtil;
@@ -227,15 +213,12 @@ public class RuleSuite{
         };
     };
 }
-[/cc]
+{% endprism %}
 
 I've added some logging methods so you can see that the before and after methods are run only once at the start and end of the suite.
 
 
-
-### A Simple Hibernate Entity
-
-
+<h2><a id="SimpleEntity">A Simple Hibernate Entity</a></h2>
 
 In order to have an entity to save, I created an "Actor" entity.  This represents a user in the system, but I've named the class "Actor" to avoid any potential conflict with the SQL keyword by the same name.  I am using Hibernate annotations to define the entity.
 
@@ -244,15 +227,17 @@ In order to have an entity to save, I created an "Actor" entity.  This represent
 
 For the Id primary key field, we use the following Hibernate annotations to mark the field as the primary key and to auto-increment the field for each new record:
 
+{% prism java %}
 @Id
 @GeneratedValue(generator="increment")
 @GenericGenerator(name="increment", strategy = "increment")
-
+{% endprism %}
 Finally, we used the column annotation to explicitly set the field name for the Role property to "user_role":
 
 @Column(name="user_role")
 
-[cc lang="Java"]
+{% prism java %}
+
 /**
  * Class Actor
  * Description:  A user of the system, the subject of a user story.  We use
@@ -296,23 +281,21 @@ public class Actor {
         this.role = role;
     }
 }
-[/cc]
+{% endprism %}
 
 The final step to making the Entity work is one that's easy to forget, but as we saw when we discussed the hibernate.cfg.xml file, make sure you include a mapping to the entity class, as we show again below:
 
-[cc lang="XML"]
+{% prism http %}
+<!-- This is the entity class that we'll be testing. -->
+<mapping class="com.codesolid.tutorials.model.entities.Actor"/>
+{% endprism %}
 
-
-[/cc]
-
-
-
-### A Hibernate Generic Entity Storage Class
+<h2><a id="GenericEntity">A Hibernate Generic Entity Storage Class</a></h2>
 
 
 While working with Hibernate enitities,  it struck me that many of the basic operations one might do with an entity could be captured well in a generic class, which is what we'll be using to test here. As you can see below, each of the methods was pretty much a wrapper around a single Hibernate session call -- with the exception of BeginTransaction, which combines getting the session from the session factory and starting the transaction.  
 
-[cc lang="Java"]
+{% prism java %}
 package com.codesolid.tutorials.model.dal;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -362,11 +345,12 @@ public class Storage  {
         return (T) session.get(entity.getClass(), id);        
     }
 }
-[/cc]
+{% endprism %}
+
 Taken together, this class and the unit tests I wrote for it were a good way to discover a couple of interesting Hibernate gotchas.  The first Hibernate mine that I steped on was that objects are no longer usable outside the context of a transaction.  Before my testing uncovered this, my original implementation of getById was called loadById, and the implementation and test looked something like this:
 
-[cc lang="Java"]
-  // Implementation  
+{% prism java %}
+   // Implementation  
     public T getById(Long id) {
         storage.beginTransaction();
         T obj = (T) session.load(entity.getClass(), id);
@@ -378,7 +362,7 @@ Taken together, this class and the unit tests I wrote for it were a good way to 
    // ...
    Actor actor  = storage.getById(id);
    assertEquals(actor.getRole(), "Some Role");
-[/cc]
+{% endprism %}
 
 This seemed like a safe approach (albeit not an efficient one since each call is wrapped in a transaction).  As it turns out, because Hibernate uses lazy initialization, the object returned from getById needed to still have the transaction active.  As a result, I got the following exception:
 
@@ -388,7 +372,7 @@ This caused me to push the transaction management out to the client, so I expose
 
 At that point, the code and test looked like:
 
-[cc lang="Java"]
+{% prism java %}
 // Implmentation
 public T getById(Long id) {
     return (T) session.load(entity.getClass(), id);
@@ -399,18 +383,19 @@ storage.beginTransaction();
 Actor actor  = storage.getById(id);
 assertEquals(actor.getRole(), "Some Role");
 storage.commit();
-[/cc]
+{% endprism %}
 
 The second interesting Hibernate quirk that I ran into was in trying to test my delete method.  Originally I wrote the test by deleting an object and then checking for the ObjectNotFoundException when I called loadById in an effort to reload the deleted object.  The first time I ran it, that test passed, but a few minutes later it failed.  It turns out that loadById may or may not return an ObjectNotFoundException, or it may instead return a "proxy object", though I admit I have a bit of a hard time following the architectural genius behind the decision to return a proxy to an object that doesn't exist yet -- or in this case, doesn't exist any more.  At that time I researched it and found that getById has the more reasonable behavior of reliably returning a for objects that don't exist, so the test and the code evolved accordingly.
 
 
 
-### The JUnit Test
+<h2><a id="JUnit">The JUnit Test</a></h2>
 
 
 With that, the final form of the JUnit test is below.  Even though I'm showing it last, in reality the process was more test-first, going back and forth between the tests, the configuration, and the classes under development.
 
-[cc lang="Java"]
+{% prism java %}
+
 package com.codesolid.tests;
 
 import com.codesolid.tutorials.model.entities.*;
@@ -522,4 +507,4 @@ public class TestStorage {
         storage.commit();
     }
 }
-[/cc]
+{% endprism %}

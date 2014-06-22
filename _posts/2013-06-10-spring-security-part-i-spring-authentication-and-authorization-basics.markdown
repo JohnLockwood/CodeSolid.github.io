@@ -38,22 +38,19 @@ Before we begin with the tutorial, I am going to lay bare my soul to you.  I kno
 
 Whenever I write an article that has Part 1 in the title, I generally am doing so without even a remote business plan for a clue about how many parts I'm going to end up with.  There, I've made my confession.  Eat your heart out, St. Augustine.
 
-In this tutorial we're going to start digging into Spring Security in the easiest way I know how.  First, spend $199 on a [great Java IDE](http://www.jetbrains.com/idea/download/), or download it free for thirty days so you can get through however many parts this article ends up having.  We're using IntelliJ 12 Ultimate Edition to generate a starter project for this article in the next section.  The cool thing is, though, once you have the [starter project](https://github.com/CodeSolid/tutorials/tree/master/SpringSecurity1), you can likely follow along with the rest of the article using either the IntelliJ Idea 11 or 12 Community Edition, which is free. I've had good luck doing that. You can even [import the POM file into Eclipse](http://www.particlewave.com/2013/05/17/how-to-run-the-codesolid-tutorials-in-eclipse/) and run the project that way.
+In this tutorial we're going to start digging into Spring Security in the easiest way I know how.  First, spend $199 on a [great Java IDE](http://www.jetbrains.com/idea/download/), or download it free for thirty days so you can get through however many parts this article ends up having.  We're using IntelliJ 12 Ultimate Edition to generate a starter project for this article in the next section.  The cool thing is, though, once you have the [starter project](https://github.com/CodeSolid/tutorials/tree/master/SpringSecurity1), you can likely follow along with the rest of the article using either the IntelliJ Idea 11 or 12 Community Edition, which is free. I've had good luck doing that. You can even [import the POM file into Eclipse](/how-to-run-the-codesolid-tutorials-in-eclipse/) and run the project that way.
 
 <h2><a id="GeneratingAProject" name="GeneratingAProject">Generating a Spring Security Project</a></h2>
 
 With Idea Ultimate Edition Version 12 and later, to create a Spring Security Project you simply select create a new project from the Welcome Screen:
 
-![IntelliJCreateNewProject](http://www.particlewave.com/wordpress/wp-content/uploads/2013/06/IntelliJCreateNewProject.jpg)
+![IntelliJCreateNewProject](/images/spring_security/IntelliJCreateNewProject.jpg)
 
 Next, select Spring Security and give your project a name:
 
-![SpringSecurityCreateProject](http://www.particlewave.com/wordpress/wp-content/uploads/2013/06/SpringSecurityCreateProject1.jpg)
-
-
+![SpringSecurityCreateProject](/images/spring_security/SpringSecurityCreateProject1.jpg)
 
 <h2><a id="SecurityConfiguration" name="SecurityConfiguration">The Security Configuration Files</a></h2>
-
 
 
 In the Spring security starter project, IntelliJ adds the security-related configuration to the two required places, web.xml, and the main Spring configuration file, both of which are in src\webapp\WEB-INF\.

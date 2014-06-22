@@ -26,8 +26,6 @@ tags:
 ---
 
 
-
-
 <div id="table_of_contents">
 <h1>Table of Contents</h1>
 <ul >

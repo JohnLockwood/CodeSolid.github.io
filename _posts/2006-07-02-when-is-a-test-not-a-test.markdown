@@ -8,13 +8,14 @@ title: When is a test not a test.
 wordpress_id: 169
 categories:
 - Software
+- JUnit
 ---
 
 When it's a classroom!
 
 OK, I admit it, I'm being obtuse.  As programmers sometimes say to being caught in the act of being obtuse, "Why Do You Think They Call It 'Code'?"
 
-I've written about [JUnit](http://www.particlewave.com/JUnit.php) unit tests in the past, and and one could say that I was able to parlay my current contract based on my experiences with test first design, since the client in this case was interested in someone experienced with Xtreme Programming, and test first design and development is one of XPs cornerstone processes.
+I often write about JUnit tests, and and one could say that I was able to parlay my current contract based on my experiences with test first design, since the client in this case was interested in someone experienced with Xtreme Programming, and test first design and development is one of XPs cornerstone processes.
 
 And indeed, at work it wasn't long before we had an NUnit test suite going -- I've been plugging my way through our new database test suite for a few days now.  The coolest thing (in my opinion) to happen to unit testing in the time since I first used JUnit is automatic test composition.  Back in the JUnit days, you had to create (and -- worse -- you had to maintain) a TestSuite.  In NUnit, there's no such restriction, simply mark the test classes and methods you want with the appropriate [TestFixture] and [Test] attributes, respectively, and you're off and running.  We're using Namespaces to organize our tests in a visually appealing and logical way.
 
