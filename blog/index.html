@@ -16,7 +16,7 @@ title: My Blog
     {% if page == paginator.page %}
       <em>{{ page }}</em>
     {% elsif page == 1 %}
-      <a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+      <a href="/blog/">{{ page }}</a>
     {% else %}
       <a href="/blog/page{{page}}">{{ page }}</a>
     {% endif %}
