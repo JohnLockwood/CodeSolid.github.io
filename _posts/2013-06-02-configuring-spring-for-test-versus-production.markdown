@@ -21,63 +21,39 @@ tags:
 - Testing, JUnit, TestNG Tutorials
 ---
 
+<div id="table_of_contents">
 
-
-
-### Contents
-
-
-
-
-
-
-  * Spring Configuration Options
-
-
-  * The META-INF Gospel
-
-
-  * Configuring Spring Properties at Build Time Using Multiple Modules
-
-
-  * Configuring Spring Properties at Run Time Using the PropertyPlaceholderConfigurer
-
-  
-  
-    * Setting up  PropertyPlaceholderConfigurer in the ApplicationContext
-
-  
-    * Some Properties Files to Test
-
-  
-    * Injecting Properties
-
-  
-    * Testing with JUnit
-
-  
-
-
-
-
-
-
-### Spring Configuration Options
+<h1>Contents</h1>
+<ul>
+    <li><a href="#SpringConfiguration">Spring Configuration Options</a></li>
+    <li><a href="#MetaInf">The META-INF Gospel</a></li>
+    <li><a href="#MultipleModules">Configuring Spring Properties at Build Time Using Multiple Modules</a></li>
+    <li><a href="#PropertyPlaceholderConfigurer">Configuring Spring Properties at Run Time Using the PropertyPlaceholderConfigurer</a></li>
+    <li>
+        <ul>
+            <li><a href="#ApplicationContext">Setting up PropertyPlaceholderConfigurer in the ApplicationContext</a></li>
+            <li><a href="#PropertiesFiles">Some Properties Files to Test</a></li>
+            <li><a href="#InjectingProperties">Injecting Properties</a></li>
+            <li><a href="#Testing">Testing with JUnit</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
+<h2><a id="SpringConfiguration">Spring Configuration Options</a></h2>
 
 
 The Spring Framework is not opinionated software.  Instead, Spring has a rich set of configuration options about which you can -- indeed, about which you must -- make up your own mind.  In this tutorial we'll discuss some of the ways you can easily configure your application to be ready for production, while still making it easy to work with your code in a test environment.
 [](META-INF)
 
-### The META-INF Gospel
-
+<h2><a id="MetaInf">The META-INF Gospel</a></h2>
 
 When you're first getting something working, the easiest path I've found is to locate your properties somewhere underneath what in the standard Maven directory structure is the src\main\resources\META-INF directory.  Then, to give just one example for now, you want to point to those resources as shown in the following annotation from a Unit test:
 
-[cc lang="Java"]
+{% prism java %}
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:META-INF/spring/applicationContext.xml")
 // class YourTestClass { ...
-[/cc]
+{% endprism %}
 
 This will work just fine, and although I've seen a few spec Nazis on Stackoverflow complain that the Java JAR specification contains the gospel truth about what files are allowed in the META-INF directory, I'll take the side of Roo and other Spring tools to preach a new gospel to you:
 
@@ -86,67 +62,67 @@ This will work just fine, and although I've seen a few spec Nazis on Stackoverfl
 That will get your software working, but the limitation of this approach is that once you've located all your configuration files in META-INF\<somewhere> to set up a single environment correctly, how do you set up _different_ environments like those you'll need for test, staging, and production.  Though I'm sure there are a lot more ways to skin this poor cat, let's discuss two of the more popular approaches to this problem.  The first option, which we'll discuss more briefly, is to resolve all your option file dependencies at compile time.  
 
 
-### Configuring Spring Properties Using Multiple Modules
-
+<h2><a id="MultipleModules">Configuring Spring Properties Using Multiple Modules</a></h2>
 
 To use this approach, you set up a multi-module project.  This approach takes advantage of the fact that WAR files can pack all the jars they need inside themselves, ready to be deployed to Tomcat or another web server.  So we bundle  our code and any configuration files that are common to all our target environments in the WAR file, then build a jar file for each different environment containing only environment-specific files.
 
 What we might end up with is a directory structure that looks something like this:
 
 
-    
-    
-    root        
-    root/app
-    root/config_test
-    root/config_production
-    
-
-
+{% prism bash %}        
+root        
+root/app
+root/config_test
+root/config_production
+{% endprism %}
 
 The app directory contains the whole structure of the application's WAR file project.  In the root directory is a pom file that builds the targets in the other directories, as shown in the following snippet:
 
-[cc lang="XML"]
+{% prism http %}
+<!-- pom.xml in root/ directory that builds the whole project -->
+<modules>
+   <module>app</module>
+   <module>config_test</module>
+   <module>config_production</module>
+</modules>
+{% endprism %}
 
-
-   app
-   config_test
-   config_production
-
-[/cc]
-
-The config_test and config_production files contain a src\main\resource\WEB-INF directory, whatever configuration files you need, and a pom file in the root to bundle the configuration files into a JAR.  What's important is that although the contents of the files will contain different settings, the names of the files should be the same in each configuration file we build -- that way when they're referenced from the main files in the application's WAR files, all is well.
+The config&#95;test and config&#95;production files contain a src\main\resource\WEB-INF directory, whatever configuration files you need, and a pom file in the root to bundle the configuration files into a JAR.  What's important is that although the contents of the files will contain different settings, the names of the files should be the same in each configuration file we build -- that way when they're referenced from the main files in the application's WAR files, all is well.
 
 In turn, the WAR file in the main app depend on either the test configuration or the production configuration as desired, as shown in the snippet below.   In the snippet below, we're building for the test environment, so the production configuration is disabled.
 
-[cc lang="XML"]
+{% prism http %}
 
+<!-- pom.xml in root/app directory that builds the WAR file -->
+<!-- Test configuration -->
+<dependency>
+  <groupId>com.codesolid</groupId>
+  <artifactId>config_test</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
 
+<!-- Production configuration   
+<dependency>
+  <groupId>com.codesolid</groupId>
+  <artifactId>config_production</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>             
+-->
 
-	com.codesolid
-	config_test
-	1.0-SNAPSHOT
-
-
-
-[/cc]
+{% endprism %}
 
 I've used the multi-module approach and it works fine, but having to build three projects to configure one WAR file is a bit heavy handed.  It also spreads the configuration files around more than I like.  Fortunately, there's an easier way to get this done, and that is to resolve the configuration files at run time, not at build time.  
 
-
-### Configuring Spring Properties at Run Time Using the PropertyPlaceholderConfigurer
-
+<h2><a id="PropertyPlaceholderConfigurer">Configuring Spring Properties at Run Time Using the PropertyPlaceholderConfigurer</a></h2>
 
 
 One powerful mechanism that Spring provides to make configuration flexible across different environments is the PropertyPlaceholderConfigurer.  Since I think it's the better approach, let's take a look at a more detailed tutorial.  The code for this is available under the PropertyPlaceholderConfigurer directory of our [Github Tutorials Repository](https://github.com/CodeSolid/tutorials).
 
 The structure of our PropertyPlaceholderConfigurer build is shown below:
 
-[![PropertyPlaceholderConfigurer](http://www.particlewave.com/wordpress/wp-content/uploads/2013/06/PropertyPlaceholderConfigurer.jpg)](http://www.particlewave.com/wordpress/wp-content/uploads/2013/06/PropertyPlaceholderConfigurer.jpg)
+[![PropertyPlaceholderConfigurer](/images/spring_configuration/PropertyPlaceholderConfigurer.jpg)](/images/spring_configuration/PropertyPlaceholderConfigurer.jpg)
 
 We have a single bean under test (yes, you guessed it: TestBean), and our mission, if we choose to accept it, is to:
-
-
 
 
 	
@@ -162,77 +138,93 @@ We have a single bean under test (yes, you guessed it: TestBean), and our missio
 
 
 
-#### Setting up  PropertyPlaceholderConfigurer in the ApplicationContext
+<h2><a id="ApplicationContext">Setting up  PropertyPlaceholderConfigurer in the ApplicationContext</a></h2>
 
 
 
 Our main "common configuration" area is in the META-INF\spring.  Our global properties file and main application context file go here.   Let's look at applicationContext.xml, where the detailed comment explains what's going on:
 
 
-[cc lang="XML"]
+{% prism http %}
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans" />  <!-- Other namespaces omitted for brevity -->
+    <!--
+       The configuration below will use any application-wide properties files
+       in the spring directory and make those properties available to all
+       configurations (test, production, etc.).
 
- 
+       However, by setting the "environment" variable appropriately, we
+       can use the files in either "test" or "production" (if you want staging etc.,
+       simply create another directory under META-INF).
 
-    
+       For example, adding -Denvironment=test to the
+       JVM command line will expose the properties located in META-INF/test.
+       Likewise, you can set a system environment variable to do the same thing.
 
-    
-        
-            
-                classpath:META-INF/spring/*.properties
-                classpath:META-INF/${environment}/*.properties
-            
-        
-    
+       The located property files are parsed and their values can
+       then be used within other configuration files or in annotation-based
+       configuration in the form of ${propertyKey}.
 
-    
-    
+       See com.codesolid.properties.TestBean for an example of injecting these
+       properties directly into a bean, and in the test directory, see
+       com.codesolid.properties.tests for what the result is.
+   -->
 
-[/cc]
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:META-INF/spring/*.properties</value>
+                <value>classpath:META-INF/${environment}/*.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Scan beans for annotation-based configuration -->
+    <context:component-scan base-package="com.codesolid.properties" />
+</beans>
+{% endprism %}
 
 
 
-#### Some Properties Files to Test
+<h2><a id="PropertiesFiles">Some Properties Files to Test</a></h2>
 
 
 To have something to test, we've set up three simple properties files.  First, we have a global "common.properties" with our humble title: 
 
-[cc lang="bash"]
+{% prism bash %}
 application.name=The Greatest Sample Ever
-[/cc]
+{% endprism %}
 
 Next come two db.properties files:
 
 test/db.properties:
 
-[cc lang="bash"]
+{% prism bash %}
 # These are the values we'll use when testing.
 database.driverClassName=com.mysql.jdbc.Driver
 database.url=jdbc:mysql://localhost/mydb
 database.username=myuser
 database.password=mypassword
-[/cc]
+{% endprism %}
 
 production/db.properties:
 
-[cc lang="bash"]
+{% prism bash %}
 # Different values for the production server
 database.driverClassName=com.mysql.jdbc.Driver
 database.url=jdbc:mysql://localhost/proddb
 database.username=prod_user
 database.password=DoubleSecretProbation
-[/cc]
+{% endprism %}
 
 
-
-#### Injecting Properties
-
-
+<h2><a id="InjectingProperties">Injecting Properties</a></h2>
 
 To keep things simple, lets inject only two of these properties.  If our setup is correct and we set the environment variable "environment" to "test" we should be able to verify that we get the right application name (a global property), and the test environment value for (for example) database.username. 
 
 We inject these properties in TestBean.java:
 
-[cc lang="Java"]
+{% prism java %}]
 package com.codesolid.properties;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -265,17 +257,17 @@ public class TestBean {
         return applicationName;
     }
 }
-[/cc]
+{% endprism %}
 
 
 
-#### Testing with JUnit
+<h2><a id="Testing">Testing with JUnit</a></h2>
 
 
 
 As a final step, let's make sure we're running our test environment and our properties are injected correctly.  Our JUnit test is as follows:
 
-[cc lang="Java"]
+{% prism java %}]
 package com.codesolid.properties.tests;
 
 import com.codesolid.properties.TestBean;
@@ -319,6 +311,6 @@ public class ContextTests {
         assertEquals(actual, expected);
     }
 
-[/cc]
+{% endprism %}
 
 Working with the PropertyPlaceholderConfigurer class lets you easily configure your WAR file for production, test, and any other environments you need -- and with that out of the way, you can now get busy writing your application.  Enjoy!

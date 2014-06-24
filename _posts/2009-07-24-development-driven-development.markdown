@@ -10,7 +10,7 @@ categories:
 - Miscellaneous
 ---
 
-Some time ago I waxed ecstatic over [JUnit automated unit tests](http://www.particlewave.com/JUnit.php) here, and I think the software community has gotten even more wild-eyed over automated tests in the meantime, with the latest buzz about Behavior Driven Development.  For my part, lately I've begun to question all this conventional wisdom.  I've begun to believe that the fact that programmers love testing so much for the same reason Twitter is so popular:  writing short little works is more fun than reading something long and difficult.  
+Some time ago I waxed ecstatic over JUnit automated unit tests here, and I think the software community has gotten even more wild-eyed over automated tests in the meantime, with the latest buzz about Behavior Driven Development.  For my part, lately I've begun to question all this conventional wisdom.  I've begun to believe that the fact that programmers love testing so much for the same reason Twitter is so popular:  writing short little works is more fun than reading something long and difficult.  
 
 You see, MY test case is elegant and concise, whereas YOUR legacy code is convoluted and difficult.
 
