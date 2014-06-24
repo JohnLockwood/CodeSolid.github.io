@@ -743,36 +743,39 @@ public class StandardPasswordEncoderDemo {
 			
 			<item>
 				<title>Configuring Spring for Test versus Production</title>
-				<description>&lt;h3&gt;Contents&lt;/h3&gt;
+				<description>&lt;div id=&quot;table_of_contents&quot;&gt;
 
+&lt;h1&gt;Contents&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Spring Configuration Options&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The META-INF Gospel&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Configuring Spring Properties at Build Time Using Multiple Modules&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Configuring Spring Properties at Run Time Using the PropertyPlaceholderConfigurer&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Setting up  PropertyPlaceholderConfigurer in the ApplicationContext&lt;/li&gt;
-&lt;li&gt;Some Properties Files to Test&lt;/li&gt;
-&lt;li&gt;Injecting Properties&lt;/li&gt;
-&lt;li&gt;Testing with JUnit&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#SpringConfiguration&quot;&gt;Spring Configuration Options&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#MetaInf&quot;&gt;The META-INF Gospel&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#MultipleModules&quot;&gt;Configuring Spring Properties at Build Time Using Multiple Modules&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#PropertyPlaceholderConfigurer&quot;&gt;Configuring Spring Properties at Run Time Using the PropertyPlaceholderConfigurer&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#ApplicationContext&quot;&gt;Setting up PropertyPlaceholderConfigurer in the ApplicationContext&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#PropertiesFiles&quot;&gt;Some Properties Files to Test&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#InjectingProperties&quot;&gt;Injecting Properties&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#Testing&quot;&gt;Testing with JUnit&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;h3&gt;Spring Configuration Options&lt;/h3&gt;
+&lt;h2&gt;&lt;a id=&quot;SpringConfiguration&quot;&gt;Spring Configuration Options&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;The Spring Framework is not opinionated software.  Instead, Spring has a rich set of configuration options about which you can -- indeed, about which you must -- make up your own mind.  In this tutorial we&amp;#39;ll discuss some of the ways you can easily configure your application to be ready for production, while still making it easy to work with your code in a test environment.
 &lt;a href=&quot;META-INF&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;The META-INF Gospel&lt;/h3&gt;
+&lt;h2&gt;&lt;a id=&quot;MetaInf&quot;&gt;The META-INF Gospel&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;When you&amp;#39;re first getting something working, the easiest path I&amp;#39;ve found is to locate your properties somewhere underneath what in the standard Maven directory structure is the src\main\resources\META-INF directory.  Then, to give just one example for now, you want to point to those resources as shown in the following annotation from a Unit test:&lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;Java&amp;quot;]
-@RunWith(SpringJUnit4ClassRunner.class)
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(&amp;quot;classpath:META-INF/spring/applicationContext.xml&amp;quot;)
-// class YourTestClass { ...
-[/cc]&lt;/p&gt;
+// class YourTestClass { ...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;This will work just fine, and although I&amp;#39;ve seen a few spec Nazis on Stackoverflow complain that the Java JAR specification contains the gospel truth about what files are allowed in the META-INF directory, I&amp;#39;ll take the side of Roo and other Spring tools to preach a new gospel to you:&lt;/p&gt;
 
@@ -780,46 +783,61 @@ public class StandardPasswordEncoderDemo {
 
 &lt;p&gt;That will get your software working, but the limitation of this approach is that once you&amp;#39;ve located all your configuration files in META-INF&amp;lt;somewhere&amp;gt; to set up a single environment correctly, how do you set up &lt;em&gt;different&lt;/em&gt; environments like those you&amp;#39;ll need for test, staging, and production.  Though I&amp;#39;m sure there are a lot more ways to skin this poor cat, let&amp;#39;s discuss two of the more popular approaches to this problem.  The first option, which we&amp;#39;ll discuss more briefly, is to resolve all your option file dependencies at compile time.  &lt;/p&gt;
 
-&lt;h3&gt;Configuring Spring Properties Using Multiple Modules&lt;/h3&gt;
+&lt;h2&gt;&lt;a id=&quot;MultipleModules&quot;&gt;Configuring Spring Properties Using Multiple Modules&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;To use this approach, you set up a multi-module project.  This approach takes advantage of the fact that WAR files can pack all the jars they need inside themselves, ready to be deployed to Tomcat or another web server.  So we bundle  our code and any configuration files that are common to all our target environments in the WAR file, then build a jar file for each different environment containing only environment-specific files.&lt;/p&gt;
 
 &lt;p&gt;What we might end up with is a directory structure that looks something like this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;root        
+
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;root        
 root/app
 root/config_test
-root/config_production
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+root/config_production&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;The app directory contains the whole structure of the application&amp;#39;s WAR file project.  In the root directory is a pom file that builds the targets in the other directories, as shown in the following snippet:&lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;XML&amp;quot;]&lt;/p&gt;
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;!-- pom.xml in root/ directory that builds the whole project --&amp;gt;
+&amp;lt;modules&amp;gt;
+   &amp;lt;module&amp;gt;app&amp;lt;/module&amp;gt;
+   &amp;lt;module&amp;gt;config_test&amp;lt;/module&amp;gt;
+   &amp;lt;module&amp;gt;config_production&amp;lt;/module&amp;gt;
+&amp;lt;/modules&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;app
-   config&lt;em&gt;test
-   config&lt;/em&gt;production&lt;/p&gt;
-
-&lt;p&gt;[/cc]&lt;/p&gt;
-
-&lt;p&gt;The config&lt;em&gt;test and config&lt;/em&gt;production files contain a src\main\resource\WEB-INF directory, whatever configuration files you need, and a pom file in the root to bundle the configuration files into a JAR.  What&amp;#39;s important is that although the contents of the files will contain different settings, the names of the files should be the same in each configuration file we build -- that way when they&amp;#39;re referenced from the main files in the application&amp;#39;s WAR files, all is well.&lt;/p&gt;
+&lt;p&gt;The config&amp;#95;test and config&amp;#95;production files contain a src\main\resource\WEB-INF directory, whatever configuration files you need, and a pom file in the root to bundle the configuration files into a JAR.  What&amp;#39;s important is that although the contents of the files will contain different settings, the names of the files should be the same in each configuration file we build -- that way when they&amp;#39;re referenced from the main files in the application&amp;#39;s WAR files, all is well.&lt;/p&gt;
 
 &lt;p&gt;In turn, the WAR file in the main app depend on either the test configuration or the production configuration as desired, as shown in the snippet below.   In the snippet below, we&amp;#39;re building for the test environment, so the production configuration is disabled.&lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;XML&amp;quot;]&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;com.codesolid
-config_test
-1.0-SNAPSHOT
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;[/cc]&lt;/p&gt;
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;!-- pom.xml in root/app directory that builds the WAR file --&amp;gt;
+&amp;lt;!-- Test configuration --&amp;gt;
+&amp;lt;dependency&amp;gt;
+  &amp;lt;groupId&amp;gt;com.codesolid&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;config_test&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+
+&amp;lt;!-- Production configuration   
+&amp;lt;dependency&amp;gt;
+  &amp;lt;groupId&amp;gt;com.codesolid&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;config_production&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;             
+--&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;I&amp;#39;ve used the multi-module approach and it works fine, but having to build three projects to configure one WAR file is a bit heavy handed.  It also spreads the configuration files around more than I like.  Fortunately, there&amp;#39;s an easier way to get this done, and that is to resolve the configuration files at run time, not at build time.  &lt;/p&gt;
 
-&lt;h3&gt;Configuring Spring Properties at Run Time Using the PropertyPlaceholderConfigurer&lt;/h3&gt;
+&lt;h2&gt;&lt;a id=&quot;PropertyPlaceholderConfigurer&quot;&gt;Configuring Spring Properties at Run Time Using the PropertyPlaceholderConfigurer&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;One powerful mechanism that Spring provides to make configuration flexible across different environments is the PropertyPlaceholderConfigurer.  Since I think it&amp;#39;s the better approach, let&amp;#39;s take a look at a more detailed tutorial.  The code for this is available under the PropertyPlaceholderConfigurer directory of our &lt;a href=&quot;https://github.com/CodeSolid/tutorials&quot;&gt;Github Tutorials Repository&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The structure of our PropertyPlaceholderConfigurer build is shown below:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.particlewave.com/wordpress/wp-content/uploads/2013/06/PropertyPlaceholderConfigurer.jpg&quot;&gt;&lt;img src=&quot;http://www.particlewave.com/wordpress/wp-content/uploads/2013/06/PropertyPlaceholderConfigurer.jpg&quot; alt=&quot;PropertyPlaceholderConfigurer&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/images/spring_configuration/PropertyPlaceholderConfigurer.jpg&quot;&gt;&lt;img src=&quot;/images/spring_configuration/PropertyPlaceholderConfigurer.jpg&quot; alt=&quot;PropertyPlaceholderConfigurer&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;We have a single bean under test (yes, you guessed it: TestBean), and our mission, if we choose to accept it, is to:&lt;/p&gt;
 
@@ -829,138 +847,170 @@ config_test
 &lt;li&gt;&lt;p&gt;Set up a unit test to show that we correctly injected the properties we want for the appropriate environment&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4&gt;Setting up  PropertyPlaceholderConfigurer in the ApplicationContext&lt;/h4&gt;
+&lt;h2&gt;&lt;a id=&quot;ApplicationContext&quot;&gt;Setting up  PropertyPlaceholderConfigurer in the ApplicationContext&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;Our main &amp;quot;common configuration&amp;quot; area is in the META-INF\spring.  Our global properties file and main application context file go here.   Let&amp;#39;s look at applicationContext.xml, where the detailed comment explains what&amp;#39;s going on:&lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;XML&amp;quot;]&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;            classpath:META-INF/spring/*.properties
-            classpath:META-INF/${environment}/*.properties
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;[/cc]&lt;/p&gt;
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;
+&amp;lt;beans xmlns=&amp;quot;http://www.springframework.org/schema/beans&amp;quot; /&amp;gt;  &amp;lt;!-- Other namespaces omitted for brevity --&amp;gt;
+    &amp;lt;!--
+       The configuration below will use any application-wide properties files
+       in the spring directory and make those properties available to all
+       configurations (test, production, etc.).
 
-&lt;h4&gt;Some Properties Files to Test&lt;/h4&gt;
+       However, by setting the &amp;quot;environment&amp;quot; variable appropriately, we
+       can use the files in either &amp;quot;test&amp;quot; or &amp;quot;production&amp;quot; (if you want staging etc.,
+       simply create another directory under META-INF).
+
+       For example, adding -Denvironment=test to the
+       JVM command line will expose the properties located in META-INF/test.
+       Likewise, you can set a system environment variable to do the same thing.
+
+       The located property files are parsed and their values can
+       then be used within other configuration files or in annotation-based
+       configuration in the form of ${propertyKey}.
+
+       See com.codesolid.properties.TestBean for an example of injecting these
+       properties directly into a bean, and in the test directory, see
+       com.codesolid.properties.tests for what the result is.
+   --&amp;gt;
+
+    &amp;lt;bean class=&amp;quot;org.springframework.beans.factory.config.PropertyPlaceholderConfigurer&amp;quot;&amp;gt;
+        &amp;lt;property name=&amp;quot;locations&amp;quot;&amp;gt;
+            &amp;lt;list&amp;gt;
+                &amp;lt;value&amp;gt;classpath:META-INF/spring/*.properties&amp;lt;/value&amp;gt;
+                &amp;lt;value&amp;gt;classpath:META-INF/${environment}/*.properties&amp;lt;/value&amp;gt;
+            &amp;lt;/list&amp;gt;
+        &amp;lt;/property&amp;gt;
+    &amp;lt;/bean&amp;gt;
+
+    &amp;lt;!-- Scan beans for annotation-based configuration --&amp;gt;
+    &amp;lt;context:component-scan base-package=&amp;quot;com.codesolid.properties&amp;quot; /&amp;gt;
+&amp;lt;/beans&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;&lt;a id=&quot;PropertiesFiles&quot;&gt;Some Properties Files to Test&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;To have something to test, we&amp;#39;ve set up three simple properties files.  First, we have a global &amp;quot;common.properties&amp;quot; with our humble title: &lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;bash&amp;quot;]
-application.name=The Greatest Sample Ever
-[/cc]&lt;/p&gt;
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;application.name=The Greatest Sample Ever&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Next come two db.properties files:&lt;/p&gt;
 
 &lt;p&gt;test/db.properties:&lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;bash&amp;quot;]&lt;/p&gt;
-
-&lt;h1&gt;These are the values we&amp;#39;ll use when testing.&lt;/h1&gt;
-
-&lt;p&gt;database.driverClassName=com.mysql.jdbc.Driver
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;# These are the values we&amp;#39;ll use when testing.
+database.driverClassName=com.mysql.jdbc.Driver
 database.url=jdbc:mysql://localhost/mydb
 database.username=myuser
-database.password=mypassword
-[/cc]&lt;/p&gt;
+database.password=mypassword&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;production/db.properties:&lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;bash&amp;quot;]&lt;/p&gt;
-
-&lt;h1&gt;Different values for the production server&lt;/h1&gt;
-
-&lt;p&gt;database.driverClassName=com.mysql.jdbc.Driver
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;# Different values for the production server
+database.driverClassName=com.mysql.jdbc.Driver
 database.url=jdbc:mysql://localhost/proddb
 database.username=prod_user
-database.password=DoubleSecretProbation
-[/cc]&lt;/p&gt;
+database.password=DoubleSecretProbation&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h4&gt;Injecting Properties&lt;/h4&gt;
+&lt;h2&gt;&lt;a id=&quot;InjectingProperties&quot;&gt;Injecting Properties&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;To keep things simple, lets inject only two of these properties.  If our setup is correct and we set the environment variable &amp;quot;environment&amp;quot; to &amp;quot;test&amp;quot; we should be able to verify that we get the right application name (a global property), and the test environment value for (for example) database.username. &lt;/p&gt;
 
 &lt;p&gt;We inject these properties in TestBean.java:&lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;Java&amp;quot;]
-package com.codesolid.properties;&lt;/p&gt;
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;]
+package com.codesolid.properties;
 
-&lt;p&gt;import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;&lt;/p&gt;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
-&lt;p&gt;@Service(value=&amp;quot;testBean&amp;quot;)
+@Service(value=&amp;quot;testBean&amp;quot;)
 public class TestBean {
     private String applicationName;
-    private String databaseUser;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;// This property is set in common.properties and will be the same
-// for all environments, test, production, etc.
-@Value(&amp;quot;${application.name}&amp;quot;)
-public void setApplicationName(String applicationName) {
-    this.applicationName = applicationName;
-}
+    private String databaseUser;
 
-// In contrast, this property and other database related properties
-// are quite likely different in test and production.
-@Value(&amp;quot;${database.username}&amp;quot;)
-public void setDatabaseUser(String databaseUser) {
-    this.databaseUser = databaseUser;
-}
+    // This property is set in common.properties and will be the same
+    // for all environments, test, production, etc.
+    @Value(&amp;quot;${application.name}&amp;quot;)
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+    }
 
-public String getDatabaseUser() {
-    return databaseUser;
-}
+    // In contrast, this property and other database related properties
+    // are quite likely different in test and production.
+    @Value(&amp;quot;${database.username}&amp;quot;)
+    public void setDatabaseUser(String databaseUser) {
+        this.databaseUser = databaseUser;
+    }
 
-public String getApplicationName() {
-    return applicationName;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;}
-[/cc]&lt;/p&gt;
+    public String getDatabaseUser() {
+        return databaseUser;
+    }
 
-&lt;h4&gt;Testing with JUnit&lt;/h4&gt;
+    public String getApplicationName() {
+        return applicationName;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;&lt;a id=&quot;Testing&quot;&gt;Testing with JUnit&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;As a final step, let&amp;#39;s make sure we&amp;#39;re running our test environment and our properties are injected correctly.  Our JUnit test is as follows:&lt;/p&gt;
 
-&lt;p&gt;[cc lang=&amp;quot;Java&amp;quot;]
-package com.codesolid.properties.tests;&lt;/p&gt;
+&lt;div&gt;
+  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;]
+package com.codesolid.properties.tests;
 
-&lt;p&gt;import com.codesolid.properties.TestBean;
+import com.codesolid.properties.TestBean;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.context.ApplicationContext;&lt;/p&gt;
+import org.springframework.context.ApplicationContext;
 
-&lt;p&gt;import static org.junit.Assert.assertEquals;&lt;/p&gt;
 
-&lt;p&gt;@RunWith(SpringJUnit4ClassRunner.class)
+import static org.junit.Assert.assertEquals;
+
+@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(&amp;quot;classpath:META-INF/spring/applicationContext.xml&amp;quot;)
-public class ContextTests {&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;@SuppressWarnings(&amp;quot;SpringJavaAutowiringInspection&amp;quot;)
-@Autowired
-private ApplicationContext ac;
+public class ContextTests {
 
-/* Verify that we&amp;#39;ve correctly injected a property from the Spring directory 
-(in this case, the common.properties file).  Property files in this
-directory define properties that can be used in all environments. */
-@Test
-public void testApplicationName() {
-    String expected = &amp;quot;The Greatest Sample Ever&amp;quot;;
-    TestBean test = (TestBean) ac.getBean(&amp;quot;testBean&amp;quot;);
-    String actual = test.getApplicationName();
-    assertEquals(actual, expected);
-}
+    @SuppressWarnings(&amp;quot;SpringJavaAutowiringInspection&amp;quot;)
+    @Autowired
+    private ApplicationContext ac;
 
-/* Verify that we&amp;#39;ve correctly injected a property from the test directory&amp;#39;s 
-db.properties. Property files in the test directory only apply to the test 
-environment and can be overridden in the production directory (for example). */
-@Test
-public void testDatabaseConfiguredCorrectly() {
-    String expected = &amp;quot;myuser&amp;quot;;
-    TestBean test = (TestBean) ac.getBean(&amp;quot;testBean&amp;quot;);
-    String actual = test.getDatabaseUser();
-    assertEquals(actual, expected);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;[/cc]&lt;/p&gt;
+    /* Verify that we&amp;#39;ve correctly injected a property from the Spring directory 
+    (in this case, the common.properties file).  Property files in this
+    directory define properties that can be used in all environments. */
+    @Test
+    public void testApplicationName() {
+        String expected = &amp;quot;The Greatest Sample Ever&amp;quot;;
+        TestBean test = (TestBean) ac.getBean(&amp;quot;testBean&amp;quot;);
+        String actual = test.getApplicationName();
+        assertEquals(actual, expected);
+    }
+
+    /* Verify that we&amp;#39;ve correctly injected a property from the test directory&amp;#39;s 
+    db.properties. Property files in the test directory only apply to the test 
+    environment and can be overridden in the production directory (for example). */
+    @Test
+    public void testDatabaseConfiguredCorrectly() {
+        String expected = &amp;quot;myuser&amp;quot;;
+        TestBean test = (TestBean) ac.getBean(&amp;quot;testBean&amp;quot;);
+        String actual = test.getDatabaseUser();
+        assertEquals(actual, expected);
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Working with the PropertyPlaceholderConfigurer class lets you easily configure your WAR file for production, test, and any other environments you need -- and with that out of the way, you can now get busy writing your application.  Enjoy!&lt;/p&gt;
 </description>
@@ -4457,7 +4507,7 @@ Exception caught: System.InvalidOperationException: Nullable object must have a 
 			
 			<item>
 				<title>Development Driven Development</title>
-				<description>&lt;p&gt;Some time ago I waxed ecstatic over &lt;a href=&quot;http://www.particlewave.com/JUnit.php&quot;&gt;JUnit automated unit tests&lt;/a&gt; here, and I think the software community has gotten even more wild-eyed over automated tests in the meantime, with the latest buzz about Behavior Driven Development.  For my part, lately I&amp;#39;ve begun to question all this conventional wisdom.  I&amp;#39;ve begun to believe that the fact that programmers love testing so much for the same reason Twitter is so popular:  writing short little works is more fun than reading something long and difficult.  &lt;/p&gt;
+				<description>&lt;p&gt;Some time ago I waxed ecstatic over JUnit automated unit tests here, and I think the software community has gotten even more wild-eyed over automated tests in the meantime, with the latest buzz about Behavior Driven Development.  For my part, lately I&amp;#39;ve begun to question all this conventional wisdom.  I&amp;#39;ve begun to believe that the fact that programmers love testing so much for the same reason Twitter is so popular:  writing short little works is more fun than reading something long and difficult.  &lt;/p&gt;
 
 &lt;p&gt;You see, MY test case is elegant and concise, whereas YOUR legacy code is convoluted and difficult.&lt;/p&gt;
 
@@ -5113,53 +5163,6 @@ But your lovin&amp;#39; don&amp;#39;t pay my bills.&lt;/em&gt;&lt;/p&gt;
 				<pubDate>Mon, 24 Mar 2008 16:14:04 -0700</pubDate>
 				<link>/tips-for-setting-writing-goals-a-stack-of-twenty</link>
 				<guid isPermaLink="true">/tips-for-setting-writing-goals-a-stack-of-twenty</guid>
-			</item>
-			
-		
-			
-			<item>
-				<title>Paid Reviews: Google’s Problem With Them and How To Solve It</title>
-				<description>&lt;p&gt;This is Part II in our &lt;a href=&quot;http://www.inklit.com/blog/2008/03/17/paid-reviews-freelance-writer-boon-or-bargain-with-the-devil&quot;&gt;article series&lt;/a&gt; on Paid Reviews.&lt;/p&gt;
-
-&lt;p&gt;Should you write paid reviews on your site?   Most bloggers would be honored to be asked, even if they&amp;#39;re not freelance writers and therefore already thinking along the lines of getting paid to write.   For freelancers it&amp;#39;s a natural, that&amp;#39;s true by definition.  You pay me, I write something.&lt;/p&gt;
-
-&lt;p&gt;Some bloggers make a few extra dollars writing paid reviews, and top bloggers make a lot of money at it.  Do you want your site reviewed at JohnChow.com?  That&amp;#39;ll be $500, please.  That&amp;#39;s not a bad rate for an hour or two of writing.&lt;/p&gt;
-
-&lt;p&gt;Paid reviews do have some problems, however, and you should know about these before you start offering them on your blog.  In this Article, I&amp;#39;ll discuss the main technical objection to paid reviews -- that Google might penalize your web site for having them -- and show you how to solve this problem.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Google&amp;#39;s Position on Paid Reviews&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;To discuss Google&amp;#39;s position on paid reviews, we need to understand why people would pay you to review their site.  What is the customer for a paid review hoping to gain?&lt;/p&gt;
-
-&lt;p&gt;There are two basic reasons someone might pay you to write a review about them:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;*&lt;em&gt;The Customer Wants a Direct, Human Boost in Their Reputation and Traffic
-*&lt;/em&gt;We all know about celebrity endorsements.  Where would the Craftmatic bed be without Lindsey Wagner, or the GAF Viewmaster without Henry Fonda?  Celebrity endorsements are just a form of personal referral, where someone&amp;#39;s paying someone they hope you&amp;#39;ve heard of to endorse their product.  Paid reviews are a small scale application of the same basic thing.  You pay someone to talk about you and link to you, hoping their readers will find you and then buy something, or at least that they will start reading you, enjoy it, and tell someone they know to buy something.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;*&lt;em&gt;The Customer Wants an Indirect, Computer-Friendly Boost in Their Reputation and Traffic
-*&lt;/em&gt;Another reason a customer would want a paid review on your site is that search engine algorithms like Google&amp;#39;s also consider a link to your site to be an endorsement of its content.  If Brian Clark of CopyBlogger.com links to Inklit.com like this:  &lt;a href=&quot;http://www.inklit.com/blog/&quot;&gt;Online Copywriter&lt;/a&gt;, then according to the Google&amp;#39;s &lt;a href=&quot;http://en.wikipedia.org/wiki/PageRank&quot;&gt;page rank algorithm&lt;/a&gt;, Inklit.com is more likely to be about an Online Copywriter than if he didn&amp;#39;t.  In other words, the link gives my site a reputation boost on Google that&amp;#39;s every bit as important as the human reputation boost I would receive.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;OK, back to Google.  As with so many &amp;quot;what is Google thinking?&amp;quot; sort of questions, the best answer to Google&amp;#39;s position on paid links comes in an article that Matt Cutts wrote.  In this case the article in question is &lt;a href=&quot;http://www.mattcutts.com/blog/selling-links-that-pass-pagerank/&quot;&gt;Selling Links That Pass Page Rank&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As you might expect, Google doesn&amp;#39;t care at all about item 1, but it does care about item 2.  Google considers buying paid reviews to be a form of link buying, and devalues pages or sites that engage in it for attempting to artificially manipulate page rank.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Practice Safe Endorsement:  Wear a Link Condom&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;With the invention of blogs, many people started commenting on other people&amp;#39;s blogs to get links back to their own site.  To combat this, Google invented the &amp;quot;nofollow&amp;quot; tag.  The idea was that you could add a bit of code to the link to mark it as being one that the webmaster himself did not endorse.&lt;/p&gt;
-
-&lt;p&gt;It wasn&amp;#39;t long before Google decided that not only should &amp;quot;nofollow&amp;quot; apply to links that other people write on my site -- it should also apply to links that I myself write, if I&amp;#39;m being paid to write them.&lt;/p&gt;
-
-&lt;p&gt;So getting back to our earlier example, if I buy a review from Brian Clark and he wants to let Google know that he&amp;#39;s not cross-his-heart, pinkie-swear endorsing me, he&amp;#39;s just endorsing me because I&amp;#39;m sending him money to be insincere, he should choose the &amp;quot;safe&amp;quot; version of the following link:
-&lt;a href=&quot;http://www.particlewave.com/internet-marketing/wp-content/uploads/2008/03/linkcondom.gif&quot;&gt;&lt;img src=&quot;http://www.particlewave.com/internet-marketing/wp-content/uploads/2008/03/linkcondom-thumb.gif&quot; alt=&quot;linkcondom&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So if you want to write a paid review and you don&amp;#39;t want the review to adversely affect your Google rankings, you should add a nofollow tag as shown above to your links.  Many good blogging tools such as Live Writer have a way to do this without having to get into the HTML view and tweak the code.&lt;/p&gt;
-
-&lt;p&gt;Matt Cutts has also hinted that you should disclose in the article that the review is paid, though to my knowledge there&amp;#39;s no standard, machine readable way to say your review is paid, so it&amp;#39;s hard to see whether this is just Matt&amp;#39;s preference or something in the algorithm.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 18 Mar 2008 07:15:32 -0700</pubDate>
-				<link>/paid-reviews-googles-problem-with-them-and-how-to-solve-it</link>
-				<guid isPermaLink="true">/paid-reviews-googles-problem-with-them-and-how-to-solve-it</guid>
 			</item>
 			
 		
