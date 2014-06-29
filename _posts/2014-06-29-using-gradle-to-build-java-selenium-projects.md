@@ -2,6 +2,8 @@
 author: John Lockwood
 layout: post
 title: "Using Gradle to Build Java Selenium Projects" 
+description:  Ant lets you script anything, and Maven handles all your dependencies neatly.  If only there were a build tool that let you do both.  Well, there is -- it's Gradle, and in this article we show you how to use it with IntelliJ and Selenium.
+
 excerpt:  Ant lets you script anything, and Maven handles all your dependencies neatly.  If only there were a build tool that let you do both.  Well, there is -- it's Gradle, and in this article we show you how to use it with IntelliJ and Selenium.
 categories:
 - Miscellaneous
