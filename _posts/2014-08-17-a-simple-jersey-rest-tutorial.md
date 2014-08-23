@@ -4,7 +4,8 @@ layout: post
 title: "Java REST tutorial" 
 categories:
 - Java, Jersey, REST
-excerpt: Easily create a RESTful API using Java, Jersey, Maven, and IntelliJ Idea.
+excerpt: Tutorial shows you how to easily create a RESTful API using Java, Jersey, Maven, and IntelliJ Idea.
+description:  Tutorial shows you how to easily create a RESTful API using Java, Jersey, Maven, and IntelliJ Idea.
 ---
 <p>Create a RESTful API Using Java and Jersey in IntelliJ Idea.</p>
 <div id="table_of_contents">
