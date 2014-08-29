@@ -136,3 +136,15 @@ header p {
 h1, h2, h3, h4, h5 {
   font-family:arial, Arial, Helvetica, sans-serif;
 }
+
+#ratetable, #ratetable th, #ratetable td {
+  border-color:black;
+  border-style:solid;
+  border-width:1px;
+  border-collapse: collapse;
+}
+
+#ratetable th, #ratetable td {
+  padding:1em;
+  
+}

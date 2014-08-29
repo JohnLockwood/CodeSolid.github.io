@@ -1,6 +1,6 @@
 ---
 layout:    default
-title:     CodeSolid
+title:     Java Contractor
 ---
 
 CodeSolid is a test automation outsourcing company with a small team of talented developers who can help you quickly move your Java or Ruby test automation effort to completion.
