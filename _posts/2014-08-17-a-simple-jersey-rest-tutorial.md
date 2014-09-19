@@ -8,20 +8,20 @@ excerpt: Tutorial shows you how to easily create a RESTful API using Java, Jerse
 description:  Tutorial shows you how to easily create a RESTful API using Java, Jersey, Maven, and IntelliJ Idea.
 ---
 <p>Create a RESTful API Using Java and Jersey in IntelliJ Idea.</p>
-<div id="table_of_contents">
+<div>
 <h1>Table of Contents</h1>
-<ul >
-<li><a href="#RESTinFiveMinutes">Take Five - REST in Five Minutes</a></li>
-<li><a href="#DumbNoSQL">Keeping It Simple - No Database Connection Needed</a>
-<li><a href="#ProjectSetup">Setting up the Jersey Project in Maven and IntelliJ Idea</a></li>
-<li><a href="#TheRestfulAPI">Server Side:  the RESTful API</a></li>
-<li><a href="#ClientSideTesting">Testing the Server:  A Jersey REST client</a></li>
-<li><a href="#Conclusion">Putting it All Together</a></li>
-<li>&nbsp;</li>
-<li>
-<a href="/downloads/RestfulWebService.zip">Download the Project (ZIP)</a>
+<ul class="list-group">
+<li class="list-group-item"><a href="#RESTinFiveMinutes">Take Five - REST in Five Minutes</a></li>
+<li class="list-group-item"><a href="#DumbNoSQL">Keeping It Simple - No Database Connection Needed</a>
+<li class="list-group-item"><a href="#ProjectSetup">Setting up the Jersey Project in Maven and IntelliJ Idea</a></li>
+<li class="list-group-item"><a href="#TheRestfulAPI">Server Side:  the RESTful API</a></li>
+<li class="list-group-item"><a href="#ClientSideTesting">Testing the Server:  A Jersey REST client</a></li>
+<li class="list-group-item"><a href="#Conclusion">Putting it All Together</a></li>
+
+
 </li>
 </ul>
+<a href="/downloads/RestfulWebService.zip">Download the Project (ZIP)</a>
 </div>
 <div style="margin-top:1em;margin-bottom:-.5em">
 <iframe src="http://ghbtns.com/github-btn.html?user=codesolid&repo=tutorials&type=fork&size=large"" allowtransparency="true" frameborder="0" scrolling="0" width="83" height="40" size="large"></iframe>

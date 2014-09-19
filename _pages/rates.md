@@ -9,7 +9,7 @@ Rates
 
 Rates are based on the length of the engagement and the location where the work is being done.  Some work like project ramp-up is best done onsite with other developers, but most work can be done equally well with collaboration as needed over phone, IM, email, Skype, etc.
 
-<table id="ratetable">
+<table class="table ">
 <tr><th>Engagement Length</th><th>Location</th><th>Rate (US $ / Hour)</th></tr>
 <tr><td>Less than three months</td><td>Local Area 95662</td><td>$85</td></tr>
 <tr><td>Three months or more</td><td>Local Area 95662</td><td>$65</td></tr>
