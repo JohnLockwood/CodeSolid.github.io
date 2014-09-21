@@ -16,7 +16,7 @@ A friend from work was also there, so we've been chatting about Cassandra since.
 
 My ethical dilemma is that I can spend the company's money on this cool bauble I want to learn, but I really think the chances of getting to use this cool bauble at this company are not good.  So even though they might well still pay for it, it doesn't seem right to let me increase my marketability at their expense unless part of the market is internal.
 
-Reaching a Temporary Compromise:  Hello World
+Compromise:  Hello World
 ==
 
 Struck down by fear at the edge of this dense ethical forest, I retreated to the safety of a trusted old friend -- Hello World.  So I told my work-friend that I'd write my other friend (Hello World) using Cassandra over the weekend, and last night just like that I did it.
