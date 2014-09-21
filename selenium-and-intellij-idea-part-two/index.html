@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Getting Started in Selenium and Java in IntelliJ Idea, Part 2</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Getting Started in Selenium and Java in IntelliJ Idea, Part 2</h1>
+<!-- <p class="meta">16 Jun 2014</p> -->
+
+<div class="post">
+<p>Read <a href="/getting-started-with-selenium-in-intellij-idea/">part one</a>.
+<a href="https://github.com/CodeSolid/tutorials/tree/master/SeleniumStarter">Get the source</a></p>
+
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul>
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#SimpleSeleniumTestcase">Set up a Selenium Test Project Using Maven and IntelliJ Idea</a></li>
+<li><a href="#ExportingSeleniumToJava">Exporting Selenium IDE Tests to Java</a></li>
+</ul>
+</div>
+
+<h2><a id="Introduction">Introduction</a></h2>
+
+<p>In <a href="/getting-started-with-selenium-in-intellij-idea/">part one</a> of this article, we looked at how to use the Selenium IDE to record browser actions.
+We then used Firebug to locate a page element, and added a simple assertion to verify that a page element had the text we expected.</p>
+
+<p>In part two of the series, we want to look at how to begin to work with out Selenium Scripts using Java.  We&#39;ll explore how easy it is to do a simple
+export to a JUnit test, and we&#39;ll get you the Maven and IntelliJ project files you&#39;ll need to get started.</p>
+
+<h2><a id="SimpleSeleniumTestcase">Set up a Selenium Test Project Using Maven and IntelliJ Idea</a></h2>
+
+<p>When setting up new projects in IntelliJ Idea, I almost always start with a Maven POM file first and then import it, since I find that pasting Maven
+dependencies is the simplest way to get the jars I need. If you prefer to skip past this section, all the source including POM file and the finished project for this article are in the <a href="https://github.com/CodeSolid/tutorials">CodeSolid Tutorials repository</a> on Github, in the <a href="https://github.com/CodeSolid/tutorials/tree/master/SeleniumStarter">Selenium Starter</a> project.  However, the steps are pretty simple:</p>
+
+<ul>
+<li>Copy the pom file (see below) into a directory.</li>
+</ul>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;groupId&gt;com.codesolid.tutorials&lt;/groupId&gt;
+    &lt;artifactId&gt;SeleniumStarter&lt;/artifactId&gt;
+    &lt;version&gt;1.0&lt;/version&gt;
+
+    &lt;properties&gt;
+        &lt;junit.version&gt;4.11&lt;/junit.version&gt;
+        &lt;selenium.version&gt;2.41.0&lt;/selenium.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;!-- JUnit --&gt;         
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;${junit.version}&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- Selenium --&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+            &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
+            &lt;version&gt;${selenium.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+            &lt;artifactId&gt;selenium-support&lt;/artifactId&gt;
+            &lt;version&gt;${selenium.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+            &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+            &lt;version&gt;${selenium.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;</code></pre>
+</div>
+
+<ul>
+<li>Set up a place for files to go.  In the same directory where you copied your pom file, run the following at the command prompt: <em>mkdir src\test\java\com\codesolid\tutorials\seleniumstarter</em>&quot; The &quot;src\test\java&quot; portion is a maven standard directory layout for test files and should
+be kept as is.  In contrast, the &quot;com\codesolid\tutorials\seleniumstarter&quot; portion of that path will be our package structure, and you can modify 
+it to fit your project&#39;s package structure as needed.</li>
+<li>In IntelliJ Idea, &quot;File / Import Project&quot;, then point to your directory.  When prompted in the Import Project dialog, make sure &quot;Import project from external
+model&quot; and &quot;Maven&quot; are selected.</li>
+<li>In the next Import Project dialog (below), I generally leave the defaults with the exception of &quot;Import Maven Projects Automatically&quot;.  This helps to make sure that any changes you make to the POM are also reflected in your IntelliJ idea.</li>
+</ul>
+
+<p><img src="/images/20140606/ImportMaven.png" alt="&quot;Import Maven Project&quot;"></p>
+
+<p>The rest of the dialogs are pretty straightforward.  I generally skip importing any modules if prompted for one, choose my favorite JDK when prompted,
+and provide a name for the project that matches the name I&#39;m prompted for in the POM.</p>
+
+<p>If you need more details on working with Idea and Maven projects, check out the IntelliJ documentation on <a href="http://wiki.jetbrains.net/intellij/Creating_and_importing_Maven_projects">working with Maven</a>.</p>
+
+<h2><a id="ExportingSeleniumToJava">Exporting Selenium to Java</a></h2>
+
+<p>Once you have a project set up to house your tests, exporting Selenium tests to a JUnit test case is generally quite straightforward. To export a single test to JUnit, simply select &quot;Export Test Case As&quot;, and select the type of test case you want to create.  Let&#39;s select Java / JUnit 4 / WebDriver, as shown here:</p>
+
+<p><img src="/images/20140606/ExportJUnitTestcase.png" alt="&quot;Export Java JUnit4 WebDriver Test&quot;"></p>
+
+<p>What you&#39;ll want to do is export it to the package directory you created above, in other words, the directory where you copied the pom file plus  src\test\java\com\codesolid\tutorials\seleniumstarter and give it a name, such as FirstSeleniumTest.java.  The final step before running it in Idea is to make sure
+your package name is set up correctly -- chances are Selenium exported something like &quot;package com.example&quot;.  Find the package directive at the top of the file
+and change it to read:  </p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.seleniumstarter;</code></pre>
+</div>
+
+<p>At this point you should be able to right-click on the file in IntelliJ Idea and click on &quot;Debug FirstSeleniumTest&quot;.  You should see Firefox launch and your test should pass.  If you run into trouble, try grabbing the project from <a href="https://github.com/CodeSolid/tutorials/tree/master/SeleniumStarter">Github</a>.  Enjoy!</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

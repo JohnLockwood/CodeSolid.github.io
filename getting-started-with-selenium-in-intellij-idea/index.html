@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Getting Started with Selenium in IntelliJ Idea - Part I</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Getting Started with Selenium in IntelliJ Idea - Part I</h1>
+<!-- <p class="meta">14 Jun 2014</p> -->
+
+<div class="post">
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#Setup">Fill Your Toolbox -- Setting Up Firebug and Selenium IDE</a></li>
+<li><a href="#SimpleSeleniumTestcase">A Simple Selenium Test Case</a></li>
+<li><a href="#LocatingWebElements">Locating Web Elements</a></li>
+<li><a href="#VerifyingExpectedResults">Verifying Expected Results</a></li>
+<li><a href="#LastSteps">Final Steps and What's Ahead</a></li>
+<li><a href="/selenium-and-intellij-idea-part-two/">Read Part Two of the Article</a></li>
+</ul>
+</div>
+
+<h2><a id="Introduction" name="Introduction">Introduction</a></h2>
+
+<p>Selenium is a one of the most popular test automation tools.  Selenium lets you write automated tests to drive a variety of popular browsers including Firefox, Chrome, and Internet Explorer. Using Selenium IDE, you can record browser sessions and export the recorded tests to test cases written in a variety of languages.  These languages include Java, Python, Ruby, and .NET. </p>
+
+<p>In this first part of our Selenium and IntelliJ Idea tutorial, we&#39;ll cover working with the IDE itself in Firefox.  We&#39;ll learn how to record a web session, and
+how to locate and test web elements on the page.  In part two of the article, we&#39;ll learn how to take our Selenium tests to the next level by turning them into 
+JUnit tests running in IntelliJ Idea.</p>
+
+<h2><a id="Setup" name="Setup">Setting up Firebug and Selenium IDE</a></h2>
+
+<p>The Selenium IDE is an extension for Firefox that should serve as your starting point for your Selenium work.  So of course, you&#39;ll need Firefox installed.</p>
+
+<p>Before getting Selenium, however, there&#39;s also one more tool we&#39;ll need if you don&#39;t already have it, Firebug.  Among other things, Firebug makes it easy to examine page elements, something which we&#39;ll be doing a lot as we dig into Selenium.  <a href="https://getfirebug.com/">Download Firebug</a> from this site and install it.  Once it&#39;s installed, you should see a little bug on the Firefox menu bar, click it to open Firebug.  We&#39;ll be using it in a few minutes.</p>
+
+<p>Now we&#39;re ready to get the Selenium IDE from the <a href="http://docs.seleniumhq.org/download/">Selenium Download Page</a>.  Selenium IDE will appear as an option on the tools menu.  In recent versions, you can also access it from the right hand menu button as shown below.</p>
+
+<p><img src="/images/20140606/FirefoxMenuButtonSelenium.png" alt="&quot;Selenium Firefox menu button&quot;"></p>
+
+<p>I generally open Selenium in a sidebar, but opening as a Popup is the more common option that&#39;s available in all environments.  Shown below is how that looks.</p>
+
+<p><img src="/images/20140606/SeleniumScreenShot1.png" alt="&quot;Selenium IDE Pop Up&quot;"></p>
+
+<h2><a id="SimpleSeleniumTestcase" name="SimpleSeleniumTestCase">A Simple Selenium Test Case</a></h2> 
+
+<p>Let&#39;s dive right in to Selenium with a simple test case.  Make sure that the red recording button in the upper right is &quot;On&quot; as shown in the image above.  You can toggle it if you&#39;re not sure -- the &quot;On&quot; state is when it looks pushed in.  Next, in the Selenium window&#39;s address bar, where it says &quot;Base URL&quot;, let&#39;s enter:  https://github.com/codesolid . One thing to notice at this point is that Selenium will not automatically go to the base URL.  You&#39;ll need to navigate it in the firefox address bar as well.  This is because really what we&#39;re entering here is the URL of the &quot;Web Application Under Test&quot; -- in other words, we&#39;re telling Selenium where to record our activity.</p>
+
+<p>The fun begins when you navigate a page under that base URL.  On the CodeSolid github page, there should be a link to a &quot;tutorials&quot; project.  Let&#39;s click on that link in Firefox.</p>
+
+<p>Firefox navigates to the link, but if you&#39;ll notice, the Selenium IDE has now recorded your activity.  At this point the Selenium IDE window should look something like this.</p>
+
+<p><img src="/images/20140606/SeleniumScreenShot2.png" alt="&quot;Selenium Test Recording&quot;"></p>
+
+<p>If you toggle the recording button to the &quot;Off state&quot;, you should be able to prove you&#39;ve recorded your session by playing it back.  First, in the window that&#39;s viewing the CodeSolid tutorials, navigate to somewhere on the web that&#39;s not as popular as the CodeSolid tutorials, like Google for example.  Now, back in the Selenium IDE window, underneath the Base URL bar, you should see two green play buttons.  Click either of these (at this point it doesn&#39;t matter which).  You should see Firefox navigate back to the CodeSolid Github account and click through to the tutorials page.</p>
+
+<h2><a id="LocatingWebElements" name="LocatingWebElements">Locating Web Elements</a></h2>
+
+<p>As interesting as it is, a recorded web session is not yet a test.  It has the first part -- a description in code of the steps that take place -- but we haven&#39;t yet added a way to compare some expected value to an actual value.  Let&#39;s add a simple check to see if some element on the page contains the text we expect it to.  On the CodeSolid tutorials page, if you scroll down past the links to the tutorials, there&#39;s a readme file.</p>
+
+<p><img src="/images/20140606/CodeSolidReadme.png" alt="&quot;CodeSolid Readme&quot;"></p>
+
+<p>Github displays this in an H1 tag, but to make sure we&#39;re finding the right H1 tag, let&#39;s open firebug using the firebug button:</p>
+
+<p><img src="/images/20140606/FirebugButton.png" alt="&quot;Firebug&quot;"></p>
+
+<p>This opens up the firebug window, as you can see below.  </p>
+
+<p><img src="/images/20140606/FirebugWindow.png" alt="&quot;Firebug&quot;"></p>
+
+<p>I&#39;ve added an arrow to point out the inspect button.  With the HTML tab selected as shown in the picture, if you click the inspect button, you&#39;ll notice if you hover over any element on the page in the browser window, you&#39;ll seee the HTML for that element displaying in the HTML window.  You can then select that element by clicking on it.  Let&#39;s go ahead and click first on the inspect button, then in the main browser window, click the header, &quot;Welcome to the CodeSolid Tutorials&quot;, that we scrolled to earlier.  This selects the html for the page element we want to verify.  There are a variety of ways to do this, but one of the most versatile is to use a CSS selector.  With the element we want still selected, if you right click on the html displayed in the firebug window you should see a menu that looks something like this:</p>
+
+<p><img src="/images/20140606/FirebugPopupWithCSSPath.png" alt="&quot;Using a CSS Path Selector&quot;"></p>
+
+<p>Click on &quot;Copy CSS Path&quot;.  At this point the CSS path for the element is copied to the clipboard.  If you were to paste it into a text editor, youd see something like:</p>
+
+<div>
+"html body.logged_out.env-production.windows.vis-public div.wrapper div.site div.container div.repository-with-sidebar.repo-container.new-discussion-timeline.js-new-discussion-timeline.with-full-navigation div#js-repo-pjax-container.repository-content.context-loader-container div#readme.clearfix.announce.instapaper_body.md article.markdown-body.entry-content h1"
+</div>
+
+<p>This represents the entire CSS path to the element.  As you work with Selenium, you may find that your tests are less brittle if you only consider what elements you need at the <b>end</b> of the path -- that way other parts of the page can change and your tests will still work.  For example, in this case, using the section &quot;article.markdown-body.entry-content h1&quot; identifies the element just fine.  For now, however, let&#39;s just take the whole path and see how to get Selenium to use it.</p>
+
+<h2><a id="VerifyingExpectedResults" name="VerifyingExpectedResults">Verifying Expected Results</a></h2>
+
+<p>With the CSS for our web element copiled to the clipboard, we can now turn our recording of a Firefox session into a real test.  If you look at the Selenium IDE window,
+you should see on the right hand side of it two tabs labeled &quot;Table&quot; and &quot;Source&quot;. The Table tab shows the Selenium commands that will run if you run the test.  So far all it has are recorded commands -- now we&#39;re going to add a command ourselves.  If you right click just underneath the command that says &quot;clickAndWait   link=tutorials&quot;, you&#39;ll can then click &quot;Insert New Command&quot;.</p>
+
+<p>Note that underneath the Table itself there are three entry fields (that are highlighted in the image below):</p>
+
+<p><img src="/images/20140606/SeleniumTableTab1.png" alt="&quot;Selenium Table Tab&quot;"></p>
+
+<p>These three fields correspond to the three columns of the table, Command, Target, and Value.  You select or type Selenium commands in the first field, so in that field enter &quot;assertText&quot;.  In the second field, start by typing &quot;css=&quot;, then just after the &quot;css=&quot;, copy the CSS path that we copied from Firebug earlier.  This creates a &quot;locator&quot; expression that will get passed to the assertText function.  You can test that you did this step successfully by clicking on the Find button -- if your locator is working properly you should see the &quot;Welcome to the CodeSolid Tutorials&quot; header flash yellow briefly.  Finally, in the third field, simply type &quot;Welcome to the CodeSolid Tutorials&quot;  Note that for all three fields you should type the text without the quotes.</p>
+
+<p>At this point, if you navigate to another page like Google and re-run your test in the Selenium IDE (clicking one the green play arrows), you should see the test navigate to the tutorials page, and you should see a green bar on the assertText command you entered.  The test passed!</p>
+
+<h2><a id="LastSteps" name="LastSteps">Final Steps and What's Ahead</a></h2>
+
+<p>In our next tutorial, we&#39;ll get into how to use what we&#39;ve created as the basis for a JUnit test suite using IntelliJ idea.  But before moving on, as a final step let&#39;s save our test.  In the Selenium IDE, select File / Save Test Case to save your file.  Notice anything special about the file format that Selenium used to save the test file?  It&#39;s just regular HTML (well, OK, it&#39;s XHTML), with the name of the test in the first row and the Selenium &quot;script&quot; in the remaining table rows.  The
+base URL is cleverly stuffed away in the head tag.  </p>
+
+<p>A tool for testing HTML that stores files as HTML?  Don&#39;t worry -- the universe is not folding back on itself.  Selenium is just cool!</p>
+
+<div>
+  <pre data-line=''><code class='language-html'>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;
+&lt;head profile=&quot;http://selenium-ide.openqa.org/profiles/test-case&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+&lt;link rel=&quot;selenium.base&quot; href=&quot;https://github.com/codesolid&quot; /&gt;
+&lt;title&gt;InitialState&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; border=&quot;1&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;td rowspan=&quot;1&quot; colspan=&quot;3&quot;&gt;InitialState&lt;/td&gt;&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+    &lt;td&gt;open&lt;/td&gt;
+    &lt;td&gt;/CodeSolid&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;clickAndWait&lt;/td&gt;
+    &lt;td&gt;link=tutorials&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;assertText&lt;/td&gt;
+    &lt;td&gt;css=html body.logged_out.env-production.windows.vis-public div.wrapper div.site div.container div.repository-with-sidebar.repo-container.new-discussion-timeline.js-new-discussion-timeline.with-full-navigation div#js-repo-pjax-container.repository-content.context-loader-container div#readme.clearfix.announce.instapaper_body.md article.markdown-body.entry-content h1&lt;/td&gt;
+    &lt;td&gt;Welcome to the CodeSolid Tutorials&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+<p><a href="/selenium-and-intellij-idea-part-two/">Read Part Two of the Article</a></p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

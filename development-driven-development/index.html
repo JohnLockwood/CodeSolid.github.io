@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Development Driven Development</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Development Driven Development</h1>
+<!-- <p class="meta">23 Jul 2009</p> -->
+
+<div class="post">
+<p>Some time ago I waxed ecstatic over JUnit automated unit tests here, and I think the software community has gotten even more wild-eyed over automated tests in the meantime, with the latest buzz about Behavior Driven Development.  For my part, lately I&#39;ve begun to question all this conventional wisdom.  I&#39;ve begun to believe that the fact that programmers love testing so much for the same reason Twitter is so popular:  writing short little works is more fun than reading something long and difficult.  </p>
+
+<p>You see, MY test case is elegant and concise, whereas YOUR legacy code is convoluted and difficult.</p>
+
+<p>Don&#39;t get me wrong.  My legacy code is convoluted and difficult, too, but it&#39;s a lot more convoluted and difficult for you than it is for me, because I wrote it, and I have a better than even chance of knowing where the tasty bits are and what I was thinking.  Your code is sometimes worse than mine, and sometimes better, but either way I don&#39;t know it as well as my code until I start grepping and reading and stepping through it in the debugger.  After a while doing that, I become more proficient in your code, but it&#39;s still YOUR code.</p>
+
+<p>During the day I make my living reading and fixing YOUR code.  Well not yours exactly, but Other People&#39;s Code.  The particular compilation of Other People&#39;s Code that pays my bills lately has been evolving since the 1980s, with very little in the way of automated testing.  Yet my employers are selling the product and making enough revenue to hire me and a bunch of other guys to work on it.  To be sure, it may be nearing the end of its life cycle, in which case I may need to find OTHER Other People&#39;s code to go work on, but I guarantee you that in the meantime my wife doesn&#39;t mind when she cooks dinner.</p>
+
+<p>When I first got to this job I lamented the fact that there were no native automated unit tests.  I wrote a few, but not nearly as many as I&#39;d like, nor nearly as many as we need.  QA has also been recently trying to add a lot more automation, though they&#39;re written in the tool we&#39;re developing -- not the language I&#39;m working in.  More and more I just try to bite the bullet and debug and fix the problems that get logged by ad hoc testing against Other People&#39;s Code, and I try not to let my overwhelming agile genius keep me from having a good time.</p>
+
+<p>As a younger programmer than I am now, at my first true development job, my agile genius was at the height of his awesome career.  As I was explaining some ingenious and difficult idea to my manager, he detected my agile genius at work.  He rewarded my heroic efforts with the following response, which I offer up to you now as a Development Driven Development manifesto:</p>
+
+<p>He said, &quot;Just write the damned code.&quot;</p>
+
+<p><strong>Just Write The Damned Code</strong></p>
+
+<p>I don&#39;t think many developers are going to go for this as a way of doing business, because just writing the damned code is not really theoretical, and we developers love our theories.  This sounds too much like chaos, and too many of us have suffered from chaos as a model of software development.</p>
+
+<p>And do I really mean we should give up all testing, finish our edits and just do an svn commit without further ado?  No, of course I mean that we should test our code, step through it in the debugger, examine it, review it, think about it, clean it up and the like.  In fact, I submit that the compelling love of automated testing is precisely a reflection of the fact that while I&#39;m an accomplished professional with a serious work ethic who always debugs and tests his code before checking it in, Other People as we all know are the dreaded perpetrators of Other People&#39;s Code.</p>
+
+<p>The sleight of hand here of course is that Other People are also the dreaded perpetrators of Other People&#39;s Automated Tests.  In my non-day job, rather than getting paid to work on a codebase that has no unit tests, I&#39;m not paid (yet) to work on a project written in Ruby, where automated testing is &quot;baked-right-in&quot;.  Of course, the tests that script/generate will spit out as a by-product of its work all pass, but more importantly, one of the Ruby third party gems I use heavily has sucked up more of its fair share of my time because its tests fail whenever I start running a new version of Ruby or make another change.  </p>
+
+<p>Am I just being ornery and jealous of my time that I don&#39;t want to spend the happy part of my coding weekend updating tests that say that a user should end up on page X when they&#39;re finished with some task, after I just explicitly made the change so they&#39;d end up on a page Y?  Really, we need tests to tell us what page people are going to now?  Did we think they&#39;d suddenly start hopping over to pets.com?  And do I care that the string format of a DateTime object changed and now your tests are failing not because the dates are wrong but because of that incidental?</p>
+
+<p>Test Driven Development works like this:</p>
+
+<p>1) Write test case, color should be red.
+2) Watch test case fail, color is not red.
+3) Write code to make red.
+4) Test case passes.</p>
+
+<p>Development Driven Development works like this:</p>
+
+<p>1) Write code to make red.
+2) Verify red.</p>
+
+<p>Yes, I&#39;ve had cases where automated tests have alerted me to real bugs, so I don&#39;t want to damn them out of hand.  But I think a lot of the religious fervor surrounding unit testing boils down to something like this:  &quot;I don&#39;t want to step through your code, and I haven&#39;t yet created anything valuable enough that some other poor sap has to step through mine and I can get paid for it while being cursed as a fool.&quot;</p>
+
+<p>So I&#39;m changing my goal, from writing unit tests for Other People&#39;s Code to just debugging that code as best I can while writing my own code.</p>
+
+<p>I&#39;d rather be a hammer than a nail.  As the great software engineer, Louis XIV, said, &quot;Other People, C&#39;est Moi!&quot;</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

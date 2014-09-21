@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>ASP.NET versus Ruby On Rails</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>ASP.NET versus Ruby On Rails</h1>
+<!-- <p class="meta">19 Apr 2009</p> -->
+
+<div class="post">
+<p>My friend and college housemate <a href="http://dimsumthinking.com/blog/">Daniel Steinberg</a> stopped by  recently and caught me red-handed in yet another heinous act of last week&#39;s marketing.  By &quot;last week&#39;s marketing&quot;, I mean that I should know better than to say this site is about a specific platform / language/ technology.  This is generally the wrong approach for a computer-linguistic gadabout to take.  John Lockwood putting up a web site about a programming language is like Madonna putting up a web site about her one true love.  The next words out of her mouth are bound to be:  &quot;Woops, no I mean my other one true love.&quot;</p>
+
+<p>So with those other strange bedfellows out of the way, we now turn our attention to a comparison of ASP.NET and Ruby on Rails from my point of view as a fellow without a firm entrenchment in either technology.  This isn&#39;t meant to start or feed a language war because, as I say, I&#39;m not passionately committed to either technology.  I do think that both environments offer a lot that&#39;s good, and both have more than enough things that bug the heck out of me.  So this article quite simply is my list of what I like and don&#39;t like about each environment.</p>
+
+<p><strong>What I Like About Ruby on Rails</strong></p>
+
+<ul>
+<li>*<em>Prototype
+*</em>Rails has excellent baked-in support for two great related JavaScript libraries -- Prototype and Script.acul.us.  It&#39;s about this hard to get started:
+&lt;%= javascript<em>include</em>tag :defaults %&gt;.  Well, OK, it&#39;s a little harder than that, but I found that with <a href="http://www.prototypejs.org/api">Prototype&#39;s beautiful documentation</a>, I was able to go from zero to productive in a few hours.  What&#39;s more, I actually found myself liking JavaScript for the first time since -- oh, who am I kidding, I always hated it.  Prototype could change my mind, though.  I wrote something that started to look pretty good in Firefox, then fired up Internet Explorer fully expecting half the page to re-materialize in a particle accelerator in Switzerland.  But lo and behold, it worked the way it did in Firefox. You&#39;re kidding, right?  JavaScript did that?</li>
+</ul>
+
+<p>But then I saw her face.  Now I&#39;m a believer.  </p>
+
+<ul>
+<li><p><strong>link<em>to</em>remote</strong>
+How easy can we make AJAX?  Does a single function call work for you?  It does for me.  Here&#39;s a tip though from someone who knocked his head briefly against this wall:  unless you&#39;re updating multiple DOM elements (and maybe even if you are), then forget about RJS.  Something in this format:  &quot;your_response.html.erb&quot; is your friend.  </p></li>
+<li><p>*<em>Lots of Other Stuff
+*</em>If you&#39;re a Rails programmer, lest I lose the goodwill from the next section, let me say this first: overall, I think Ruby on Rails is the bee&#39;s knees, or perhaps the cat&#39;s pajamas.  Well, either way, it&#39;s something cool that belongs to some critter. I&#39;m not sure I can frame why exactly, but it&#39;s a lot of fun to program in.  There&#39;s something about the way it all fits together that&#39;s very satisfying.</p></li>
+</ul>
+
+<p><strong>What I Don&#39;t Like About Ruby on Rails</strong></p>
+
+<ul>
+<li><p><strong>Smugness and Sleight of Hand</strong>
+Rails is an utterly cool framework, but that doesn&#39;t mean that there aren&#39;t parts of it that aren&#39;t either smoke and mirrors or mere social gushiness.  For example, if you have a phrase that goes Don&#39;t Repeat Yourself with the clever acronym of &quot;DRY&quot;, then you probably shouldn&#39;t say it over and over and over and over and over again.  Honestly.  Shut up already.  Even Assembly Language had macros.  We get it.  Give it a REST already.  Oh, and speaking of REST, remember your other catch phrase, You Ain&#39;t Going to Need It?  Well, guess what:  you still have sessions, and so regarding REST, you ain&#39;t.  </p></li>
+<li><p>*<em>What, No Windows?
+*</em>Apparently Rails runs a lot better on Linux than it does on Windows.  I say apparently because I haven&#39;t bitten the bullet yet to set up an Ubuntu partition, but it seems to be the gist of the literature.  I have no reason to doubt it given that as of a couple of weeks ago my no-model unit test framework (which at the time barely beat &quot;Hello World&quot; in terms of complexity) took 13 seconds to load and run.  </p></li>
+<li><p>*<em>You Call This Documentation?
+*</em>Unlike the Prototype documentation (which as I said, is beautiful), the documentation for Rails falls into two categories, as near as I can tell:</p>
+
+<ul>
+<li>Web pages that link to things that aren&#39;t there any more, as though the framework were trying to bury the competition beneath the sheer weight of 404 errors.</li>
+<li>Function documentation that looks something like this:my<em>rails</em>function(object, gizmo, options = {}, html<em>options = {} )
+_object:  some well defined object that the documentation describes in depth
+gizmo:  some gizmo that&#39;s also pretty well defined but fairly self evident
+blah blah blah lorem ipsit dolor yada yada.
+_
+Where&#39;s the discussion of &quot;options&quot; and &quot;html</em>options&quot;, you ask?  If you&#39;re lucky, they&#39;re somewhere else on the same page, twenty lines down or under the discussion of some related function.  More likely they&#39;re in the source.  Apparently if you&#39;re a Rails programmer, a side benefit of saying Don&#39;t Repeat Yourself over and over is having function parameters handled only in the source and not in the documentation.</li>
+</ul></li>
+</ul>
+
+<p>So much for the pros and cons of Rails.  Let&#39;s see if we can come up with some similar virtues and trash talk for Microsoft&#39;s ASP.NET.</p>
+
+<p><strong>What I Like About ASP.NET</strong></p>
+
+<ul>
+<li><p>*<em>Visual Studio
+*</em>Visual Studio is a competent and mature Integrated Environment, with an outstanding debugger and great features such as code completion.  Now, before you say, &quot;But John, Rails has that, too!&quot;, I should point out that, yes, I tried out RubyMine (in Beta) and Aptana Studio, and so far I&#39;m a bit underwhelmed.  Yes, Chris Williams was totally nice when I entered a bug wherein the code completion didn&#39;t work, and he put a fix in for 1.3.0 within 24 hours of me entering it, and yes I appreciate that.  But 1.3 isn&#39;t out yet, and in Visual Studio, it just works.  Admittedly, Microsoft&#39;s tool has been around a lot longer, and yes, they have huge resources, the comparison is unfair, etc.  But if you&#39;re going to lure me out of Visual SlickEdit and the command line, you&#39;d better have great code completion and an awesome debugger, because otherwise I&#39;m comfortable already.  </p></li>
+<li><p>*<em>MSDN
+*</em>Remember those missing options and html_options from the Rails doc?  Well, if I&#39;m sitting at my keyboard, say &quot;Go&quot;, give me twenty seconds, and I&#39;ll rattle off all the parameters for CreateWindowEx and what they mean, including acceptable values for multi-valued parameters.  The MSDN documentation for ASP.NET is as good as the Rails documentation is poor.  </p></li>
+<li><p>*<em>Jobs
+*</em>The last two times I looked, the number of jobs for ASP.NET developers was beating the number of jobs for Ruby on Rails developers by a factor of about 11 to 1.  If you look at the pyramid for Abraham Maslow&#39;s <a href="http://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs">hierarchy of needs</a>, you&#39;ll see that employment (in &quot;Safety&quot;), comes well before Esteem and Self-actualization.  The Beatles presciently wrote about the allure of Rails versus the hegemony of Microsoft thus:</p></li>
+</ul>
+
+<p><em>Your lovin&#39; gives me a thrill
+But your lovin&#39; don&#39;t pay my bills.</em></p>
+
+<ul>
+<li>__*<em>NUnit
+*</em>What can I say.  I&#39;m a tramp for cheap visual thrills.  I like to see the bar turn green.</li>
+</ul>
+
+<p><strong>What I Don&#39;t Like About ASP.NET</strong></p>
+
+<ul>
+<li><p>*<em>High Cost of Ownership
+*</em>I mentioned jobs before, but in some respects this is a moot point or at least not the only point, since what I have discovered about myself long ago is that the guy I really like working and writing code for is me.  SQLServer and .NET hosting simply don&#39;t have the same sorts of economies as the LAMP world, and I&#39;m sure Rails is on a path to being that cost effective even if it&#39;s not quite there yet.  Thus, to me much of the debate breaks down into a personal decision between entrepreneur versus employee.  </p></li>
+<li><p>*<em>Vendor Lock
+*</em>As slow as Rails is on Windows, as far as I know the only implementation to date of LINQ to SQL (which one might nickname &quot;ActiveRecord for Microsfoties&quot;) is against SQL Server.  Yes, it&#39;s cool that LINQ works with native objects, XML, and SQL, but to date I haven&#39;t yet needed to do a right outer join of my Employees table and my HttpRequest object, and I don&#39;t anticipate that changing.  </p></li>
+<li><p>*<em>Their Model View Controller Support is a Disaster
+*</em>This may have changed since I last looked at it, but on my last ASP.NET contract they had an MVC implementation that completely broke browser navigation and was a nightmare to code to.  I&#39;m not an MVC snob, so I&#39;m quite happy with some pages and code behind talking to a well defined model interface if that&#39;s how you want to do things.  However I do think that if you&#39;re going to use the MVC pattern (or any other design pattern), it should work better than the absence of it does.  Rails forces MVC on you, but it works just fine.  MVC is an optional nightmare in ASP.NET, unless your manager is of that all too common variety that prefers buzzwords over common sense -- in which case it becomes a required nightmare.</p></li>
+</ul>
+
+<p>Thank you for hanging in there for this completely idiosyncratic view of some of the pros and cons of Ruby on Rails versus ASP.NET.  I&#39;ve barely scratched the surface, I&#39;m sure, but when it comes to language wars, that&#39;s probably all one should do.  In my opinion, programming always represents a certain dynamic tension between &quot;How cool is that?&quot; and &quot;Who&#39;s cutting me a check this week?&quot;  Go out and code something, folks.  What if they gave a language war and nobody came?</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>
