@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>A Simple JUnit Tutorial using Maven and IntelliJ Idea</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>A Simple JUnit Tutorial using Maven and IntelliJ Idea</h1>
+<!-- <p class="meta">11 May 2013</p> -->
+
+<div class="post">
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#WhatIsJUnit">What is JUnit?</a></li>
+<li><a href="#GetTheTools">Get the Tools</a></li>
+<li><a href="#SettingUpTheMavenProject">Set up the Maven Project</a></li>
+<li><a href="#RunInMaven">Run In Maven</a></li>
+<li><a href="#ImportingTheProject">Importing the Maven Project Into Idea</a></li>
+<li><a href="#YourFirstTest">Writing Your First Test</a></li>
+<li><a href="#BuildingAndRunningTests">Building and Running the Tests</a></li>
+<li><a href="#FixingABug">Fixing a Bug</a></li>
+</ul>
+</div>
+
+<h2><a id="WhatIsJUnit">What is JUnit?</a></h2>
+
+<p>JUnit is a powerful and easy to use tool that every Java programmer should know.  It&#39;s a unit test framework  That is to say, it&#39;s a framework for testing out small pieces of code, such as individual classes and methods, as the code is being developed.</p>
+
+<p>For those newcomers to Java who aren&#39;t familiar with JUnit, Here is a really simple, &quot;Hello World&quot; style tutorial about how to use JUnit with Maven and IntelliJ Idea Community Edition -- both free tools.  By the way, this tutorial also works fine with the professional edition.</p>
+
+<h2><a id="GetTheTools">Get The Tools</a></h2>
+
+<p>If you need to set up those tools, here are the  <a href="http://www.jetbrains.com/idea/download/index.html">IntelliJ Idea download page</a> and the <a href="http://maven.apache.org/download.cgi#Installation">Maven Download / Installation page</a>.  Be sure to read the installation page carefully in the case of Maven especially</p>
+
+<h2><a id="SettingUpTheMavenProject">Set up the Maven Project</a></h2>
+
+<p>Though it may seem counter-intuitive, I find that the easiest way to start with Maven and Idea projects is not to start in Idea, but to simply to save a maven project file (&quot;pom.xml&quot;) in a text editor.  Here is that file:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.codesolid&lt;/groupId&gt;
+    &lt;artifactId&gt;HelloJUnit&lt;/artifactId&gt;
+    &lt;version&gt;1.0&lt;/version&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.11&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;</code></pre>
+</div>
+
+<h2><a id="RunInMaven">Run In Maven</a></h2>
+
+<p>Save the file above using a plain text editor in a new directory that will be the root directory of you project, then open a command prompt at that location.  Enter the command  &quot;mvn -q install&quot;</p>
+
+<p>If you&#39;re new to Maven, the cool thing about it is that it will install any dependencies your project needs, so if the universe is behaving as it should you should see output that looks something like:</p>
+
+<pre>
+
+[debug] execute contextualize
+[debug] execute contextualize
+
+--------------------------------------------------
+ T E S T S
+--------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+</pre>
+
+<p>You&#39;ll notice no tests were run -- that&#39;s as expected, since we haven&#39;t written them yet!  Before we do, while still at the command line there&#39;s one more manual step we have to do, and that&#39;s to set up our directory structure in a way that Maven expects it.  On Windows the command is:</p>
+
+<pre>
+md src\main\java
+md src\main\resources
+md src\test\java
+md src\test\resources
+</pre>
+
+<p>On Unix or a Mac the command would be:
+<pre>
+mkdir -p src/main/java
+mkdir -p src/main/resources
+mkdir -p src/test/java
+mkdir -p src/test/resources
+</pre></p>
+
+<h2><a id="ImportingTheProject">Importing the Project Into Idea</a></h2>
+
+<p>At this point you&#39;re ready to open the Idea IDE.  Now we&#39;re going to create an Idea project by importing the maven file we just created.  Click on Import Project, and then navigate to where you have that pom file stored.  It should look something like:</p>
+
+<p><img src="/images/simple_junit/CaptureJUnit.jpg" alt="Idea Import Project"></p>
+
+<p>On the first dialog that comes up, I usually like to check the box that says &quot;Import Maven projects automatically&quot;, as shown below.</p>
+
+<p><img src="/images/simple_junit/MavenImport.jpg" alt="Maven Import"></p>
+
+<p>You&#39;ll then click through a few more dialog boxes, selecting the default for each.  On the one that asks you to select a JVM, make sure it looks like a valid one is selected.</p>
+
+<p>Once you&#39;ve imported the project, locate the project view on the left, and navigate to the src\test\java directory, as shown below:</p>
+
+<p><img src="/images/simple_junit/JUnitProjectView.jpg" alt="JUnit Project View"></p>
+
+<h2><a id="YourFirstTest">Your First Test</a></h2>
+
+<p>Right click on the src\test\java directory, and select New / File.  Give it the name &quot;TestHello.java&quot;, and paste the following code into it:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestHello {
+
+    @Test
+    public void testPasses() {
+        String expected = &quot;Hello, JUnit!&quot;;
+        String hello = &quot;Hello, JUnit!&quot;;
+        assertEquals(hello, expected);
+    }
+
+    @Test
+    public void testFails() {
+        // The worlds most obvious bug:
+        assertTrue(false);
+    }
+
+    @Test
+    public void testArray() {
+        int [] array1 = new int[] {1, 2, 3};
+        int [] array2 = new int[] {1, 2, 3};
+        assertArrayEquals(array1, array2);
+    }
+}</code></pre>
+</div>
+
+<h2><a id="BuildingAndRunningTests">Building and Running the Tests</a></h2>
+
+<p>To build the test, from the Idea menu select &quot;Build / Make Project&quot;.  Next, from the Run menu select Debug.  If all goes well you should see a configuration named &quot;Test Hello&quot;.  Click that.</p>
+
+<h2><a id="FixingABug">Fixing a Bug</a></h2>
+
+<p>You will next see the output of the tests in a window that looks like this:</p>
+
+<p><img src="/images/simple_junit/JUnitDebug.jpg" alt="JUnit Debugging"></p>
+
+<p>You may have noticed when you pasted the code that the testFails method contains &quot;The world&#39;s most obvious bug&quot;.  Because of this, that test will fail. You&#39;ll notice that -- very conveniently -- there will be a link to TestHello.java:16 -- clicking that link will bring you right to the failing line of code, where you should be able to fix it easily. Running tests in the debugger like this is a very easy way to fix the failing code.</p>
+
+<p>Of course, these tests are very simple and do not test any &quot;real&quot; code.  In a real project you&#39;d be moving back between fixing the bugs in the code, which the test code was exercising, while writing new tests to exercise new code.  But if you put your Java classes in src\main\java, you can easily test them from tests you add to src\test\java.  </p>
+
+<p>Enjoy!</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

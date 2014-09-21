@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Graphical Unit Testing for Ruby on Windows</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Graphical Unit Testing for Ruby on Windows</h1>
+<!-- <p class="meta">08 May 2009</p> -->
+
+<div class="post">
+<p>In my last post I discussed some of the pros and cons of Ruby on Rails versus .NET.  One of my complaints at the time was that Ruby lacks a good graphical unit test runner, because I&#39;m a sucker for a green bar.  I also complained that running tests is cumbersome on Windows.</p>
+
+<p>Tonight I decided to see if there was a green bar to be had anywhere in the Ruby world, and the answer is this:  well, yes, if you&#39;re running on Linux, and if you&#39;re running Windows, well, sort of.  The good news is that Ruby does have a graphical test runner -- in my case it lives in ruby\lib\ruby\1.8\test\unit\ui\gtk2.  You can learn how to set up <a href="http://ruby-gnome2.sourceforge.jp/hiki.cgi?Install+Guide+for+Windows">Ruby GTK on Windows here</a>.   Also even though the source clearly wants gtk2, and the web site warns that that&#39;s not fully supported on Windows, it does appear to be working.  I must say the treeview is a lot more primitive than NUnit&#39;s, and you don&#39;t get to see which tests passed -- though of course you get the more important information about which ones failed and where.  And most of all, you get the green bar.  Sweet, beautiful green telling you the world is OK.</p>
+
+<p>And in spite of what the docs say about ActiveSupport::TestCase being derived from Object, it&#39;s not -- it&#39;s derived from ::Test::Unit::TestCase as it should be, at least in the code I&#39;m looking at.  Like I said before:  Ruby documentation makes Jesus cry.  And I&#39;m not even religious.</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

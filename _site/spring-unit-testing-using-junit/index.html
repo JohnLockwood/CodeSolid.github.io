@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Spring Unit Testing Using JUnit</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Spring Unit Testing Using JUnit</h1>
+<!-- <p class="meta">16 May 2013</p> -->
+
+<div class="post">
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#Introduction">The Simplest Case - Exploring the IDE Starter Project</a></li>
+<li><a href="#TestingSpringBeans">Testing Some Basic Spring Beans</a></li>
+<li><a href="#ApplicationContext">Pojo Style: Getting an Application Context in a junit.org Test Runner</a></li>
+</ul>
+</div>
+
+<h2><a id="Introduction" name="Introduction">Exploring the IDE Starter Project</a></h2>
+
+<p>In this tutorial we&#39;ll set up some really basic Spring unit tests -- the sort of thing that is vanilla enough so you can steal it and get started on your own tests. I developed these tests in IntelliJ Idea Ultimate Edition, but when I check them in to the <a href="https://github.com/codesolid/tutorials">Github repository</a> I&#39;ll try to make something available in Maven and Eclipse, so you can try it out that way if you like. (Update -- that&#39;s done, <a href="http://www.particlewave.com/2013/05/17/how-to-run-the-codesolid-tutorials-in-eclipse/">here are the instructions</a>).  I originally developed these tests in a web app I was working on, but to keep things simple let&#39;s start instead by creating a new project in Idea as a &quot;Spring Application&quot; for the project type.</p>
+
+<p><a href="http://www.particlewave.com/wordpress/wp-content/uploads/2013/05/SwingJUnitScreenshot1.jpg"><img src="http://www.particlewave.com/wordpress/wp-content/uploads/2013/05/SwingJUnitScreenshot1.jpg" alt="Spring Starter Project in IntelliJ"></a></p>
+
+<p>You can then make the project from the build menu, and you&#39;ll see if you look around in the test directory (actually src\test\java\foo.bar, to be precise), that Idea has created your first Spring Test for you as SpringAppTests.java:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package foo.bar;
+
+import junit.framework.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(&quot;classpath:spring-config.xml&quot;)
+public class SpringAppTests {
+@Autowired
+private HelloService helloService;
+
+@Test
+public void testSayHello() {
+Assert.assertEquals(&quot;Hello world!&quot;, helloService.sayHello());
+}
+}</code></pre>
+</div>
+
+<p>This unit test is doing a few interesting things. First of all, it&#39;s annotated as &quot;@RunWith(SpringJUnit4ClassRunner.class)&quot;. The Spring JUnit runner, which works in conjunction with the Spring <a href="http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/test/context/TestContextManager.html">TestContextManager</a>, allows you to easily set up Spring ApplicationContexts for your tests, as you can see it does here with the annotation @ContextConfiguration(&quot;classpath:spring-config.xml&quot;). Inside the SpringAppTests class, you can see that you can also use Dependency Injection to wire up your objects for you. Note that the object that&#39;s under the @Autowired annotation is used in the test without an explicit constructor call.</p>
+
+<h2><a id="TestingSpringBeans" name="TestingSpringBeans">Testing Some Basic Spring Beans</a></h2>
+
+<p>Now let&#39;s write our own test to exercise some basic beans to see how the Spring framework injects dependencies as needed. We&#39;ll want to compare that to what would happen outside of the framework so we&#39;ll set up our beans in such a way as to work differently depending on the context -- Spring versus non-Spring. (I was tempted to say Spring versus Fall in that last sentence, but Java suffers from enough puns already).</p>
+
+<p>Let&#39;s say we want to model some classes to capture software User Stories. Of course, every story needs a character, so we&#39;ll want a class to model the person using the software. One very useful form of user story takes the basic form: As a <Type of User> I want to <Something the software can do> in order that <some benefit to the user>.</p>
+
+<p>So let&#39;s write two beans to capture the relationship between a user and the UserStory. First, the UserStory class:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>// UserStory.java
+
+package com.codesolid.tutorials;
+
+/**
+* Class UserStory
+* Description: An example bean that models a user story.
+* Uses the standard story form:
+* &quot;As a ______&quot; (user role), &quot;I want to ______&quot; (actionDesired)
+* &quot;so that _____&quot; (outcomeDesired).
+*/
+public class UserStory {
+private User user;
+private String actionDesired = &quot;&quot;;
+private String outcomeDesired = &quot;&quot;;
+public UserStory() {
+}
+
+public User getUser() {
+return user;
+}
+
+public void setUser(User user) {
+this.user = user;
+}
+
+public String getActionDesired() {
+return actionDesired;
+}
+
+public void setActionDesired(String actionDesired) {
+this.actionDesired = actionDesired;
+}
+
+public String getOutcomeDesired() {
+return outcomeDesired;
+}
+
+public void setOutcomeDesired(String outcomeDesired) {
+this.outcomeDesired = outcomeDesired;
+}
+}</code></pre>
+</div>
+
+<p>And the User class:
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials;</p>
+
+<p>/**
+* Class User
+* Description: An example of a bean dependency. Story is dependent on Actor.
+*/
+public class User {
+private String role;</p>
+
+<p>public User() {
+setRole(&quot;User&quot;);
+}</p>
+
+<p>public String getRole() {
+return role;
+}</p>
+
+<p>public void setRole(String role) {
+this.role = role;
+}
+}</code></pre>
+</div></p>
+
+<p>As you can see, if you were to construct a UserStory object at this point, the user field it contains would be null. The trade-off on class dependencies is basically this: You can ensure that your objects are always fully constructed by putting all the dependencies in the constructor. However, this means that your object becomes tightly coupled with other objects, and harder to test. Having accessors to set the dependencies means you have the flexibility to test only that part of the object that relies on the dependencies, or you can set up all your dependencies up front and test a fully constructed object.</p>
+
+<p>Spring can inject the dependencies either way, but many people prefer using the accessors using what&#39;s known as &quot;Setter Based Dependency Injection&quot;.</p>
+
+<p>Take a look at the file src\main\resources\spring-config.xml. Here we&#39;ve configured the dependency using XML. (Spring also allows this to be done using annotations, but we won&#39;t cover that in this tutorial):</p>
+
+<p>When we add our dependencies, the file looks like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-XML'>xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;</code></pre>
+</div>
+
+<p>We&#39;re now ready to write some tests against this code. I&#39;ll show you the whole listing in one go, since I&#39;ve commented it fairly heavily to show what we&#39;re demonstrating in each case. Bear with the imports -- there&#39;s some code underneath, I promise!</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.tests;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.context.ApplicationContext;
+import com.codesolid.tutorials.UserStory;
+import com.codesolid.tutorials.User;
+import static org.junit.Assert.assertEquals;
+import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(&quot;file:src/main/resources/spring-config.xml&quot;)
+public class ContextTests {
+
+@SuppressWarnings(&quot;SpringJavaAutowiringInspection&quot;)
+@Autowired
+protected ApplicationContext ac;
+
+// Using ApplicationContext
+// The getBean method is the workhorse of the Spring ApplicationContext.
+// The user field in the UserStory object was set up (dependency injected)
+// by Spring:
+@Test
+public void testUserNotNull() {
+UserStory story = (UserStory) ac.getBean(&quot;userStory&quot;);
+assertNotNull(story.getUser());
+}
+
+// Not using ApplicationContext
+// Regular non-Spring instantiation
+// Instantiating our own UserStory, you can see that the user
+// is null.
+@Test
+public void testUserStoryNotFromContext() {
+UserStory story = new UserStory();
+assertNull(story.getUser());
+}
+
+// Not using ApplicationContext
+// Regular non-Spring instantiation
+// The default role if you just call the constructor
+// is &quot;User&quot;.
+@Test
+public void testNonSpringUserDefaultRole()
+{
+User u = new User();
+assertEquals(u.getRole(), &quot;User&quot;);
+}
+
+// Using ApplicationContext
+// Since Spring instantiated this according to the property
+// from spring-config.xml, it overrode the default &quot;user&quot;
+// role with &quot;SuperGenius User&quot;. (This presumably
+// is Wile E. Coyote.)
+@Test
+public void testUserRoleIsAsExpected() {
+UserStory story = (UserStory) ac.getBean(&quot;userStory&quot;);
+assertEquals(story.getUser().getRole(), &quot;SuperGenius User&quot;);
+}
+}</code></pre>
+</div>
+
+<p>As you can see, Spring allows for a great deal of flexibility in configuring the objects in the system. In a simple context like this one it may be hard to see the advantage of this, but in the context of a large application, having a configuration system like this in place means that the system is very flexible.</p>
+
+<h2><a id="ApplicationContext" name="ApplicationContext">Getting an Application Context in a junit.org Test Runner</a></h2>
+
+<p>You&#39;ll probably use the SpringJUnit4ClassRunner for most of your Spring testing, since it is derived from the &quot;vanilla&quot;, junit.orgJ Unit4ClassRunner. However it&#39;s also possible to get an ApplicationContext outside of the context of the Spring test runner, and doing this in JUnit demonstrates how to achieve this programatically. The following sample shows some of the same tests we ran earlier set up in this way:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.tests;
+import com.codesolid.tutorials.UserStory;
+import org.junit.Test;
+import org.junit.Before;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+import static org.junit.Assert.*;
+
+/* Here we run one of the same tests we run in ContextTests, but we separate it out here to demonstrate
+* we can do it with a POJU (Plain Old JUnit :) test runner.
+*/
+public class JUnitContextTests {
+
+ApplicationContext ac;
+
+@Before
+public void setUp()
+{
+ac = new FileSystemXmlApplicationContext(&quot;file:src/main/resources/spring-config.xml&quot;);
+}
+
+@Test
+public void testUserCorrectFromPlainOldJUnitTest() {
+
+UserStory story = (UserStory) ac.getBean(&quot;userStory&quot;);
+// Spring is working fine using this app context
+assertEquals(story.getUser().getRole(), &quot;SuperGenius User&quot;);
+
+// In this case our User is not wired up
+UserStory story2 = new UserStory();
+assertNull(story2.getUser());
+}
+
+@Test
+public void testPrewiredUserCorrect() {
+UserStory story = (UserStory) ac.getBean(&quot;userStory&quot;);
+assertEquals(story.getUser().getRole(), &quot;SuperGenius User&quot;);
+}
+}</code></pre>
+</div>
+
+<p>I hope you enjoyed this tutorial on Spring Unit Testing -- feel free to leave a comment if you&#39;re finding it useful.</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>
