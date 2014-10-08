@@ -96,7 +96,7 @@ Once you&#39;re connected in the mysql client, use the source command to run the
 <div>
   <pre data-line=''><code class='language-sql'>CREATE DATABASE tutorials;
 USE tutorials;
-GRANT ALL ON tutorials.* to &#39;myuser&#39;@&#39;localhost&#39; identified by &#39;mypassword&#39;;
+GRANT ALL ON tutorials.* to 'myuser'@'localhost' identified by 'mypassword';
 commit;
 flush privileges;</code></pre>
 </div>
@@ -110,7 +110,7 @@ flush privileges;</code></pre>
 <p>You might also experiment with setting the show<em>sql and use</em>sql_comments to true, especially if you run into problems.  For now they are turned off to keep the test run output a little bit cleaner.</p>
 
 <div>
-  <pre data-line=''><code class='language-http'>&lt;?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?&gt;
+  <pre data-line=''><code class='language-http'>&lt;?xml version='1.0' encoding='utf-8'?&gt;
 &lt;!DOCTYPE hibernate-configuration PUBLIC
         &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
         &quot;http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd&quot;&gt;
@@ -140,7 +140,7 @@ flush privileges;</code></pre>
         --&gt;
         &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQL5InnoDBDialect&lt;/property&gt;
 
-        &lt;!-- Enable Hibernate&#39;s automatic session context management --&gt;
+        &lt;!-- Enable Hibernate's automatic session context management --&gt;
         &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
 
         &lt;!-- Disable the second-level cache  --&gt;
@@ -153,7 +153,7 @@ flush privileges;</code></pre>
         &lt;!-- Drop and re-create the database schema on startup --&gt;
         &lt;property name=&quot;hbm2ddl.auto&quot;&gt;update&lt;/property&gt;
 
-        &lt;!-- This is the entity class that we&#39;ll be testing. --&gt;
+        &lt;!-- This is the entity class that we'll be testing. --&gt;
         &lt;mapping class=&quot;com.codesolid.tutorials.model.entities.Actor&quot;/&gt;
 
     &lt;/session-factory&gt;
@@ -315,7 +315,7 @@ public class Actor {
 <p>The final step to making the Entity work is one that&#39;s easy to forget, but as we saw when we discussed the hibernate.cfg.xml file, make sure you include a mapping to the entity class, as we show again below:</p>
 
 <div>
-  <pre data-line=''><code class='language-http'>&lt;!-- This is the entity class that we&#39;ll be testing. --&gt;
+  <pre data-line=''><code class='language-http'>&lt;!-- This is the entity class that we'll be testing. --&gt;
 &lt;mapping class=&quot;com.codesolid.tutorials.model.entities.Actor&quot;/&gt;</code></pre>
 </div>
 
@@ -524,7 +524,7 @@ public class TestStorage {
         storage.delete(actor);
         storage.commit();
 
-        // Now we can&#39;t read it back, as expected
+        // Now we can't read it back, as expected
         storage.beginTransaction();
         Actor actor2 = storage.getById(id);
         assertNull(actor2);

@@ -393,8 +393,8 @@ public class TaskRestfulService {
                 .build();
     }
 
-    /* A more verbose version of the same POST handler.  Don&#39;t write your code
-       this way, it&#39;s provided for illustration purposes so you can see what&#39;s going
+    /* A more verbose version of the same POST handler.  Don't write your code
+       this way, it's provided for illustration purposes so you can see what's going
        on behind the scenes.
 
     @POST
@@ -489,7 +489,7 @@ public Task getTask(@PathParam(&quot;id&quot;) Integer id) {
 <div>
   <pre data-line=''><code class='language-java'>/*
    Handle a POST request, i.e., a request to create a new Task object.
-   We&#39;re going to Unpack our JSON String manually for illustration purposes.
+   We're going to Unpack our JSON String manually for illustration purposes.
    A more concise way to do this will be shown in the PUT handler, below
  */
 @POST
@@ -639,7 +639,7 @@ public class TaskServiceTest {
     @Test
     public void canPUTanUpdatedTask() throws Exception {
 
-        String original = &quot;Update me -- don&#39;t leave me in this awful, just-created state!&quot;;
+        String original = &quot;Update me -- don't leave me in this awful, just-created state!&quot;;
         String updated = &quot;Freshly updated and open for business.  Thank you so much!&quot;;
 
         // Create the original object
@@ -700,7 +700,7 @@ public class TaskServiceTest {
         WebTarget target = client.target(&quot;http://localhost:8080/webapi&quot;).path(&quot;tasks&quot;);
         Task task = new Task();
         task.setAssigned(&quot;example@test.com&quot;);
-        task.setDescription(&quot;I can&#39;t go on like this.  Please delete me.&quot;);
+        task.setDescription(&quot;I can't go on like this.  Please delete me.&quot;);
         Response rs = target.request().post(Entity.entity(task, MediaType.APPLICATION_JSON));
         Task taskResponse = rs.readEntity(Task.class);
         assertNotNull(taskResponse);
@@ -710,7 +710,7 @@ public class TaskServiceTest {
         // Set up a URL based on our returned object
         target = client.target(&quot;http://localhost:8080/webapi&quot;).path(&quot;tasks/&quot; + taskResponse.getId());
 
-        // Test that it&#39;s saved
+        // Test that it's saved
         taskResponse = null;
         rs = target.request().get();
         taskResponse = rs.readEntity(Task.class);
@@ -719,7 +719,7 @@ public class TaskServiceTest {
         // Goodbye!
         target.request().delete();
 
-        // Test that it&#39;s really gone.
+        // Test that it's really gone.
         taskResponse = null;
         rs = target.request().get();
         taskResponse = rs.readEntity(Task.class);

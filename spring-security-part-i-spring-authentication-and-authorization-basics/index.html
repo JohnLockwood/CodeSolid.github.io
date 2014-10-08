@@ -145,13 +145,13 @@ woopra.track();
 
 <div>
   <pre data-line=''><code class='language-java'>// In UserService.java:
-    @PreAuthorize(&quot;hasRole(&#39;admin&#39;)&quot;)
+    @PreAuthorize(&quot;hasRole('admin')&quot;)
     public Collection getAuthorities(UserDetails userDetails) {
         return userDetails.getAuthorities();
     }
 
     // In ApplicationController.java:
-    @PreAuthorize(&quot;hasRole(&#39;admin&#39;)&quot;)
+    @PreAuthorize(&quot;hasRole('admin')&quot;)
     @RequestMapping(value = &quot;/admin&quot;, method = RequestMethod.GET)
     public String admin(ModelMap map) {
         UserDetails userDetails =
@@ -217,10 +217,10 @@ public class StandardPasswordEncoderDemo {
         String encoded = encoder.encode(password);
         String encodedFromXML = &quot;4efe081594ce25ee4efd9f7067f7f678a347bccf2de201f3adf2a3eb544850b465b4e51cdc3fcdde&quot;;
 
-        // What we generated is not what&#39;s in the XML
+        // What we generated is not what's in the XML
         assertTrue(encodedFromXML != encoded);
 
-        // But both what&#39;s in the XML and what we generated match the password.
+        // But both what's in the XML and what we generated match the password.
         assertTrue(encoder.matches(password, encoded));
         assertTrue(encoder.matches(password, encodedFromXML));
 
@@ -281,7 +281,7 @@ public class StandardPasswordEncoderDemo {
 <p>Finally, we do a check for the admin role and conditionally display a link if the signed in user has that role assigned.</p>
 
 <div>
-  <pre data-line=''><code class='language-http'>&lt;sec:authorize access=&quot;hasRole(&#39;admin&#39;)&quot;&gt;
+  <pre data-line=''><code class='language-http'>&lt;sec:authorize access=&quot;hasRole('admin')&quot;&gt;
     &lt;p&gt;
         &lt;a href=&quot;/admin&quot;&gt;Admin page&lt;/a&gt;
     &lt;/p&gt;

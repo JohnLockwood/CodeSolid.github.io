@@ -71,14 +71,14 @@ allow Jenniffer to write the Goalboost test plan in Markdown and generate the HT
     repositories {
         jcenter()
          maven {
-         url  &#39;http://dl.bintray.com/content/aalmiray/kordamp&#39;
+         url  'http://dl.bintray.com/content/aalmiray/kordamp'
         }        
     }
     dependencies {
-        classpath &#39;org.kordamp:markdown-gradle-plugin:0.1&#39;
+        classpath 'org.kordamp:markdown-gradle-plugin:0.1'
     }
 }
-apply plugin: &#39;markdown&#39;
+apply plugin: 'markdown'
 
 markdownToHtml.sourceDir = file(&quot;doc/md&quot;)
 markdownToHtml.outputDir = file(&quot;doc/html&quot;)</code></pre>
@@ -97,33 +97,33 @@ markdownToHtml.outputDir = file(&quot;doc/html&quot;)</code></pre>
 */
 
 // Support for building and testing
-apply plugin: &#39;java&#39;
+apply plugin: 'java'
 
 // (Optional) configure name and version for jar
 jar {
-    version  &#39;1.0&#39;
-    baseName &#39;SeleniumStarter&#39;
-    extension &#39;.jar&#39;
+    version  '1.0'
+    baseName 'SeleniumStarter'
+    extension '.jar'
 }
 
 // Cf. Maven properties
-ext.junitVersion = &#39;4.11&#39;
-ext.seleniumVersion = &#39;2.41.0&#39;
+ext.junitVersion = '4.11'
+ext.seleniumVersion = '2.41.0'
 
 
 // Cf. Maven &lt;dependencies&gt;
 dependencies {
-    compile group: &#39;junit&#39;, name: &#39;junit&#39;, version: junitVersion
-    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-firefox-driver&#39;, version:seleniumVersion
-    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-chrome-driver&#39;, version:seleniumVersion
-    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-api&#39;, version:seleniumVersion
-    compile group: &#39;org.seleniumhq.selenium&#39;, name: &#39;selenium-java&#39;, version:seleniumVersion
+    compile group: 'junit', name: 'junit', version: junitVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:seleniumVersion
 }
 
 // A custom task to show report on tests that have run
-task viewResults(dependsOn: [&#39;test&#39;] , type:Exec) {
-        workingDir &#39;./build/reports/tests&#39;      
-        commandLine &#39;cmd&#39;, &#39;/c&#39;, &#39;start index.html&#39; 
+task viewResults(dependsOn: ['test'] , type:Exec) {
+        workingDir './build/reports/tests'      
+        commandLine 'cmd', '/c', 'start index.html' 
 }
  
 // Resolve Maven dependencies as Maven does
