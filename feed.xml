@@ -19,5 +19,5 @@ layout: none
 			</item>
 			{% endunless %}
 		{% endfor %}
-	</channel>
+    </channel>
 </rss>
