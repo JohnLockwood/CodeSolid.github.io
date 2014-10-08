@@ -1,8 +1,0 @@
----
-author: John Lockwood
-layout: post
-title: 
-categories:
-- Miscellaneous
----
-
