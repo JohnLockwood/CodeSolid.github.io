@@ -2,13 +2,13 @@
 <html class=no-js>
 <head>
 <meta charset="utf-8">
-<title>My Blog</title>
+<title>{{ page.title }}</title>
 <meta name="viewport" content="width=device-width">
-<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+{% if page.description != null %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.meta_description }}">{% endif %}
 
-<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
-<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
-<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+<link rel=stylesheet href={{site.baseurl}}bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href={{site.baseurl}}bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href={{site.baseurl}}bootstrap/styles/custom.css> 
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -17,9 +17,9 @@
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
 
 <!-- Prism syntax highlighting -->
-<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+<link href="{{site.baseurl}}css/prism.css" rel="stylesheet" type="text/css">
 
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}feed.xml" />
 <!-- Start of Woopra Code -->
 <script>
 (function(){
@@ -55,13 +55,10 @@ woopra.track();
         <h3 class=text-muted>CodeSolid</h3>     
         </div>
         <article>   
-            <!-- This loops through the paginated posts -->
-
-
-            
+            {{ content }}            
         </article>
     </div>
 
-    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    <script src={{site.baseurl}}bootstrap/scripts/cb7562c6.plugins.js></script> <script src={{site.baseurl}}bootstrap/scripts/b6c3df09.main.js></script>  
     </body>
 </html>

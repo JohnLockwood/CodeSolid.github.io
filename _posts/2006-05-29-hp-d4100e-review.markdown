@@ -1,0 +1,47 @@
+---
+author: admin
+comments: false
+date: 2006-05-29 03:59:04+00:00
+layout: post
+slug: hp-d4100e-review
+title: HP d4100e Review
+wordpress_id: 161
+categories:
+- Miscellaneous
+---
+
+My HP d4100e arrived while I was at a "Zoo Overnighter" with my daughter, so naturally I was excited to see the big cardboard box in the living room when I returned, a sign of impending hardware.
+
+The good:
+
+
+
+
+	
+  * The unit I purchased was a dual core AMD Athlon 4200, with 2 Gb of RAM, so finally I have a substantial development box to work with here, no cheesy underpowered laptop.  So far I've thrown the JBoss Application Server and Eclipse's Java IDE at it and it took that and 120 meg of Firefox windows in stride.  Performance has been fine, though it's interesting to note that there are some things about Windows that are just slow anyway.
+
+	
+  * Other than start-up, which sounds like a brief and minor train wreck, operation is very quiet.
+
+	
+  * There's a nice set of included utilities, including PC Doctor and a bunch of junk I haven't tried out yet.
+
+
+
+The bad:
+
+	
+  * The first day it was set up, with the included wireless mouse and keyboard, I had two fairly nasty hangs of the "hard boot -- pull the plug" variety.  I'm not sure if the mouse and keyboard are really the culprits, but I thought I'd replace them with my wired PS2 ergonomic keyboard and my old mouse to see what I could see.  So far since then I've gone through a day with no hangs at all -- knock wood that's solved.	
+
+	
+  * Well, compared to the issue above -- which if unsolved would be a a heart-breaking call support or heaven forbid wrap it up and send it back -- nothing else is really to complain about, but the box is a bit of hefty and large.  In my younger days I'd consider that a benefit, now I no longer need to play inside so I call it a defect.
+
+	
+  * The system came with a pre-installed 60 day trial of a version of Outlook, Outlook 2003.  No, thanks, I'll skip the upsell.  My old version serves just fine.
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+---
+layout:    default
+permalink: /goalboost/
+title:     Goalboost Time Tracking
+---
+
+<h1>Goalboost</h1>
+<p> <a href="http://goalboost.com">Goalboost</a> is the name of our time tracking application.  What started out as a side-project for one of hour devlopers
+has turned into an awesome training tool and case study opportunity for one of our engineers.  We'll be writing more about our progress here as time goes by.  Listed below are the archives of some earlier posts.</p>
+
+{% for post in site.posts %}	
+    {% if post.categories contains 'goalboost' %}
+    <p>
+      <b><a href="{{ post.url }}">{{ post.title }}</a></b>
+      {{ post.excerpt }}  <a href="{{ post.url }}">Read more</a>...
+      </p>
+    {% endif %}
+{% endfor %}  
+</ul>
+</li>
