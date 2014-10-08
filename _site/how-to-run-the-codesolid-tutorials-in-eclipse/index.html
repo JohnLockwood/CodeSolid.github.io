@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>How to Run the CodeSolid Tutorials in Eclipse</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>How to Run the CodeSolid Tutorials in Eclipse</h1>
+<!-- <p class="meta">17 May 2013</p> -->
+
+<div class="post">
+<p>If you&#39;ve taken a look at the <a href="https://github.com/CodeSolid/tutorials">Github Repository</a> for the CodeSolid tutorials, you may have noticed that the project files all use IntelliJ Idea.  I use the Ultimate Edition (currently Version 12) for most of my development, but recently I promised to look into using these project files in Eclipse.  I had a feeling it would work since I have sourced the Maven project -- i.e., the POM files, those named pom.xml in the root of each tutorial -- but being the good test infected developer that I am, I try not to take &quot;that should work&quot; for granted.</p>
+
+<p>Well, the good news in this case is that not only should it work, but it actually does.  I have tested it out on the Spring Tool Suite version 3.2, as well as on a more vanilla version of Eclipse (Indigo -- version 3.7).  Because we&#39;re importing Maven files, Maven is resolving the dependencies -- meaning the Spring Tutorial works even without the Spring Tool Suite.  (How cool is that -- it&#39;s magic!)  To run the projects, start by right clicking on any empty space in the Package Explorer window, as shown below.</p>
+
+<p><img src="/images/tutorials_in_eclipse/EclipseImport.jpg" alt="EclipseImport"></p>
+
+<p>From the menu, select Import.  In the Import dialog box, you want to select Maven, then Existing Maven Project, as shown below:</p>
+
+<p><img src="/images/tutorials_in_eclipse/EclipseImport2.png" alt="EclipseImport2"></p>
+
+<p>If you then navigate to the root of the tutorials directory, you can select which tutorials you want to import.  I&#39;m writing this article when there are only two tutorials available -- you&#39;ll likely see more projects available.  Select the project(s) you want, click finish, and you&#39;re done!  You can now run the tutorials in Eclipse.  Enjoy!</p>
+
+<p><img src="/images/tutorials_in_eclipse/EclipseImport3.png" alt="EclipseImport3"></p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

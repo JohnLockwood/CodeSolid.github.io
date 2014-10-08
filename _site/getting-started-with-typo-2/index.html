@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Getting Started With Typo</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Getting Started With Typo</h1>
+<!-- <p class="meta">12 Jul 2012</p> -->
+
+<div class="post">
+<p>Why do Rails developers like me blog on WordPress, which is written in PHP, instead of Typo, which is written in Ruby on Rails?</p>
+
+<p>The answer is simple, really, maybe even obvious:  WordPress works better.  Wordpress has been in development longer, and it has more of everything, more plugins, more polish, more templates.  As of today, for example, Wordpress has some 20,244 plugins, while Typo has about 25.</p>
+
+<p>It&#39;s a bit of a landslide, really.</p>
+
+<p>The reason I wanted to take a look at Typo is that it fits in with my professional development goals, which are:</p>
+
+<ul>
+<li><p>To work on some passive income Rails projects to improve my skills.</p></li>
+<li><p>To work on some open source projects to further develop my skills and give something back.</p></li>
+<li><p>To share my experiences here.</p></li>
+<li><p>Finally, as the inevitable result, to land some paid Rails work.</p></li>
+</ul>
+
+<p>Sure, being early in development, Typo&#39;s not right (yet) for the casual blogger.  But at the same time, it&#39;s an ideal project on which a Rails developer can hope to make important contributions.</p>
+
+<p>So...</p>
+
+<p><strong>Getting Typo Up and Running</strong></p>
+
+<p>The <a href="http://fdv.github.com/typo/">Typo blog</a> tells us that we&#39;re supposed to start with something more or less like this:</p>
+
+<p>[cc]
+$ gem install typo
+$ typo install some/path
+[/cc]</p>
+
+<p>Trying out the first line, we get a clue as to the sort of development fun we can have with this product:</p>
+
+<p>We&#39;re greeted with the following in nice red letters:</p>
+
+<h2>[cc]</h2>
+
+<p>Since version 6.0, Typo is no longer available as a gem. 
+Please download Typo source at http://typosphere.org/stable.tgz </p>
+
+<p>To install Typo from scratch: https://github.com/fdv/typo/wiki/Installing-Typo
+Upgrading Typo from an older version: https://github.com/fdv/typo/wiki/Upgrading-to-typo-6.0</p>
+
+<hr>
+
+<p>[/cc]</p>
+
+<p>After you get that message, the gem that&#39;s no longer available will be installed.  </p>
+
+<p>That&#39;s OK, let&#39;s not let it deter us from doing the right thing according to the warning.  Getting the stable release specified in the link and unzipping it, let&#39;s visit the <a href="https://github.com/fdv/typo/wiki/Installing-Typo">documentation</a> as suggested.</p>
+
+<p>I&#39;ve just worked with the doc and updated the wiki page fix some inaccuracies and omissions, so hopefully it&#39;s current (as of today at least).  So you should be able to work your way through that to the point where you&#39;re ready to run &quot;rails server&quot; without trouble.  </p>
+
+<p>I was able to get it running, and was able to run edge server pretty easily too.  Just get the latest:</p>
+
+<p>[cc]
+git clone git://github.com/fdv/typo.git
+[/cc]</p>
+
+<p>Run the instructions above and you should be good to go!</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

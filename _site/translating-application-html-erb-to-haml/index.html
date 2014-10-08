@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Translating Application.html.erb to Haml</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Translating Application.html.erb to Haml</h1>
+<!-- <p class="meta">10 Nov 2012</p> -->
+
+<div class="post">
+<p>As part of my <a href="http://johnlockwood.com/2012/11/07/learnapp/">latest pet Rails</a> project, I&#39;m sharpening up my nascent HAML skills a bit.  </p>
+
+<p>If you&#39;re thinking about learning HAML, let me assure you a little:  it&#39;s not that hard.  Compared to programming generally, Rails in particular, HTML, and all the other stuff you learned before it occurred to you to learn HAML, HAML is pretty simple stuff.  The best way to learn it is to simply dive in as the tutorial suggests and translate a file or two from your current project.  That will teach you the basics.  When you&#39;ve done a file or two, you&#39;re ready to take on translating a layout such as application.html.erb to haml.  This is a bit more of a challenge -- but still not a big deal, really.</p>
+
+<p>I posted a couple of code samples that show the before and after to Gist.  The before of course is <a href="https://gist.github.com/4051866">application.html.erb</a>.  The translated file also has a couple of modifications, because as I was working on this I was also internationalizing the site, but that&#39;s OK, it&#39;s good for a challenge.  Here is <a href="https://gist.github.com/4051775">application.html.haml</a>.</p>
+
+<p>Going through the HAML, first we have a doctype declaration:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+!!!
+[/cc]</p>
+
+<p>This will turn into an HTML5 doctype declaration:</p>
+
+<p>[cc lang=&quot;html&quot;]</p>
+
+<p>[/cc]</p>
+
+<p>Along with the <a href="http://haml.info/docs/yardoc/file.REFERENCE.html">HAML documetation</a>, the head section of the layout is a sort of mini-haml lesson all by itself, so let&#39;s take a look at that:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+%head
+  %title= content<em>for?(:title) ? yield(:title) : I18n.t(&quot;site</em>title&quot;)
+  %meta{:name =&gt; &quot;description&quot;, :content=&gt; &quot;#{ content<em>for?(:description) ? yield(:description) : (I18n.t &quot;site</em>description&quot;)}&quot;}
+  %meta{:charset =&gt; &quot;utf-8&quot;}
+  %meta{:author =&gt; &quot;John Lockwood&quot;}{:cheese =&gt; &quot;limburger, :friends =&gt; &quot;moe larry&quot;}&#39;
+  =stylesheet<em>link</em>tag    &quot;application&quot;, :media =&gt; &quot;all&quot;
+  =javascript<em>include</em>tag &quot;application&quot;
+  =csrf<em>meta</em>tags
+  = yield(:head)
+[/cc]</p>
+
+<p>The head tag and the title tag show the basic HAML conventions of using %tagname for tags, and indentation for nesting one tag within another.  After title we have an equals sign, =, to interpret the rest of the line as ruby code.  We&#39;re setting up a flexible content<em>for block so we can set the title on a per-page basis, and we&#39;ve modified the original line to use an internationalized string:  I18n.t(&quot;site</em>title&quot;).  Anyway, the main point here is that we can have whatever ruby expression we want after the = and it will be evaluated and output to the page.</p>
+
+<p>When we get to the meta tags, things start to get a bit interesting.  To get HTML attributes, HAML uses a syntax that looks like Ruby hash attributes.</p>
+
+<p>Thus the HAML:</p>
+
+<p>[cc lang=&quot;ruby]
+%curly_request{:cheese =&gt; &quot;limburger, :friends =&gt; &quot;moe larry&quot;}
+[/cc]</p>
+
+<p>renders in HTML as:</p>
+
+<p>[cc lang=&quot;html]</p>
+
+<p>...</p>
+
+<p>[/cc]</p>
+
+<p>So far so good, but what if you need to build your HTML attributes using Ruby code?  Not to worry, HAML provides for Ruby interpolation using a syntax akin to string interpolation in Ruby.  For example:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+%meta{:name =&gt; &quot;description&quot;, :content=&gt; &quot;#{ content<em>for?(:description) ? yield(:description) : (I18n.t &quot;site</em>description&quot;)}&quot;}
+[/cc]</p>
+
+<p>In the code above, we&#39;re creating a meta description tag, and our content attribute for this tag is the interpolated ruby expression:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+content<em>for?(:description) ? yield(:description) : (I18n.t &quot;site</em>description&quot;)
+[/cc]</p>
+
+<p>So we&#39;ve made our description flexible, and we&#39;ve internationalized our default site description, so your site can be Google optimized for English speakers as &quot;The best site for learning about eating cheese&quot;, while your Guatemalan visitors will see &quot;El mejor sitio para aprender comer queso.&quot;</p>
+
+<p>International haml and cheese!  How cool is that?</p>
+
+<p>I&#39;m tempted to leave it there on a tasty note, but let me just steer you clear of one little HAML gotcha to avoid.  Make sure when specifying attributes to not add any space before your attribute list.  The first whitespace it sees signals the content of the tag, so you need:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+%meta{:name =&gt; &quot;description&quot;}
+[/cc]</p>
+
+<p>not</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+%meta {:name =&gt; &quot;description&quot;}
+[/cc]</p>
+
+<p>The second tag will evaluate to:</p>
+
+<p>[cc lang=&quot;html&quot;]
+{:name =&gt; &quot;description&quot;}
+[/cc]</p>
+
+<p>Definitely not what you want.  What will the Guatemalans think of you then?</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>
