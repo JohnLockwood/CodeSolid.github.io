@@ -9,13 +9,11 @@
 			
 			<item>
 				<title>First Impressions of Cassandra</title>
-				<description>&lt;p&gt;Recently I attended a Sacramento Java User&amp;#39;s Group meeting for the first time in many years, and saw an excellent presentation by Jega Aravandy on some work he&amp;#39;s doing with Casandra, Solr, Spring, and Angular.js. It was exciting work in its own right, and Jega came equipped with plenty of swag that someone from Datastax had asked him to bring along. So between my wife and I we walked away with newfound insights along with three USBs with Cassandra VMs on them, two coffee mugs and a tee shirt.&lt;/p&gt;
+				<description>&lt;p&gt;Recently I attended a Sacramento Java User&amp;#39;s Group meeting for the first time in many years, and saw an excellent presentation by Jega Aravandy on some work he&amp;#39;s doing with Casandra, Solr, Spring, and Angular.js.  It was exciting work in its own right, and Jega came equipped with plenty of swag that Russell from Datastax (who&amp;#39;d given a talk there earlier that I missed), had asked him to bring along.  So between my wife and I we walked away with newfound insights along with three USBs with Cassandra VMs on them, two coffee mugs and a tee shirt.&lt;/p&gt;
 
 &lt;p&gt;Not a bad night&amp;#39;s haul.&lt;/p&gt;
 
-&lt;p&gt;A colleague from work and I were there, so we&amp;#39;ve been chatting about Cassandra since.  We&amp;#39;ve been discussing whether we should spend some of the money that the company is encouraging us to spend on training on Datastax&amp;#39;s &lt;a href=&quot;http://www.datastax.com/what-we-offer/products-services/training/apache-cassandra-core-concepts-skills-and-tools&quot;&gt;Introductory Course in Cassandra&lt;/a&gt;.  &lt;/p&gt;
-
-&lt;p&gt;My ethical dilemma is that I can spend the company&amp;#39;s money on this cool bauble I want to learn, but I really think the chances of getting to use this cool bauble at this company are not good, even though they might well still pay for it.&lt;/p&gt;
+&lt;p&gt;A colleague from work and I were there, so we&amp;#39;ve been chatting about Cassandra since.  We&amp;#39;ve been discussing whether we should spend some of the money the company is encouraging us to spend on training on Datastax&amp;#39;s &lt;a href=&quot;http://www.datastax.com/what-we-offer/products-services/training/apache-cassandra-core-concepts-skills-and-tools&quot;&gt;Introductory Course in Cassandra&lt;/a&gt;.  My ethical dilemma is that I can spend the company&amp;#39;s money on this cool bauble I want to learn, but I really think the chances of getting to use this cool bauble at this company are not good, even though they might well still pay for it.&lt;/p&gt;
 
 &lt;h1&gt;Reaching a Temporary Compromise:  Hello World&lt;/h1&gt;
 
@@ -29,21 +27,19 @@
 
 &lt;h1&gt;How Easy Was It?&lt;/h1&gt;
 
-&lt;p&gt;I have VMWare Player installed, so I tried inserting one of the USBs with the Cassandra VM on it and double clicking on the Cassandra-2.0.6.ova file.  VMWare complained a bit at first, but gave me a message along the lines of &amp;quot;Should I stop complaining and load this?&amp;quot;, so I wiesely chose yes.&lt;/p&gt;
+&lt;p&gt;I have VMWare Player installed here on my personal laptop, so I tried inserting one of the USBs with the Cassandra VM on it and double clicking on the Cassandra-2.0.6.ova file.  VMWare complained a bit, but gave me a message along the lines of &amp;quot;Should I stop complaining and load this?&amp;quot;, so I chose yes.&lt;/p&gt;
 
 &lt;p&gt;Being instructed to stop complaining, VMWare dutifully launched the VM, which was good enough to tell me I should try to get to the CSQL console at http://some_local_address:some_port.  &lt;/p&gt;
 
-&lt;p&gt;I typed that URL into Chrome, and, hey presto, without installing Cassandra I was in a cqlsh terminal writing Hello World in it.  This basically involved a process of Googling things like &amp;quot;Cassandra create table&amp;quot;, finding out I needed a keyspace first, and working my way forward through &amp;quot;Cassandra insert&amp;quot; and &amp;quot;Cassandra select&amp;quot;.  Nothing was hard, and if you wanted to make it even easier you could &lt;a href=&quot;http://planetcassandra.org/install-cassandra-ova-on-vmware/&quot;&gt;read this overview&lt;/a&gt;.  My cassandra-newbie fingers made a mistake or two along the way to full hello-worldly glory, but it was nothing csql and I couldn&amp;#39;t work through together amicably.&lt;/p&gt;
+&lt;p&gt;So I typed that URL into Chrome, and, hey presto, without installing Cassandra I was in a cqlsh terminal writing Hello World in it.  This basically involved a process of Googling things like &amp;quot;Cassandra create table&amp;quot;, finding out I needed a keyspace first, and working my way forward through &amp;quot;Cassandra insert&amp;quot; and &amp;quot;Cassandra select&amp;quot;.  Nothing was hard, and if you wanted to make it even easier you could &lt;a href=&quot;http://planetcassandra.org/install-cassandra-ova-on-vmware/&quot;&gt;read this overview&lt;/a&gt;.  My cassandra-newbie fingers made a mistake or two along the way to full hello-worldly glory, but nothing we csql and I couldn&amp;#39;t work through together amicably.&lt;/p&gt;
 
-&lt;h1&gt;My Datastax-sponsored Friends&lt;/h1&gt;
+&lt;h1&gt;My Datastax-Sponsored Friends&lt;/h1&gt;
 
-&lt;p&gt;On the human side of my experience, it seems to me that there is a pitched battle going on among NoSQL vendors for developer mind-share.  To give a non-Cassandra example, when I took another look at MongoDB recently, the download process required registration first.  I sometimes enter my correct details in those just to see how much hard sell I&amp;#39;ll get before the salesman and I get tired of one another.  &lt;/p&gt;
+&lt;p&gt;There is a pitched battle going on among NoSQL vendors for developer mind-share.  When I took another look at MongoDB recently, the download process required registration first.  I sometimes enter my correct details in those just to see how much hard sell I&amp;#39;ll get before the salesman and I get tired of one another.  &lt;/p&gt;
 
-&lt;p&gt;On the other hand, I come to Cassandra via a clever Datastax swag USB stick. So I didn&amp;#39;t have to fill out a form, and no salesman has called me. I did however get a lot of cool new Datastax-sponsored friends on Twitter when I mentioned that I had mastered the non-challenge of hello world.  &lt;/p&gt;
+&lt;p&gt;Because I come to Cassandra via a clever Datastax swag USB stick, I didn&amp;#39;t have to fill out a form, and no salesman has called me.  I did however get a lot of cool new Datastax-sponsored friends on Twitter when I mentioned that I had mastered the non-challenge of hello world.  &lt;/p&gt;
 
-&lt;p&gt;Full disclosure:  one of them offered me more Datastax swag if I share my experiences in getting started.  So I&amp;#39;m going to point them to this article.  &lt;/p&gt;
-
-&lt;p&gt;If they&amp;#39;re still my friends after this poor ouvre, then they&amp;#39;ll be the best industry-sponsored pals I ever made.&lt;/p&gt;
+&lt;p&gt;Full disclosure:  one of them offered me more Datastax swag if I share my experiences in getting started.  So I&amp;#39;m going to point them to this article.  If they&amp;#39;re still my friends after this poor ouvre, then they&amp;#39;ll be the best industry-sponsored pals I ever made.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 20 Sep 2014 00:00:00 -0700</pubDate>
 				<link>/cassandra-first-impressions</link>
@@ -102,7 +98,7 @@
 &lt;p&gt;Let&amp;#39;s start with some example resource, a task.  A task has an id, a description, and the email address of the person to whom it is assigned.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.restfulwebservice;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.restfulwebservice;
 
 public class Task {
     private String  description;
@@ -135,7 +131,7 @@ public class Task {
 &lt;p&gt;Our API will allow us to perform CRUD (Create, Read, Update, and Delete) operations using our four HTTP verbs, but to keep things simple our entire &amp;quot;model layer&amp;quot; consists of the world&amp;#39;s dumbest in-memory, NoSQL database -- a simple map of keys to values.  We even start out with a test object pre-populated, so we&amp;#39;re not standing on ceremony here.  The important point is to create a class that can act like a database class might act -- returning a list of all the objects, returning a single object by a primary key, etc.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.restfulwebservice;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.restfulwebservice;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -200,7 +196,7 @@ public class TaskModel {
 &lt;p&gt;We&amp;#39;ll be using Maven and IntelliJ idea to build and run our project.  Here&amp;#39;s the Maven pom.xml file:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; 
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; 
     xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
     xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 
     http://maven.apache.org/maven-v4_0_0.xsd&amp;quot;&amp;gt;
@@ -295,7 +291,7 @@ public class TaskModel {
 &lt;p&gt;To make the Jersey magic happen, we set up a base URL on our web server &amp;quot;/webapi/*&amp;quot;.  Any requests underneath that base pattern will be handled by Jersey&amp;#39;s ServletContainer class, which will know how to handle the RESTful API we&amp;#39;ll develop.  To do this, we the web.xml shown below into src/main/webapp/WEB-INF:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
 &amp;lt;web-app xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
          xmlns=&amp;quot;http://java.sun.com/xml/ns/javaee&amp;quot; xmlns:web=&amp;quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&amp;quot;
          xsi:schemaLocation=&amp;quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&amp;quot;
@@ -322,7 +318,7 @@ public class TaskModel {
 we&amp;#39;ll import from the package, javax.ws.rs.  It will scan the package we&amp;#39;ve specified, com.codesolid.tutorials.restfulwebservice, for Jersey provider files.For example, our API is defined in the file TaskRestfulService.java, shown below:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.restfulwebservice;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.restfulwebservice;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -388,8 +384,8 @@ public class TaskRestfulService {
                 .build();
     }
 
-    /* A more verbose version of the same POST handler.  Don&amp;#39;t write your code
-       this way, it&amp;#39;s provided for illustration purposes so you can see what&amp;#39;s going
+    /* A more verbose version of the same POST handler.  Don't write your code
+       this way, it's provided for illustration purposes so you can see what's going
        on behind the scenes.
 
     @POST
@@ -457,7 +453,7 @@ public class TaskRestfulService {
 &lt;p&gt;Don&amp;#39;t you love it when things just go your way?&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;@GET
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;@GET
 @Produces(MediaType.APPLICATION_JSON)
 public List&amp;lt;Task&amp;gt; getTasks() {
     List&amp;lt;Task&amp;gt; tasks = model.getAll();
@@ -468,7 +464,7 @@ public List&amp;lt;Task&amp;gt; getTasks() {
 &lt;p&gt;Returning a single object from our API via a GET request is also straightforward because it&amp;#39;s almost identical to our first method.  All we need to add is a way to specify an id for the object we want.   We use @Path(&amp;quot;{id}&amp;quot;) to specify a path variable parameter, so our GET URL becomes /webapi/tasks/{id}, where {id} is some primary key for the object.  We then use the expression &amp;quot;@PathParam(&amp;quot;id&amp;quot;) Integer id&amp;quot; to have Jersey read the id into an Integer variable we can pass to the model.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;@GET
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;@GET
 @Produces(MediaType.APPLICATION_JSON)
 @Path(&amp;quot;{id}&amp;quot;)
 public Task getTask(@PathParam(&amp;quot;id&amp;quot;) Integer id) {
@@ -482,9 +478,9 @@ public Task getTask(@PathParam(&amp;quot;id&amp;quot;) Integer id) {
 &lt;p&gt;In our handler to POST a new Task object, to give you an idea of what&amp;#39;s going on behind the scenes, we make our code considerably more verbose by handling the JSON conversion to a Java object ourselves.  &lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;/*
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;/*
    Handle a POST request, i.e., a request to create a new Task object.
-   We&amp;#39;re going to Unpack our JSON String manually for illustration purposes.
+   We're going to Unpack our JSON String manually for illustration purposes.
    A more concise way to do this will be shown in the PUT handler, below
  */
 @POST
@@ -518,7 +514,7 @@ private Response saveNewDTO(Task task, UriInfo uriInfo) {
 &lt;p&gt;Our verbose POST method is equivalent to the much more eye-friendly:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;@POST
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;@POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response doPost(Task task, @Context UriInfo uriInfo) {
@@ -532,7 +528,7 @@ We don&amp;#39;t return the new task. According to the &lt;a href=&quot;http://w
 to store a new resource.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;/* PUT to overwrites (updates) a pre-existing task.  Optionally,
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;/* PUT to overwrites (updates) a pre-existing task.  Optionally,
        it can store a new task as well. */
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
@@ -565,7 +561,7 @@ to store a new resource.&lt;/p&gt;
 &lt;p&gt;And of course, we need a way to bid our objects a fond (or not) farewell.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;@DELETE
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;@DELETE
 @Path(&amp;quot;{id}&amp;quot;)
 public Response deleteTask(@PathParam(&amp;quot;id&amp;quot;) Integer id) {
     model.delete(id);
@@ -580,7 +576,7 @@ test to exercise our client.  Each of our methods tests a specific part of the A
 to and from the JSON our REST API consumes.  &lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.restfulwebservice;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.restfulwebservice;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.AfterClass;
@@ -634,7 +630,7 @@ public class TaskServiceTest {
     @Test
     public void canPUTanUpdatedTask() throws Exception {
 
-        String original = &amp;quot;Update me -- don&amp;#39;t leave me in this awful, just-created state!&amp;quot;;
+        String original = &amp;quot;Update me -- don't leave me in this awful, just-created state!&amp;quot;;
         String updated = &amp;quot;Freshly updated and open for business.  Thank you so much!&amp;quot;;
 
         // Create the original object
@@ -695,7 +691,7 @@ public class TaskServiceTest {
         WebTarget target = client.target(&amp;quot;http://localhost:8080/webapi&amp;quot;).path(&amp;quot;tasks&amp;quot;);
         Task task = new Task();
         task.setAssigned(&amp;quot;example@test.com&amp;quot;);
-        task.setDescription(&amp;quot;I can&amp;#39;t go on like this.  Please delete me.&amp;quot;);
+        task.setDescription(&amp;quot;I can't go on like this.  Please delete me.&amp;quot;);
         Response rs = target.request().post(Entity.entity(task, MediaType.APPLICATION_JSON));
         Task taskResponse = rs.readEntity(Task.class);
         assertNotNull(taskResponse);
@@ -705,7 +701,7 @@ public class TaskServiceTest {
         // Set up a URL based on our returned object
         target = client.target(&amp;quot;http://localhost:8080/webapi&amp;quot;).path(&amp;quot;tasks/&amp;quot; + taskResponse.getId());
 
-        // Test that it&amp;#39;s saved
+        // Test that it's saved
         taskResponse = null;
         rs = target.request().get();
         taskResponse = rs.readEntity(Task.class);
@@ -714,7 +710,7 @@ public class TaskServiceTest {
         // Goodbye!
         target.request().delete();
 
-        // Test that it&amp;#39;s really gone.
+        // Test that it's really gone.
         taskResponse = null;
         rs = target.request().get();
         taskResponse = rs.readEntity(Task.class);
@@ -755,18 +751,18 @@ custom scripting of tasks such as generating HTML from Markdown for the test pla
 allow Jenniffer to write the Goalboost test plan in Markdown and generate the HTML as needed so she could preview it without pushing to Github.  Using Andres Almiray&amp;#39;s &lt;a href=&quot;https://github.com/aalmiray/markdown-gradle-plugin&quot;&gt;markdown-gradle-plugin&lt;/a&gt;, this turned out to be pretty easy to do:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-groovy&#39;&gt;buildscript {
+  &lt;pre data-line=''&gt;&lt;code class='language-groovy'&gt;buildscript {
     repositories {
         jcenter()
          maven {
-         url  &amp;#39;http://dl.bintray.com/content/aalmiray/kordamp&amp;#39;
+         url  'http://dl.bintray.com/content/aalmiray/kordamp'
         }        
     }
     dependencies {
-        classpath &amp;#39;org.kordamp:markdown-gradle-plugin:0.1&amp;#39;
+        classpath 'org.kordamp:markdown-gradle-plugin:0.1'
     }
 }
-apply plugin: &amp;#39;markdown&amp;#39;
+apply plugin: 'markdown'
 
 markdownToHtml.sourceDir = file(&amp;quot;doc/md&amp;quot;)
 markdownToHtml.outputDir = file(&amp;quot;doc/html&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -775,7 +771,7 @@ markdownToHtml.outputDir = file(&amp;quot;doc/html&amp;quot;)&lt;/code&gt;&lt;/p
 &lt;p&gt;Now that we had a way to &amp;quot;build&amp;quot; the test plan as it was being written, we also wanted to use the same tool to build and run the Selenium tests that she&amp;#39;d be developing against the plan.  So what was needed was a Gradle build script that build a Java Selenium project the same way my earlier &lt;a href=&quot;https://github.com/CodeSolid/tutorials/blob/master/SeleniumStarter/pom.xml&quot;&gt;Maven build script&lt;/a&gt; did.  Taking as a starting point Juan Cavallotti&amp;#39;s fine article on &lt;a href=&quot;http://jcavallotti.blogspot.com/2013/12/migration-of-maven-based-project-to.html&quot;&gt;converting a Maven project to Gradle&lt;/a&gt;, it turned out this was really to do.  The first version was done in about twenty minutes, but here&amp;#39;s a version with a bit more polish:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-groovy&#39;&gt;/*
+  &lt;pre data-line=''&gt;&lt;code class='language-groovy'&gt;/*
     build.gradle file for building and running Selenium tests
     Example uses:
     gradle clean test       - Rebuild and run tests
@@ -785,33 +781,33 @@ markdownToHtml.outputDir = file(&amp;quot;doc/html&amp;quot;)&lt;/code&gt;&lt;/p
 */
 
 // Support for building and testing
-apply plugin: &amp;#39;java&amp;#39;
+apply plugin: 'java'
 
 // (Optional) configure name and version for jar
 jar {
-    version  &amp;#39;1.0&amp;#39;
-    baseName &amp;#39;SeleniumStarter&amp;#39;
-    extension &amp;#39;.jar&amp;#39;
+    version  '1.0'
+    baseName 'SeleniumStarter'
+    extension '.jar'
 }
 
 // Cf. Maven properties
-ext.junitVersion = &amp;#39;4.11&amp;#39;
-ext.seleniumVersion = &amp;#39;2.41.0&amp;#39;
+ext.junitVersion = '4.11'
+ext.seleniumVersion = '2.41.0'
 
 
 // Cf. Maven &amp;lt;dependencies&amp;gt;
 dependencies {
-    compile group: &amp;#39;junit&amp;#39;, name: &amp;#39;junit&amp;#39;, version: junitVersion
-    compile group: &amp;#39;org.seleniumhq.selenium&amp;#39;, name: &amp;#39;selenium-firefox-driver&amp;#39;, version:seleniumVersion
-    compile group: &amp;#39;org.seleniumhq.selenium&amp;#39;, name: &amp;#39;selenium-chrome-driver&amp;#39;, version:seleniumVersion
-    compile group: &amp;#39;org.seleniumhq.selenium&amp;#39;, name: &amp;#39;selenium-api&amp;#39;, version:seleniumVersion
-    compile group: &amp;#39;org.seleniumhq.selenium&amp;#39;, name: &amp;#39;selenium-java&amp;#39;, version:seleniumVersion
+    compile group: 'junit', name: 'junit', version: junitVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:seleniumVersion
 }
 
 // A custom task to show report on tests that have run
-task viewResults(dependsOn: [&amp;#39;test&amp;#39;] , type:Exec) {
-        workingDir &amp;#39;./build/reports/tests&amp;#39;      
-        commandLine &amp;#39;cmd&amp;#39;, &amp;#39;/c&amp;#39;, &amp;#39;start index.html&amp;#39; 
+task viewResults(dependsOn: ['test'] , type:Exec) {
+        workingDir './build/reports/tests'      
+        commandLine 'cmd', '/c', 'start index.html' 
 }
  
 // Resolve Maven dependencies as Maven does
@@ -882,7 +878,7 @@ dependencies is the simplest way to get the jars I need. If you prefer to skip p
 &lt;/ul&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
 &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;
          xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
          xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
@@ -957,7 +953,7 @@ your package name is set up correctly -- chances are Selenium exported something
 and change it to read:  &lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.seleniumstarter;&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.seleniumstarter;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;At this point you should be able to right-click on the file in IntelliJ Idea and click on &amp;quot;Debug FirstSeleniumTest&amp;quot;.  You should see Firefox launch and your test should pass.  If you run into trouble, try grabbing the project from &lt;a href=&quot;https://github.com/CodeSolid/tutorials/tree/master/SeleniumStarter&quot;&gt;Github&lt;/a&gt;.  Enjoy!&lt;/p&gt;
@@ -979,7 +975,7 @@ and change it to read:  &lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;#SimpleSeleniumTestcase&quot;&gt;A Simple Selenium Test Case&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#LocatingWebElements&quot;&gt;Locating Web Elements&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#VerifyingExpectedResults&quot;&gt;Verifying Expected Results&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#LastSteps&quot;&gt;Final Steps and What&#39;s Ahead&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#LastSteps&quot;&gt;Final Steps and What's Ahead&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/selenium-and-intellij-idea-part-two/&quot;&gt;Read Part Two of the Article&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -1057,7 +1053,7 @@ you should see on the right hand side of it two tabs labeled &amp;quot;Table&amp
 
 &lt;p&gt;At this point, if you navigate to another page like Google and re-run your test in the Selenium IDE (clicking one the green play arrows), you should see the test navigate to the tutorials page, and you should see a green bar on the assertText command you entered.  The test passed!&lt;/p&gt;
 
-&lt;h2&gt;&lt;a id=&quot;LastSteps&quot; name=&quot;LastSteps&quot;&gt;Final Steps and What&#39;s Ahead&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a id=&quot;LastSteps&quot; name=&quot;LastSteps&quot;&gt;Final Steps and What's Ahead&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;In our next tutorial, we&amp;#39;ll get into how to use what we&amp;#39;ve created as the basis for a JUnit test suite using IntelliJ idea.  But before moving on, as a final step let&amp;#39;s save our test.  In the Selenium IDE, select File / Save Test Case to save your file.  Notice anything special about the file format that Selenium used to save the test file?  It&amp;#39;s just regular HTML (well, OK, it&amp;#39;s XHTML), with the name of the test in the first row and the Selenium &amp;quot;script&amp;quot; in the remaining table rows.  The
 base URL is cleverly stuffed away in the head tag.  &lt;/p&gt;
@@ -1065,7 +1061,7 @@ base URL is cleverly stuffed away in the head tag.  &lt;/p&gt;
 &lt;p&gt;A tool for testing HTML that stores files as HTML?  Don&amp;#39;t worry -- the universe is not folding back on itself.  Selenium is just cool!&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-html&#39;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-html'&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
 &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Strict//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&amp;quot;&amp;gt;
 &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot; xml:lang=&amp;quot;en&amp;quot; lang=&amp;quot;en&amp;quot;&amp;gt;
 &amp;lt;head profile=&amp;quot;http://selenium-ide.openqa.org/profiles/test-case&amp;quot;&amp;gt;
@@ -1208,7 +1204,7 @@ more complex than &amp;#39;rake[&amp;quot;Testing the Rake Post Task&amp;quot;]&
 &lt;p&gt;Rather than repeat all the sample bean code from our &lt;a href=&quot;=&quot;&gt;original JUnit article&lt;/a&gt;, let&amp;#39;s focus here on the tests. The original sample code is, after all, not very interesting -- it only gave us something to test.  To migrate the JUnit sample, the first thing I needed to do was change the dependency section in our POM file slightly.  Remove the JUnit dependency:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;junit
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;junit
   junit
   4.8.2
   test&lt;/code&gt;&lt;/pre&gt;
@@ -1217,7 +1213,7 @@ more complex than &amp;#39;rake[&amp;quot;Testing the Rake Post Task&amp;quot;]&
 &lt;p&gt;Now add the dependency for TestNG:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;org.testng
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;org.testng
   testng
   6.1.1
   test&lt;/code&gt;&lt;/pre&gt;
@@ -1232,7 +1228,7 @@ more complex than &amp;#39;rake[&amp;quot;Testing the Rake Post Task&amp;quot;]&
 &lt;p&gt;Next, let&amp;#39;s see what we need to do to use Spring&amp;#39;s basic TestNG testing support class, AbstractTestNGSpringContextTests.  Don&amp;#39;t let the &amp;quot;Abstract&amp;quot; in the name scare you off here, there&amp;#39;s really nothing much to implement. All you need to do is add a ContextConfiguration annotation to your class and it just works.  Here&amp;#39;s the Hello-World-simple example, which only uses the ContextConfiguration annotation to get it to compile and run.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.tests;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.tests;
 
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.ContextConfiguration;
@@ -1253,7 +1249,7 @@ public class SimpleTest extends AbstractTestNGSpringContextTests {
 &lt;p&gt;Modifying our JUnit tests to work with TestNG was just as easy.  The @RunWith annotation was no longer needed, being replaced by the fact that we&amp;#39;re extending AbstractTestNGSpringContextTexts.  So  pretty much the only migration we did involved changing JUnit imports to TestNG ones.  We removed:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;import static org.junit.Assert.*;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;&lt;/code&gt;&lt;/pre&gt;
@@ -1262,7 +1258,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;&lt;/code
 &lt;p&gt;We replaced it with:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1270,7 +1266,7 @@ import static org.testng.Assert.*;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here for example is a little bit longer example, that exercises some of the test beans we&amp;#39;ve wired up in our application context:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.tests;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.tests;
 
 // Generally needed:
 import org.springframework.beans.factory.annotation.Autowired;
@@ -1352,7 +1348,7 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 &lt;li&gt;&lt;a href=&quot;#Introduction&quot;&gt;Introduction -- My Scandalous Confession&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#GeneratingAProject&quot;&gt;Generating a Spring Security Project&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#SecurityConfiguration&quot;&gt;The Security Configuration Files&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#StandardPasswordEncoder&quot;&gt;Spring&#39;s StandardPasswordEncoder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#StandardPasswordEncoder&quot;&gt;Spring's StandardPasswordEncoder&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#SecurityInTheViewLayer&quot;&gt;Using Security in the View Layer -- The Spring Security Tag Libraries&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -1382,7 +1378,7 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 &lt;p&gt;In web.xml, we first set up a security filter name, then use that name to defining a mapping to ensure that all application URLs go through the security filter first:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;filter&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;filter&amp;gt;
         &amp;lt;filter-name&amp;gt;springSecurityFilterChain&amp;lt;/filter-name&amp;gt;
         &amp;lt;filter-class&amp;gt;org.springframework.web.filter.DelegatingFilterProxy&amp;lt;/filter-class&amp;gt;
     &amp;lt;/filter&amp;gt;
@@ -1396,7 +1392,7 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 &lt;p&gt;Next we turn to the main Spring configuration file, spring-config.xml, which is shown in abbreviated form below:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;security:global-method-security jsr250-annotations=&amp;quot;enabled&amp;quot; pre-post-annotations=&amp;quot;enabled&amp;quot; secured-annotations=&amp;quot;enabled&amp;quot; /&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;security:global-method-security jsr250-annotations=&amp;quot;enabled&amp;quot; pre-post-annotations=&amp;quot;enabled&amp;quot; secured-annotations=&amp;quot;enabled&amp;quot; /&amp;gt;
 
 &amp;lt;security:http use-expressions=&amp;quot;true&amp;quot;&amp;gt;
     &amp;lt;security:intercept-url pattern=&amp;quot;/**&amp;quot; access=&amp;quot;permitAll&amp;quot; /&amp;gt;
@@ -1431,14 +1427,14 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 &lt;p&gt;Next, the attributes &amp;#39;pre-post-annotations=&amp;quot;enabled&amp;quot;&amp;#39; and &amp;#39;secured-annotations=&amp;quot;enabled&amp;quot;&amp;#39; will be used by our controllers.  These configuration elements enable a feature that is new as of Spring 3.0.  Spring 3.0 introduced several new, method-level annotations beginning with @Pre and @Post.  We see one of these, @PreAuthorize, used in both the UserService class and the ApplicationController classes:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;// In UserService.java:
-    @PreAuthorize(&amp;quot;hasRole(&amp;#39;admin&amp;#39;)&amp;quot;)
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;// In UserService.java:
+    @PreAuthorize(&amp;quot;hasRole('admin')&amp;quot;)
     public Collection getAuthorities(UserDetails userDetails) {
         return userDetails.getAuthorities();
     }
 
     // In ApplicationController.java:
-    @PreAuthorize(&amp;quot;hasRole(&amp;#39;admin&amp;#39;)&amp;quot;)
+    @PreAuthorize(&amp;quot;hasRole('admin')&amp;quot;)
     @RequestMapping(value = &amp;quot;/admin&amp;quot;, method = RequestMethod.GET)
     public String admin(ModelMap map) {
         UserDetails userDetails =
@@ -1453,7 +1449,7 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 &lt;p&gt;In the next section of the configuration, we see a setting that is probably worth giving some thought to before you move an application into production:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;security:http use-expressions=&amp;quot;true&amp;quot;&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;security:http use-expressions=&amp;quot;true&amp;quot;&amp;gt;
         &amp;lt;security:intercept-url pattern=&amp;quot;/**&amp;quot; access=&amp;quot;permitAll&amp;quot; /&amp;gt;
         ...
    &amp;lt;/security:http&amp;gt;&lt;/code&gt;&lt;/pre&gt;
@@ -1461,12 +1457,12 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 
 &lt;p&gt;The demo app takes the unusual approach of allowing access by default, and allowing it for certain roles.  Generally it&amp;#39;s considered a best practice for secure applications to deny access by default, then turn it on selectively -- that way when you forget a setting somewhere, you err on the side of more security, not less.&lt;/p&gt;
 
-&lt;h2&gt;&lt;a id=&quot;StandardPasswordEncoder&quot; name=&quot;StandardPasswordEncoder&quot;&gt;Spring&#39;s StandardPasswordEncoder&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a id=&quot;StandardPasswordEncoder&quot; name=&quot;StandardPasswordEncoder&quot;&gt;Spring's StandardPasswordEncoder&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;In the next two sections of spring-config.xml, we set the password encoder our application will use to the StandardPasswordEncoder, then we configure two users with passwords generated by that encoder:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;...
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;...
 &amp;lt;security:user-service&amp;gt;
     &amp;lt;!-- Password: &amp;quot;koala&amp;quot; for both --&amp;gt;
     &amp;lt;security:user name=&amp;quot;user&amp;quot;
@@ -1482,7 +1478,7 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 &lt;p&gt;The StandardPasswordEncoder is a small and quite nicely designed class that bundles everything you want a password encoder to do into a very small interface.  It uses an SHA-256 hasing together with an eight byte random salt to generate a password hash that is unique each time.  Although the starter application does not show this, for additional security you can add an extra secret value for your application, in which case the hash will be based on the password, the random salt, and the secret value.  This is configured using basic constructor injection:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;bean id=&amp;quot;encoder&amp;quot; class=&amp;quot;org.springframework.security.crypto.password.StandardPasswordEncoder&amp;quot;&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;bean id=&amp;quot;encoder&amp;quot; class=&amp;quot;org.springframework.security.crypto.password.StandardPasswordEncoder&amp;quot;&amp;gt;
   &amp;lt;constructor-arg value=&amp;quot;x9ajDR$#Qkr91&amp;quot;&amp;gt;
 &amp;lt;/bean&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1492,7 +1488,7 @@ public class ContextTests extends AbstractTestNGSpringContextTests {
 &lt;p&gt;To show you a little more about how the StandardPasswordController works, I&amp;#39;ve added a unit test to the code that IntelliJ Idea provides.  As you can guess from the code, each time the tests are run the output for each encoded string will be different, even though we are encoding the same password over and over again.  Moreover, though we can verify the encoded string against the password, the password is virtually impossible to reverse engineer.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;import static org.junit.Assert.*;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;import static org.junit.Assert.*;
 import org.junit.Test;
 import org.springframework.security.crypto.password.StandardPasswordEncoder;
 
@@ -1504,10 +1500,10 @@ public class StandardPasswordEncoderDemo {
         String encoded = encoder.encode(password);
         String encodedFromXML = &amp;quot;4efe081594ce25ee4efd9f7067f7f678a347bccf2de201f3adf2a3eb544850b465b4e51cdc3fcdde&amp;quot;;
 
-        // What we generated is not what&amp;#39;s in the XML
+        // What we generated is not what's in the XML
         assertTrue(encodedFromXML != encoded);
 
-        // But both what&amp;#39;s in the XML and what we generated match the password.
+        // But both what's in the XML and what we generated match the password.
         assertTrue(encoder.matches(password, encoded));
         assertTrue(encoder.matches(password, encodedFromXML));
 
@@ -1532,7 +1528,7 @@ public class StandardPasswordEncoderDemo {
 
 &lt;p&gt;If we look in ApplicationController.java, we find the following method mapping:
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;@RequestMapping(value = &amp;quot;/&amp;quot;, method = RequestMethod.GET)
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;@RequestMapping(value = &amp;quot;/&amp;quot;, method = RequestMethod.GET)
     public String index(ModelMap map) {
         // Additional code...
         return &amp;quot;index&amp;quot;;
@@ -1542,13 +1538,13 @@ public class StandardPasswordEncoderDemo {
 &lt;p&gt;No surprises here, the root mapping is to the traditional index page.  Examining the source in src/webapp/WEB-INF/pages/index.jsp we find a good demonstration of the use of the Spring Security Tag Library.  First, we import the tag library:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;&amp;lt;%@ taglib prefix=&amp;quot;sec&amp;quot; uri=&amp;quot;http://www.springframework.org/security/tags&amp;quot; %&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;&amp;lt;%@ taglib prefix=&amp;quot;sec&amp;quot; uri=&amp;quot;http://www.springframework.org/security/tags&amp;quot; %&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;We now have access to the &lt;a href=&quot;http://static.springsource.org/spring-security/site/docs/3.0.x/reference/el-access.html#el-access-web&quot;&gt;Spring Security Expressions&lt;/a&gt; that we saw enabled earlier when we discussed the configuration. For example, we first check to see if the User has logged in or not, and if not, we prompt for a sign-in:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;sec:authorize access=&amp;quot;isAnonymous()&amp;quot;&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;sec:authorize access=&amp;quot;isAnonymous()&amp;quot;&amp;gt;
     &amp;lt;p&amp;gt;
         &amp;lt;a href=&amp;quot;/spring_security_login&amp;quot;&amp;gt;Sign In&amp;lt;/a&amp;gt;
     &amp;lt;/p&amp;gt;
@@ -1558,7 +1554,7 @@ public class StandardPasswordEncoderDemo {
 &lt;p&gt;Using the inverse of the isAnonymousCheck, if the user is authenticated we display a welcome message and a sign-out link:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;sec:authorize access=&amp;quot;isAuthenticated()&amp;quot;&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;sec:authorize access=&amp;quot;isAuthenticated()&amp;quot;&amp;gt;
     &amp;lt;p&amp;gt;Hello, ${userDetails.username}! &amp;lt;a href=&amp;quot;/j_spring_security_logout&amp;quot;&amp;gt;Sign Out&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
 &amp;lt;/sec:authorize&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1568,7 +1564,7 @@ public class StandardPasswordEncoderDemo {
 &lt;p&gt;Finally, we do a check for the admin role and conditionally display a link if the signed in user has that role assigned.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;sec:authorize access=&amp;quot;hasRole(&amp;#39;admin&amp;#39;)&amp;quot;&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;sec:authorize access=&amp;quot;hasRole('admin')&amp;quot;&amp;gt;
     &amp;lt;p&amp;gt;
         &amp;lt;a href=&amp;quot;/admin&amp;quot;&amp;gt;Admin page&amp;lt;/a&amp;gt;
     &amp;lt;/p&amp;gt;
@@ -1615,7 +1611,7 @@ public class StandardPasswordEncoderDemo {
 &lt;p&gt;When you&amp;#39;re first getting something working, the easiest path I&amp;#39;ve found is to locate your properties somewhere underneath what in the standard Maven directory structure is the src\main\resources\META-INF directory.  Then, to give just one example for now, you want to point to those resources as shown in the following annotation from a Unit test:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;@RunWith(SpringJUnit4ClassRunner.class)
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(&amp;quot;classpath:META-INF/spring/applicationContext.xml&amp;quot;)
 // class YourTestClass { ...&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1633,7 +1629,7 @@ public class StandardPasswordEncoderDemo {
 &lt;p&gt;What we might end up with is a directory structure that looks something like this:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;root        
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;root        
 root/app
 root/config_test
 root/config_production&lt;/code&gt;&lt;/pre&gt;
@@ -1642,7 +1638,7 @@ root/config_production&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The app directory contains the whole structure of the application&amp;#39;s WAR file project.  In the root directory is a pom file that builds the targets in the other directories, as shown in the following snippet:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;!-- pom.xml in root/ directory that builds the whole project --&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;!-- pom.xml in root/ directory that builds the whole project --&amp;gt;
 &amp;lt;modules&amp;gt;
    &amp;lt;module&amp;gt;app&amp;lt;/module&amp;gt;
    &amp;lt;module&amp;gt;config_test&amp;lt;/module&amp;gt;
@@ -1655,7 +1651,7 @@ root/config_production&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In turn, the WAR file in the main app depend on either the test configuration or the production configuration as desired, as shown in the snippet below.   In the snippet below, we&amp;#39;re building for the test environment, so the production configuration is disabled.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;!-- pom.xml in root/app directory that builds the WAR file --&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;!-- pom.xml in root/app directory that builds the WAR file --&amp;gt;
 &amp;lt;!-- Test configuration --&amp;gt;
 &amp;lt;dependency&amp;gt;
   &amp;lt;groupId&amp;gt;com.codesolid&amp;lt;/groupId&amp;gt;
@@ -1695,7 +1691,7 @@ root/config_production&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Our main &amp;quot;common configuration&amp;quot; area is in the META-INF\spring.  Our global properties file and main application context file go here.   Let&amp;#39;s look at applicationContext.xml, where the detailed comment explains what&amp;#39;s going on:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt;
 &amp;lt;beans xmlns=&amp;quot;http://www.springframework.org/schema/beans&amp;quot; /&amp;gt;  &amp;lt;!-- Other namespaces omitted for brevity --&amp;gt;
     &amp;lt;!--
        The configuration below will use any application-wide properties files
@@ -1738,7 +1734,7 @@ root/config_production&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To have something to test, we&amp;#39;ve set up three simple properties files.  First, we have a global &amp;quot;common.properties&amp;quot; with our humble title: &lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;application.name=The Greatest Sample Ever&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;application.name=The Greatest Sample Ever&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Next come two db.properties files:&lt;/p&gt;
@@ -1746,7 +1742,7 @@ root/config_production&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;test/db.properties:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;# These are the values we&amp;#39;ll use when testing.
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;# These are the values we'll use when testing.
 database.driverClassName=com.mysql.jdbc.Driver
 database.url=jdbc:mysql://localhost/mydb
 database.username=myuser
@@ -1756,7 +1752,7 @@ database.password=mypassword&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;production/db.properties:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;# Different values for the production server
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;# Different values for the production server
 database.driverClassName=com.mysql.jdbc.Driver
 database.url=jdbc:mysql://localhost/proddb
 database.username=prod_user
@@ -1770,7 +1766,7 @@ database.password=DoubleSecretProbation&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We inject these properties in TestBean.java:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;]
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;]
 package com.codesolid.properties;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -1810,7 +1806,7 @@ public class TestBean {
 &lt;p&gt;As a final step, let&amp;#39;s make sure we&amp;#39;re running our test environment and our properties are injected correctly.  Our JUnit test is as follows:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;]
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;]
 package com.codesolid.properties.tests;
 
 import com.codesolid.properties.TestBean;
@@ -1832,7 +1828,7 @@ public class ContextTests {
     @Autowired
     private ApplicationContext ac;
 
-    /* Verify that we&amp;#39;ve correctly injected a property from the Spring directory 
+    /* Verify that we've correctly injected a property from the Spring directory 
     (in this case, the common.properties file).  Property files in this
     directory define properties that can be used in all environments. */
     @Test
@@ -1843,7 +1839,7 @@ public class ContextTests {
         assertEquals(actual, expected);
     }
 
-    /* Verify that we&amp;#39;ve correctly injected a property from the test directory&amp;#39;s 
+    /* Verify that we've correctly injected a property from the test directory's 
     db.properties. Property files in the test directory only apply to the test 
     environment and can be overridden in the production directory (for example). */
     @Test
@@ -1901,9 +1897,9 @@ Once you&amp;#39;re connected in the mysql client, use the source command to run
 &lt;pre&gt;source database\dbsetup.sql&lt;/pre&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-sql&#39;&gt;CREATE DATABASE tutorials;
+  &lt;pre data-line=''&gt;&lt;code class='language-sql'&gt;CREATE DATABASE tutorials;
 USE tutorials;
-GRANT ALL ON tutorials.* to &amp;#39;myuser&amp;#39;@&amp;#39;localhost&amp;#39; identified by &amp;#39;mypassword&amp;#39;;
+GRANT ALL ON tutorials.* to 'myuser'@'localhost' identified by 'mypassword';
 commit;
 flush privileges;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1917,7 +1913,7 @@ flush privileges;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You might also experiment with setting the show&lt;em&gt;sql and use&lt;/em&gt;sql_comments to true, especially if you run into problems.  For now they are turned off to keep the test run output a little bit cleaner.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;?xml version='1.0' encoding='utf-8'?&amp;gt;
 &amp;lt;!DOCTYPE hibernate-configuration PUBLIC
         &amp;quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&amp;quot;
         &amp;quot;http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd&amp;quot;&amp;gt;
@@ -1947,7 +1943,7 @@ flush privileges;&lt;/code&gt;&lt;/pre&gt;
         --&amp;gt;
         &amp;lt;property name=&amp;quot;dialect&amp;quot;&amp;gt;org.hibernate.dialect.MySQL5InnoDBDialect&amp;lt;/property&amp;gt;
 
-        &amp;lt;!-- Enable Hibernate&amp;#39;s automatic session context management --&amp;gt;
+        &amp;lt;!-- Enable Hibernate's automatic session context management --&amp;gt;
         &amp;lt;property name=&amp;quot;current_session_context_class&amp;quot;&amp;gt;thread&amp;lt;/property&amp;gt;
 
         &amp;lt;!-- Disable the second-level cache  --&amp;gt;
@@ -1960,7 +1956,7 @@ flush privileges;&lt;/code&gt;&lt;/pre&gt;
         &amp;lt;!-- Drop and re-create the database schema on startup --&amp;gt;
         &amp;lt;property name=&amp;quot;hbm2ddl.auto&amp;quot;&amp;gt;update&amp;lt;/property&amp;gt;
 
-        &amp;lt;!-- This is the entity class that we&amp;#39;ll be testing. --&amp;gt;
+        &amp;lt;!-- This is the entity class that we'll be testing. --&amp;gt;
         &amp;lt;mapping class=&amp;quot;com.codesolid.tutorials.model.entities.Actor&amp;quot;/&amp;gt;
 
     &amp;lt;/session-factory&amp;gt;
@@ -1976,7 +1972,7 @@ flush privileges;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;a href=&quot;http://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/tutorial.html&quot;&gt;Hibernate tutorial&lt;/a&gt; that comes with the Hibernate docs gives us a part of the solution, the HibernateUtil class, which exists for the sole purpose of ensuring a one time initialization of a SessionFactory, which it then caches as a static object.  I&amp;#39;ve used this class pretty much verbatim in the current tutorial, changing only the package name.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;// This file is adapted with only minor changes from the original in the hibernate
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;// This file is adapted with only minor changes from the original in the hibernate
 // tutorial, http://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/tutorial.html.
 package com.codesolid.tutorials.model.dal;
 
@@ -2011,7 +2007,7 @@ public class HibernateUtil {
 &lt;p&gt;The following listing shows the RuleSuite test suite, which builds with the rest of the tests in the src\test\java\code\codesolid\tests directory:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tests;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tests;
 
 import com.codesolid.tutorials.model.dal.HibernateUtil;
 import org.apache.log4j.Level;
@@ -2064,7 +2060,7 @@ public class RuleSuite{
 &lt;p&gt;For the Id primary key field, we use the following Hibernate annotations to mark the field as the primary key and to auto-increment the field for each new record:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;@Id
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;@Id
 @GeneratedValue(generator=&amp;quot;increment&amp;quot;)
 @GenericGenerator(name=&amp;quot;increment&amp;quot;, strategy = &amp;quot;increment&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -2074,7 +2070,7 @@ public class RuleSuite{
 &lt;p&gt;@Column(name=&amp;quot;user_role&amp;quot;)&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;/**
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;/**
  * Class Actor
  * Description:  A user of the system, the subject of a user story.  We use
  *               actor instead of user as table name to avoid any conflict
@@ -2122,7 +2118,7 @@ public class Actor {
 &lt;p&gt;The final step to making the Entity work is one that&amp;#39;s easy to forget, but as we saw when we discussed the hibernate.cfg.xml file, make sure you include a mapping to the entity class, as we show again below:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;!-- This is the entity class that we&amp;#39;ll be testing. --&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;!-- This is the entity class that we'll be testing. --&amp;gt;
 &amp;lt;mapping class=&amp;quot;com.codesolid.tutorials.model.entities.Actor&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -2131,7 +2127,7 @@ public class Actor {
 &lt;p&gt;While working with Hibernate enitities,  it struck me that many of the basic operations one might do with an entity could be captured well in a generic class, which is what we&amp;#39;ll be using to test here. As you can see below, each of the methods was pretty much a wrapper around a single Hibernate session call -- with the exception of BeginTransaction, which combines getting the session from the session factory and starting the transaction.  &lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.model.dal;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.model.dal;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -2185,7 +2181,7 @@ public class Storage  {
 &lt;p&gt;Taken together, this class and the unit tests I wrote for it were a good way to discover a couple of interesting Hibernate gotchas.  The first Hibernate mine that I steped on was that objects are no longer usable outside the context of a transaction.  Before my testing uncovered this, my original implementation of getById was called loadById, and the implementation and test looked something like this:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;// Implementation  
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;// Implementation  
     public T getById(Long id) {
         storage.beginTransaction();
         T obj = (T) session.load(entity.getClass(), id);
@@ -2208,7 +2204,7 @@ public class Storage  {
 &lt;p&gt;At that point, the code and test looked like:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;// Implmentation
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;// Implmentation
 public T getById(Long id) {
     return (T) session.load(entity.getClass(), id);
 }
@@ -2227,7 +2223,7 @@ storage.commit();&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;With that, the final form of the JUnit test is below.  Even though I&amp;#39;m showing it last, in reality the process was more test-first, going back and forth between the tests, the configuration, and the classes under development.&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tests;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tests;
 
 import com.codesolid.tutorials.model.entities.*;
 import com.codesolid.tutorials.model.dal.Storage;
@@ -2331,7 +2327,7 @@ public class TestStorage {
         storage.delete(actor);
         storage.commit();
 
-        // Now we can&amp;#39;t read it back, as expected
+        // Now we can't read it back, as expected
         storage.beginTransaction();
         Actor actor2 = storage.getById(id);
         assertNull(actor2);
@@ -2390,7 +2386,7 @@ public class TestStorage {
 &lt;p&gt;You can then make the project from the build menu, and you&amp;#39;ll see if you look around in the test directory (actually src\test\java\foo.bar, to be precise), that Idea has created your first Spring Test for you as SpringAppTests.java:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package foo.bar;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package foo.bar;
 
 import junit.framework.Assert;
 import org.junit.Test;
@@ -2423,7 +2419,7 @@ Assert.assertEquals(&amp;quot;Hello world!&amp;quot;, helloService.sayHello());
 &lt;p&gt;So let&amp;#39;s write two beans to capture the relationship between a user and the UserStory. First, the UserStory class:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;// UserStory.java
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;// UserStory.java
 
 package com.codesolid.tutorials;
 
@@ -2469,7 +2465,7 @@ this.outcomeDesired = outcomeDesired;
 
 &lt;p&gt;And the User class:
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials;&lt;/p&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials;&lt;/p&gt;
 
 &lt;p&gt;/**
 * Class User
@@ -2501,7 +2497,7 @@ this.role = role;
 &lt;p&gt;When we add our dependencies, the file looks like this:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-XML&#39;&gt;xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+  &lt;pre data-line=''&gt;&lt;code class='language-XML'&gt;xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
 xmlns:context=&amp;quot;http://www.springframework.org/schema/context&amp;quot;
 xsi:schemaLocation=&amp;quot;http://www.springframework.org/schema/beans 
 http://www.springframework.org/schema/beans/spring-beans.xsd 
@@ -2512,7 +2508,7 @@ http://www.springframework.org/schema/context/spring-context.xsd&amp;quot;&amp;g
 &lt;p&gt;We&amp;#39;re now ready to write some tests against this code. I&amp;#39;ll show you the whole listing in one go, since I&amp;#39;ve commented it fairly heavily to show what we&amp;#39;re demonstrating in each case. Bear with the imports -- there&amp;#39;s some code underneath, I promise!&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.tests;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.tests;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
@@ -2586,7 +2582,7 @@ assertEquals(story.getUser().getRole(), &amp;quot;SuperGenius User&amp;quot;);
 &lt;p&gt;You&amp;#39;ll probably use the SpringJUnit4ClassRunner for most of your Spring testing, since it is derived from the &amp;quot;vanilla&amp;quot;, junit.orgJ Unit4ClassRunner. However it&amp;#39;s also possible to get an ApplicationContext outside of the context of the Spring test runner, and doing this in JUnit demonstrates how to achieve this programatically. The following sample shows some of the same tests we ran earlier set up in this way:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;package com.codesolid.tutorials.tests;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;package com.codesolid.tutorials.tests;
 import com.codesolid.tutorials.UserStory;
 import org.junit.Test;
 import org.junit.Before;
@@ -2701,7 +2697,7 @@ assertEquals(story.getUser().getRole(), &amp;quot;SuperGenius User&amp;quot;);
 &lt;p&gt;Though it may seem counter-intuitive, I find that the easiest way to start with Maven and Idea projects is not to start in Idea, but to simply to save a maven project file (&amp;quot;pom.xml&amp;quot;) in a text editor.  Here is that file:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-http&#39;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-http'&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
 &amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;
          xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
          xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
@@ -2781,7 +2777,7 @@ mkdir -p src/test/resources
 &lt;p&gt;Right click on the src\test\java directory, and select New / File.  Give it the name &amp;quot;TestHello.java&amp;quot;, and paste the following code into it:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-java&#39;&gt;import org.junit.Test;
+  &lt;pre data-line=''&gt;&lt;code class='language-java'&gt;import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestHello {
@@ -2904,7 +2900,7 @@ public class TestHello {
 		
 			
 			<item>
-				<title>Don&#39;t Let the Development Department Run Your One Man Company</title>
+				<title>Don't Let the Development Department Run Your One Man Company</title>
 				<description>&lt;p&gt;Over the last few days I revisited the code for my project, &lt;a href=&quot;http://www.relaysafe.com&quot;&gt;RelaySafe Secure Email&lt;/a&gt;, after taking some detours into:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -3038,7 +3034,7 @@ content&lt;em&gt;for?(:description) ? yield(:description) : (I18n.t &amp;quot;si
 		
 			
 			<item>
-				<title>Thirty Point Five Reasons Why I Don&#39;t have a Rails Job.</title>
+				<title>Thirty Point Five Reasons Why I Don't have a Rails Job.</title>
 				<description>&lt;p&gt;There are at least twenty reasons I don&amp;#39;t have a Rails job. Actually there are 30.5 -- hindsight really is quite precise, isn&amp;#39;t it? &lt;/p&gt;
 
 &lt;p&gt;Right now I&amp;#39;m on my laptop keyboard, and I generally prefer something full sized without this silly track pad in the middle that ends up making my cursor jump around when I&amp;#39;m trying to publish something stupid.&lt;/p&gt;
@@ -3305,7 +3301,7 @@ git clone git://github.com/fdv/typo.git
 &lt;p&gt;ServerName myservername.com
   PassengerLogLevel 3                             &amp;lt;-- Add this line!
   DocumentRoot /var/www/apps/prjectdirectory/public&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;Options -Multiviews
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Options -Multiviews
 AllowOverride None
 Order allow,deny 
     Allow from all
@@ -3376,7 +3372,7 @@ Completed 500 Internal Server Error in 18ms
 			
 			<item>
 				<title>Testing Devise Authentication in Rails 3.1</title>
-				<description>&lt;p&gt;I ran into a bit of a hiccup while writing tests in RSpec for a site I&amp;#39;m working on which is using Devise for authentication.  I spent a short time working through the documentation at &lt;a href=&quot;https://github.com/plataformatec/devise/wiki/How-To:-Controllers-and-Views-tests-with-Rails-3-(and-rspec&quot;&gt;testing Devise using rspec and controller tests&lt;/a&gt;), only to end up stubbing my toe on the following caveat:&lt;/p&gt;
+				<description>&lt;p&gt;I ran into a bit of a hiccup while writing tests in RSpec for a site I&amp;#39;m working on which is using Devise for authentication.  I spent a short time working through the documentation at &lt;a href=&quot;https://github.com/plataformatec/devise/wiki/How-To:-Controllers-and-Views-tests-with-Rails-3-(and-rspec)&quot;&gt;testing Devise using rspec and controller tests&lt;/a&gt;, only to end up stubbing my toe on the following caveat:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Authenticated routes in Rails 3
@@ -3477,7 +3473,7 @@ rake spec SPEC=spec/requests/people_spec.rb
 		
 			
 			<item>
-				<title>How I Became a Ruby on Rails Contractor (Trapped in a Microsoft Programmer&#39;s Body)</title>
+				<title>How I Became a Ruby on Rails Contractor (Trapped in a Microsoft Programmer's Body)</title>
 				<description>&lt;p&gt;I work in a Microsoft shop during the day working mostly on legacy code written in C, C++, C#, and some VB.NET. There was an incident at work recently that turned me into a Rails Contractor, through some interesting alchemy involving pointy hair, which I will describe below.&lt;/p&gt;
 
 &lt;p&gt;But before telling you my war story, a bit about my Rails experience: I learned Rails the same way I learned every language and framework I know -- by coding in it in my spare time.  I&amp;#39;ve made my living as a programmer / web developer doing that since about 1993.  Currently I&amp;#39;m working on a private Rails project, which is probably a bad thing since I can&amp;#39;t point to it on Github and show you my stuff.  I&amp;#39;ll fix that shortly by doing some public rails work.&lt;/p&gt;
@@ -3588,7 +3584,7 @@ end
 &lt;p&gt;The solution turned out to be some combination of the following commands:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&#39;&#39;&gt;&lt;code class=&#39;language-bash&#39;&gt;sudo apt-get install libmysql-ruby
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;sudo apt-get install libmysql-ruby
 sudo aptitude install libmysqlclient16-dev
 sudo ln -s /usr/lib/mysql/ /usr/local/lib/mysql
 
@@ -3624,7 +3620,7 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 			<item>
 				<title>Testing a Code Markup Plugin</title>
 				<description>&lt;p&gt;I just installed the &lt;a href=&quot;http://thunderguy.com/semicolon/wordpress/code-markup-wordpress-plugin/&quot;&gt;Code Markup Plugin&lt;/a&gt; and thought I&amp;#39;d give it a bit of a test drive.  Some HTML and PHP ought to be enough to prove the concept, I would think:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;[code lang=&amp;quot;php&amp;quot;]
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[code lang=&amp;quot;php&amp;quot;]
 &amp;lt;html&amp;gt;
    &amp;lt;body&amp;gt;
       
@@ -3668,9 +3664,9 @@ details.  You may need configuration options.&lt;/code&gt;&lt;/pre&gt;
 				<title>Taking Another Look At Python</title>
 				<description>&lt;p&gt;The first few times I encountered Python was in a local bookstore, and I think the same book was there each time.  Each time I was immediately put off by this unfortunate volume, which seemed to suggest that the greatest thing about Python was the whitespace, and gave me the impression that whitespace was more significant than it was.&lt;/p&gt;
 
-&lt;p&gt;Not quite.  It turns out that there is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Whitespace_(programming_language&quot;&gt;Whitespace language&lt;/a&gt;) (who knew?), but Python isn&amp;#39;t it.  Well, I do hate making mistakes, but it seems the myth about whitespace being significant in Python is pretty common, enough so for at least &lt;a href=&quot;http://www.secnetix.de/olli/Python/block_indentation.hawk&quot;&gt;one author&lt;/a&gt; to dispel it.&lt;/p&gt;
+&lt;p&gt;Not quite.  It turns out that there is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Whitespace_(programming_language)&quot;&gt;Whitespace language&lt;/a&gt; (who knew?), but Python isn&amp;#39;t it.  Well, I do hate making mistakes, but it seems the myth about whitespace being significant in Python is pretty common, enough so for at least &lt;a href=&quot;http://www.secnetix.de/olli/Python/block_indentation.hawk&quot;&gt;one author&lt;/a&gt; to dispel it.&lt;/p&gt;
 
-&lt;p&gt;I&amp;#39;m into my third or fourth look at Phython now, and I&amp;#39;m starting to get why so many programmers like it.  First, Python&amp;#39;s design and culture are based on being as simple and as obvious as possible. Forcing correct indentation is one example.  The Pythonic question to ask is not why you should be forced to indent correctly, but for heaven&amp;#39;s sake, why would you want the freedom to do it wrong?  &amp;quot;As Alex Martelli put it in his &lt;em&gt;Pyhon Cookbook&lt;/em&gt; (2nd ed., p. 230): &amp;#39;To describe something as clever is NOT considered a compliment in the Python culture.&amp;#39;&amp;quot; (&lt;a href=&quot;http://en.wikipedia.org/wiki/Python_(programming_language&quot;&gt;Wikipedia&lt;/a&gt;)).&lt;/p&gt;
+&lt;p&gt;I&amp;#39;m into my third or fourth look at Phython now, and I&amp;#39;m starting to get why so many programmers like it.  First, Python&amp;#39;s design and culture are based on being as simple and as obvious as possible. Forcing correct indentation is one example.  The Pythonic question to ask is not why you should be forced to indent correctly, but for heaven&amp;#39;s sake, why would you want the freedom to do it wrong?  &amp;quot;As Alex Martelli put it in his &lt;em&gt;Pyhon Cookbook&lt;/em&gt; (2nd ed., p. 230): &amp;#39;To describe something as clever is NOT considered a compliment in the Python culture.&amp;#39;&amp;quot; (&lt;a href=&quot;http://en.wikipedia.org/wiki/Python_(programming_language)&quot;&gt;Wikipedia&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;The obviousness of Python shines through brilliantly in the Windows binaries, including Idle, which has the incredible good manners to include a really good searchable help system (that&amp;#39;s also available directly through a chm file).  A windows help system on Windows?  What were these people thinking?  The Ruby approach:  &amp;quot;You can&amp;#39;t do Ruby on Windows, Get a  Mac, and by the way, documentation violates the DRY principle&amp;quot;.&lt;/p&gt;
 
@@ -4226,7 +4222,7 @@ A Vermont web development software company organized as an Employee Owned Cooper
 		
 			
 			<item>
-				<title>Employee Owned Software -- Why You Should (n&#39;t?) Watch Michael Moore Movies</title>
+				<title>Employee Owned Software -- Why You Should (n't?) Watch Michael Moore Movies</title>
 				<description>&lt;p&gt;I met a few out of town friends to see Michael Moore’s Capitalism, a Love Story recently. As usual, Howard Zinn loving socialist that I am, listener to this guy that I am …&lt;/p&gt;
 
 &lt;p&gt;this movie was quite appealing to me, and I began to think about how cool it would be to work for an employee owned software collective.&lt;/p&gt;
@@ -4386,7 +4382,7 @@ A Vermont web development software company organized as an Employee Owned Cooper
 				<description>&lt;p&gt;In the spirit of our DriveInfo example, which was a little slip of a thing, here&amp;#39;s a DriveInfo example. &lt;/p&gt;
 
 &lt;p&gt;`&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;using System;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -4464,7 +4460,7 @@ class DirectoryInfoExample
 			<item>
 				<title>Copying, Moving, Deleting, Creating, and Reading Files (With Or Without Deep Love Poetry)</title>
 				<description>&lt;p&gt;`&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;using System;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;using System;
 using System.IO;
 
 class FileAndFileInfoExample
@@ -4578,7 +4574,7 @@ class FileAndFileInfoExample
 				<description>&lt;p&gt;Too easy.&lt;/p&gt;
 
 &lt;p&gt;`   &lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;using System;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;using System;
 using System.IO;
 
 public class DriveInfoExample
@@ -4605,7 +4601,7 @@ public class DriveInfoExample
 		
 			
 			<item>
-				<title>What&#39;s So Funny About the UpdatePanel Control, Love and Understanding?</title>
+				<title>What's So Funny About the UpdatePanel Control, Love and Understanding?</title>
 				<description>&lt;p&gt;&lt;a href=&quot;http://www.particlewave.com/blog/2009/09/18/certification-and-its-discontents/&quot;&gt;I recently reported&lt;/a&gt; that I had a domain for an ASP.NET site to hack around on with nothing on it yet. Since then I’ve made some progress and had some fun coding some ASP.NET, so I can now show off a minor feature on a new web site, the &lt;a href=&quot;http://www.aspworkbench.com/blog/&quot;&gt;Featured ASP.NET Certification Question&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This isn’t exactly Google or even StackOverflow yet, to be sure, but there were nevertheless a fair bit of learning and practice goals along the way to this simple looking page.&lt;/p&gt;
@@ -4640,7 +4636,7 @@ public class DriveInfoExample
 				<description>&lt;p&gt;Here&amp;#39;s a quick IComparable example. The memorization feat for this interface is that CompareTo returns &lt;0 when “this” is less than the object passed to it. The rest follows easily: return 0 when both objects are equal and &gt; 0 when this instance greater than obj passed to CompareTo. Remember, this is self centered so everything’s in terms of this.&lt;/p&gt;
 
 &lt;p&gt;`   &lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;using System;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -4775,7 +4771,7 @@ class IComparableTest
 				<description>&lt;p&gt;Here is the first of what should really be several .NET Regular Expressions examples. I firmly believe that in any given environment, you’re going to end up spending most of your programming career manipulating strings one way or another. Because of this, learning .NET’s regular expression support -- unlike many of the other topics you’re likely to encounter on the certification exam, is not one of those Use It and Lose It things. It’s something that’s really useful.&lt;/p&gt;
 
 &lt;p&gt;`   &lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;using System;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -4988,7 +4984,7 @@ namespace GlobalizationDrawingText
 				<description>&lt;p&gt;In .NET, delegates are classes that implement type safe function pointers.  Like all function pointers, they can be used whereever you need dynamic execution of code.  One use of delegates that is ubiquitous in .NET is as a mechanism for handling events.  Both ASP.NET Webforms and the Windows development Winforms classes uses such delegates as event handlers.  So does our little program below, which shows how to translate keypresses into events, then handle certain events as they&amp;#39;re raised.&lt;/p&gt;
 
 &lt;p&gt;As a side note, this was the first sample I developed using Visual Studio 2010 beta (though it compiles and runs fine under 2005 as well).&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;code&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;code&amp;gt;
 using System;
 
 /*
@@ -5129,7 +5125,7 @@ class EventHandlerExample
 &amp;lt;/code&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Output of course varies depending on what keys you press. One possibility:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;code&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;code&amp;gt;
 aPressed:  a
 bPressed:  b
 ☻Pressed:  ☻
@@ -5190,7 +5186,7 @@ Control key pressed
 				<description>&lt;p&gt;Note that the example below has no output.&lt;/p&gt;
 
 &lt;p&gt;`   &lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;/* 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;/* 
  * This example shows a non-generic list with an array of objects, 
  * and the boxing and unboxing that are needed to add and retrieve integers
  * from such an array.  It also shows a generic list and how this simplifies
@@ -5267,7 +5263,7 @@ class ListsExample
 				<description>&lt;p&gt;The memory for reference types is allocated on the system heap, so it makes sense that reference variables can be null. Value types, in contrast, cannot be assigned a &amp;quot;null” value by default. Still, there are times when you may want to declare a int (for example) and allow it to be set null – one obvious use is in reading and writing data from a database. Enter the Nullable type. Here’s a brief sample that shows how these types work.&lt;/p&gt;
 
 &lt;p&gt;``&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;using System;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;using System;
 
 class NullableExample
 {
@@ -5316,7 +5312,7 @@ class NullableExample
 &lt;p&gt;`&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;normal = 1, nullable = , nullable2 = 5
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;normal = 1, nullable = , nullable2 = 5
 nullable.HasValue = False, nullable2.HasValue = True
 Exception caught: System.InvalidOperationException: Nullable object must have a value.
    at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
@@ -6547,7 +6543,7 @@ Because blogs are not vetted in any way and needn&amp;#39;t be &amp;quot;sold&am
 			<item>
 				<title>ICollection, IEqualityComparer, IComparable Examples</title>
 				<description>&lt;p&gt;`&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;using System;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -6807,7 +6803,7 @@ namespace ExamSamples.Bullet1
 &lt;p&gt;With very little extra work, I was able to get some cool formatting going.&lt;/p&gt;
 
 &lt;h2&gt;Cool Formatting&lt;/h2&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;code class=&amp;quot;code&amp;quot; allow=&amp;quot;none&amp;quot;&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;code class=&amp;quot;code&amp;quot; allow=&amp;quot;none&amp;quot;&amp;gt;
 using System;
 using System.Text;
 
@@ -6874,7 +6870,7 @@ on and on, using &amp;quot;&amp;quot;quote&amp;quot;&amp;quot; characters
 etc but everything else
 is not escaped, like tab characters, \t
 and so forth.&amp;quot;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;System.Console.Write(verbatim);
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;System.Console.Write(verbatim);
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;}`&lt;/p&gt;

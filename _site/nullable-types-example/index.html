@@ -62,7 +62,7 @@ woopra.track();
 <p>The memory for reference types is allocated on the system heap, so it makes sense that reference variables can be null. Value types, in contrast, cannot be assigned a &quot;null” value by default. Still, there are times when you may want to declare a int (for example) and allow it to be set null – one obvious use is in reading and writing data from a database. Enter the Nullable type. Here’s a brief sample that shows how these types work.</p>
 
 <p>``</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">using System;
+<div class="highlight"><pre><code class="language-text" data-lang="text">using System;
 
 class NullableExample
 {
@@ -111,7 +111,7 @@ class NullableExample
 <p>`</p>
 
 <p><strong>Output</strong></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">normal = 1, nullable = , nullable2 = 5
+<div class="highlight"><pre><code class="language-text" data-lang="text">normal = 1, nullable = , nullable2 = 5
 nullable.HasValue = False, nullable2.HasValue = True
 Exception caught: System.InvalidOperationException: Nullable object must have a value.
    at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
