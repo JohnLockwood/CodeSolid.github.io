@@ -17,8 +17,8 @@ desc "Completely rebuilds and pushes site"
 task :all do
   Rake::Task["delete"].invoke
   Rake::Task["build:pro"].invoke
-  Rake::Task["commit"].invoke
-  Rake::Task["deploy"].invoke  
+  Rake::Task["push_source"].invoke
+  Rake::Task["push_master"].invoke  
   puts "Rake all finished."
 end
 
@@ -56,8 +56,8 @@ namespace :build do
   end
 end
 
-desc "Commit _site/"
-task :commit do
+desc "Commit & push source"
+task :push_source do
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
@@ -66,13 +66,13 @@ task :commit do
   status = system("git commit -m \"#{message}\"")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing commits to remote"
-  status = system("git push origin source")
+  status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
 end
 
 
 desc "Deploy _site/ to master branch"
-task :deploy do
+task :push_master do
   puts "\n## Deleting master branch"
   status = system("git branch -D master")
   puts status ? "Success" : "Failed"
