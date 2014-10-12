@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>ICollection, IEqualityComparer, IComparable Examples</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>ICollection, IEqualityComparer, IComparable Examples</h1>
+<!-- <p class="meta">08 Jul 2006</p> -->
+
+<div class="post">
+<p>`</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using NUnit.Framework;
+using NUnit.Framework.Tests;
+using System.Threading;
+
+namespace ExamSamples.Bullet1
+{
+    [TestFixture]
+    public class NewBullet1Tests
+    {
+        [Test]
+        public void TestICollection()
+        {
+            ArrayList al = new ArrayList();
+            al.Add(&quot;Something&quot;);
+            al.Add(&quot;Something Else&quot;);
+
+            // ArrayList implements ICollection
+            ICollection col = al as ICollection;
+            Assert.IsNotNull(col);
+
+            // Iterate in thread safe way using
+        // IColleciton.SyncRoot
+            // -- just an example in our case
+            try
+            {
+                Monitor.Enter(col.SyncRoot);
+                foreach (String item in al)
+                    Assert.AreNotEqual(item, String.Empty);
+                // This failed.  ArrayList is not thread safe
+                // Assert.IsTrue(col.IsSynchronized);
+            }
+            finally
+            {
+                Monitor.Exit(col.SyncRoot);
+            }
+
+            Assert.AreEqual(col.Count, 2);
+            Assert.IsFalse(col.IsSynchronized);
+        }
+
+        [Test]
+        public void TestIComparable()
+        {
+            ArrayList al = new ArrayList();
+            al.Add(&quot;Something&quot;);
+            al.Add(&quot;Something Else&quot;);
+
+            // No, IComparer is used on objects in collections,
+            // not collections
+            IComparer ic = al as IComparer;
+            Assert.IsNull(ic);
+
+            IComparable icomparable = al as IComparable;
+            Assert.IsNull(icomparable);
+
+            // Sort some fish (see fish implementation below)
+            SortedList sl = new SortedList();
+
+            // Insert in nonsorted order
+            sl.Add(new Fish(&quot;Fancy Goldfish&quot;,
+                Fish.Finsize.medium), null);
+            sl.Add(new Fish(&quot;Angelfish&quot;,
+                Fish.Finsize.large), null);
+            sl.Add(new Fish(&quot;Glassfish&quot;,
+                Fish.Finsize.small), null);
+
+            // Keys are now in sorted order
+            Fish f = (Fish)sl.GetKey(0);
+            Assert.IsTrue(f.FinSize == Fish.Finsize.small);
+
+            f = (Fish)sl.GetKey(2);
+            Assert.IsTrue(f.FinSize == Fish.Finsize.large);
+        }
+
+        [Test]
+        public void TestIEqualityComparer()
+        {
+            Cookie c1 = new Cookie();
+
+            Cookie c2 = new Cookie();
+            Cookie c3 = new Cookie();
+
+            c1.Name = &quot;Keebler&quot;;
+            c1.HasChips = true;
+
+            c2.Name = &quot;Swanson&quot;;
+            c2.HasChips = true;
+
+            c3.Name = &quot;Keebler&quot;;
+            c3.HasChips = false;
+
+            // We&#39;ve overriden Object.Equals as well,
+            // so this succceeds
+            Assert.AreEqual(c1, c3);
+
+            // Here&#39;s the IEqualityComparer version
+            Assert.IsTrue(c1.Equals(c1, c3));
+        }
+    }
+
+    public class Fish : IComparer, IComparable
+    {
+        public enum Finsize { small, medium, large };
+
+        private String _name;
+
+        private Finsize _finsize;
+
+        public Finsize FinSize
+        {
+            get
+            {
+                return _finsize;
+            }
+        }
+
+
+        public Fish(String name, Finsize size)
+        {
+            _name = name;
+            _finsize = size;
+        }
+
+
+        #region IComparer Members
+        public int Compare(object x, object y)
+        {
+            if (x == null ||
+        ((Fish)x)._finsize &lt; ((Fish)y)._finsize)
+                return -1;
+
+            if (y == null ||
+        ((Fish)y)._finsize &lt; ((Fish)x)._finsize)
+                return 1;
+
+            return 0;
+        }
+        #endregion
+
+        #region IComparable Members
+
+        public int CompareTo(object obj)
+        {
+            // This sorts in ascending order
+        // -- small fins first in our case.
+            return Compare(this, obj);
+        }
+
+        #endregion
+    }
+
+    public class Cookie : IEqualityComparer
+    {
+        private String _name;
+        private Boolean _hasChocolateChips;
+
+        public String Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+
+        public Boolean HasChips
+        {
+            get
+            {
+                return _hasChocolateChips;
+            }
+            set
+            {
+                _hasChocolateChips = value;
+            }
+        }
+
+
+        // Needed for our test to pass. Probably not for a
+    // hashtable.
+        // Object.Equals here
+        public override bool Equals(object obj)
+        {
+            return Equals(this, obj);
+        }
+
+        // also therefore need to override Object.GetHashCode
+        public override int GetHashCode()
+        {
+            return GetHashCode(this);
+        }
+
+        #region IEqualityComparer Members
+        public new bool Equals(Object x, Object y)
+        {
+            Cookie cx = x as Cookie;
+            Cookie cy = y as Cookie;
+            return (GetHashCode(cx) == cy.GetHashCode(cy));
+        }
+
+
+        public int GetHashCode(object obj)
+        {
+            Cookie c = obj as Cookie;
+            // Easy -- defer to one of our strings
+        // to hash by name of cookie.
+            return (c.Name.GetHashCode());
+        }
+        #endregion
+    }
+}
+</code></pre></div>
+<p>`</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Testing Devise Authentication in Rails 3.1</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Testing Devise Authentication in Rails 3.1</h1>
+<!-- <p class="meta">06 Jul 2012</p> -->
+
+<div class="post">
+<p>I ran into a bit of a hiccup while writing tests in RSpec for a site I&#39;m working on which is using Devise for authentication.  I spent a short time working through the documentation at <a href="https://github.com/plataformatec/devise/wiki/How-To:-Controllers-and-Views-tests-with-Rails-3-(and-rspec)">testing Devise using rspec and controller tests</a>, only to end up stubbing my toe on the following caveat:</p>
+
+<blockquote>
+<p>Authenticated routes in Rails 3
+If you choose to authenticate in routes.rb, you lose the ability to test your routes via assert<em>routing (which combines assert</em>recognizes and assert_generates, so you lose them also). It’s a limitation in Rails: Rack runs first and checks your routing information but since functional/controller tests run at the controller level, you cannot provide authentication information to Rack which means request.env[‘warden’] is nil and Devise generates one of the following errors:</p>
+</blockquote>
+
+<p>NoMethodError: undefined method &#39;authenticate!&#39; for nil:NilClass
+  NoMethodError: undefined method &#39;authenticate?&#39; for nil:NilClass
+The solution is to test your routes via integration tests. Authenticating your routes has its advantages, this is one of the disadvantages.</p>
+
+<p>This was just the error I was getting when running my controller tests, so it looked like I needed to go after them in in integration tests.</p>
+
+<p>Fortunately with a bit of Google-Fu, it turned out this is not an unusual problem. I was lucky to run into Andy Lindeman&#39;s excellent post on <a href="http://alindeman.github.com/2011/09/25/testing-devise-with-rspec-request-specs-and-capybara.html">Testing Devise with RSpec and Capybara</a>. </p>
+
+<p>First I had to install CapyBara, which I hadn&#39;t worked with before (See Lindeman&#39;s article for details on how to install this).  I based my solution on Lindeman&#39;s code, but with a couple of variations.  First, I wanted to wrap his code in a module so I could call it from any test.  Also, I modified his code to ensure that if the user was not registered, we&#39;d register him, and if he was registered, we&#39;d log him in.  This helped me make the code he provided easier to use and more re-entrant.</p>
+
+<p>To accomplish this in RSpec, I added the following line to spec_helper.rb in the spec directory:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+    config.extend RequestMacros, :type =&gt; :request
+[/cc]</p>
+
+<p>That done, I added the module code to a new file, spec/support/request_macros.rb.  As you can see in the snippet below, it looks for the user in the database, and if not found, registers the user (which logs the user in as a side effect).  If the user is found, it logs the user in.  (I&#39;ve coded the email and password here along the way, but this could be DRY&#39;ed up a bit by getting the user information from FactoryGirl).</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+module RequestMacros 
+  def login<em>site</em>admin
+   before(:each) do
+      # Ensure registered
+      email = &quot;someone@test.com&quot;
+      password = &quot;password&quot;
+      user = User.find<em>by</em>email(email)
+      if user.nil?
+        visit &quot;/users/sign<em>up&quot;
+        fill</em>in &quot;Email&quot;,                 :with =&gt; email 
+        fill<em>in &quot;Password&quot;,              :with =&gt; password
+        fill</em>in &quot;Password confirmation&quot;, :with =&gt; password
+        click<em>button &quot;Sign up&quot;
+        page.should have</em>content(&quot;successfully&quot;)
+      else
+        visit &quot;/users/sign<em>in&quot;
+        fill</em>in &quot;Email&quot;,                 :with =&gt; email 
+        fill<em>in &quot;Password&quot;,              :with =&gt; password
+        click</em>button &quot;Sign in&quot;
+      end
+   end
+  end
+end
+[/cc]</p>
+
+<p>Finally, because in integration testing we&#39;re not really testing Rails objects but are dealing with input and output as the web browser sees it, I had to set up a test page to verify that things were working as planned.  I&#39;ll no doubt yank this page later as I develop &quot;real tests&quot; for the functionality I want, and develop the functionality along with the tests.  In the meantime, the target test page (views/people/test.html.erb) is simplicity itself:</p>
+
+<p>[cc lang=&quot;rails&quot;]
+&lt;%= 
+if user<em>signed</em>in? 
+  &quot;true&quot;
+else
+  &quot;false&quot;
+end
+%&gt;</p>
+
+<p>[/cc]</p>
+
+<p>With this done and the route for the test in place (we don&#39;t need a controller method because the default rendering will pick up the view), we&#39;re now ready for the test itself, in spec/requests/people_spec.rb. (Assuming you want to test the &quot;PeopleController&quot;, if not, modify this and the view location to suit). You&#39;ll see we test that we can log in a second time as well:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+require &#39;spec_helper&#39;</p>
+
+<p>describe &quot;People&quot;, :type =&gt; :request do</p>
+
+<p>login<em>site</em>admin </p>
+
+<p>it &quot;signs<em>me</em>in&quot; do
+   visit &quot;/people/test&quot;
+   page.should have_content(&quot;true&quot;)
+  end</p>
+
+<p>it &quot;signs<em>me</em>in<em>again&quot; do
+   visit &quot;/people/test&quot;
+   page.should have</em>content(&quot;true&quot;)
+  end
+end
+[/cc]</p>
+
+<p>Run the spec as below to verify that it works!</p>
+
+<p>[cc lang=&quot;bash&quot;]
+rake spec SPEC=spec/requests/people_spec.rb
+[/cc]</p>
+
+<p>Hopefully that will save you a few minutes of time.  Enjoy!</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

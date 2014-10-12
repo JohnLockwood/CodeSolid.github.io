@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>A Simple Hibernate, MySQL, and JUnit Tutorial</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>A Simple Hibernate, MySQL, and JUnit Tutorial</h1>
+<!-- <p class="meta">22 May 2013</p> -->
+
+<div class="post">
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#GettingStarted">Getting Started with Hibernate and MySQL</a></li>
+<li><a href="#ConfiguringMYSQL">Configuring MySQL</a></li>
+<li><a href="#ConfiguringHibernate">Configuring Hibernate</a></li>
+<li><a href="#MinimizingSetupTime">Minimizing Setup Time</a></li>
+<li><a href="#SimpleEntity">A Simple Hibernate Entity</a></li>
+<li><a href="#GenericEntity">A Hibernate Generic Entity Storage Class</a></li>
+<li><a href="#JUnit">The JUnit Test</a></li>
+
+</ul>
+</div>
+
+<h2><a id="GettingStarted">Getting Started With Hibernate and MySQL</a></h2>
+
+<p>In this tutorial, we&#39;re once again going to use JUnit as a learning tool for exploring various Java technologies -- in this case Hibernate.  We&#39;ll be configuring Hibernate to run with MySQL in a way that works both in a standalone application or in a Spring or other web application.  Along the way we&#39;ll also be setting up Log4J logging for hibernate.  We&#39;ll work on a small generics class that -- although it doesn&#39;t really do much more than wrap a few Hibernate functions -- will allow us to demonstrate and test out the basic CRUD operations -- Create, Read, Update, and Delete.</p>
+
+<p>As usual, you can download the complete project files for IntelliJ Idea from our <a href="https://github.com/CodeSolid/tutorials">Tutorials Repository on Github</a>. This tutorial is located in the HibernateGeneric directory.  If you&#39;re using Eclipse, check out our <a href="/how-to-run-the-codesolid-tutorials-in-eclipse/">Eclipse instructions</a>.</p>
+
+<h2><a id="ConfiguringMYSQL">Configuring MySQL</a></h2>
+
+<p>This tutorial assumes you have mysql installed and can log in as root.  If you don&#39;t have MySQL on your system, you should <a href="http://dev.mysql.com/doc/refman/5.1/en/windows-installation.html">start here</a> and work through the instructions appropriate to your environment.  Go into the mysql monitor (i.e., the mysql command line client).  To do this, run:
+<pre>
+&lt;PathToMySQLBin&gt;mysql.exe --user=root --password=YourRootPassword
+</pre>
+(If you haven&#39;t set a mysql root password, you should -- if you haven&#39;t, you can simply use the command:
+<pre>
+&lt;PathToMySQLBin&gt;\mysql.exe --user=root
+</pre>
+Once you&#39;re connected in the mysql client, use the source command to run the dbsetup.sql script located in the database directory of the tutorial, for example:</p>
+
+<pre>source database\dbsetup.sql</pre>
+
+<div>
+  <pre data-line=''><code class='language-sql'>CREATE DATABASE tutorials;
+USE tutorials;
+GRANT ALL ON tutorials.* to 'myuser'@'localhost' identified by 'mypassword';
+commit;
+flush privileges;</code></pre>
+</div>
+
+<p>Of course, the user name and password given in this script are pretty brain-dead and certainly not secure so probably want to change them.  If you do, that&#39;s fine, you&#39;ll just need to make one other change, in the hibernate configuration file.  Let&#39;s look at that next:</p>
+
+<h2><a id="ConfiguringHibernate">Configuring Hibernate</a></h2>
+
+<p>The hibernate configuration file is the file hibernate.cfg.xml in the root of the resources directory (i.e., at src/main/resources).  As you can see, we&#39;ve configured the JDBC driver directly in this file.  If you changed the user name or password in the dbsetup.sql script, you need to make the corresponding chagnes to the &quot;connection.username&quot; and / or &quot;connection.password&quot; properties below.</p>
+
+<p>You might also experiment with setting the show<em>sql and use</em>sql_comments to true, especially if you run into problems.  For now they are turned off to keep the test run output a little bit cleaner.</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;?xml version='1.0' encoding='utf-8'?&gt;
+&lt;!DOCTYPE hibernate-configuration PUBLIC
+        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+        &quot;http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd&quot;&gt;
+
+&lt;hibernate-configuration&gt;
+    &lt;session-factory&gt;
+
+        &lt;!-- Database connection settings --&gt;
+        &lt;property name=&quot;connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;
+        &lt;property name=&quot;connection.url&quot;&gt;jdbc:mysql://localhost/tutorials&lt;/property&gt;
+        &lt;property name=&quot;connection.username&quot;&gt;myuser&lt;/property&gt;
+        &lt;property name=&quot;connection.password&quot;&gt;mypassword&lt;/property&gt;
+
+        &lt;!-- JDBC connection pool (use the built-in connection pool) --&gt;
+        &lt;property name=&quot;connection.pool_size&quot;&gt;1&lt;/property&gt;
+
+        &lt;!--
+            SQL dialect
+            There are other mysql dialects avaialable IF you run INTO trouble WITH this one.
+            The FULL list IS:
+                MySQL5Dialect
+                MySQL5InnoDBDialect
+                MySQLDialect
+                MySQLInnoDBDialect
+                MySQLMyISAMDialect
+            See http://docs.jboss.org/hibernate/orm/3.5/api/org/hibernate/dialect/package-summary.html
+        --&gt;
+        &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQL5InnoDBDialect&lt;/property&gt;
+
+        &lt;!-- Enable Hibernate's automatic session context management --&gt;
+        &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
+
+        &lt;!-- Disable the second-level cache  --&gt;
+        &lt;property name=&quot;cache.provider_class&quot;&gt;org.hibernate.cache.NoCacheProvider&lt;/property&gt;
+
+        &lt;!-- Change these values to true to echo all executed SQL to stdout --&gt;
+        &lt;property name=&quot;show_sql&quot;&gt;false&lt;/property&gt;
+        &lt;property name=&quot;use_sql_comments&quot;&gt;false&lt;/property&gt;
+
+        &lt;!-- Drop and re-create the database schema on startup --&gt;
+        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;update&lt;/property&gt;
+
+        &lt;!-- This is the entity class that we'll be testing. --&gt;
+        &lt;mapping class=&quot;com.codesolid.tutorials.model.entities.Actor&quot;/&gt;
+
+    &lt;/session-factory&gt;
+&lt;/hibernate-configuration&gt;</code></pre>
+</div>
+
+<p>I won&#39;t post the log4j configuration here.  Hibernate issues a warning if logging is not enabled, so I have configured Hibernate to use the log file, &quot;log4j.log&quot; in the root of the project directory.  The configuration file for log4j is at src/main/resources/log4j.xml.</p>
+
+<h2><a id="MinimizingSetupTime">Minimizing Setup Time</a></h2>
+
+<p>As with any process that initially connects to a database, initializing Hibernate sessions takes a fair amount of time, and is not something you want to be doing over and over again in your tests.  In the case of Hibernate, creating the SessionFactory object takes even more time, adding up to about 1.4 seconds on a laptop, or about .8 seconds on a faster machine.  We don&#39;t want to be running that for every test class.  (To be sure, in the kind of one-class suite we&#39;re running in this tutorial, it wouldn&#39;t make a difference, but one of the purposes of these tutorials is to give you steal-able code that you can use in larger projects.  What we want is to initialize the SessionFactory only once.</p>
+
+<p>The <a href="http://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/tutorial.html">Hibernate tutorial</a> that comes with the Hibernate docs gives us a part of the solution, the HibernateUtil class, which exists for the sole purpose of ensuring a one time initialization of a SessionFactory, which it then caches as a static object.  I&#39;ve used this class pretty much verbatim in the current tutorial, changing only the package name.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>// This file is adapted with only minor changes from the original in the hibernate
+// tutorial, http://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/tutorial.html.
+package com.codesolid.tutorials.model.dal;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtil {
+
+    private static final SessionFactory sessionFactory = buildSessionFactory();
+
+    private static SessionFactory buildSessionFactory() {
+        try {
+            // Create the SessionFactory from hibernate.cfg.xml
+            return new Configuration().configure().buildSessionFactory();
+        }
+        catch (Throwable ex) {
+            // Make sure you log the exception, as it might be swallowed
+            System.err.println(&quot;Initial SessionFactory creation failed.&quot; + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+}</code></pre>
+</div>
+
+<p>OK, so we have a class where we can cache our SessionFactory, but the question remains -- how should we wire that up to our JUnit tests?  Since JUnit 4.9, we can use the @ClassRule annotation to set up a test suite with before and after methods that will run before and after all the classes in the suite have run.  This allows for the initialization of expensive resoures once before all the tests in the suite are run.</p>
+
+<p>The following listing shows the RuleSuite test suite, which builds with the rest of the tests in the src\test\java\code\codesolid\tests directory:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tests;
+
+import com.codesolid.tutorials.model.dal.HibernateUtil;
+import org.apache.log4j.Level;
+import org.apache.log4j.xml.Log4jEntityResolver;
+import org.junit.ClassRule;
+import org.junit.rules.ExternalResource;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.apache.log4j.Logger;
+
+@RunWith( Suite.class )
+@Suite.SuiteClasses( {
+        TestStorage.class
+        /* , Add more test classes here separated by commas*/
+} )
+public class RuleSuite{
+
+    static HibernateUtil util;
+
+    // This is a static field.  Per the ClassRule documentation,
+    // to use a ClassRule we need a field that is &quot;public, static,
+    // and a subtype of of TestRule.&quot;
+    // See http://junit.czweb.org/apidocs/org/junit/ClassRule.html
+    @ClassRule
+    public static ExternalResource testRule = new ExternalResource(){
+        @Override
+        protected void before() throws Throwable{
+            Logger.getLogger(&quot;com.codesolid.tests&quot;).log(Level.DEBUG, &quot;Inside RuleSuite::ExternalResource::before.&quot;);
+            util = new HibernateUtil();
+        };
+
+        @Override
+        protected void after(){
+            // Nothing to do here in this case.
+            Logger.getLogger(&quot;com.codesolid.tests&quot;).log(Level.DEBUG, &quot;Inside RuleSuite::ExternalResource::after.&quot;);
+        };
+    };
+}</code></pre>
+</div>
+
+<p>I&#39;ve added some logging methods so you can see that the before and after methods are run only once at the start and end of the suite.</p>
+
+<h2><a id="SimpleEntity">A Simple Hibernate Entity</a></h2>
+
+<p>In order to have an entity to save, I created an &quot;Actor&quot; entity.  This represents a user in the system, but I&#39;ve named the class &quot;Actor&quot; to avoid any potential conflict with the SQL keyword by the same name.  I am using Hibernate annotations to define the entity.</p>
+
+<p>@Table allows us to name the table.
+@Entity marks the class as representing a Hibernate Entity, that is to say, an object that Hibernate can save to and load from the database.</p>
+
+<p>For the Id primary key field, we use the following Hibernate annotations to mark the field as the primary key and to auto-increment the field for each new record:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>@Id
+@GeneratedValue(generator=&quot;increment&quot;)
+@GenericGenerator(name=&quot;increment&quot;, strategy = &quot;increment&quot;)</code></pre>
+</div>
+
+<p>Finally, we used the column annotation to explicitly set the field name for the Role property to &quot;user_role&quot;:</p>
+
+<p>@Column(name=&quot;user_role&quot;)</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>/**
+ * Class Actor
+ * Description:  A user of the system, the subject of a user story.  We use
+ *               actor instead of user as table name to avoid any conflict
+ *               with the database concept of user
+ */
+package com.codesolid.tutorials.model.entities;
+import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.*;
+
+@Table( name = &quot;ACTORS&quot; )
+@Entity
+public class Actor {
+    public static final String DEFAULT_ROLE = &quot;Standard User&quot;;
+
+    public Actor() {
+        setRole(Actor.DEFAULT_ROLE);
+    }
+
+    private Long id;
+    private String role;
+
+    @Id
+    @GeneratedValue(generator=&quot;increment&quot;)
+    @GenericGenerator(name=&quot;increment&quot;, strategy = &quot;increment&quot;)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
+    @Column(name=&quot;user_role&quot;)
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+}</code></pre>
+</div>
+
+<p>The final step to making the Entity work is one that&#39;s easy to forget, but as we saw when we discussed the hibernate.cfg.xml file, make sure you include a mapping to the entity class, as we show again below:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;!-- This is the entity class that we'll be testing. --&gt;
+&lt;mapping class=&quot;com.codesolid.tutorials.model.entities.Actor&quot;/&gt;</code></pre>
+</div>
+
+<h2><a id="GenericEntity">A Hibernate Generic Entity Storage Class</a></h2>
+
+<p>While working with Hibernate enitities,  it struck me that many of the basic operations one might do with an entity could be captured well in a generic class, which is what we&#39;ll be using to test here. As you can see below, each of the methods was pretty much a wrapper around a single Hibernate session call -- with the exception of BeginTransaction, which combines getting the session from the session factory and starting the transaction.  </p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.model.dal;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Storage  {
+
+    public static SessionFactory getSessionFactory() {
+        return HibernateUtil.getSessionFactory();
+    }
+
+    private T entity;
+    private Session session;
+
+    public void beginTransaction() {
+        session = Storage.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+    }
+
+    public void commit () {
+        session.getTransaction().commit();
+    }
+
+    public Storage(T entity) {
+        this.entity = entity;
+    }
+
+    public void update(T entity) {
+        session.update(entity);
+    }
+
+    public Long insert(T entity) {
+        return (Long) session.save(entity);
+    }
+
+    public void delete(T entity) {
+        session.delete(entity);
+    }
+
+    // This call will issue a warning about the unchecked cast,
+    // but we know the value returned will be of the right type because
+    // we specify the entity (T) class in the call.
+    //
+    // Note that &quot;get&quot; will return a null if no value with this id fails
+    @SuppressWarnings (value=&quot;unchecked&quot;)
+    public T getById(Long id) {
+        return (T) session.get(entity.getClass(), id);        
+    }
+}</code></pre>
+</div>
+
+<p>Taken together, this class and the unit tests I wrote for it were a good way to discover a couple of interesting Hibernate gotchas.  The first Hibernate mine that I steped on was that objects are no longer usable outside the context of a transaction.  Before my testing uncovered this, my original implementation of getById was called loadById, and the implementation and test looked something like this:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>// Implementation  
+    public T getById(Long id) {
+        storage.beginTransaction();
+        T obj = (T) session.load(entity.getClass(), id);
+        session.getTransaction().commit();
+        return obj;
+    }
+
+   // Test code:
+   // ...
+   Actor actor  = storage.getById(id);
+   assertEquals(actor.getRole(), &quot;Some Role&quot;);</code></pre>
+</div>
+
+<p>This seemed like a safe approach (albeit not an efficient one since each call is wrapped in a transaction).  As it turns out, because Hibernate uses lazy initialization, the object returned from getById needed to still have the transaction active.  As a result, I got the following exception:</p>
+
+<p>org.hibernate.LazyInitializationException: could not initialize proxy - no Session</p>
+
+<p>This caused me to push the transaction management out to the client, so I exposed beginTransaction and commit methods on my storage class.</p>
+
+<p>At that point, the code and test looked like:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>// Implmentation
+public T getById(Long id) {
+    return (T) session.load(entity.getClass(), id);
+}
+
+// Test code
+storage.beginTransaction();
+Actor actor  = storage.getById(id);
+assertEquals(actor.getRole(), &quot;Some Role&quot;);
+storage.commit();</code></pre>
+</div>
+
+<p>The second interesting Hibernate quirk that I ran into was in trying to test my delete method.  Originally I wrote the test by deleting an object and then checking for the ObjectNotFoundException when I called loadById in an effort to reload the deleted object.  The first time I ran it, that test passed, but a few minutes later it failed.  It turns out that loadById may or may not return an ObjectNotFoundException, or it may instead return a &quot;proxy object&quot;, though I admit I have a bit of a hard time following the architectural genius behind the decision to return a proxy to an object that doesn&#39;t exist yet -- or in this case, doesn&#39;t exist any more.  At that time I researched it and found that getById has the more reasonable behavior of reliably returning a for objects that don&#39;t exist, so the test and the code evolved accordingly.</p>
+
+<h2><a id="JUnit">The JUnit Test</a></h2>
+
+<p>With that, the final form of the JUnit test is below.  Even though I&#39;m showing it last, in reality the process was more test-first, going back and forth between the tests, the configuration, and the classes under development.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tests;
+
+import com.codesolid.tutorials.model.entities.*;
+import com.codesolid.tutorials.model.dal.Storage;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestStorage {
+
+    @Test
+    public void testWrite() {
+        // Just a write, verify id set
+        Actor user = new Actor();
+        Storage storage = new Storage(user);
+        storage.beginTransaction();
+        user.setRole(&quot;SuperUser&quot;);
+        assertNull(user.getId());
+        storage.insert(user);
+        assertNotNull(user.getId());
+        storage.commit();
+    }
+
+    @Test
+    public void testWriteAndRead() {
+
+        // This time write and read back
+        String overRideRole = &quot;SuperUser&quot;;
+
+        // Write
+        Actor actor = new Actor();
+        Storage storage = new Storage(actor);
+        storage.beginTransaction();
+        actor.setRole(overRideRole);
+        assertNull(actor.getId());
+        storage.insert(actor);
+        assertNotNull(actor.getId());
+        Long id = actor.getId();
+        storage.commit();
+
+        // Read and verify
+        Actor actor2  = new Actor();
+        assertEquals(actor2.getRole(), Actor.DEFAULT_ROLE);
+        storage = new Storage(actor2);
+        storage.beginTransaction();
+        actor2 = storage.getById(id);
+        assertEquals(actor2.getRole(), overRideRole);
+        storage.commit();
+    }
+
+
+    @Test
+    public void testUpdate() {
+
+        String overRideRole = &quot;SuperUser&quot;;
+        String newOverrideRole = &quot;GUEST&quot;;
+
+        // Insert an actor
+        Actor actor = new Actor();
+        Storage storage = new Storage(actor);
+        storage.beginTransaction();
+        actor.setRole(overRideRole);
+        assertNull(actor.getId());
+        storage.insert(actor);
+        assertNotNull(actor.getId());
+        Long id = actor.getId();
+        storage.commit();
+
+        // Read it back
+        Actor actor2  = new Actor();
+        assertEquals(actor2.getRole(), Actor.DEFAULT_ROLE);
+        storage.beginTransaction();
+        actor2 = storage.getById(id);
+        assertEquals(actor2.getRole(), overRideRole);
+
+        // Update it
+        actor2.setRole(newOverrideRole);
+        storage.update(actor2);
+        storage.commit();
+
+        // Read it again and verify update
+        storage.beginTransaction();
+        Actor actor3  = storage.getById(id);
+        assertEquals(actor3.getRole(), newOverrideRole);
+        storage.commit();
+    }
+
+    @Test
+    public void testDelete() {
+
+        Actor actor = new Actor();
+        Storage storage = new Storage(actor);
+
+        // Write
+        storage.beginTransaction();
+        storage.insert(actor);
+        Long id = actor.getId();
+        storage.commit();
+
+        // Delete it now
+        assert(actor.getId() &gt; 0);
+        storage.beginTransaction();
+        storage.delete(actor);
+        storage.commit();
+
+        // Now we can't read it back, as expected
+        storage.beginTransaction();
+        Actor actor2 = storage.getById(id);
+        assertNull(actor2);
+        storage.commit();
+    }
+}</code></pre>
+</div>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

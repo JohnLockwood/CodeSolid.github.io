@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Pros and Cons of Test Driven Development</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Pros and Cons of Test Driven Development</h1>
+<!-- <p class="meta">13 May 2013</p> -->
+
+<div class="post">
+<p>If you ask anyone who works with me, I&#39;m a huge fan of automated unit testing in general and Test Driven Development (TDD) in particular. Ever since I first tried it out on a project eleven years ago, I&#39;ve been convinced that Test Driven Development is a huge improvement over the number one software development &quot;methodology&quot; in the U.S.: code and fix.</p>
+
+<p>But if TDD is so cool, the last sentence begs a very important question: why is code and fix so popular? Should you be considering more unit testing for your next project, or will you do just fine without it? Are there legitimate reasons not to consider automated unit testing? How much testing is enough?  What are the pros and cons of Test Driven Development and automated unit testing?</p>
+
+<h3>Pros</h3>
+
+<ul>
+<li><p>If you&#39;re a software manager, the number one benefit to consider for automated unit testing is reduced costs. This may seem paradoxical -- how can writing <strong>more</strong> code cost you <strong>less</strong>? The answer is that unit tests let your developers find bugs earlier in the development process than they would otherwise.  As a result of this, empirical studies such as the one conducted by <a href="http://research.microsoft.com/en-us/groups/ese/nagappan_tdd.pdf">Nagappan et al</a>. at Microsoft and IBM have shown a drop in the defect density of between 40% and 90% for teams using test driven development.</p></li>
+<li><p>Unit tests are especially valuable as a safety net when the code needs to be changed to either add new features or fix an existing bug, since the  sanity check for new changes. Since maintenance accounts for between 60 and 90% of the software life cycle, it&#39;s hard to overstate how the time taken up front to create a decent set of unit tests can pay for itself over and over again over the lifetime of the project.</p></li>
+<li><p>Another big plus to automated unit testing is something that rarely gets much mention but is crucially important. Writing unit tests during development means you&#39;ll always have a stub for exercising a given method in the debugger. Getting my start 20,000 years ago as I did as a C and C++ programmer -- there be pointers there! -- running your code through the debugger as you were writing it was something that All-Right-Thinking-Programmers(tm) had to do. As my friend, Jim Alisago, put it early on in my career, &quot;You might as well start in the debugger because you&#39;re going to end up there anyway.&quot; I sometimes get the impression reading the literature that Unit Testing replaces debugging -- on the contrary, to me, it enables it and enhances it.</p></li>
+<li><p>Testing while writing also forces you to try to make your interfaces clean enough to be tested. It&#39;s sometimes hard to see the advantage of this until you work on a body of code where it wasn&#39;t done, and the only way to exercise and focus on a given piece of code is to run the whole system and set a break-point. Unit tested code therefore tends to be less tightly coupled than code that sprang fully formed from the clever mind of a cowboy developer.</p></li>
+<li><p>Unit tests are a fantastic learning tool for developers using new technologies. Whenever I encounter something obtuse in some bit of software documentation, I find myself reaching for a small set of unit tests. Unit tests let me quickly find where the skeletons are buried in a new framework.</p></li>
+<li><p>Along the same lines serve as documentation for existing code, showing developers new to the code how it works.</p></li>
+</ul>
+
+<h3>Cons</h3>
+
+<ul>
+<li><p>There is of course the up front cost of writing the unit tests.   I believe that in almost all cases this cost will be amortized over the life of the project.  However, if a quick and dirty prototype is needed in a hurry, this initial time cost may not be acceptable.  A caveat is in order here, however:  many a quick and dirty prototype has been rushed from developer conference to deliverable without stopping at go or collecting $200.  Today&#39;s quick and dirty prototype is often tomorrow&#39;s legacy albatross.</p></li>
+<li><p>Speaking of legacy code, it is far, far easier to introduce unit testing at the start of a coding effort than it is to add unit tests during the maintenance phase of a project.  It&#39;s more difficult enough that Michael Feathers was able to write a wonderful book about it.  However, as the Chinese are alleged to say, the best time to plant a tree was 20 years ago, but the second best time is today.</p></li>
+<li><p>Like any good technique, unit testing can be carried to an extreme. My own experience has been that the biggest benefits come from a moderate effort, with the tests always exercising the code in the simplest way possible.  If you find yourself frequently re-factoring your tests, there&#39;s a good chance you&#39;re spending too much time on the test suite.  Similarly, there&#39;s not much point to optimizing your tests with stubs and mocks if they don&#39;t take that long to run yet.</p></li>
+<li><p>Unit tests of course need to be maintained to be useful -- ideally keeping the error / failure rate at zero.  This of course means there are times when the tests themselves have to change to keep track of new changes to the code, but the whole point of the test suite is to bring the impact of your changes into sharp focus.  Breaking existing callers depending on an interface is not a big deal -- but doing it without knowing you did it is a real problem.</p></li>
+<li><p>Unit tests are just unit tests.  Although, as we mentioned above, they do have a role in documentation, unit tests are not a substitute for documentation. Contrary to what many agile texts would have you believe, not all comments are &quot;smells&quot;.  Similarly, the planning that takes place in the process of producing initial specifications almost always justifies a reasonable effort.  Nor are unit tests a substitute for integration testing, acceptance testing, or other automated / manual testing done by sharp quality engineers.</p></li>
+</ul>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>
