@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Java REST tutorial</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Tutorial shows you how to easily create a RESTful API using Java, Jersey, Maven, and IntelliJ Idea.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Java REST tutorial</h1>
+<!-- <p class="meta">17 Aug 2014</p> -->
+
+<div class="post">
+<p>Create a RESTful API Using Java and Jersey in IntelliJ Idea.</p>
+
+<div>
+<h1>Table of Contents</h1>
+<ul class="list-group">
+<li class="list-group-item"><a href="#RESTinFiveMinutes">Take Five - REST in Five Minutes</a></li>
+<li class="list-group-item"><a href="#DumbNoSQL">Keeping It Simple - No Database Connection Needed</a>
+<li class="list-group-item"><a href="#ProjectSetup">Setting up the Jersey Project in Maven and IntelliJ Idea</a></li>
+<li class="list-group-item"><a href="#TheRestfulAPI">Server Side:  the RESTful API</a></li>
+<li class="list-group-item"><a href="#ClientSideTesting">Testing the Server:  A Jersey REST client</a></li>
+<li class="list-group-item"><a href="#Conclusion">Putting it All Together</a></li>
+
+
+</li>
+</ul>
+<a href="/downloads/RestfulWebService.zip">Download the Project (ZIP)</a>
+</div>
+
+<div style="margin-top:1em;margin-bottom:-.5em">
+<iframe src="http://ghbtns.com/github-btn.html?user=codesolid&repo=tutorials&type=fork&size=large"" allowtransparency="true" frameborder="0" scrolling="0" width="83" height="40" size="large"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user=codesolid&repo=tutorials&type=follow&size=large"" allowtransparency="true" frameborder="0" scrolling="0" width="200" height="40" size="large"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user=codesolid&repo=tutorials&type=watch&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="40""></iframe>
+</div>
+
+<h2><a name="RESTinFiveMinutes" id="RESTinFiveMinutes">Take Five -- REST in Five Minutes</a></h2>
+
+<p>Let&#39;s face it -- now that web Services written in crufty old XML are yesterday&#39;s news, we all want to be hanging out with the cool kids writing RESTful APIs that use JSON.  Best of all, because Java&#39;s <a href="https://jax-rs-spec.java.net/">JAX-RS specification</a> makes RESTful APIs so easy to create and test, hanging out with the cool kids who are writing RESTful APIs turns out to be a good deal easier than hanging out with the cool kids ever was in high school.  </p>
+
+<p>This tutorial is an easy and 100%-wedgie-free way to create a RESTful API using <a href="https://jersey.java.net/">Jersey</a>, the reference implementation for the JAX-RS specification.  </p>
+
+<p>REST is an architectural style which favors APIs that exposes resources through standard HTTP verbs.  REST APIs are stateless, i.e., every request should carry sufficient information to execute the request without resorting to a session on the server side, including authentication information. (Note that in the spirit of a &quot;Hello world&quot; tutorial, we won&#39;t get into RESTful authentication in this article.  We may take this up in a later article, but for now we refer you to the <a href="https://jersey.java.net/documentation/latest/security.html">Jersey Security</a> page.)</p>
+
+<p>Though not strictly speaking a requirement, combinining JSON with REST is a popular choice since it makes RESTful APIs Javascript and mobile-app friendly.</p>
+
+<p>A resource can be anything, a person, a todo list item, a contact in an address book.  The simplicity of REST is that resources can be read or manipulated using only four HTTP verbs.  RESTful clients submit the following verbs:</p>
+
+<ul>
+<li><strong><em>POST</em></strong> -- to create a new resource.</li>
+<li><strong><em>GET</em></strong> -- to read (return) a single resource or a list of resources.</li>
+<li><strong><em>PUT</em></strong> -- to update an existing resource.</li>
+<li><strong><em>DELETE</em></strong> -- to delete a resource.</li>
+</ul>
+
+<h2><a name="DumbNoSQL" id="DumbNoSQL">Keeping It Simple - No Database Connection Needed</a></h2>
+
+<p>Let&#39;s start with some example resource, a task.  A task has an id, a description, and the email address of the person to whom it is assigned.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.restfulwebservice;
+
+public class Task {
+    private String  description;
+    private String  assigned;
+    private Integer id;
+
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getAssigned() {
+        return assigned;
+    }
+    public void setAssigned(String assigned) {
+        this.assigned = assigned;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+}</code></pre>
+</div>
+
+<p>Our API will allow us to perform CRUD (Create, Read, Update, and Delete) operations using our four HTTP verbs, but to keep things simple our entire &quot;model layer&quot; consists of the world&#39;s dumbest in-memory, NoSQL database -- a simple map of keys to values.  We even start out with a test object pre-populated, so we&#39;re not standing on ceremony here.  The important point is to create a class that can act like a database class might act -- returning a list of all the objects, returning a single object by a primary key, etc.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.restfulwebservice;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class TaskModel {
+    HashMap&lt;Integer, Task&gt; taskMap = new HashMap&lt;Integer, Task&gt;();
+
+    public TaskModel() {
+        // Make sure we can always see at least one object by setting up a test
+        // object
+        createTestObject();
+    }
+
+    private synchronized void createTestObject(){
+        Task td = new Task();
+        td.setAssigned(&quot;unluckyintern@example.com&quot;);
+        td.setDescription(&quot;Get coffee for developers&quot;);
+        td.setId(1);
+        insert(td);
+    }
+
+    // Store a new task.
+    public synchronized Integer insert(Task task) {
+        Integer id = taskMap.size() + 1;
+
+        task.setId(id);
+        taskMap.put(id, task);
+        return id;
+    }
+
+    // Delete a task
+    public synchronized void delete(Integer taskId) {
+        if (taskMap.containsKey(taskId)) {
+            taskMap.remove(taskId);
+        }
+    }
+
+    // Update an existing task
+    public synchronized void update(Task task) {
+        taskMap.put(task.getId(), task);
+    }
+
+    // Get a single task
+    public synchronized Task get(int taskId) {
+        return taskMap.get(taskId);
+    }
+
+    // Get a list of all the tasks in the map
+    public synchronized List&lt;Task&gt; getAll() {
+        List&lt;Task&gt; tasks = new ArrayList&lt;Task&gt;();
+        for(Task t : taskMap.values()) {
+            tasks.add(t);
+        }
+        return tasks;
+    }
+}</code></pre>
+</div>
+
+<h2><a id="ProjectSetup" name="ProjectSetup">Setting up the Jersey Project in Maven and IntelliJ Idea</a></h2>
+
+<p>We&#39;ll be using Maven and IntelliJ idea to build and run our project.  Here&#39;s the Maven pom.xml file:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; 
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 
+    http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.codesolid.tutorials&lt;/groupId&gt;
+    &lt;artifactId&gt;RestfulWebService&lt;/artifactId&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;RestfulWebService&lt;/name&gt;
+
+    &lt;properties&gt;
+        &lt;jersey.version&gt;2.4.1&lt;/jersey.version&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;/properties&gt;
+
+    &lt;build&gt;
+        &lt;finalName&gt;RestfulWebService&lt;/finalName&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                &lt;version&gt;2.5.1&lt;/version&gt;
+                &lt;inherited&gt;true&lt;/inherited&gt;
+                &lt;configuration&gt;
+                    &lt;source&gt;1.6&lt;/source&gt;
+                    &lt;target&gt;1.6&lt;/target&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+                &lt;version&gt;2.16&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;excludes&gt;
+                        &lt;exclude&gt;**/TaskServiceTest.java&lt;/exclude&gt;
+                    &lt;/excludes&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.glassfish.jersey.core&lt;/groupId&gt;
+            &lt;artifactId&gt;jersey-client&lt;/artifactId&gt;
+            &lt;version&gt;${jersey.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.glassfish.jersey.core&lt;/groupId&gt;
+            &lt;artifactId&gt;jersey-client&lt;/artifactId&gt;
+            &lt;version&gt;${jersey.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.glassfish.jersey.containers&lt;/groupId&gt;
+            &lt;artifactId&gt;jersey-container-servlet&lt;/artifactId&gt;
+            &lt;version&gt;${jersey.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.glassfish.jersey.media&lt;/groupId&gt;
+            &lt;artifactId&gt;jersey-media-moxy&lt;/artifactId&gt;
+            &lt;version&gt;${jersey.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+            &lt;artifactId&gt;jackson-core&lt;/artifactId&gt;
+            &lt;version&gt;2.3.0&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.codehaus.jackson&lt;/groupId&gt;
+            &lt;artifactId&gt;jackson-mapper-asl&lt;/artifactId&gt;
+            &lt;version&gt;1.9.13&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.8.1&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+</div>
+
+<p>As you can see we&#39;ve taken the strange step of excluding our only unit test from the Maven build.  The reason for this is that our &quot;unit test&quot; is really more of an integraion test because it is a RESTful client that relies on the Tomcat server running the application.</p>
+
+<p>The procedure for importing the POM file into an Idea project is documented <a href="http://codesolid.com/a-simple-junit-tutorial-using-maven-and-intellij-idea/#ImportingTheProject">here</a>, but since you&#39;ll also be needing configuration to run the web application in Tomcat and to run the client side test, the easiest thing to do at this point is <a href="/downloads/RestfulWebService.zip">download the project</a> and open it in IntelliJ Idea.</p>
+
+<h2><a name="TheRestfulAPI" id="TheRestfulAPI">The Restful API</a></h2>
+
+<p>To make the Jersey magic happen, we set up a base URL on our web server &quot;/webapi/*&quot;.  Any requests underneath that base pattern will be handled by Jersey&#39;s ServletContainer class, which will know how to handle the RESTful API we&#39;ll develop.  To do this, we the web.xml shown below into src/main/webapp/WEB-INF:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;
+         xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;
+         id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;
+
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;Jersey Web Application&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;org.glassfish.jersey.servlet.ServletContainer&lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;jersey.config.server.provider.packages&lt;/param-name&gt;
+            &lt;param-value&gt;com.codesolid.tutorials.restfulwebservice&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;Jersey Web Application&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/webapi/*&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre>
+</div>
+
+<p>The Jersey ServletContainer works in conjunction with annotations 
+we&#39;ll import from the package, javax.ws.rs.  It will scan the package we&#39;ve specified, com.codesolid.tutorials.restfulwebservice, for Jersey provider files.For example, our API is defined in the file TaskRestfulService.java, shown below:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.restfulwebservice;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import org.codehaus.jackson.map.ObjectMapper;
+
+import java.net.URI;
+import java.util.List;
+
+import javax.ws.rs.core.Response.Status;
+import javax.ws.rs.core.UriInfo;
+
+/**
+ * This is a Jersey resource.  The RESOURCE_URL we define here, &quot;tasks&quot;,
+ * is added on to our base Jersey url_pattern of &quot;/webapi/&quot; (see web.xml).
+ *
+ * So the starting point for all URLs for this resource will look something
+ * like http://localhost:8080/webapi/tasks on a test server, for example,
+ * or http://localhost/webapi/tasks in production.
+ */
+@Path(TaskRestfulService.RESOURCE_URL)
+public class TaskRestfulService {
+
+    public static final String RESOURCE_URL = &quot;tasks&quot;;
+
+    static TaskModel model = new TaskModel();
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List&lt;Task&gt; getTasks() {
+        List&lt;Task&gt; tasks = model.getAll();
+        return tasks;
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;{id}&quot;)
+    public Task getTask(@PathParam(&quot;id&quot;) Integer id) {
+        Task task = model.get(id);
+        return task;
+    }
+
+    /* Handle a POST request, i.e., a request to create a new Task object.
+    */
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response doPost(Task task, @Context UriInfo uriInfo) {
+        return saveNewTask(task, uriInfo);
+    }
+
+    // Used by POST and PUT when entity does not yet exist
+    private Response saveNewTask(Task task, UriInfo uriInfo) {
+        Integer id = model.insert(task);
+        URI createdURI = URI.create(uriInfo.getBaseUri().toString() + RESOURCE_URL + &quot;/&quot; + id);
+        task.setId(id);
+        return Response
+                .status(Status.CREATED)
+                .contentLocation(createdURI)
+                .entity(task)
+                .build();
+    }
+
+    /* A more verbose version of the same POST handler.  Don't write your code
+       this way, it's provided for illustration purposes so you can see what's going
+       on behind the scenes.
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response doPost(String json, @Context UriInfo uriInfo) {
+
+        ObjectMapper mapper = new ObjectMapper();
+        Task task = null;
+        try {
+            task = mapper.readValue(json, Task.class);
+        }
+        catch (Exception e) {
+            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+        }
+        return saveNewTask(task, uriInfo);
+    }
+    */
+
+    /* PUT to overwrites (updates) a pre-existing task.  Optionally,
+       it can store a new task as well.
+    */
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;{id}&quot;)
+    public Response doPut(@PathParam(&quot;id&quot;) Integer id, Task task, @Context UriInfo uriInfo) {
+
+        if (model.isTaskSaved(id)) {
+            // In case of a disagreement, the pathParam overrides
+            // any id that may be set in the POST body
+            if (id &gt; 0) {
+                task.setId(id);
+            }
+            return updateExistingTask(task);
+        }
+        else {
+            return saveNewTask(task, uriInfo);
+        }
+    }
+
+    private Response updateExistingTask(Task task) {
+        model.update(task);
+        return Response
+                .status(200)
+                .entity(task)
+                .build();
+    }
+
+    @DELETE
+    @Path(&quot;{id}&quot;)
+    public Response deleteTask(@PathParam(&quot;id&quot;) Integer id) {
+        model.delete(id);
+        return Response.accepted().build();
+    }
+}</code></pre>
+</div>
+
+<p>The @Path(&quot;tasks&quot;) annotation marks the class as a resource that Jersey&#39;s ServletContainer will serve for us.  Because we earlier specified /webapi as our root all our resources, the path string here, &quot;tasks&quot; this will get tacked on to the end of that, so the relative URLs for our task resource will look like with &quot;/webapi/tasks&quot;.  </p>
+
+<p>Inside the class we declare a model object for our &quot;database&quot;, and we see our first RESTful method (below).  There&#39;s no additional path annotation here, just an annotation @GET, so the result is that a simple GET on /webapi/tasks/ returns a list of all the tasks object we have in memory.  </p>
+
+<p>Because our file imports org.codehaus.jackson.map.ObjectMapper, and because we&#39;ve used the annotation &quot;@Produces(MediaType.APPLICATION_JSON)&quot;, even though we&#39;re returning a list of Task objects from the method, Jersey&#39;s going to be kind enough to use Jackson to <a href="https://jersey.java.net/documentation/latest/media.html">automagically convert</a> your objects to JSON strings.</p>
+
+<p>Don&#39;t you love it when things just go your way?</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>@GET
+@Produces(MediaType.APPLICATION_JSON)
+public List&lt;Task&gt; getTasks() {
+    List&lt;Task&gt; tasks = model.getAll();
+    return tasks;
+}</code></pre>
+</div>
+
+<p>Returning a single object from our API via a GET request is also straightforward because it&#39;s almost identical to our first method.  All we need to add is a way to specify an id for the object we want.   We use @Path(&quot;{id}&quot;) to specify a path variable parameter, so our GET URL becomes /webapi/tasks/{id}, where {id} is some primary key for the object.  We then use the expression &quot;@PathParam(&quot;id&quot;) Integer id&quot; to have Jersey read the id into an Integer variable we can pass to the model.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>@GET
+@Produces(MediaType.APPLICATION_JSON)
+@Path(&quot;{id}&quot;)
+public Task getTask(@PathParam(&quot;id&quot;) Integer id) {
+    Task task = model.get(id);
+    return task;
+}</code></pre>
+</div>
+
+<p>Once again, conversion to JSON will be automatic in this case.</p>
+
+<p>In our handler to POST a new Task object, to give you an idea of what&#39;s going on behind the scenes, we make our code considerably more verbose by handling the JSON conversion to a Java object ourselves.  </p>
+
+<div>
+  <pre data-line=''><code class='language-java'>/*
+   Handle a POST request, i.e., a request to create a new Task object.
+   We're going to Unpack our JSON String manually for illustration purposes.
+   A more concise way to do this will be shown in the PUT handler, below
+ */
+@POST
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+public Response doPost(String json, @Context UriInfo uriInfo) {
+    ObjectMapper mapper = new ObjectMapper();
+    Task task = null;
+    try {
+        task = mapper.readValue(json, Task.class);
+    }
+    catch (Exception e) {
+        return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+    }
+    return saveNewDTO(task, uriInfo);
+}
+
+// Used by POST and PUT when entity does not yet exist
+private Response saveNewDTO(Task task, UriInfo uriInfo) {
+    Integer id = model.insert(task);
+    URI createdURI = URI.create(uriInfo.getBaseUri().toString() + RESOURCE_URL + &quot;/&quot; + id);
+    task.setId(id);
+    return Response
+            .status(Status.CREATED)
+            .contentLocation(createdURI)
+            .entity(task)
+            .build();
+}</code></pre>
+</div>
+
+<p>Our verbose POST method is equivalent to the much more eye-friendly:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>@POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response doPost(Task task, @Context UriInfo uriInfo) {
+        return saveNewTask(task, uriInfo);
+    }</code></pre>
+</div>
+
+<p>Strictly speaking, PUT is used to update a new task.  We read the id
+from the URL and ensure that that&#39;s the id of the task we&#39;re updating.
+We don&#39;t return the new task. According to the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP Protocol Standard</a>, however, PUT can also be used
+to store a new resource.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>/* PUT to overwrites (updates) a pre-existing task.  Optionally,
+       it can store a new task as well. */
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;{id}&quot;)
+    public Response doPut(@PathParam(&quot;id&quot;) Integer id, Task task, @Context UriInfo uriInfo) {
+
+        if (model.isTaskSaved(id)) {
+            // In case of a disagreement, the pathParam overrides
+            // any id that may be set in the POST body
+            if (id &gt; 0) {
+                task.setId(id);
+            }
+            return updateExistingTask(task);
+        }
+        else {
+            return saveNewTask(task, uriInfo);
+        }
+    }
+
+    private Response updateExistingTask(Task task) {
+        model.update(task);
+        return Response
+                .status(200)
+                .entity(task)
+                .build();
+    }</code></pre>
+</div>
+
+<p>And of course, we need a way to bid our objects a fond (or not) farewell.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>@DELETE
+@Path(&quot;{id}&quot;)
+public Response deleteTask(@PathParam(&quot;id&quot;) Integer id) {
+    model.delete(id);
+    return Response.accepted().build();
+}</code></pre>
+</div>
+
+<h2><a name="ClientSideTesting" id="ClientSideTesting">Testing the Server:  A Jersey REST client</a></h2>
+
+<p>In addition to being a fine API for easily setting up a RESTful API on the Server side, Jersey provides excellent services that you can use to create a RESTful client.  In the next listing, we show how to construct an integration
+test to exercise our client.  Each of our methods tests a specific part of the API, with the HTTP verb in caps, for example &quot;canPOSTaNewTask&quot; or &quot;canGETaTaskList&quot;.  We use the Jackson ObjectMapper to convert our entities 
+to and from the JSON our REST API consumes.  </p>
+
+<div>
+  <pre data-line=''><code class='language-java'>package com.codesolid.tutorials.restfulwebservice;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import javax.ws.rs.client.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import static org.junit.Assert.*;
+
+/** 
+ * Note that this is an Integration Test.  It relies on having the Restful Web Service running
+ * in Tomcat or another container.
+ * @see TaskRestfulService  
+ */
+public class TaskServiceTest {
+
+    public static Client client = null;
+
+    @BeforeClass
+    public static void Before() {
+        TaskServiceTest.client = ClientBuilder.newClient();
+    }
+
+    @AfterClass
+    public static void After() {
+        client.close();
+    }
+
+    @Test
+    public void canPOSTaNewTask() throws Exception {
+
+        WebTarget target = client.target(&quot;http://localhost:8080/webapi&quot;).path(&quot;tasks&quot;);
+        Task task = new Task();
+        task.setAssigned(&quot;john@particlewave.com&quot;);
+        task.setDescription(&quot;Fix post test&quot;);
+
+        ObjectMapper mapper = new ObjectMapper();
+        String json = mapper.writeValueAsString(task);
+        Response rs = target.request().post(Entity.entity(json, MediaType.APPLICATION_JSON));
+        Task taskResponse = rs.readEntity(Task.class);
+        assertNotNull(taskResponse);
+        assertNotNull(taskResponse.getId());
+        assertEquals(taskResponse.getAssigned(), task.getAssigned());
+    }
+
+    // In order not to rely on the fact that our toy model
+    // creates a test object for us, we create one here and then update it.
+    @Test
+    public void canPUTanUpdatedTask() throws Exception {
+
+        String original = &quot;Update me -- don't leave me in this awful, just-created state!&quot;;
+        String updated = &quot;Freshly updated and open for business.  Thank you so much!&quot;;
+
+        // Create the original object
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target(&quot;http://localhost:8080/webapi&quot;).path(&quot;tasks&quot;);
+        Task task = new Task();
+        task.setAssigned(&quot;bogus@example.com&quot;);
+        task.setDescription(original);
+        Response rs = target.request().post(Entity.entity(task, MediaType.APPLICATION_JSON));
+        Task taskResponse = rs.readEntity(Task.class);
+        assertNotNull(taskResponse);
+
+        // Now update it, and PUT the updated version
+        taskResponse.setDescription(updated);
+        target = client.target(&quot;http://localhost:8080/webapi&quot;).path(&quot;tasks/&quot; + taskResponse.getId());
+        rs = target.request().put(Entity.entity(taskResponse, MediaType.APPLICATION_JSON));
+        Task taskResponseUpdated = rs.readEntity(Task.class);
+
+        // And test...
+        assertNotNull(taskResponseUpdated);
+        assertEquals(taskResponseUpdated.getDescription(), updated);
+    }
+
+    @Test
+    public void canGETaTaskList() throws Exception {
+
+        WebTarget target = client.target(&quot;http://localhost:8080/webapi&quot;);
+        WebTarget resource = target.path(&quot;/tasks&quot;);
+        Invocation.Builder invocationBuilder =
+                resource.request(MediaType.APPLICATION_JSON);
+        Response response = invocationBuilder.get();
+        String tasks = response.readEntity(String.class);
+        assertNotNull(tasks);
+        ObjectMapper mapper = new ObjectMapper();
+        Task[] taskArray = mapper.readValue(tasks, Task[].class);
+        assertNotNull(taskArray);
+        assertTrue(taskArray.length &gt;= 1);
+    }
+
+    @Test
+    public void canGETaSingleTask() {
+
+        WebTarget target = client.target(&quot;http://localhost:8080/webapi&quot;);
+        WebTarget resource = target.path(&quot;/tasks/1&quot;);
+        Invocation.Builder invocationBuilder =
+                resource.request(MediaType.APPLICATION_JSON);
+        Response response = invocationBuilder.get();
+        Task task = response.readEntity(Task.class);
+        assertNotNull(task);
+        assertNotNull(task.getId());
+        assertTrue(task.getId() &gt;= 1);
+    }
+
+    @Test
+    public void canDELETEaTask() throws Exception {
+
+        // Create a task to have one we can safely delete
+        WebTarget target = client.target(&quot;http://localhost:8080/webapi&quot;).path(&quot;tasks&quot;);
+        Task task = new Task();
+        task.setAssigned(&quot;example@test.com&quot;);
+        task.setDescription(&quot;I can't go on like this.  Please delete me.&quot;);
+        Response rs = target.request().post(Entity.entity(task, MediaType.APPLICATION_JSON));
+        Task taskResponse = rs.readEntity(Task.class);
+        assertNotNull(taskResponse);
+        assertNotNull(taskResponse.getId());
+        assertTrue(taskResponse.getId() &gt;= 1);
+
+        // Set up a URL based on our returned object
+        target = client.target(&quot;http://localhost:8080/webapi&quot;).path(&quot;tasks/&quot; + taskResponse.getId());
+
+        // Test that it's saved
+        taskResponse = null;
+        rs = target.request().get();
+        taskResponse = rs.readEntity(Task.class);
+        assertNotNull(taskResponse);
+
+        // Goodbye!
+        target.request().delete();
+
+        // Test that it's really gone.
+        taskResponse = null;
+        rs = target.request().get();
+        taskResponse = rs.readEntity(Task.class);
+        assertNull(taskResponse);
+    }
+}</code></pre>
+</div>
+
+<h2><a name="Conclusion" id="Conclusion">Putting it All Together</a></h2>
+
+<p>We&#39;ve bundled it all up for you in a <a href="/downloads/RestfulWebService.zip">ZIP file download</a> that has everything you need to get started.  (If you prefer, you can <a href="https://github.com/CodeSolid/tutorials/tree/master/RestfulWebService">browse the code</a> on Github.)  </p>
+
+<p>In the IntelliJ project, you&#39;ll need to re-point your Tomcat instance to a Tomcat instance running on your local machine (Run / Edit Configurations / Tomcat Server / Tomcat7 then press the &quot;Configure button&quot; to set up your Tomcat instance).  In the Run dropdown, select Tomcat first and run that, and once
+Tomcat runs up your integration tests should all be green.  </p>
+
+<p>If you enjoyed this tutorial, we&#39;ll happily accept Github love via the links below. (Shameless, I know, but thanks!)</p>
+
+<div style="margin-top:1em;margin-bottom:-.5em">
+<iframe src="http://ghbtns.com/github-btn.html?user=codesolid&repo=tutorials&type=fork&size=large"" allowtransparency="true" frameborder="0" scrolling="0" width="83" height="40" size="large"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user=codesolid&repo=tutorials&type=follow&size=large"" allowtransparency="true" frameborder="0" scrolling="0" width="200" height="40" size="large"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user=codesolid&repo=tutorials&type=watch&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="40""></iframe>
+</div>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

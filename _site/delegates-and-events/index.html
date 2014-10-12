@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Delegates and Events</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Delegates and Events</h1>
+<!-- <p class="meta">28 Aug 2009</p> -->
+
+<div class="post">
+<p>In .NET, delegates are classes that implement type safe function pointers.  Like all function pointers, they can be used whereever you need dynamic execution of code.  One use of delegates that is ubiquitous in .NET is as a mechanism for handling events.  Both ASP.NET Webforms and the Windows development Winforms classes uses such delegates as event handlers.  So does our little program below, which shows how to translate keypresses into events, then handle certain events as they&#39;re raised.</p>
+
+<p>As a side note, this was the first sample I developed using Visual Studio 2010 beta (though it compiles and runs fine under 2005 as well).</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;code&gt;
+using System;
+
+/*
+ *  Since we&#39;ll be raising events, we create a simple
+ *  EventArgs class that knows about System.ConsoleModifiers 
+ *  (i.e. keyboard states like CTRL, ALT, SHIFT)
+ */
+public class KeyEventArgs : EventArgs
+{
+    private ConsoleModifiers _cm;
+
+    public KeyEventArgs(ConsoleModifiers cm)
+    {
+        _cm = cm;
+    }
+    public ConsoleModifiers Modifiers
+    {
+        get { return _cm; }
+    }
+}
+
+/*
+ * Define an event delegate.  Our publisher defines instances
+ * of this delegate.  Our subscribers add event handlers to the 
+ * publisher&#39;s delegates for the events they&#39;re interested in.
+ */
+public delegate void KeyEventDelegate(object obj, KeyEventArgs e);
+
+/* 
+ * A simple event publisher.  Translate keypresses into events that
+ * a subscriber can subscribe to.
+ * */
+class KeyPublisher
+{
+    // Translate keypresses into events
+    public void KeypressToEvent(ConsoleKeyInfo pressed)
+    {
+        // No event generated for a plain old key
+        Console.WriteLine(&quot;Pressed:  {0}&quot;, pressed.KeyChar);
+
+        // Now the plot thickens
+        if (pressed.Modifiers != 0)
+        {
+            KeyEventArgs kea = new KeyEventArgs(pressed.Modifiers);
+
+            // Alt key pressed?
+            if ((pressed.Modifiers &amp; ConsoleModifiers.Alt) != 0)
+            {
+                // I.e., if someone has subscribed
+                if (AltKeyPressed != null)
+                {
+                    // Raise an event
+                    AltKeyPressed(this, kea);
+                }
+            }
+
+            // Etc...
+            if ((pressed.Modifiers &amp; ConsoleModifiers.Control) != 0)
+            {
+                if (ControlKeyPressed != null) 
+                    ControlKeyPressed(this, kea);
+            }
+
+            if ((pressed.Modifiers &amp; ConsoleModifiers.Shift) != 0)
+            {
+                if (ShiftKeyPressed != null)
+                    ShiftKeyPressed(this, kea);
+            }
+        }
+
+    }
+
+    public static event KeyEventDelegate AltKeyPressed = null;
+    public static event KeyEventDelegate ShiftKeyPressed = null;
+    public static event KeyEventDelegate ControlKeyPressed = null;
+}
+
+/*
+ * Create some simple event hanlders we can use.  We&#39;ll wire these
+ * up below in our sample &quot;Main&quot;
+ */
+class KeySubscriber
+{
+    // Function signature matches our delegate
+    public void HandleControlKey(Object ojb, KeyEventArgs e)
+    {
+        Console.WriteLine(&quot;Control key pressed&quot;);
+    }
+
+    // Function signature matches our delegate
+    public void HandleAltKey(Object ojb, KeyEventArgs e)
+    {
+        Console.WriteLine(&quot;Alt key pressed&quot;);
+    }   
+
+    // But I&#39;m not interested in Shift keys
+}
+
+
+class EventHandlerExample
+{
+    static void Main(string[] args)
+    {
+        // Create a publisher to fire events
+        KeyPublisher pub = new KeyPublisher();
+
+        // Create a subscriber to respond to them
+        KeySubscriber sub = new KeySubscriber();
+
+        // Link event handlers to events
+        KeyPublisher.AltKeyPressed += sub.HandleAltKey;
+        KeyPublisher.ControlKeyPressed += sub.HandleControlKey;
+
+        // Read keys and translate to events
+        ConsoleKeyInfo keyInfo;
+        bool finished = false;
+        while (! finished)
+        {
+            keyInfo = Console.ReadKey();
+            switch (keyInfo.KeyChar)
+            {
+                case &#39;Q&#39;:
+                case &#39;q&#39;:
+                    finished = true;
+                    break;
+
+                default:
+                    // Publish!
+                    pub.KeypressToEvent(keyInfo);
+                    break;
+            }
+        }
+
+    }
+}
+
+
+&lt;/code&gt;
+</code></pre></div>
+<p>Output of course varies depending on what keys you press. One possibility:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;code&gt;
+aPressed:  a
+bPressed:  b
+☻Pressed:  ☻
+Control key pressed
+◄Pressed:  ◄
+Control key pressed
+♦Pressed:  ♦
+Control key pressed
+aPressed:  a
+Alt key pressed
+ Pressed:
+Alt key pressed
+Control key pressed
+&lt;/code&gt;
+</code></pre></div>
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

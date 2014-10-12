@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Copying, Moving, Deleting, Creating, and Reading Files (With Or Without Deep Love Poetry)</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Copying, Moving, Deleting, Creating, and Reading Files (With Or Without Deep Love Poetry)</h1>
+<!-- <p class="meta">28 Sep 2009</p> -->
+
+<div class="post">
+<p>`</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">using System;
+using System.IO;
+
+class FileAndFileInfoExample
+{
+    static void Main(string[] args)
+    {
+        // Show some mechanisms for creating, moving, 
+    // copying and deleting files
+        try
+        {
+            // Get a couple of filenames
+            string file1 = @&quot;C:\FileInfoExample_Sample.txt&quot;;
+            string file2 = @&quot;C:\FileInfoExample_Sample2.txt&quot;;
+
+            // Create a text file.
+            TextWriter tw = File.CreateText(file1);
+
+            // Write a moving love poem into it.
+            tw.WriteLine(&quot;I had a girl.&quot;);
+            tw.WriteLine(&quot;Her name was Sue.&quot;);
+            tw.WriteLine(&quot;Loved her dear,&quot;);
+            tw.WriteLine(&quot;Loved her true.&quot;);
+            tw.WriteLine(&quot;Till one day&quot;);
+            tw.WriteLine(&quot;She broke my heart.&quot;);
+            tw.WriteLine(&quot;Took a shotgun -- &quot;);
+            tw.WriteLine(&quot;Blew me apart.&quot;);
+
+            // Sealed with a kiss for Sue
+            tw.Close();
+
+            // Copy our beautiful creation
+            File.Copy(file1, file2);
+
+            // Delete the original
+            File.Delete(file1);
+
+            // Move the new file back using File
+            File.Move(file2, file1);
+
+            // Using FileInfo instead this time...
+            FileInfo fi = new FileInfo(file1);
+
+            // Copy it again.
+            fi.CopyTo(file2);
+
+            // Delete the original again
+            fi.Delete();
+
+            // Get file2
+            fi = new FileInfo(file2);
+
+            // Move it back to one.
+            fi.MoveTo(file1);
+
+            // Show our poem to the world
+            string [] lovePoem = File.ReadAllLines(file1);
+            foreach (string profoundLine in lovePoem)
+            {
+                Console.WriteLine(profoundLine);
+            }
+
+            // Make sure no jealous poets steal our work
+            fi = new FileInfo(file1);
+            fi.Delete();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+        Console.ReadKey();
+    }
+}
+</code></pre></div>
+<p>`</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

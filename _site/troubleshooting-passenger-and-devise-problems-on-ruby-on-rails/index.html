@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Troubleshooting Passenger and Devise Problems on Ruby on Rails</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Troubleshooting Passenger and Devise Problems on Ruby on Rails</h1>
+<!-- <p class="meta">11 Jul 2012</p> -->
+
+<div class="post">
+<p>I spent more time than I&#39;d like to admit yesterday on a problem with Devise that I was seeing on a Rails application that I was deploying to production.  Like most head-scratcher bugs that we as software developers track down, the solution often appears blindingly obvious -- once we find it, of course.  What happened was that my Devise routes, which had worked fine on the development server, suddenly stopped working when I moved the app to production.</p>
+
+<p>At first all I saw were 404 errors.  Thinking it was a Passenger issue, my first stop was to try finding out about Passenger logging.  This led me to set up my apache configuration file for this virtual host as follows:</p>
+
+<p>[cc lang=&quot;XML&quot;]</p>
+
+<p>ServerName myservername.com
+  PassengerLogLevel 3                             &lt;-- Add this line!
+  DocumentRoot /var/www/apps/prjectdirectory/public</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Options -Multiviews
+AllowOverride None
+Order allow,deny 
+    Allow from all
+</code></pre></div>
+<p>[/cc]</p>
+
+<p>Since this was an early deployment effort, I also temporarily moved config/environments/development.rb to config/environments/production.rb, thus picking up some of the development time debug settings.</p>
+
+<p>By the time I&#39;d done this, the page was at least starting to point me in the right direction, by displaying the error:</p>
+
+<p>[cc]
+No route matches {:controller=&gt;“devise/home”}.
+[/cc]</p>
+
+<p>Well, that was a little more helpful than a 404 message, but not much.  The error output from passenger in the Apache log wasn&#39;t much help either.  Google-Fu, StackOverflow -- nothing helpful.</p>
+
+<p>Meantime, one thing that kept nagging at me was the fact that I was also seeing the problem if I ran the app under WebBrick using production settings (i.e.:  &quot;RAILS_ENV=production rails s&quot;).  </p>
+
+<p><strong>Looking in the Wrong Place</strong></p>
+
+<p>Often I find that a few minutes before a daunting software puzzler turns into trivial child&#39;s play, I stop looking for the solution in the &quot;wrong&quot; (according to hindsight) place.  In this case, the fact that this was also failing in WebBrick led me to conclude that what I should be troubleshooting in this case was not passenger -- but the Rails app itself.  Never mind that it worked in development -- it wasn&#39;t working here, in not one but two web servers.  </p>
+
+<p>At this point I turned on Rails logging.  (Yay -- good answer -- and the crowd went wild!)</p>
+
+<p>Adding the following line to production.rb was all I needed:</p>
+
+<p>[cc lang=&quot;ruby&quot;]
+config.log_level = :debug
+[/cc]</p>
+
+<p>Doing that, restarting the server and navigating to mysite.com/users/sign_up, the log (in the default location of &quot;log/production.log&quot; showed me this call stack:</p>
+
+<p>[cc]
+Started GET &quot;/users/sign<em>up&quot; for 207.183.247.194 at 2012-07-10 23:56:21 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/</em>links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/<em>dev</em>nav.html.erb (0.8ms)
+Completed 500 Internal Server Error in 18ms
+[/cc]</p>
+
+<p>At this point the log helpfully was pointing me to just the page where the error was happening.  Looking at the partial in &quot;views/layouts/<em>dev</em>nav.html.erb&quot;, the advice of the articles I&#39;d found about the problem along the way now made sense:  this was a scoping problem in a link_to call.  Actually there were a few such calls, but the solution was the same in each case:  Add a &quot;/&quot; to the beginning of the controller &quot;name&quot;.  In other words, change this:</p>
+
+<p>[cc lang=&quot;ruby&quot;]</p>
+
+<p>&lt;%= link_to &quot;Home&quot;, :controller =&gt; &quot;home&quot;, :action =&gt; &quot;index&quot; %&gt;</p>
+
+<p>[/cc]</p>
+
+<p>To this:</p>
+
+<p>[cc lang=&quot;ruby&quot;]</p>
+
+<p>&lt;%= link_to &quot;Home&quot;, :controller =&gt; &quot;/home&quot;, :action =&gt; &quot;index&quot; %&gt;</p>
+
+<p>[/cc]</p>
+
+<p>This makes sure that &quot;home&quot; isn&#39;t considered to be a Devise controller, even in the context of rendering a Devise view.</p>
+
+<p>In simpler terms, the best way to debug Passenger and Devise problems on Rails is not to treat them as Passenger or Devise problems.   Underneath whatever&#39;s broken is a Rails application, and that Rails application has excellent logging available.</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

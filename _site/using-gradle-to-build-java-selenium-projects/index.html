@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Using Gradle to Build Java Selenium Projects</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Ant lets you script anything, and Maven handles all your dependencies neatly.  If only there were a build tool that let you do both.  Well, there is -- it's Gradle, and in this article we show you how to use it with IntelliJ and Selenium.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Using Gradle to Build Java Selenium Projects</h1>
+<!-- <p class="meta">29 Jun 2014</p> -->
+
+<div class="post">
+<p>In a recent article, we showed you how to start working with <a href="http://localhost:4000/selenium-and-intellij-idea-part-two/">Selenium in IntelliJ Idea</a>.  As we&#39;ve often done in the past, we started our Idea project with a Maven build script (a pom file).  Well, all that worked well enough, but as Jenniffer was beginning to make some
+really good progress on her <a href="https://github.com/JennifferLockwood/GoalboostTesting">Goalboost Testing</a> project, I wanted to help her with a tool that would enable
+custom scripting of tasks such as generating HTML from Markdown for the test plan, while still allowing us to build and run Selenium tests in Java in a straightforward way as Maven does.  </p>
+
+<p>In recent years there&#39;s been a lot of buzz around Gradle, the tool that lets you enjoy the easy dependency management that made Maven so popular while still having the flexibility to script whatever custom tasks you need to create.  So being the language and tools junkie that I am, of course I had to try it out.  My first task was to 
+allow Jenniffer to write the Goalboost test plan in Markdown and generate the HTML as needed so she could preview it without pushing to Github.  Using Andres Almiray&#39;s <a href="https://github.com/aalmiray/markdown-gradle-plugin">markdown-gradle-plugin</a>, this turned out to be pretty easy to do:</p>
+
+<div>
+  <pre data-line=''><code class='language-groovy'>buildscript {
+    repositories {
+        jcenter()
+         maven {
+         url  'http://dl.bintray.com/content/aalmiray/kordamp'
+        }        
+    }
+    dependencies {
+        classpath 'org.kordamp:markdown-gradle-plugin:0.1'
+    }
+}
+apply plugin: 'markdown'
+
+markdownToHtml.sourceDir = file(&quot;doc/md&quot;)
+markdownToHtml.outputDir = file(&quot;doc/html&quot;)</code></pre>
+</div>
+
+<p>Now that we had a way to &quot;build&quot; the test plan as it was being written, we also wanted to use the same tool to build and run the Selenium tests that she&#39;d be developing against the plan.  So what was needed was a Gradle build script that build a Java Selenium project the same way my earlier <a href="https://github.com/CodeSolid/tutorials/blob/master/SeleniumStarter/pom.xml">Maven build script</a> did.  Taking as a starting point Juan Cavallotti&#39;s fine article on <a href="http://jcavallotti.blogspot.com/2013/12/migration-of-maven-based-project-to.html">converting a Maven project to Gradle</a>, it turned out this was really to do.  The first version was done in about twenty minutes, but here&#39;s a version with a bit more polish:</p>
+
+<div>
+  <pre data-line=''><code class='language-groovy'>/*
+    build.gradle file for building and running Selenium tests
+    Example uses:
+    gradle clean test       - Rebuild and run tests
+    gradle test             - Run tests only
+    gradle cleanTest test   - Force tests to be run even if up to date
+    gradle viewResults      - Displays the report of test results (Windows only)
+*/
+
+// Support for building and testing
+apply plugin: 'java'
+
+// (Optional) configure name and version for jar
+jar {
+    version  '1.0'
+    baseName 'SeleniumStarter'
+    extension '.jar'
+}
+
+// Cf. Maven properties
+ext.junitVersion = '4.11'
+ext.seleniumVersion = '2.41.0'
+
+
+// Cf. Maven &lt;dependencies&gt;
+dependencies {
+    compile group: 'junit', name: 'junit', version: junitVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version:seleniumVersion
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:seleniumVersion
+}
+
+// A custom task to show report on tests that have run
+task viewResults(dependsOn: ['test'] , type:Exec) {
+        workingDir './build/reports/tests'      
+        commandLine 'cmd', '/c', 'start index.html' 
+}
+ 
+// Resolve Maven dependencies as Maven does
+repositories {
+    mavenCentral()
+    mavenLocal() 
+}</code></pre>
+</div>
+
+<p>Once you have Gradle installed (if you don&#39;t, <a href="http://www.gradle.org/downloads">download it here</a>), importing the 
+Gradle project into IntelliJ Idea works pretty much the same way as importing a Maven project.  That is to say, in Idea you 
+use File / Import Project, select the directory where the build.gradle file lives, then click &quot;Import project from external model&quot; 
+and select &quot;Gradle&quot; as the model type.</p>
+
+<p>Unfortunately, Idea&#39;s support for Gradle is not yet as polished as it is for Maven, but it&#39;s still possible to use Gradle to
+import the dependencies you need to build from within Idea as well.  To do this, go to Idea / View / Tools / Gradle to open the Gradle
+tool window, as shown below:</p>
+
+<p><img src="/images/gradle/GradleToolsMenu.png" alt="&quot;Gradle Tools Menu&quot;"></p>
+
+<p>This will bring up the Gradle Tool Window, shown below.  In that window, the button with the circular arrows right under &quot;Gradle Tasks&quot;
+is the &quot;Refresh all Gradle projects&quot; button.  Clicking this will allow you to build inside of IntelliJ Idea as you normally would,
+or you can also select Gradle tasks to run from within this window as well.  I&#39;ve run the test task and the jar task already, so this
+shows up in the Gradle Tool Window under &quot;Recent tasks&quot;.</p>
+
+<p><img src="/images/gradle/GradleToolWindow.png" alt="&quot;Gradle Tool Window&quot;"></p>
+
+<p>The <a href="https://github.com/CodeSolid/tutorials/tree/master/SeleniumStarterGradle">SeleniumStarterGradle</a> directory of the CodeSolid tutorials
+contains a complete Idea project with a Java Selenium test to get you started.  You may need to go into the project settings
+to point your gradle configuration to your local Gradle install (File / Settings / Gradle).</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

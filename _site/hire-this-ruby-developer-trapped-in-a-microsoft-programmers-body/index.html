@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>How I Became a Ruby on Rails Contractor (Trapped in a Microsoft Programmer's Body)</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>How I Became a Ruby on Rails Contractor (Trapped in a Microsoft Programmer's Body)</h1>
+<!-- <p class="meta">06 Jul 2012</p> -->
+
+<div class="post">
+<p>I work in a Microsoft shop during the day working mostly on legacy code written in C, C++, C#, and some VB.NET. There was an incident at work recently that turned me into a Rails Contractor, through some interesting alchemy involving pointy hair, which I will describe below.</p>
+
+<p>But before telling you my war story, a bit about my Rails experience: I learned Rails the same way I learned every language and framework I know -- by coding in it in my spare time.  I&#39;ve made my living as a programmer / web developer doing that since about 1993.  Currently I&#39;m working on a private Rails project, which is probably a bad thing since I can&#39;t point to it on Github and show you my stuff.  I&#39;ll fix that shortly by doing some public rails work.</p>
+
+<p>Now on to the war story. As I said, I work mainly on legacy code. In his excellent book on the subject, Michael Feathers defines legacy code as code that&#39;s not under test. That&#39;s what I work on -- vast expanses of code through which dozens of programmers have slogged since Regan was in office. The first development time unit tests in the system were tests that I added, and I only came here some four years ago, so that tells you how long this untested code had been hacked on. So needless to say, it&#39;s been a challenge to get tests in after the fact.</p>
+
+<p>Here is our software &quot;process&quot;: For major releases, our software goes through QA, running whatever tests we have. The quality is poor, so we have multiple service packs to fix it, which also go through QA. But because our test coverage isn&#39;t what it should be, the quality of the service packs is poor. Our solution to this is to send out &quot;Emergency Patches&quot; -- releases that don&#39;t go through QA testing at all.</p>
+
+<p>Yes, you really read that right, and it really said that.  To fix our quality problems, we patch our software, test the patch, but we don&#39;t send the software back to QA to run whatever scant regression tests we have -- we just send the patch out the door.  Problem?  What problem?</p>
+
+<p><strong>The Software Death Spiral</strong></p>
+
+<p>Yesterday one of my bosses asked me why we were having regressions in one area of the product. I work on database drivers, and the area in question was our handling of Oracle LONGs, a data type that Oracle deprecated in 1997, when Bill Clinton was president. I replied that we don&#39;t have regression tests for it in the suite that QA runs, and that it wasn&#39;t too much work to add them, but would leave us in the position of certifying our product against another vendor&#39;s deprecated type. So this development manager talks to the manager of technical support, who&#39;s job it is to tell us which fixes we ship without testing, which she determines according to the customer screaming for the fix.</p>
+
+<p>Our process is CSDD: Customer Screaming Driven Development.</p>
+
+<p>The answer I received was that the support manager &quot;agreed&quot; with me that we don&#39;t need regression tests for LONGs. We just need &quot;something very targeted and specifc: a fix for this one problem...&quot;</p>
+
+<p>In other words, the manager&#39;s solution for the regressions he was asking me about was to do more patches in that area without regression testing, and to attribute the idea to me!</p>
+
+<p>It was at that very moment that I became a Ruby on Rails Contractor.  To be sure, I was occupying the space of a nominal .NET / C# / C++ / C programmer, but now I was a Rails Contractor sitting in the wrong chair.  Echos of my old career as a contractor came back to me, where I was able to fight and win the battle of Test First Development in a Java shop, before Ruby on Rails was invented.  As a result, we found and killed all kinds of problems that we wouldn&#39;t have otherwise.  (That was shortly after teaching myself Java, as it happens.  Learn.  Do.  Learn more.  Do more.  That&#39;s the cycle).</p>
+
+<p>Rails is not a magic bullet, of course, but at least a framework that includes unit tests baked in -- as well as gems like Rspec and FactoryGirl and Capybara -- has a fighting chance of attracting one or two managers who understand that testing is important.</p>
+
+<p>Leave me a comment if you&#39;re such a manager. I&#39;d love to hear from you.</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>

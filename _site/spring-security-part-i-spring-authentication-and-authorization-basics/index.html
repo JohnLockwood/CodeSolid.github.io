@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class=no-js>
+<head>
+<meta charset="utf-8">
+<title>Spring Security - Part I:  Spring Authentication and Authorization Basics</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
+
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
+<link rel=stylesheet href=http://codesolid.com/bootstrap/styles/custom.css> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Prism syntax highlighting -->
+<link href="http://codesolid.com/css/prism.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://codesolid.com/feed.xml" />
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'codesolid.com',
+    idle_timeout: 1800000
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+<script src="/js/prism.js"></script>    
+</head>
+    <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <div class="container">
+        <!--
+        <header><h1><span class="logo_code">Code</span><span class="logo_solid">Solid</span></h1><p>Software Development</p></header>
+
+        <nav id="nav">
+-->     <div class="header">
+        <ul class="nav nav-pills pull-right">        
+        <li><a href="/">Home</a></li>        
+        <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+        <h3 class=text-muted>CodeSolid</h3>     
+        </div>
+        <article>   
+            <h1>Spring Security - Part I:  Spring Authentication and Authorization Basics</h1>
+<!-- <p class="meta">09 Jun 2013</p> -->
+
+<div class="post">
+<div id="table_of_contents">
+<h1>Table of Contents</h1>
+<ul >
+<li><a href="#Introduction">Introduction -- My Scandalous Confession</a></li>
+<li><a href="#GeneratingAProject">Generating a Spring Security Project</a></li>
+<li><a href="#SecurityConfiguration">The Security Configuration Files</a></li>
+<li><a href="#StandardPasswordEncoder">Spring's StandardPasswordEncoder</a></li>
+<li><a href="#SecurityInTheViewLayer">Using Security in the View Layer -- The Spring Security Tag Libraries</a></li>
+</ul>
+</div>
+
+<h2><a id="Introduction" name="Introduction">Introduction -- My Scandalous Confession</a></h2>
+
+<p>Before we begin with the tutorial, I am going to lay bare my soul to you.  I know, most tutorials are dry and boring, and don&#39;t include such titillating and scandalous gossip as you are about to hear. You&#39;re welcome.</p>
+
+<p>Whenever I write an article that has Part 1 in the title, I generally am doing so without even a remote business plan for a clue about how many parts I&#39;m going to end up with.  There, I&#39;ve made my confession.  Eat your heart out, St. Augustine.</p>
+
+<p>In this tutorial we&#39;re going to start digging into Spring Security in the easiest way I know how.  First, spend $199 on a <a href="http://www.jetbrains.com/idea/download/">great Java IDE</a>, or download it free for thirty days so you can get through however many parts this article ends up having.  We&#39;re using IntelliJ 12 Ultimate Edition to generate a starter project for this article in the next section.  The cool thing is, though, once you have the <a href="https://github.com/CodeSolid/tutorials/tree/master/SpringSecurity1">starter project</a>, you can likely follow along with the rest of the article using either the IntelliJ Idea 11 or 12 Community Edition, which is free. I&#39;ve had good luck doing that. You can even <a href="/how-to-run-the-codesolid-tutorials-in-eclipse/">import the POM file into Eclipse</a> and run the project that way.</p>
+
+<h2><a id="GeneratingAProject" name="GeneratingAProject">Generating a Spring Security Project</a></h2>
+
+<p>With Idea Ultimate Edition Version 12 and later, to create a Spring Security Project you simply select create a new project from the Welcome Screen:</p>
+
+<p><img src="/images/spring_security/IntelliJCreateNewProject.jpg" alt="IntelliJCreateNewProject"></p>
+
+<p>Next, select Spring Security and give your project a name:</p>
+
+<p><img src="/images/spring_security/SpringSecurityCreateProject1.jpg" alt="SpringSecurityCreateProject"></p>
+
+<h2><a id="SecurityConfiguration" name="SecurityConfiguration">The Security Configuration Files</a></h2>
+
+<p>In the Spring security starter project, IntelliJ adds the security-related configuration to the two required places, web.xml, and the main Spring configuration file, both of which are in src\webapp\WEB-INF.</p>
+
+<p>In web.xml, we first set up a security filter name, then use that name to defining a mapping to ensure that all application URLs go through the security filter first:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;filter&gt;
+        &lt;filter-name&gt;springSecurityFilterChain&lt;/filter-name&gt;
+        &lt;filter-class&gt;org.springframework.web.filter.DelegatingFilterProxy&lt;/filter-class&gt;
+    &lt;/filter&gt;
+
+    &lt;filter-mapping&gt;
+        &lt;filter-name&gt;springSecurityFilterChain&lt;/filter-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/filter-mapping&gt;</code></pre>
+</div>
+
+<p>Next we turn to the main Spring configuration file, spring-config.xml, which is shown in abbreviated form below:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;security:global-method-security jsr250-annotations=&quot;enabled&quot; pre-post-annotations=&quot;enabled&quot; secured-annotations=&quot;enabled&quot; /&gt;
+
+&lt;security:http use-expressions=&quot;true&quot;&gt;
+    &lt;security:intercept-url pattern=&quot;/**&quot; access=&quot;permitAll&quot; /&gt;
+    &lt;security:form-login /&gt;
+    &lt;security:logout logout-success-url=&quot;/&quot; delete-cookies=&quot;JSESSIONID&quot;/&gt;
+    &lt;security:remember-me /&gt;
+    &lt;security:session-management invalid-session-url=&quot;/&quot;&gt;
+        &lt;security:concurrency-control max-sessions=&quot;1&quot; error-if-maximum-exceeded=&quot;true&quot; /&gt;
+    &lt;/security:session-management&gt;
+&lt;/security:http&gt;
+
+&lt;bean id=&quot;encoder&quot; class=&quot;org.springframework.security.crypto.password.StandardPasswordEncoder&quot;/&gt;
+
+&lt;security:authentication-manager&gt;
+    &lt;security:authentication-provider&gt;
+        &lt;security:password-encoder ref=&quot;encoder&quot;/&gt;
+        &lt;security:user-service&gt;
+            &lt;!-- Password: &quot;koala&quot; for both --&gt;
+            &lt;security:user name=&quot;user&quot;
+                  password=&quot;4efe081594ce25ee4efd9f7067f7f678a347bccf2de201f3adf2a3eb544850b465b4e51cdc3fcdde&quot;
+                  authorities=&quot;user&quot;/&gt;
+            &lt;security:user name=&quot;admin&quot;
+                  password=&quot;4efe081594ce25ee4efd9f7067f7f678a347bccf2de201f3adf2a3eb544850b465b4e51cdc3fcdde&quot;
+                  authorities=&quot;admin&quot;/&gt;
+        &lt;/security:user-service&gt;
+    &lt;/security:authentication-provider&gt;
+&lt;/security:authentication-manager&gt;</code></pre>
+</div>
+
+<p>First, we see a line enabling JSR-250 annotations, such as @RolesAllowed, @PermitAll, @DenyAll, which allows fine-grained, method level access control.  Furthermore, the &#39;use-expressions=&quot;true&quot;&#39; clause allows us to use Spring Expression Language style security expressions in our view layer. We&#39;ll be looking at what that allows us to do a bit further on when we discuss the view layer. </p>
+
+<p>Next, the attributes &#39;pre-post-annotations=&quot;enabled&quot;&#39; and &#39;secured-annotations=&quot;enabled&quot;&#39; will be used by our controllers.  These configuration elements enable a feature that is new as of Spring 3.0.  Spring 3.0 introduced several new, method-level annotations beginning with @Pre and @Post.  We see one of these, @PreAuthorize, used in both the UserService class and the ApplicationController classes:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>// In UserService.java:
+    @PreAuthorize(&quot;hasRole('admin')&quot;)
+    public Collection getAuthorities(UserDetails userDetails) {
+        return userDetails.getAuthorities();
+    }
+
+    // In ApplicationController.java:
+    @PreAuthorize(&quot;hasRole('admin')&quot;)
+    @RequestMapping(value = &quot;/admin&quot;, method = RequestMethod.GET)
+    public String admin(ModelMap map) {
+        UserDetails userDetails =
+                (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Collection securedMessage = userService.getAuthorities(userDetails);
+        map.addAttribute(&quot;userDetails&quot;, userDetails);
+        map.addAttribute(&quot;userAuthorities&quot;, securedMessage);
+        return &quot;admin&quot;;
+    }</code></pre>
+</div>
+
+<p>In the next section of the configuration, we see a setting that is probably worth giving some thought to before you move an application into production:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;security:http use-expressions=&quot;true&quot;&gt;
+        &lt;security:intercept-url pattern=&quot;/**&quot; access=&quot;permitAll&quot; /&gt;
+        ...
+   &lt;/security:http&gt;</code></pre>
+</div>
+
+<p>The demo app takes the unusual approach of allowing access by default, and allowing it for certain roles.  Generally it&#39;s considered a best practice for secure applications to deny access by default, then turn it on selectively -- that way when you forget a setting somewhere, you err on the side of more security, not less.</p>
+
+<h2><a id="StandardPasswordEncoder" name="StandardPasswordEncoder">Spring's StandardPasswordEncoder</a></h2>
+
+<p>In the next two sections of spring-config.xml, we set the password encoder our application will use to the StandardPasswordEncoder, then we configure two users with passwords generated by that encoder:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>...
+&lt;security:user-service&gt;
+    &lt;!-- Password: &quot;koala&quot; for both --&gt;
+    &lt;security:user name=&quot;user&quot;
+         password=&quot;4efe081594ce25ee4efd9f7067f7f678a347bccf2de201f3adf2a3eb544850b465b4e51cdc3fcdde&quot;
+         authorities=&quot;user&quot;/&gt;
+    &lt;security:user name=&quot;admin&quot;
+         password=&quot;4efe081594ce25ee4efd9f7067f7f678a347bccf2de201f3adf2a3eb544850b465b4e51cdc3fcdde&quot;
+         authorities=&quot;admin&quot;/&gt;
+&lt;/security:user-service&gt;
+...</code></pre>
+</div>
+
+<p>The StandardPasswordEncoder is a small and quite nicely designed class that bundles everything you want a password encoder to do into a very small interface.  It uses an SHA-256 hasing together with an eight byte random salt to generate a password hash that is unique each time.  Although the starter application does not show this, for additional security you can add an extra secret value for your application, in which case the hash will be based on the password, the random salt, and the secret value.  This is configured using basic constructor injection:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;bean id=&quot;encoder&quot; class=&quot;org.springframework.security.crypto.password.StandardPasswordEncoder&quot;&gt;
+  &lt;constructor-arg value=&quot;x9ajDR$#Qkr91&quot;&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+
+<p>Getting back to the application configuration, we see that the application is configured with two users, &quot;user&quot; and &quot;admin&quot;, both with the password &quot;koala&quot;, which is hashed to: 4efe081594ce25ee4efd9f7067f7f678a347bccf2de201f3adf2a3eb544850b465b4e51cdc3fcdde.</p>
+
+<p>To show you a little more about how the StandardPasswordController works, I&#39;ve added a unit test to the code that IntelliJ Idea provides.  As you can guess from the code, each time the tests are run the output for each encoded string will be different, even though we are encoding the same password over and over again.  Moreover, though we can verify the encoded string against the password, the password is virtually impossible to reverse engineer.</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>import static org.junit.Assert.*;
+import org.junit.Test;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
+
+public class StandardPasswordEncoderDemo {
+    @Test
+    public void testCannotReproduceHashFromConfigFile() {
+        StandardPasswordEncoder encoder = new StandardPasswordEncoder();
+        String password = &quot;koala&quot;;
+        String encoded = encoder.encode(password);
+        String encodedFromXML = &quot;4efe081594ce25ee4efd9f7067f7f678a347bccf2de201f3adf2a3eb544850b465b4e51cdc3fcdde&quot;;
+
+        // What we generated is not what's in the XML
+        assertTrue(encodedFromXML != encoded);
+
+        // But both what's in the XML and what we generated match the password.
+        assertTrue(encoder.matches(password, encoded));
+        assertTrue(encoder.matches(password, encodedFromXML));
+
+        System.out.println(encoded);
+   }
+
+    @Test
+    public void testAnotherRunWillAlsoYieldDifferentHashes() {
+        StandardPasswordEncoder encoder = new StandardPasswordEncoder();
+        String password = &quot;koala&quot;;
+        String encoded = encoder.encode(password);
+        String encoded2 = encoder.encode(password);
+        assertTrue(encoded2 != encoded);
+
+        System.out.println(encoded);
+        System.out.println(encoded2);
+    }
+}</code></pre>
+</div>
+
+<h3>Using Security in the View Layer - The Spring Security Tag Libraries</h3>
+
+<p>If we look in ApplicationController.java, we find the following method mapping:
+<div>
+  <pre data-line=''><code class='language-java'>@RequestMapping(value = &quot;/&quot;, method = RequestMethod.GET)
+    public String index(ModelMap map) {
+        // Additional code...
+        return &quot;index&quot;;
+    }</code></pre>
+</div></p>
+
+<p>No surprises here, the root mapping is to the traditional index page.  Examining the source in src/webapp/WEB-INF/pages/index.jsp we find a good demonstration of the use of the Spring Security Tag Library.  First, we import the tag library:</p>
+
+<div>
+  <pre data-line=''><code class='language-java'>&lt;%@ taglib prefix=&quot;sec&quot; uri=&quot;http://www.springframework.org/security/tags&quot; %&gt;</code></pre>
+</div>
+
+<p>We now have access to the <a href="http://static.springsource.org/spring-security/site/docs/3.0.x/reference/el-access.html#el-access-web">Spring Security Expressions</a> that we saw enabled earlier when we discussed the configuration. For example, we first check to see if the User has logged in or not, and if not, we prompt for a sign-in:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;sec:authorize access=&quot;isAnonymous()&quot;&gt;
+    &lt;p&gt;
+        &lt;a href=&quot;/spring_security_login&quot;&gt;Sign In&lt;/a&gt;
+    &lt;/p&gt;
+&lt;/sec:authorize&gt;</code></pre>
+</div>
+
+<p>Using the inverse of the isAnonymousCheck, if the user is authenticated we display a welcome message and a sign-out link:</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;sec:authorize access=&quot;isAuthenticated()&quot;&gt;
+    &lt;p&gt;Hello, ${userDetails.username}! &lt;a href=&quot;/j_spring_security_logout&quot;&gt;Sign Out&lt;/a&gt;&lt;/p&gt;
+&lt;/sec:authorize&gt;</code></pre>
+</div>
+
+<p>Note that for production use, there&#39;s a bit of a bug in this code, since there&#39;s a the user could be a user who asked to be remembered (&quot;Remember Me&quot;), in which case isAuthenticated would still return true even if the user were not logged in.  To eliminate this possibility, use &quot;isFullyAuthenticated&quot; instead.</p>
+
+<p>Finally, we do a check for the admin role and conditionally display a link if the signed in user has that role assigned.</p>
+
+<div>
+  <pre data-line=''><code class='language-http'>&lt;sec:authorize access=&quot;hasRole('admin')&quot;&gt;
+    &lt;p&gt;
+        &lt;a href=&quot;/admin&quot;&gt;Admin page&lt;/a&gt;
+    &lt;/p&gt;
+&lt;/sec:authorize&gt;</code></pre>
+</div>
+
+<p>With that, we&#39;ve seen a basic Spring Security starter project that illustrates how to set up a very basic authentication based on pre-configured user names and passwords.  In Spring Security Part II, we&#39;ll dig into how to handle the much more common use case of storing user authentication information in a database.  We&#39;ll also dig into customizing the log-in forms.  This will serve as a starting point for a much more full featured authorization system suitable for a business to consumer or business to business web site.  Later on in another tutorial we&#39;re planning to tie this database-based authentication system with Spring OAuth, allowing users with (for example) a Google account to sign in using that account.</p>
+
+</div>
+            
+        </article>
+    </div>
+
+    <script src=http://codesolid.com/bootstrap/scripts/cb7562c6.plugins.js></script> <script src=http://codesolid.com/bootstrap/scripts/b6c3df09.main.js></script>  
+    </body>
+</html>
