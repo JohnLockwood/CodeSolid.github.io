@@ -12,6 +12,15 @@
 				<description>&lt;p&gt;This is simply a test post.  I&amp;#39;ve been going back and forth on how the Rakefile and Github branches / repositories should be set up for the CodeSolid web site. &lt;/p&gt;
 
 &lt;p&gt;I think I have it licked, but this should have been much easier.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s try an edit and check out how fast and easy.&lt;/p&gt;
+
+&lt;p&gt;So the solution (for those of you who prefer to read solutions rather than test posts, which should be all of you):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use two repositories, not one.  No, seriously.&lt;/li&gt;
+&lt;li&gt;That being done, &lt;a href=&quot;https://github.com/CodeSolid/CodeSolid.github.source/blob/master/Rakefile&quot;&gt;here&amp;#39;s the Rakefile&lt;/a&gt; I&amp;#39;m using.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
 				<pubDate>Sun, 12 Oct 2014 00:00:00 -0700</pubDate>
 				<link>/yet-another-attempt-to-make-github-pages-as-easy-as-wordpress</link>
