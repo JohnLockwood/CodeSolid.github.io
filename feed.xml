@@ -8,6 +8,51 @@
 		
 			
 			<item>
+				<title>First Impressions of Cassandra</title>
+				<description>&lt;p&gt;Recently I attended a Sacramento Java User&amp;#39;s Group meeting for the first time in many years, and saw an excellent presentation by Jega Aravandy on some work he&amp;#39;s doing with Casandra, Solr, Spring, and Angular.js. It was exciting work in its own right, and Jega came equipped with plenty of swag that someone from Datastax had asked him to bring along. So between my wife and I we walked away with newfound insights along with three USBs with Cassandra VMs on them, two coffee mugs and a tee shirt.&lt;/p&gt;
+
+&lt;p&gt;Not a bad night&amp;#39;s haul.&lt;/p&gt;
+
+&lt;p&gt;A friend from work was also there, so we&amp;#39;ve been chatting about Cassandra since.  We&amp;#39;ve been discussing whether we should spend some of the money that the company is encouraging us to spend on training on Datastax&amp;#39;s &lt;a href=&quot;http://www.datastax.com/what-we-offer/products-services/training/apache-cassandra-core-concepts-skills-and-tools&quot;&gt;Introductory Course in Cassandra&lt;/a&gt;.  &lt;/p&gt;
+
+&lt;p&gt;My ethical dilemma is that I can spend the company&amp;#39;s money on this cool bauble I want to learn, but I really think the chances of getting to use this cool bauble at this company are not good.  So even though they might well still pay for it, it doesn&amp;#39;t seem right to let me increase my marketability at their expense unless part of the market is internal.&lt;/p&gt;
+
+&lt;h1&gt;Compromise:  Hello World&lt;/h1&gt;
+
+&lt;p&gt;Struck down by fear at the edge of this dense ethical forest, I retreated to the safety of a trusted old friend -- Hello World.  So I told my work-friend that I&amp;#39;d write my other friend (Hello World) using Cassandra over the weekend, and last night just like that I did it.&lt;/p&gt;
+
+&lt;p&gt;Come on people, it&amp;#39;s Hello World.  It&amp;#39;s not meant to be hard.  The only place Hello World was ever hard was Websphere, and that&amp;#39;s only because Websphere is a disaster.&lt;/p&gt;
+
+&lt;p&gt;A bit circular, perhaps, but QED.&lt;/p&gt;
+
+&lt;p&gt;But enough about Websphere.  Cassandra isn&amp;#39;t a disaster, so Hello World was easy.  As it should be.&lt;/p&gt;
+
+&lt;h1&gt;How Easy Was It?&lt;/h1&gt;
+
+&lt;p&gt;I have VMWare Player installed, so I tried inserting one of the USBs with the Cassandra VM on it and double clicking on the Cassandra-2.0.6.ova file.  VMWare complained a bit at first, but gave me a message along the lines of &amp;quot;Should I stop complaining and load this?&amp;quot;, so I wiesely chose yes.&lt;/p&gt;
+
+&lt;p&gt;Being instructed to stop complaining, VMWare dutifully launched the VM, which was good enough to tell me I should try to get to the CSQL console at http://some_local_address:some_port.  &lt;/p&gt;
+
+&lt;p&gt;I typed that URL into Chrome, and, hey presto, without installing Cassandra I was in a cqlsh terminal writing Hello World in it.  This basically involved a process of Googling things like &amp;quot;Cassandra create table&amp;quot;, finding out I needed a keyspace first, and working my way forward through &amp;quot;Cassandra insert&amp;quot; and &amp;quot;Cassandra select&amp;quot;.  Nothing was hard, and if you wanted to make it even easier you could &lt;a href=&quot;http://planetcassandra.org/install-cassandra-ova-on-vmware/&quot;&gt;read this overview&lt;/a&gt;.  My cassandra-newbie fingers made a mistake or two along the way to full hello-worldly glory, but it was nothing csql and I couldn&amp;#39;t work through together amicably.&lt;/p&gt;
+
+&lt;h1&gt;My Datastax-sponsored Friends&lt;/h1&gt;
+
+&lt;p&gt;On the human side of my experience, it seems to me that there is a pitched battle going on among NoSQL vendors for developer mind-share.  To give a non-Cassandra example, when I took another look at MongoDB recently, the download process required registration first.  I sometimes enter my correct details in those just to see how much hard sell I&amp;#39;ll get before the salesman and I get tired of one another.  &lt;/p&gt;
+
+&lt;p&gt;On the other hand, I come to Cassandra via a clever Datastax swag USB stick. So I didn&amp;#39;t have to fill out a form, and no salesman has called me. I did however get a lot of cool new Datastax-sponsored friends on Twitter when I mentioned that I had mastered the non-challenge of hello world.  &lt;/p&gt;
+
+&lt;p&gt;Full disclosure:  one of them offered me more Datastax swag if I share my experiences in getting started.  So I&amp;#39;m going to point them to this article.  &lt;/p&gt;
+
+&lt;p&gt;If they&amp;#39;re still my friends after this poor ouvre, then they&amp;#39;ll be the best industry-sponsored pals I ever made.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 20 Sep 2014 00:00:00 -0700</pubDate>
+				<link>/cassandra-first-impressions</link>
+				<guid isPermaLink="true">/cassandra-first-impressions</guid>
+			</item>
+			
+		
+			
+			<item>
 				<title>Java REST tutorial</title>
 				<description>&lt;p&gt;Create a RESTful API Using Java and Jersey in IntelliJ Idea.&lt;/p&gt;
 

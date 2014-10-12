@@ -15,7 +15,6 @@ POSTS = "_posts"
 
 desc "Completely rebuilds and pushes site"
 task :all do
-  Rake::Task["delete"].invoke
   Rake::Task["build:pro"].invoke
   Rake::Task["push_source"].invoke
   Rake::Task["push_master"].invoke  
@@ -27,13 +26,6 @@ task :debug do
 end
 
 
-
-desc "Delete _site/"
-task :delete do
-  puts "\## Deleting _site/"
-  status = system("rm -r _site")
-  puts status ? "Success" : "Failed"
-end
 
 desc "Preview _site/"
 task :preview do
@@ -56,9 +48,9 @@ namespace :build do
   end
 end
 
-desc "Commit & push source"
+desc "Commit & push source branch"
 task :push_source do
-  puts "\n## Staging modified files"
+  puts "\n## Staging modified files in source"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
@@ -71,29 +63,23 @@ task :push_source do
 end
 
 
-desc "Deploy _site/ to master branch"
+desc "Commit & push to master branch"
 task :push_master do
-  puts "\n## Deleting master branch"
-  status = system("git branch -D master")
-  puts status ? "Success" : "Failed"
-  puts "\n## Creating new master branch and switching to it"
-  status = system("git checkout -b master")
-  puts status ? "Success" : "Failed"
-  puts "\n## Forcing the _site subdirectory to be project root"
-  status = system("git filter-branch --subdirectory-filter _site/ -f")
-  puts status ? "Success" : "Failed"
-  puts "\n## Switching back to source branch"
-  status = system("git checkout source")
-  puts status ? "Success" : "Failed"
-  puts "\n## Pushing all branches to origin"
 
-  puts "\n## Pushing source"
-  status = system("git push origin source")
-  puts status ? "Success" : "Failed"
+  puts("Switching to master directory")
+  system("pushd ../master")
 
-  puts "\n## Pushing master (_site) -- forcing"
-  status = system("git push origin +master")
+  puts "\n## Staging modified files in master"
+  status = system("git add -A .")
   puts status ? "Success" : "Failed"
+  puts "\n## Committing a site build at #{Time.now.utc}"
+  message = "Build site at #{Time.now.utc}"
+  status = system("git commit -m \"#{message}\"")
+
+  puts "\n## Pushing master"
+  status = system("git push origin HEAD")
+  puts status ? "Success" : "Failed"
+  system("popd")
 
 end
 
