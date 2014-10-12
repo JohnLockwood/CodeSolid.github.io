@@ -8,6 +8,19 @@
 		
 			
 			<item>
+				<title>Yet another attempt to make Github Pages as Easy as WordPress</title>
+				<description>&lt;p&gt;This is simply a test post.  I&amp;#39;ve been going back and forth on how the Rakefile and Github branches / repositories should be set up for the CodeSolid web site. &lt;/p&gt;
+
+&lt;p&gt;I think I have it licked, but this should have been much easier.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 12 Oct 2014 00:00:00 -0700</pubDate>
+				<link>/yet-another-attempt-to-make-github-pages-as-easy-as-wordpress</link>
+				<guid isPermaLink="true">/yet-another-attempt-to-make-github-pages-as-easy-as-wordpress</guid>
+			</item>
+			
+		
+			
+			<item>
 				<title>First Impressions of Cassandra</title>
 				<description>&lt;p&gt;Recently I attended a Sacramento Java User&amp;#39;s Group meeting for the first time in many years, and saw an excellent presentation by Jega Aravandy on some work he&amp;#39;s doing with Casandra, Solr, Spring, and Angular.js. It was exciting work in its own right, and Jega came equipped with plenty of swag that someone from Datastax had asked him to bring along. So between my wife and I we walked away with newfound insights along with three USBs with Cassandra VMs on them, two coffee mugs and a tee shirt.&lt;/p&gt;
 
