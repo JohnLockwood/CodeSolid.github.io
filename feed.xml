@@ -8,6 +8,40 @@
 		
 			
 			<item>
+				<title>Shutting Off Social Networks on Linux</title>
+				<description>&lt;p&gt;Are you tired of how social networks suck up your life and make you feel like you&amp;#39;ve somehow managed to avoid Vonnegut&amp;#39;s dictum that all of life is like high school by turning your life into something that&amp;#39;s really a lot more like middle school?&lt;/p&gt;
+
+&lt;p&gt;I know I am.&lt;/p&gt;
+
+&lt;p&gt;So in case you&amp;#39;re wondering how to move on with your life, here&amp;#39;s a simple way to accomplish that in Linux.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;cd /etc
+sudo cp hosts hosts.backup
+sudo &amp;lt;youreditor&amp;gt; hosts&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then add three lines to the end.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;# Customizations
+127.0.0.1   twitter.com
+127.0.0.1   facebook.com
+127.0.0.1   linkedin.com&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Save the file, re-start your browser, and you&amp;#39;re done.&lt;/p&gt;
+
+&lt;p&gt;Now go enjoy your life.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 26 Oct 2014 00:00:00 -0700</pubDate>
+				<link>/shutting-off-social-networks-on-linux</link>
+				<guid isPermaLink="true">/shutting-off-social-networks-on-linux</guid>
+			</item>
+			
+		
+			
+			<item>
 				<title>Yet another attempt to make Github Pages as Easy as WordPress</title>
 				<description>&lt;p&gt;This is simply a test post.  I&amp;#39;ve been going back and forth on how the Rakefile and Github branches / repositories should be set up for the CodeSolid web site. &lt;/p&gt;
 
