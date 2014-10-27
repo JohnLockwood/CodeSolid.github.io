@@ -2,7 +2,7 @@
 <html class=no-js>
 <head>
 <meta charset="utf-8">
-<title>Goalboost Time Tracking</title>
+<title>Bash script to switch between scala versions</title>
 <meta name="viewport" content="width=device-width">
 <meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
 
@@ -55,270 +55,50 @@ woopra.track();
         <h3 class=text-muted>CodeSolid</h3>     
         </div>
         <article>   
-            <h1>Goalboost</h1>
-<p> <a href="http://goalboost.com">Goalboost</a> is the name of our time tracking application.  What started out as a side-project for one of hour devlopers
-has turned into an awesome training tool and case study opportunity for one of our engineers.  We'll be writing more about our progress here as time goes by.  Listed below are the archives of some earlier posts.</p>
+            <h1>Bash script to switch between scala versions</h1>
+<!-- <p class="meta">26 Oct 2014</p> -->
 
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-    <p>
-      <b><a href="/goalboost---hours-tracking-for-sofware-projects">Goalboost - Hours Tracking for Sofware Projects</a></b>
-      We're eating our own dogfood on Goalboost, and so far it's not all that bad.  <a href="/goalboost---hours-tracking-for-sofware-projects">Read more</a>...
-      </p>
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-	
-    
-  
-</ul>
-</li>
+<div class="post">
+<p>Switching between Scala versions in bash (in my case running on Ubuntu linux) was a pretty easy project even for me as a novice bash programmer,
+given the programmer&#39;s friend:  Google.</p>
+
+<p>One wrinkle is that environment variables set in a bash script do not affect the global environment, but an easy fix for that was to &quot;source&quot; the script from within two utility aliases I set up, one for each version I wanted to pass to the script:</p>
+
+<div>
+  <pre data-line=''><code class='language-bash'>alias ver10='source ~/bin/scalaver.sh 2.10'
+alias ver11='source ~/bin/scalaver.sh 2.11'</code></pre>
+</div>
+
+<p>As you can see, I saved the script to my &lt;user home&gt;/bin directory</p>
+
+<p>Here is the bash script that the alias calls:</p>
+
+<div>
+  <pre data-line=''><code class='language-bash'>#!/bin/bash
+
+function printUsage() {
+    echo &quot;Usage scalaver.sh [2.10|2.11]&quot;
+    exit 1
+}
+
+if [ -z $1  ]; then
+    printUsage;
+elif [ &quot;$1&quot; = &quot;2.10&quot; ]; then
+    export SCALA_HOME=~/apps/scala-2.10.4
+    export PATH=$SCALA_HOME/bin:$PATH   
+    echo &quot;Scala version is 2.10.4&quot;
+    scala -version
+elif [ &quot;$1&quot; = &quot;2.11&quot; ]; then
+    export SCALA_HOME=~/apps/scala-2.11.2
+    export PATH=$SCALA_HOME/bin:$PATH   
+    echo &quot;Scala version is 2.11.2&quot;
+    scala -version
+else
+    printUsage;     
+fi</code></pre>
+</div>
+
+</div>
             
         </article>
     </div>

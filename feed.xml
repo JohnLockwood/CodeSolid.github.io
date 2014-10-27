@@ -42,6 +42,54 @@ sudo &amp;lt;youreditor&amp;gt; hosts&lt;/code&gt;&lt;/pre&gt;
 		
 			
 			<item>
+				<title>Bash script to switch between scala versions</title>
+				<description>&lt;p&gt;Switching between Scala versions in bash (in my case running on Ubuntu linux) was a pretty easy project even for me as a novice bash programmer,
+given the programmer&amp;#39;s friend:  Google.&lt;/p&gt;
+
+&lt;p&gt;One wrinkle is that environment variables set in a bash script do not affect the global environment, but an easy fix for that was to &amp;quot;source&amp;quot; the script from within two utility aliases I set up, one for each version I wanted to pass to the script:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;alias ver10='source ~/bin/scalaver.sh 2.10'
+alias ver11='source ~/bin/scalaver.sh 2.11'&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As you can see, I saved the script to my &amp;lt;user home&amp;gt;/bin directory&lt;/p&gt;
+
+&lt;p&gt;Here is the bash script that the alias calls:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=''&gt;&lt;code class='language-bash'&gt;#!/bin/bash
+
+function printUsage() {
+    echo &amp;quot;Usage scalaver.sh [2.10|2.11]&amp;quot;
+    exit 1
+}
+
+if [ -z $1  ]; then
+    printUsage;
+elif [ &amp;quot;$1&amp;quot; = &amp;quot;2.10&amp;quot; ]; then
+    export SCALA_HOME=~/apps/scala-2.10.4
+    export PATH=$SCALA_HOME/bin:$PATH   
+    echo &amp;quot;Scala version is 2.10.4&amp;quot;
+    scala -version
+elif [ &amp;quot;$1&amp;quot; = &amp;quot;2.11&amp;quot; ]; then
+    export SCALA_HOME=~/apps/scala-2.11.2
+    export PATH=$SCALA_HOME/bin:$PATH   
+    echo &amp;quot;Scala version is 2.11.2&amp;quot;
+    scala -version
+else
+    printUsage;     
+fi&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+				<pubDate>Sun, 26 Oct 2014 00:00:00 -0700</pubDate>
+				<link>/bash-script-to-switch-between-scala-versions</link>
+				<guid isPermaLink="true">/bash-script-to-switch-between-scala-versions</guid>
+			</item>
+			
+		
+			
+			<item>
 				<title>Yet another attempt to make Github Pages as Easy as WordPress</title>
 				<description>&lt;p&gt;This is simply a test post.  I&amp;#39;ve been going back and forth on how the Rakefile and Github branches / repositories should be set up for the CodeSolid web site. &lt;/p&gt;
 
