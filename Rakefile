@@ -72,6 +72,9 @@ end
 desc "Commit & push to master branch"
 task :push_master do
 
+  puts("Copying resume")
+  cp '../../../../JohnPersonal/JohnLockwoodResume.doc', '../master'
+
 
   puts("Switching to master directory")
   Dir.chdir("../master")
