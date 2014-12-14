@@ -59,8 +59,15 @@ woopra.track();
             <!-- This loops through the paginated posts -->
 
   <p>
-  <b><a href="/post-mortem-of-our-first-scalausergroup.org-meeting">Post-mortem of our first ScalaUserGroup.org meeting</a></b><br />14 December 2014<br />
-  What if we held a Scala User Group and nobody came?  Well, in that case, we'd have more time to write some code!  <a href="/post-mortem-of-our-first-scalausergroup.org-meeting">Read more</a>...
+  <b><a href="/post-mortem-of-our-first-scalausergroup.org-meeting">Post Mortem Of Our First Scalausergroup.org Meeting</a></b><br />14 December 2014<br />
+  Our first meeting of <a href="http://ScalaUserGroup.org">ScalaUserGroup.org</a> was a very close knit group, inasmuch as it featured me as speaker, and me in the audience. I kept the video of me and the audience on from a few minutes before our appointed time until a half hour afterward. For the first ten minutes or so I said things like &quot;Welcome&quot; (at first) followed by &quot;Is anyone there?&quot; and the like. Then after a bit I turned on some Christmas music. Around 9:20 I said I&#39;d be taking off at 9:30 if no one showed up. For the latter part of my half hour and beyond, I had the fun of standing up a preliminary restful API as the entry point of a Scala and akka based third party ordering system <a href="/asynchronous-order-processing-in-play/">proof of concept</a> I wanted to work on.
+
+So anyway, by hacking on this I began to get a better feel for restful APIs in akka, and I also learned that if you want to tweak the &quot;constructors&quot; of a case class, you don&#39;t overload the constructor since it isn&#39;t the constructor you&#39;re really dealing with, you overload the apply method of the companion object, as it says in <a href="http://stackoverflow.com/questions/2400794/overload-constructor-for-scalas-case-classes">this stackoverflow answer</a>. The fun thing about new languages is that there are always cool tidbits like that.
+
+By way of conclusion, to all you smart but impatient developers who would rather go hack on your own than hang out in granfalloons like ScalaUserGroup.org, I salute and validate your instincts in this regard, which for my part are generally the same as yours. <a href="https://www.linkedin.com/groups/Just-purchased-ScalaUserGrouporg-746917.S.5942076205380427777?view=&amp;gid=746917&amp;item=5942076205380427777">Blathering about it on LinkedIn</a> will buy you a recruiter who&#39;ll call you to discuss her &quot;many Scala opportunities&quot;, leading in the fullness of time to her doing no such thing and trying to strong-arm you into some leftover Rails gig. Starting a user&#39;s group online is a good exercise in Vagrant and EC2, and a good excuse to hack on an akka restful API since you cleared a Saturday morning. 
+
+If you&#39;re smart you can learn Scala on your own. If you&#39;re looking for a friend, buy a puppy.
+  <a href="/post-mortem-of-our-first-scalausergroup.org-meeting">Read more</a>...
   </p>
 
   <p>
