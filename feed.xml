@@ -8,7 +8,7 @@
 		
 			
 			<item>
-				<title>Post Mortem Of Our First Scalausergroup.org Meeting</title>
+				<title>Post-mortem of our first ScalaUserGroup.org meeting</title>
 				<description>&lt;p&gt;Our first meeting of &lt;a href=&quot;http://ScalaUserGroup.org&quot;&gt;ScalaUserGroup.org&lt;/a&gt; was a very close knit group, inasmuch as it featured me as speaker, and me in the audience. I kept the video of me and the audience on from a few minutes before our appointed time until a half hour afterward. For the first ten minutes or so I said things like &amp;quot;Welcome&amp;quot; (at first) followed by &amp;quot;Is anyone there?&amp;quot; and the like. Then after a bit I turned on some Christmas music. Around 9:20 I said I&amp;#39;d be taking off at 9:30 if no one showed up. For the latter part of my half hour and beyond, I had the fun of standing up a preliminary restful API as the entry point of a Scala and akka based third party ordering system &lt;a href=&quot;/asynchronous-order-processing-in-play/&quot;&gt;proof of concept&lt;/a&gt; I wanted to work on.&lt;/p&gt;
 
 &lt;p&gt;So anyway, by hacking on this I began to get a better feel for restful APIs in akka, and I also learned that if you want to tweak the &amp;quot;constructors&amp;quot; of a case class, you don&amp;#39;t overload the constructor since it isn&amp;#39;t the constructor you&amp;#39;re really dealing with, you overload the apply method of the companion object, as it says in &lt;a href=&quot;http://stackoverflow.com/questions/2400794/overload-constructor-for-scalas-case-classes&quot;&gt;this stackoverflow answer&lt;/a&gt;. The fun thing about new languages is that there are always cool tidbits like that.&lt;/p&gt;
