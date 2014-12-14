@@ -8,6 +8,43 @@
 		
 			
 			<item>
+				<title>Asynchronous Order Processing in Play - A Proof of Concept</title>
+				<description>&lt;p&gt;There&amp;#39;s a project at a company I know that I thought would be a great fit for a Play application. For reasons too complex to go into here, no one will be working on this application any time soon, but to me it&amp;#39;s still a simple but interesting problem.  The gist of the thing is this:&lt;/p&gt;
+
+&lt;p&gt;The company has a service that handles orders for [top secret thing].  This service has some limitations.  First, it writes the order request into a database in real time, then a separate process running hourly on a different system reads the orders and sends them to a partner for processing.  The output of the second process is opaque to our customers -- i.e., there&amp;#39;s not a separate service that allows them to retrieve the status of an order.&lt;/p&gt;
+
+&lt;p&gt;Obviously an application like this is rife for improvements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Minimally, the team could expose an endpoint to report the status of the order.  Yes, the order wouldn&amp;#39;t be ready for up to an hour or more after it&amp;#39;s submitted, but at least the customer could check the status without calling support.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Better yet, rather than batching orders to our third party vendor we could send them as they&amp;#39;re received, and return a result as soon as we get it.  Of course, the downstream server is not under our control, it might be out of commission, etc., so we&amp;#39;d want to store enough information locally to be able to resend the order if it fails.  Picking a number out of a hat, the team&amp;#39;s manager suggested that orders would be processed in ten seconds, rather than hourly.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, ten seconds is still an eternity if you&amp;#39;re a user who just clicked the submit button, so taking the idea a bit further and using Play / Akka for the solution, a few ideas come to mind:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Once submitted, the order should be &amp;quot;received&amp;quot; (i.e. written to our &amp;quot;local&amp;quot; datastore) as soon as possible.  This could still be an asynchronous request, of course, the response should be less than 100ms after the request is received.  Cassandra could do this in a walk, but MySQL could easily handle our volume as well.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If the partner that process the order is down / overloaded, etc., we should be able to report a possible delay to the user as soon as possible.  The &lt;a href=&quot;http://doc.akka.io/docs/akka/snapshot/common/circuitbreaker.html&quot;&gt;akka circuit breaker&lt;/a&gt; pattern provides an elegant solution to this problem.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The order status page should update itself in real time if possible.  Some alternatives:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;WebSocket on modern browsers, but degrade to F5 to refresh status on older browsers.&lt;/li&gt;
+&lt;li&gt;Comet sockets everywhere.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this point, I need to better understand best practices for WebSocket / Comet services, since this idea may be untenable.  A proof of concept may be easy to stand up in Play, but our client almost certainly will not be a Play app, so the order status information needs to be available as a stateless service endpoint as well).  Probably at minimum we need &lt;a href=&quot;https://code.google.com/p/jquery-graceful-websocket/&quot;&gt;Graceful Web Sockets&lt;/a&gt; in there, and probably another trick or two.&lt;/p&gt;
+
+&lt;p&gt;I started working on some code for this while waiting for someone to show up at the first meeting of the &lt;a href=&quot;http://ScalaUserGroup.org&quot;&gt;ScalaUserGroup.org&lt;/a&gt;, and inasmuch as nobody did, I made pretty good progress! I may post the code soon if I can make it generic enough to protect the innocent.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 12 Dec 2014 00:00:00 -0800</pubDate>
+				<link>/asynchronous-order-processing-in-play</link>
+				<guid isPermaLink="true">/asynchronous-order-processing-in-play</guid>
+			</item>
+			
+		
+			
+			<item>
 				<title>Shutting Off Social Networks on Linux</title>
 				<description>&lt;p&gt;Are you tired of how social networks suck up your life and make you feel like you&amp;#39;ve somehow managed to avoid Vonnegut&amp;#39;s dictum that all of life is like high school by turning your life into something that&amp;#39;s really a lot more like middle school?&lt;/p&gt;
 
