@@ -8,6 +8,23 @@
 		
 			
 			<item>
+				<title>Post-mortem of our first ScalaUserGroup.org meeting</title>
+				<description>&lt;p&gt;Our first meeting of &lt;a href=&quot;http://ScalaUserGroup.org&quot;&gt;ScalaUserGroup.org&lt;/a&gt; was a very close knit group, inasmuch as it featured me as speaker, and me in the audience. I kept the video of me and the audience on from a few minutes before our appointed time until a half hour afterward. For the first ten minutes or so I said things like &amp;quot;Welcome&amp;quot; (at first) followed by &amp;quot;Is anyone there?&amp;quot; and the like. Then after a bit I turned on some Christmas music. Around 9:20 I said I&amp;#39;d be taking off at 9:30 if no one showed up. For the latter part of my half hour and beyond, I had the fun of standing up a preliminary restful API as the entry point of a Scala and akka based third party ordering system &lt;a href=&quot;/asynchronous-order-processing-in-play/&quot;&gt;proof of concept&lt;/a&gt; I wanted to work on.&lt;/p&gt;
+
+&lt;p&gt;So anyway, by hacking on this I began to get a better feel for restful APIs in akka, and I also learned that if you want to tweak the &amp;quot;constructors&amp;quot; of a case class, you don&amp;#39;t overload the constructor since it isn&amp;#39;t the constructor you&amp;#39;re really dealing with, you overload the apply method of the companion object, as it says in &lt;a href=&quot;http://stackoverflow.com/questions/2400794/overload-constructor-for-scalas-case-classes&quot;&gt;this stackoverflow answer&lt;/a&gt;. The fun thing about new languages is that there are always cool tidbits like that.&lt;/p&gt;
+
+&lt;p&gt;By way of conclusion, to all you smart but impatient developers who would rather go hack on your own than hang out in granfalloons like ScalaUserGroup.org, I salute and validate your instincts in this regard, which for my part are generally the same as yours. &lt;a href=&quot;https://www.linkedin.com/groups/Just-purchased-ScalaUserGrouporg-746917.S.5942076205380427777?view=&amp;amp;gid=746917&amp;amp;item=5942076205380427777&quot;&gt;Blathering about it on LinkedIn&lt;/a&gt; will buy you a recruiter who&amp;#39;ll call you to discuss her &amp;quot;many Scala opportunities&amp;quot;, leading in the fullness of time to her doing no such thing and trying to strong-arm you into some leftover Rails gig. Starting a user&amp;#39;s group online is a good exercise in Vagrant and EC2, and a good excuse to hack on an akka restful API since you cleared a Saturday morning. &lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;re smart you can learn Scala on your own. If you&amp;#39;re looking for a friend, buy a puppy.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 14 Dec 2014 00:00:00 -0800</pubDate>
+				<link>/post-mortem-of-our-first-scalausergroup.org-meeting</link>
+				<guid isPermaLink="true">/post-mortem-of-our-first-scalausergroup.org-meeting</guid>
+			</item>
+			
+		
+			
+			<item>
 				<title>Asynchronous Order Processing in Play - A Proof of Concept</title>
 				<description>&lt;p&gt;There&amp;#39;s a project at a company I know that I thought would be a great fit for a Play application. For reasons too complex to go into here, no one will be working on this application any time soon, but to me it&amp;#39;s still a simple but interesting problem.  The gist of the thing is this:&lt;/p&gt;
 
