@@ -26,6 +26,7 @@ task :debug do
 end
 
 
+
 desc "Preview _site/"
 task :preview do
   puts "\n## Opening _site/ in browser"
@@ -47,24 +48,17 @@ namespace :build do
   end
 end
 
-desc "Test"
-task :test do
-  puts("\n## Moving to master directory?")
-  Dir.chdir("../master")
-  File.unlink("hello.txt")  
-end
-
 desc "Commit & push source branch"
 task :push_source do
   puts "\n## Staging modified files in source"
-  status = system("git add -A .")
+  status = system("git add -A")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
   message = "Build site at #{Time.now.utc}"
   status = system("git commit -m \"#{message}\"")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing commits to remote"
-  status = system("git push ")
+  status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
 end
 
@@ -72,27 +66,20 @@ end
 desc "Commit & push to master branch"
 task :push_master do
 
-  puts("Copying resume")
-  cp '../../../../JohnPersonal/JohnLockwoodResume.doc', '../master'
-
-
   puts("Switching to master directory")
-  Dir.chdir("../master")
-  
-  #puts("Removing extra Rakefile (hack alert)")
-  #system("rm hello.txt")
+  system("pushd ../master")
 
   puts "\n## Staging modified files in master"
-  status = system("git add -A .")
+  status = system("git add -A")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
   message = "Build site at #{Time.now.utc}"
   status = system("git commit -m \"#{message}\"")
 
   puts "\n## Pushing master"
-  status = system("git push")
+  status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
-  Dir.chdir("../source")
+  system("popd")
 
 end
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>My Blog</title>
 <meta name="viewport" content="width=device-width">
-<meta name="description" content="Wherein my modest successes as a coder and spectacular failures as a community builder are documented in gruesome detail.">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
 
 <link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
 <link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
@@ -47,11 +47,8 @@ woopra.track();
 -->     <div class="header">
         <ul class="nav nav-pills pull-right">        
         <li><a href="/">Home</a></li>        
-        <!-- <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/rates/">Rates & Guarantee</a></li>
         <li><a href="/resume/">Resume</a></li>
-        -->
-
-
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/contact/">Contact Us</a></li>
         </ul>
@@ -59,42 +56,6 @@ woopra.track();
         </div>
         <article>   
             <!-- This loops through the paginated posts -->
-
-  <p>
-  <b><a href="/taking-another-look-at-python">Taking Another Look At Python</a></b><br />4 February 2012<br />
-  The first few times I encountered Python was in a local bookstore, and I think the same book was there each time.  Each time I was immediately put off by this unfortunate volume, which seemed to suggest that the greatest thing about Python was the whitespace, and gave me the impression that whitespace was more significant than it was.
-  <a href="/taking-another-look-at-python">Read more</a>...
-  </p>
-
-  <p>
-  <b><a href="/back-into-rails">Back into Rails</a></b><br />7 January 2012<br />
-  I haven&#39;t wanted to really dig into a software language in a long time, but I&#39;ve been brushing up my Ruby and Rails skills and enjoying it thoroughly. It&#39;s still fun even if I only get to do it in my spare time. I haven&#39;t had the pleasure of making money at it yet, and currently I make a living digging up dinosaur bones in what we will charitably call C++ since that&#39;s what the file extensions seem to denote.
-  <a href="/back-into-rails">Read more</a>...
-  </p>
-
-  <p>
-  <b><a href="/how-much-is-enough">How Much Is Enough</a></b><br />27 October 2011<br />
-  The cops arrived at dawn from fifteen jurisdictions
-  <a href="/how-much-is-enough">Read more</a>...
-  </p>
-
-  <p>
-  <b><a href="/in-solidarity-with-occupy-wall-street">In Solidarity with Occupy Wall Street</a></b><br />21 October 2011<br />
-  I&#39;ve been following <a href="http://occupywallst.org/">Occupy Wall Street</a> with great interest on Twitter, and last Saturday Jenniffer and I went down to <a href="http://www.meetup.com/occupytogether/Sacramento-CA/">Occupy Sacramento</a> for a time to meet the folks and show our support.
-  <a href="/in-solidarity-with-occupy-wall-street">Read more</a>...
-  </p>
-
-  <p>
-  <b><a href="/web-design-and-being-in-a-state-of-flow">Web Design and Being in a State of Flow</a></b><br />21 June 2011<br />
-  For someone who considers himself skeptical and rational, I&#39;m a huge fan of self help books.  Naturally, given my skeptical and rational bent, my taste in such books leans heavily toward those that either really are somewhat scientific or at least make a pretense of being that way.
-  <a href="/web-design-and-being-in-a-state-of-flow">Read more</a>...
-  </p>
-
-  <p>
-  <b><a href="/css3-and-modern-web-design-resources-this-week">CSS3 and Modern Web Design Resources This WeekRecursos Para CSS y Diseño Web Moderno Esta Semana</a></b><br />15 June 2010<br />
-  I&#39;ve been preparing for a tutorial series that I will write soon that will start with a blank screen in a text editor and finish with a complete modern CSS3 web site layout.  I might also include a bilingual Wordpress and / or Drupal theme, depending on how ambitious I&#39;m feeling once I&#39;m well into it.  In preparation, I&#39;ve been perusing several websites to think about what sorts of things I would like to include. I&#39;ll post a follow-up to this article outlining the work we&#39;ll be doing in the tutorial, but meantime, I thought I&#39;d share some of the resources I found, which are excellent.
-  <a href="/css3-and-modern-web-design-resources-this-week">Read more</a>...
-  </p>
 
   <p>
   <b><a href="/the-unimaginable">The Unimaginable</a></b><br />29 May 2010<br />
@@ -192,6 +153,118 @@ woopra.track();
 <li>Programming Web Applications (17 percent) </li>
 </ul>
   <a href="/microsoft-exam-70-562">Read more</a>...
+  </p>
+
+  <p>
+  <b><a href="/copying-moving-deleting-creating-and-reading-files-with-or-without-deep-love-poetry">Copying, Moving, Deleting, Creating, and Reading Files (With Or Without Deep Love Poetry)</a></b><br />28 September 2009<br />
+  `
+<div class="highlight"><pre><code class="language-text" data-lang="text">using System;
+using System.IO;
+
+class FileAndFileInfoExample
+{
+    static void Main(string[] args)
+    {
+        // Show some mechanisms for creating, moving, 
+    // copying and deleting files
+        try
+        {
+            // Get a couple of filenames
+            string file1 = @&quot;C:\FileInfoExample_Sample.txt&quot;;
+            string file2 = @&quot;C:\FileInfoExample_Sample2.txt&quot;;
+
+            // Create a text file.
+            TextWriter tw = File.CreateText(file1);
+
+            // Write a moving love poem into it.
+            tw.WriteLine(&quot;I had a girl.&quot;);
+            tw.WriteLine(&quot;Her name was Sue.&quot;);
+            tw.WriteLine(&quot;Loved her dear,&quot;);
+            tw.WriteLine(&quot;Loved her true.&quot;);
+            tw.WriteLine(&quot;Till one day&quot;);
+            tw.WriteLine(&quot;She broke my heart.&quot;);
+            tw.WriteLine(&quot;Took a shotgun -- &quot;);
+            tw.WriteLine(&quot;Blew me apart.&quot;);
+
+            // Sealed with a kiss for Sue
+            tw.Close();
+
+            // Copy our beautiful creation
+            File.Copy(file1, file2);
+
+            // Delete the original
+            File.Delete(file1);
+
+            // Move the new file back using File
+            File.Move(file2, file1);
+
+            // Using FileInfo instead this time...
+            FileInfo fi = new FileInfo(file1);
+
+            // Copy it again.
+            fi.CopyTo(file2);
+
+            // Delete the original again
+            fi.Delete();
+
+            // Get file2
+            fi = new FileInfo(file2);
+
+            // Move it back to one.
+            fi.MoveTo(file1);
+
+            // Show our poem to the world
+            string [] lovePoem = File.ReadAllLines(file1);
+            foreach (string profoundLine in lovePoem)
+            {
+                Console.WriteLine(profoundLine);
+            }
+
+            // Make sure no jealous poets steal our work
+            fi = new FileInfo(file1);
+            fi.Delete();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+        Console.ReadKey();
+    }
+}
+</code></pre></div>  <a href="/copying-moving-deleting-creating-and-reading-files-with-or-without-deep-love-poetry">Read more</a>...
+  </p>
+
+  <p>
+  <b><a href="/featured-aspworkbench-question">Featured .NET Certification Study Question</a></b><br />26 September 2009<br />
+  We have a new featured question over on the ASPWorkbench.
+  <a href="/featured-aspworkbench-question">Read more</a>...
+  </p>
+
+  <p>
+  <b><a href="/a-quick-driveinfo-example">A Quick DriveInfo Example</a></b><br />26 September 2009<br />
+  Too easy.
+  <a href="/a-quick-driveinfo-example">Read more</a>...
+  </p>
+
+  <p>
+  <b><a href="/whats-so-funny-about-asp-net-master-pages-love-and-understanding">What's So Funny About the UpdatePanel Control, Love and Understanding?</a></b><br />21 September 2009<br />
+  <a href="http://www.particlewave.com/blog/2009/09/18/certification-and-its-discontents/">I recently reported</a> that I had a domain for an ASP.NET site to hack around on with nothing on it yet. Since then I’ve made some progress and had some fun coding some ASP.NET, so I can now show off a minor feature on a new web site, the <a href="http://www.aspworkbench.com/blog/">Featured ASP.NET Certification Question</a>.
+  <a href="/whats-so-funny-about-asp-net-master-pages-love-and-understanding">Read more</a>...
+  </p>
+
+  <p>
+  <b><a href="/icomparable-example">IComparable Example</a></b><br />14 September 2009<br />
+  Here&#39;s a quick IComparable example. The memorization feat for this interface is that CompareTo returns <0 when “this” is less than the object passed to it. The rest follows easily: return 0 when both objects are equal and > 0 when this instance greater than obj passed to CompareTo. Remember, this is self centered so everything’s in terms of this.
+  <a href="/icomparable-example">Read more</a>...
+  </p>
+
+  <p>
+  <b><a href="/implementing-interoperability-reflection-and-mailing-functionality-in-a-net-framework-application-11-percent">Implementing interoperability, reflection, and mailing functionality in a .NET Framework application (11 percent)</a></b><br />12 September 2009<br />
+  <ul>
+<li><br></li>
+</ul>
+  <a href="/implementing-interoperability-reflection-and-mailing-functionality-in-a-net-framework-application-11-percent">Read more</a>...
   </p>
 
 

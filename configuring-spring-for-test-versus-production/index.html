@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Configuring Spring for Test versus Production</title>
 <meta name="viewport" content="width=device-width">
-<meta name="description" content="Wherein my modest successes as a coder and spectacular failures as a community builder are documented in gruesome detail.">
+<meta name="description" content="Bring twenty years of software development experience to your next Java project.  Web services and Spring full stack development.  On-site and off-site rates available.">
 
 <link rel=stylesheet href=http://codesolid.com/bootstrap/styles/87837fff.vendor.css>
 <link rel=stylesheet href=http://codesolid.com/bootstrap/styles/a5896f90.main.css> 
@@ -47,11 +47,8 @@ woopra.track();
 -->     <div class="header">
         <ul class="nav nav-pills pull-right">        
         <li><a href="/">Home</a></li>        
-        <!-- <li><a href="/rates/">Rates & Guarantee</a></li>
+        <li><a href="/rates/">Rates & Guarantee</a></li>
         <li><a href="/resume/">Resume</a></li>
-        -->
-
-
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/contact/">Contact Us</a></li>
         </ul>
@@ -222,7 +219,7 @@ root/config_production</code></pre>
 <p>test/db.properties:</p>
 
 <div>
-  <pre data-line=''><code class='language-bash'># These are the values we'll use when testing.
+  <pre data-line=''><code class='language-bash'># These are the values we&#39;ll use when testing.
 database.driverClassName=com.mysql.jdbc.Driver
 database.url=jdbc:mysql://localhost/mydb
 database.username=myuser
@@ -308,7 +305,7 @@ public class ContextTests {
     @Autowired
     private ApplicationContext ac;
 
-    /* Verify that we've correctly injected a property from the Spring directory 
+    /* Verify that we&#39;ve correctly injected a property from the Spring directory 
     (in this case, the common.properties file).  Property files in this
     directory define properties that can be used in all environments. */
     @Test
@@ -319,7 +316,7 @@ public class ContextTests {
         assertEquals(actual, expected);
     }
 
-    /* Verify that we've correctly injected a property from the test directory's 
+    /* Verify that we&#39;ve correctly injected a property from the test directory&#39;s 
     db.properties. Property files in the test directory only apply to the test 
     environment and can be overridden in the production directory (for example). */
     @Test
