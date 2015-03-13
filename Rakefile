@@ -58,7 +58,7 @@ task :push_source do
   status = system("git commit -m \"#{message}\"")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing commits to remote"
-  status = system("git push origin source")
+  status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
 end
 
@@ -75,7 +75,7 @@ task :push_master do
   message = "Build site at #{Time.now.utc}"
   status = system("git commit -m \"#{message}\"")
   puts "\n## Pushing master"
-  status = system("git push origin master")
+  status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
   system("popd")
 
