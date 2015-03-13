@@ -1127,34 +1127,6 @@ base URL is cleverly stuffed away in the head tag.  &lt;/p&gt;
 		
 			
 			<item>
-				<title>We are moving</title>
-				<description>&lt;p&gt;For some time now my ParticleWave site has been fairly schizophrenic, being also JohnLockwood.com and Codesolid.com.&lt;/p&gt;
-
-&lt;p&gt;To add to the lack of mental health around this site, I&amp;#39;ve been meaning to move the whole site to Jekyll for some time,
-because I&amp;#39;m tired of wordpress updates and stupid spam comments.  In other words, I&amp;#39;m moving from Wordpress to Jekyll for the same reason 
-everybody moves from Wordpress to Jekyll.&lt;/p&gt;
-
-&lt;p&gt;As of this post, my site is live on Github pages, as you can see if you&amp;#39;re reading it.&lt;/p&gt;
-
-&lt;p&gt;There was a LOT involved in making the move, and I took lousy notes.  So this is not a tutorial, or not much of one -- sorry.  It&amp;#39;s more of an announcement for the one or two people who are kind enough to read me from time to time.   Getting Wordpress to Jekyll was one nasty little bit of business which I have forgotten since I did it weeks ago.  I do recall that it started with Google and involved typing, so I&amp;#39;m sure if you&amp;#39;re smart you can reproduce it.  More recently I&amp;#39;m able to credit David Ensinger&amp;#39;s &lt;a href=&quot;http://davidensinger.com/2013/07/automating-jekyll-deployment-to-github-pages-with-rake/&quot;&gt;fine article&lt;/a&gt; on how to workaround the fact that your plugins are likely not supported by Github.  Nice job there and helpful,
-and my own stripped down version of his Rakefile is in the &lt;a href=&quot;https://github.com/CodeSolid/CodeSolid.github.io/tree/source&quot;&gt;source for this site&lt;/a&gt;.  My version
-works around some issues I had (I found I had to force the pushes to master for some reason), and it removes some of the sass-specific stuff he had added 
-since I&amp;#39;m not using sass at the moment.&lt;/p&gt;
-
-&lt;p&gt;Most importantly, it&amp;#39;s nice to have a starter site here I can begin to build out.  You&amp;#39;ll see that there&amp;#39;s a lot to be done, the pages are just stubs, etc., etc.  There&amp;#39;s no domain actually pointing here yet, though we&amp;#39;ll work on having it be CodeSolid.com before too long.&lt;/p&gt;
-
-&lt;p&gt;And now finally I have a place for the blog posts to go, so I can keep writing.  For about two months I&amp;#39;ve written very little on ParticleWave since I know it&amp;#39;s going away.&lt;/p&gt;
-
-&lt;p&gt;Now I can feed my keyboard addition again.  &lt;/p&gt;
-</description>
-				<pubDate>Sun, 01 Jun 2014 00:00:00 -0700</pubDate>
-				<link>/we-are-moving</link>
-				<guid isPermaLink="true">/we-are-moving</guid>
-			</item>
-			
-		
-			
-			<item>
 				<title>Testing the Rake Post Task</title>
 				<description>&lt;p&gt;I just merged some tasks from Ellen Gummesson&amp;#39;s cool Rake Boilerplate, and once that was done, started this post based on nothing
 more complex than &amp;#39;rake[&amp;quot;Testing the Rake Post Task&amp;quot;]&amp;#39;.&lt;/p&gt;
