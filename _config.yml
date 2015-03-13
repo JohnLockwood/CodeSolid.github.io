@@ -35,4 +35,4 @@ defaults:
       author:  "John Lockwood"
 
 paginate: 20
-paginate_path: "blog/page:num"
+paginate_path: "/page:num"
