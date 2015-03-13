@@ -63,20 +63,20 @@ task :push_source do
 end
 
 
-desc "Commit & push to master branch"
+desc "Commit & push to gh-pages branch"
 task :push_master do
 
-  puts("Switching to master directory")
-  system("pushd ../master")
+  puts("Switching to gh-pages directory")
+  system("pushd ../gh-pages")
 
-  puts "\n## Staging modified files in master"
+  puts "\n## Staging modified files in gh-pages"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
   message = "Build site at #{Time.now.utc}"
   status = system("git commit -m \"#{message}\"")
 
-  puts "\n## Pushing master"
+  puts "\n## Pushing gh-pages"
   status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
   system("popd")

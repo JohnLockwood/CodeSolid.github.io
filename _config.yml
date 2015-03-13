@@ -1,4 +1,4 @@
-destination: ../master
+destination: ../gh-pages
 
 name: CodeSolid
 
@@ -21,7 +21,7 @@ permalink: /:title
 
 baseurl: "http://codesolid.com/"
 
-post:
+post:		
   template: templates/_post.txt
   extension: md
 
