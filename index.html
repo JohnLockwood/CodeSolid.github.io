@@ -24,9 +24,9 @@ title: CodeSolid -- John Lockwood's Blog
     {% if page == paginator.page %}
       <em>{{ page }}</em>
     {% elsif page == 1 %}
-      <a href="/blog/">{{ page }}</a>
+      <a href="/">{{ page }}</a>
     {% else %}
-      <a href="/blog/page{{page}}">{{ page }}</a>
+      <a href="/:page{{page}}">{{ page }}</a>
     {% endif %}
   {% endfor %}
 
