@@ -51,7 +51,7 @@ end
 desc "Commit & push source branch"
 task :push_source do
   puts "\n## Staging modified files in source"
-  status = system("git add -A")
+  status = system("git add -A .")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
   message = "Build site at #{Time.now.utc}"
@@ -68,14 +68,12 @@ task :push_master do
 
   puts("Switching to master directory")
   system("pushd ../master")
-
   puts "\n## Staging modified files in master"
-  status = system("git add -A")
+  status = system("git add -A .")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
   message = "Build site at #{Time.now.utc}"
   status = system("git commit -m \"#{message}\"")
-
   puts "\n## Pushing master"
   status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
