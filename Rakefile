@@ -15,10 +15,9 @@ POSTS = "_posts"
 
 desc "Completely rebuilds and pushes site"
 task :all do
-  Rake::Task["delete"].invoke
   Rake::Task["build:pro"].invoke
-  Rake::Task["commit"].invoke
-  Rake::Task["deploy"].invoke  
+  Rake::Task["push_source"].invoke
+  Rake::Task["push_master"].invoke  
   puts "Rake all finished."
 end
 
@@ -27,13 +26,6 @@ task :debug do
 end
 
 
-
-desc "Delete _site/"
-task :delete do
-  puts "\## Deleting _site/"
-  status = system("rm -r _site")
-  puts status ? "Success" : "Failed"
-end
 
 desc "Preview _site/"
 task :preview do
@@ -56,9 +48,9 @@ namespace :build do
   end
 end
 
-desc "Commit _site/"
-task :commit do
-  puts "\n## Staging modified files"
+desc "Commit & push source branch"
+task :push_source do
+  puts "\n## Staging modified files in source"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
@@ -66,21 +58,28 @@ task :commit do
   status = system("git commit -m \"#{message}\"")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing commits to remote"
-  status = system("git push origin master")
+  status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
 end
 
 
-desc "Deploy _site/ to master branch"
-task :deploy do
+desc "Commit & push to gh-pages branch"
+task :push_master do
 
-  puts "\n## Pushing master"
-  status = system("git push origin master")
-  puts status ? "Success" : "Failed"
+  puts("Switching to gh-pages directory")
+  system("pushd ../gh-pages")
 
-  puts "\n## Pushing (_site) - gh-pages"
-  status = system("git push origin gh-pages")
+  puts "\n## Staging modified files in gh-pages"
+  status = system("git add -A")
   puts status ? "Success" : "Failed"
+  puts "\n## Committing a site build at #{Time.now.utc}"
+  message = "Build site at #{Time.now.utc}"
+  status = system("git commit -m \"#{message}\"")
+
+  puts "\n## Pushing gh-pages"
+  status = system("git push origin HEAD")
+  puts status ? "Success" : "Failed"
+  system("popd")
 
 end
 
