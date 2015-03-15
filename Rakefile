@@ -82,7 +82,7 @@ task :push_master do
 end
 
 # rake post["Title"]
-desc "Create a post in _posts"
+desc "Create a new post in _posts"
 task :post, :title do |t, args|
   title = args[:title]
   template = CONFIG["post"]["template"]
