@@ -67,7 +67,7 @@ desc "Commit & push to master branch"
 task :push_master do
 
   puts("Switching to master directory")
-  system("pushd ../master")
+  Dir.chdir("../master")
   puts "\n## Staging modified files in master"
   status = system("git add -A .")
   puts status ? "Success" : "Failed"
@@ -77,8 +77,7 @@ task :push_master do
   puts "\n## Pushing master"
   status = system("git push origin HEAD")
   puts status ? "Success" : "Failed"
-  system("popd")
-
+  Dir.chdir("../source")
 end
 
 # rake post["Title"]

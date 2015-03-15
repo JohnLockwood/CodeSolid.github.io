@@ -16,6 +16,8 @@
 &lt;p&gt;For Jenniffer the new career involes a bunch of new skills including data analysis (brand new) and programming (which she has dabbled in).  For myself as an experienced developer, the statistical analysis part is new as well.  On the programming side, encountering tools like R Studio and IPython was a weird experience since it expand my definition of programming. These are tools aimed at &amp;quot;programmers&amp;quot; who aren&amp;#39;t programmers like me at all -- they are accomplished quants and other data analysts who wouldn&amp;#39;t care a whit about writing line after line of &amp;quot;production quality&amp;quot; code. Instead, they&amp;#39;re using optimized data-oriented and math-oriented libraries to write programs that are at once a lot simpler than I&amp;#39;m used to (programatically) and more complex (conceptually).&lt;/p&gt;
 
 &lt;p&gt;So I&amp;#39;ve been digging into R a bit, and even more into IPython, Pandas, and NumPy, using the online resources and Wes McKinney&amp;#39;s &lt;a href=&quot;http://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1449319793/ref=sr_1_4?ie=UTF8&amp;amp;qid=1426400056&amp;amp;sr=8-4&amp;amp;keywords=ipython&quot;&gt;Python for Data Analysis&lt;/a&gt; and although this hasn&amp;#39;t yet risen to the level of an article you might find useful, I am for the time being recording my notes and helpful links in my &lt;a href=&quot;https://github.com/CodeSolid/python-notes&quot;&gt;python-notes&lt;/a&gt; Github repo. &lt;/p&gt;
+
+&lt;!-- All OK --&gt;
 </description>
 				<pubDate>Fri, 13 Mar 2015 00:00:00 -0700</pubDate>
 				<link>/getting-started-with-ipython</link>
