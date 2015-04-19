@@ -8,6 +8,26 @@
 		
 			
 			<item>
+				<title>Transitioning from Software Developer to Data Scientist</title>
+				<description>&lt;p&gt;A little over a month ago, I reported that I was making my first explorations of transitioning out of software development (per se) and into a role as a data scientist.  At the time I was pretty much just kicking the tires a bit, but since then I&amp;#39;ve begun to cultivate my interest more seriously.  It&amp;#39;s been a pretty whirlwind month of learning and trying out new things, and here are some highlights:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;At my current day job, I was able to take advantage of an &amp;quot;Innovation and Planning Sprint&amp;quot; to scratch the surface of Hadoop by writing my first MapReduce job. The goal was to dig into some of our splunk logs and report on statistics of certain error rates.  Although I was able to get a Hadoop standalone instance working with a MapReduce job against a pared-down data set, it turned out that a much cleaner and more fruitful approach in this case was to first filter the splunk data to reduce the output volume, and then to treat it as a &amp;quot;small data&amp;quot; project using IPython and Pandas.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In the meantime, toward the end of March I happened across the Coursera &lt;a href=&quot;https://www.coursera.org/specialization/jhudatascience/1?utm_medium=listingPage&quot;&gt;Data Science Specialization&lt;/a&gt; program, which focuses on Data Science using R.
+I decided to take the first two courses concurrently, since really the material and final project for the first course wasn&amp;#39;t teaching me anything new, I was just filling a pre-requisite.  The second course, Roger Peng&amp;#39;s course in &lt;a href=&quot;https://www.coursera.org/course/rprog&quot;&gt;R Programming&lt;/a&gt;, has been a lot of fun.  I&amp;#39;m finding it quite straightforward but not trivially so, given my background as a developer.  However, many of the reviews I&amp;#39;ve read from entry level programmers have pointed out how challenging it is for that audience, and given that it&amp;#39;s taken me some modest time and effort to work through the problems myself, I can certainly see their point.  Meantime I&amp;#39;ve been hacking quite a bit on my own both on the course material and on other R resources.  Most of that&amp;#39;s unstructured, but here are some &lt;a href=&quot;/tapply&quot;&gt;learning exercises on tapply&lt;/a&gt; that beginners might find useful.  I&amp;#39;m not sure if I want to spend the time to work several such examples into a consistent R resource -- it&amp;#39;s quite likely that I won&amp;#39;t given what else I have going on.  We&amp;#39;re on week three of the course and so far I&amp;#39;m acing it, but stay tuned.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Once I signed up for the course, I discovered something I really hadn&amp;#39;t expected to find, a &lt;a href=&quot;http://www.meetup.com/Sacramento-MOOCs/events/221884366/&quot;&gt;Sacramento Data Science Meetup&lt;/a&gt; consisting of other folks who were also taking the course.  We met in Roseville and are currently planning to get together every couple of weeks, and it seems like a smart and congenial group of folks.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So anyway, that&amp;#39;s it for now.  This statistical / data analysis angle on programming is so far turning out to be quite entertaining, and we&amp;#39;ll see how it all works out.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 18 Apr 2015 00:00:00 -0700</pubDate>
+				<link>/transitioning-from-software-developer-to-data-scientist</link>
+				<guid isPermaLink="true">/transitioning-from-software-developer-to-data-scientist</guid>
+			</item>
+			
+		
+			
+			<item>
 				<title>Getting Started With IPython and Data Science</title>
 				<description>&lt;h2&gt;What I&amp;#39;m Working On and Why&lt;/h2&gt;
 
