@@ -4,6 +4,8 @@ layout: post
 title: "Two Data Science Certificates Earned in April" 
 categories:
 - Miscellaneous
+excerpt: "I'm happy to report good grades and the beginnings of a good foundation in R Programming and Data Science with two certificates I earned from the Johns Hopkins / Coursera 
+program in April.  Working on another course this month, too!"
 ---
 In May I'm working through the course "Getting and Cleaning Data", but already in April I was able to get two certificates for taking the two courses below 
 concurrently.  I got a 100% grade in each course, too.  I'm not sure I can maintain that since Getting and Cleaning Data threw me a curve ball or two,
